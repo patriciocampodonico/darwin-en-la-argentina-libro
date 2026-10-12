@@ -187,3 +187,7 @@
 .p061__notes { align-self: end; }
 /* 062: la nota ED cierra en la línea 28, donde terminan el texto y la imagen de 063 */
 .p062__caption { grid-row: 27 / 29; align-self: end; }
+/* 060–061 (pedido de Patricio, 12 oct. 2026): rótulo «Ciudad de Buenos Aires» más grande (12 pt);
+   «Cuadra» va dentro de su cuadra, en papel, para que no la corte la cuadra de arriba */
+.diagram__label--big { font-size: 4.23px; }
+.diagram__label--in { font-size: 2.1px; }
