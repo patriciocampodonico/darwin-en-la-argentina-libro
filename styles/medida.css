@@ -168,3 +168,14 @@
 /* 055: la imagen va a sangre abajo y a la derecha (pedido de Patricio, 12 oct. 2026); el folio va sobre una chapa de papel, como en las otras páginas con imagen bajo el folio */
 .p055__image { margin-right: calc(var(--margin-outer) * -1); margin-bottom: calc(var(--margin-bottom) * -1); }
 #p055 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+
+/* ── 056–059 ── recomposición del 12 oct. 2026 (misma información) */
+/* 056–057: las dos páginas cierran en la línea 27. 057: la planta crece y su nota ED termina con el texto */
+.p056__caption { grid-row: 27; }
+.p057__plan { grid-row: 7 / 24; }
+.p057__caption { grid-row: 25 / 28; align-self: end; }
+/* 058: las dos medidas van apiladas junto al texto y terminan con él (línea 19), cada una apoyada en su filete;
+   la nota ED baja a la línea 21, donde empiezan las notas de 059 */
+.p058__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; transform: translateY(0.7mm); }
+.p058__data > div { display: grid; align-content: end; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 1.4mm; }
+.p058__caption { grid-column: 1 / 4; grid-row: 21 / 23; }
