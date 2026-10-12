@@ -266,3 +266,6 @@
 .p049__text { grid-column: 1 / 7; grid-row: 7 / 13; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
 .p049__cut { grid-row: 15 / 24; }
 .p049__caption { grid-row: 25; }
+
+/* 055: la imagen llega también hasta el lomo (la mitad de la doble): ocupa todo el ancho de la página (12 oct. 2026) */
+.p055__image { margin-left: calc(var(--margin-inner) * -1); }
