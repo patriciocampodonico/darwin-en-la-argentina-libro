@@ -102,3 +102,8 @@ for p in piezas:
     x += p.shape[1] + hueco
 Image.fromarray(lienzo).save(os.path.join(IMG, '038-megaterios-fila.jpg'), quality=92)
 print('038-megaterios-fila', (W, H), round(W / 188 * 25.4), 'ppp', 'hueco', round(hueco / px, 1), 'mm')
+
+# 060 · las afueras de Buenos Aires (reemplaza el esquema de puntos y rayas): lámina sobre papel,
+# recortada al alto del dibujo (y 132–880); va en el esquema de la página con 135 mm de ancho.
+im = lamina('060-afueras').crop((0, 132, 1536, 880))
+guardar(im, '060-afueras', 135)
