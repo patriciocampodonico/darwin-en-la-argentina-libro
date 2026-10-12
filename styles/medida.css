@@ -55,3 +55,10 @@
 .p033__text { grid-column: 1 / 7; grid-row: 10 / 18; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
 .p033__profile { grid-column: 1 / 7; grid-row: 19 / 27; }
 .p033__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 035 ── a la par de 034 (pedido de Patricio, 12 oct. 2026): la planta termina donde termina la imagen de 034
+   (línea 25) y las notas van al pie, hasta la línea 27, donde termina el texto de 034 */
+.p035__plan { grid-row: 7 / 26; }
+.p035__caption { grid-row: 26 / 28; align-self: end; }
+.p035__note-e { grid-row: 24 / 26; }
+.p035__note-ed { grid-row: 27; }
