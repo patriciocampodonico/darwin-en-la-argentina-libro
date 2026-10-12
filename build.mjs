@@ -56,6 +56,10 @@ for (let n = PRIMERA; n <= ULTIMA; n += 2) spreads.push(`<div class="spread">${s
 spreads.push(`<div class="spread">${guard('left', 'p106')}<div class="slot--empty"></div></div>`,
   `<div class="spread">${cover('back', 'left', 'pcontratapa')}<div class="slot--empty"></div></div>`);
 
+// Sello de versión de los estilos: obliga al navegador a bajar los CSS nuevos cuando cambian (sin esperar su caché)
+const sello = createHash('sha256').update(['styles', 'tapa'].flatMap((d) => readdirSync(join(ROOT, d)).filter((f) => f.endsWith('.css')).sort()
+  .map((f) => readFileSync(join(ROOT, d, f), 'utf8'))).join('')).digest('hex').slice(0, 8);
+
 writeFileSync(join(ROOT, 'index.html'), `<!doctype html>
 <!-- GENERADO por build.mjs — no editar a mano. Editar pages/NNN.html y styles/. -->
 <html lang="es">
@@ -63,23 +67,23 @@ writeFileSync(join(ROOT, 'index.html'), `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=1280">
 <title>Darwin en la Argentina — libro</title>
-<link rel="stylesheet" href="styles/tokens.css">
-<link rel="stylesheet" href="styles/typography.css">
-<link rel="stylesheet" href="styles/grid.css">
-<link rel="stylesheet" href="styles/components.css">
-<link rel="stylesheet" href="styles/pages.css">
-<link rel="stylesheet" href="styles/maps.css">
-<link rel="stylesheet" href="styles/paradas.css">
-<link rel="stylesheet" href="styles/registros.css">
-<link rel="stylesheet" href="styles/tramo-03.css">
-<link rel="stylesheet" href="styles/tramo-04-05.css">
-<link rel="stylesheet" href="styles/tramo-05-07.css">
-<link rel="stylesheet" href="styles/tramo-07-10.css">
-<link rel="stylesheet" href="styles/tramo-10-15.css">
-<link rel="stylesheet" href="styles/fotos.css">
-<link rel="stylesheet" href="tapa/tapa.css">
-<link rel="stylesheet" href="styles/medida.css">
-<link rel="stylesheet" href="styles/print.css">
+<link rel="stylesheet" href="styles/tokens.css?v=${sello}">
+<link rel="stylesheet" href="styles/typography.css?v=${sello}">
+<link rel="stylesheet" href="styles/grid.css?v=${sello}">
+<link rel="stylesheet" href="styles/components.css?v=${sello}">
+<link rel="stylesheet" href="styles/pages.css?v=${sello}">
+<link rel="stylesheet" href="styles/maps.css?v=${sello}">
+<link rel="stylesheet" href="styles/paradas.css?v=${sello}">
+<link rel="stylesheet" href="styles/registros.css?v=${sello}">
+<link rel="stylesheet" href="styles/tramo-03.css?v=${sello}">
+<link rel="stylesheet" href="styles/tramo-04-05.css?v=${sello}">
+<link rel="stylesheet" href="styles/tramo-05-07.css?v=${sello}">
+<link rel="stylesheet" href="styles/tramo-07-10.css?v=${sello}">
+<link rel="stylesheet" href="styles/tramo-10-15.css?v=${sello}">
+<link rel="stylesheet" href="styles/fotos.css?v=${sello}">
+<link rel="stylesheet" href="tapa/tapa.css?v=${sello}">
+<link rel="stylesheet" href="styles/medida.css?v=${sello}">
+<link rel="stylesheet" href="styles/print.css?v=${sello}">
 </head>
 <body>
 ${spreads.join('\n')}
