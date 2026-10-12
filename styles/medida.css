@@ -250,3 +250,7 @@
 /* 099: el corte crece y su nota ED termina con el texto (25) */
 .p099__spring { grid-row: 7 / 23; }
 .p099__caption { grid-row: 24 / 26; align-self: end; }
+
+/* 024: la imagen va a sangre abajo y a la izquierda (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
+.p024__image { margin-left: calc(var(--margin-outer) * -1); margin-bottom: calc(var(--margin-bottom) * -1); }
+#p024 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
