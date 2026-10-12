@@ -1,7 +1,7 @@
 // Mapa de tramo de la parada 02: desembocadura del río Negro y El Carmen o Patagones (página 018).
-// Genera assets/maps/tramo-02.svg. PROVISORIO: costa y cauce esquemáticos trazados con puntos
-// de referencia (lat, lon). Uso: node tools/tramo02.mjs
-import { writeFileSync } from 'node:fs';
+// Genera assets/maps/tramo-02.svg. Costa y cauce reales: Natural Earth 1:10m (assets/maps/geo.json,
+// tools/geodatos.py). Uso: node tools/tramo02.mjs
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -13,10 +13,20 @@ const kx = k * Math.cos(((latN + latS) / 2) * Math.PI / 180);
 const f = (n) => n.toFixed(2);
 const xy = ([lat, lon]) => [(lon - lonW) * kx, (latN - lat) * k];
 
-const COSTA = [[-40.85, -62.2], [-40.9, -62.3], [-40.97, -62.55], [-41.03, -62.78], [-41.07, -62.82], [-41.1, -63.0], [-41.14, -63.3], [-41.15, -63.7]];
-const RIO = [[-40.43, -63.67], [-40.6, -63.35], [-40.72, -63.15], [-40.8, -62.98], [-40.92, -62.9], [-41.04, -62.79]];
+const G = JSON.parse(readFileSync(join(dirname(OUT), 'geo.json'), 'utf8')).tramo02;
+const traza = (lineas, cerrar) => lineas.map((l) => l.map(([lon, lat]) => xy([lat, lon])).map(([x, y], i) => `${i ? 'L' : 'M'}${f(x)} ${f(y)}`).join('') + (cerrar ? 'Z' : '')).join('');
 const LLEGADA = [[-41.2, -62.4], [-41.12, -62.6], [-41.05, -62.76]];
-const CARMEN = [-40.8, -62.98];
+// El Carmen (−40,80 / −62,99) está sobre la margen norte: el punto se apoya en el cauce dibujado
+const CARMEN = (() => {
+  const c = [-40.8, -62.99], kk = Math.cos(40.9 * Math.PI / 180); let mejor = null, dm = 9;
+  for (const l of G.rios.Negro) for (let n = 0; n < l.length - 1; n++) {
+    const [ax, ay] = [l[n][0] * kk, l[n][1]], [bx, by] = [l[n + 1][0] * kk, l[n + 1][1]], [px, py] = [c[1] * kk, c[0]];
+    const u = Math.max(0, Math.min(1, ((px - ax) * (bx - ax) + (py - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)));
+    const q = [ay + u * (by - ay), (ax + u * (bx - ax)) / kk], d = Math.hypot(q[0] - c[0], (q[1] - c[1]) * kk);
+    if (d < dm) { dm = d; mejor = q; }
+  }
+  return mejor;
+})();
 
 const suave = (pts) => {
   const q = pts.map(xy);
@@ -33,11 +43,11 @@ const o = [];
 o.push(`<svg class="map" viewBox="0 0 ${W} ${H}" aria-hidden="true">`);
 o.push(`<defs><clipPath id="clip-tramo02"><rect width="${W}" height="${H}"/></clipPath></defs>`);
 o.push('<g clip-path="url(#clip-tramo02)">');
-o.push(`<path class="map__land" d="${suave(COSTA)}L${xy([-40.3, -63.7]).map(f).join(' ')}L${xy([-40.3, -62.2]).map(f).join(' ')}Z"/>`);
+o.push(`<path class="map__land" d="${traza(G.arg, true)}"/>`);
 { const [, y] = xy([-41, lonW]); o.push(`<path class="map__grat" d="M0 ${f(y)}H${W}"/>`); }
 { const [x] = xy([latN, -63]); o.push(`<path class="map__grat" d="M${f(x)} 0V${H}"/>`); }
-o.push(`<path class="map__coast" d="${suave(COSTA)}"/>`);
-o.push(`<path class="map__river map__river--main" d="${suave(RIO)}"/>`);
+o.push(`<path class="map__coast" d="${traza(G.costa)}"/>`);
+o.push(`<path class="map__river map__river--main" d="${traza(G.rios.Negro)}"/>`);
 o.push(`<path class="route--water" d="${suave(LLEGADA)}"/>`);
 o.push('</g>');
 o.push(texto('map__gratlabel', [-41, lonW], '41° S', ' dx="1" dy="-0.7"'));

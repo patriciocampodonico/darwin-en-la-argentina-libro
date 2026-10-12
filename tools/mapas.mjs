@@ -1,75 +1,56 @@
 // Genera los mapas vectoriales del recorrido (assets/maps/general.svg y detalle.svg)
 // a partir de coordenadas geográficas (lat, lon). Proyección equirrectangular simple.
-// PROVISORIO: la costa es un trazado esquemático hecho con puntos de referencia
-// (ciudades, cabos, desembocaduras), no un contorno cartográfico oficial.
-// Las paradas son orientativas. Uso: node tools/mapas.mjs
-import { writeFileSync } from 'node:fs';
+// Cartografía: Natural Earth 1:10m (assets/maps/geo.json, preparado por tools/geodatos.py):
+// costa, límite internacional, ríos y lagos reales. Las Malvinas van como parte de la Argentina.
+// Paradas y recorrido: lugares que nombra el diario, en su posición actual. Uso: node tools/mapas.mjs
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', 'assets', 'maps');
+const GEO = JSON.parse(readFileSync(join(OUT, 'geo.json'), 'utf8'));
 
-// ── Geografía (lat, lon) ───────────────────────────────────────
-const COSTA_NORTE = [ // Río de la Plata (orilla norte) → costa bonaerense → río Negro → golfo San Matías
-  [-34.88, -56.0], [-34.9, -56.2], [-34.78, -56.36], [-34.7, -56.75], [-34.43, -57.35], [-34.47, -57.85],
-  [-34.0, -58.29], [-33.88, -58.42], [-34.2, -58.5], [-34.42, -58.58], [-34.6, -58.37], [-34.72, -58.25],
-  [-34.82, -57.97], [-35.07, -57.52], [-35.27, -57.23], [-35.43, -57.13], [-35.75, -57.38], [-36.0, -57.35],
-  [-36.3, -56.93], [-36.36, -56.72], [-36.72, -56.68], [-37.11, -56.86], [-37.26, -56.97], [-37.74, -57.42],
-  [-38.03, -57.53], [-38.28, -57.84], [-38.58, -58.72], [-38.86, -60.08], [-38.99, -61.3], [-39.0, -61.55],
-  [-38.9, -62.05], [-38.79, -62.27], [-38.85, -62.45], [-39.05, -62.3], [-39.25, -62.05], [-39.45, -62.05],
-  [-39.85, -62.1], [-40.2, -62.3], [-40.55, -62.23], [-40.85, -62.3], [-41.03, -62.78], [-41.13, -63.3],
-  [-41.12, -64.0], [-40.9, -64.6], [-40.75, -64.95], [-40.95, -65.15], [-41.3, -65.1],
-];
-const COSTA_SUR = [ // golfo San Matías → Patagonia → estrecho de Magallanes
-  [-41.5, -65.02], [-42.0, -65.07], [-42.2, -64.6], [-42.08, -63.77], [-42.77, -63.63], [-42.6, -64.3],
-  [-42.77, -65.03], [-42.95, -64.6], [-42.97, -64.32], [-43.33, -65.05], [-44.05, -65.22], [-44.8, -65.72],
-  [-44.92, -65.53], [-45.13, -66.53], [-45.87, -67.48], [-46.44, -67.52], [-46.75, -67.0], [-47.2, -65.75],
-  [-47.75, -65.9], [-48.05, -65.93], [-48.4, -66.45], [-48.9, -67.2], [-49.3, -67.72], [-49.75, -67.75],
-  [-50.12, -68.38], [-50.95, -69.15], [-51.6, -68.98], [-52.33, -68.35], [-52.4, -69.2], [-52.5, -69.6],
-  [-52.65, -70.3], [-52.75, -70.75], [-53.15, -70.92], [-53.6, -70.95], [-53.9, -71.3], [-53.6, -72.5],
-];
-const TIERRA_DEL_FUEGO = [
-  [-52.66, -68.6], [-53.1, -68.25], [-53.3, -68.2], [-53.78, -67.7], [-54.0, -67.3], [-54.28, -66.7],
-  [-54.5, -66.0], [-54.65, -65.12], [-54.82, -65.25], [-54.95, -65.9], [-55.0, -66.6], [-54.82, -68.3],
-  [-54.9, -69.5], [-54.6, -70.5], [-54.3, -70.9], [-53.9, -70.3], [-53.3, -70.37], [-52.9, -70.1], [-52.75, -69.5],
-];
-const ISLAS = [
-  [[-54.72, -64.7], [-54.7, -64.0], [-54.78, -63.8], [-54.88, -64.3], [-54.85, -64.72]],                       // de los Estados
-  [[-51.3, -60.6], [-51.35, -59.6], [-51.75, -59.5], [-52.2, -60.0], [-52.1, -60.9], [-51.6, -61.2]],           // Gran Malvina
-  [[-51.3, -59.0], [-51.35, -57.8], [-51.7, -57.75], [-52.3, -58.6], [-52.2, -59.4], [-51.8, -59.2]],           // Soledad
-];
-const RIOS = {
-  parana: [[-30.5, -59.6], [-30.74, -59.65], [-31.73, -60.6], [-32.95, -60.6], [-33.33, -60.18], [-33.68, -59.62], [-34.1, -59.0], [-34.3, -58.55]],
-  colorado: [[-37.77, -67.72], [-38.8, -64.9], [-39.02, -64.08], [-39.5, -62.68], [-39.85, -62.1]],
-  negro: [[-38.95, -68.06], [-39.27, -65.67], [-40.1, -64.45], [-40.8, -62.98], [-41.03, -62.78]],
-  santaCruz: [[-50.25, -72.1], [-50.2, -71.0], [-50.25, -70.0], [-49.98, -68.91], [-50.12, -68.38]],
-};
-
-// ── Paradas (orientativas) ─────────────────────────────────────
+// ── Paradas: lugar actual de cada punto del diario ───────────
 const P = {
-  '01': [-54.8, -65.25], '02': [-40.8, -62.98], '03': [-39.5, -62.68], '04': [-39.15, -62.45], '05': [-38.8, -62.17],
-  '06': [-38.13, -61.95], '07': [-36.35, -60.02], '08': [-34.6, -58.38], '09': [-32.95, -60.65], '10': [-31.63, -60.72],
-  '11': [-31.73, -60.5], '13': [-47.75, -65.9], '14': [-49.31, -67.73], '15': [-50.02, -68.52],
+  '01': [-54.8, -65.23],   // bahía Buen Suceso
+  '02': [-40.8, -62.99],   // Carmen de Patagones
+  '03': [-39.5, -62.68],   // paso del río Colorado (campamento de Rosas)
+  '04': [-39.12, -62.47],  // camino del Colorado a Bahía Blanca (punto medio del tramo)
+  '05': [-38.8, -62.17],   // entre el fuerte de Bahía Blanca y Punta Alta
+  '06': [-38.07, -61.98],  // sierra de la Ventana
+  '07': [-36.35, -60.02],  // Tapalqué (travesía de las Pampas)
+  '08': [-34.6, -58.38],   // Buenos Aires
+  '09': [-32.95, -60.65],  // Rosario
+  '10': [-31.63, -60.7],   // Santa Fe
+  '11': [-31.73, -60.53],  // Bajada (Paraná)
+  '13': [-47.75, -65.9],   // Puerto Deseado
+  '14': [-49.31, -67.73],  // Puerto San Julián
+  '15': [-50.02, -68.52],  // río Santa Cruz (fondeadero)
 };
 const REGISTRO = ['01', '05', '09', '13', '14']; // paradas con página de registro, inventario o especie en el v2
 
-const TIERRA = [ // a caballo: 02 → 10
-  P['02'], P['03'], P['04'], P['05'], P['06'], P['07'], [-35.44, -58.8], P['08'],
-  [-34.57, -59.1], [-34.25, -59.47], [-33.33, -60.28], P['09'], [-31.97, -60.92], P['10'],
+const TIERRA = [ // a caballo, posta por posta según el diario: 02 → 10
+  P['02'], P['03'], P['04'], [-38.72, -62.27] /* fuerte de Bahía Blanca */, P['05'],
+  [-38.5, -61.8] /* posta del río Sauce */, P['06'], [-37.75, -61.35], [-36.95, -60.35] /* sierra Tapalguen */, P['07'],
+  [-35.44, -58.81] /* Guardia del Monte */, P['08'],
+  [-34.57, -59.11] /* Luján */, [-34.25, -59.47] /* Areco */, [-34.06, -60.1] /* río Arrecifes */, [-33.33, -60.22] /* San Nicolás */,
+  P['09'], [-31.97, -60.92] /* Coronda */, P['10'],
 ];
+const SANTA_CRUZ = GEO.general.rios['Santa Cruz'].flat().filter(([lon]) => lon > -71.3 && lon < -68.6)
+  .sort((a, b) => b[0] - a[0]).map(([lon, lat]) => [lat, lon]); // remontada por el cauce real; se detiene antes de la Cordillera
 const AGUA = [ // cruce a Bajada · regreso por el Paraná · navegación a Patagonia · río Santa Cruz
   [P['10'], P['11']],
-  [P['11'], [-32.2, -60.45], [-32.95, -60.48], [-33.3, -60.05], [-33.7, -59.5], [-34.1, -58.88], [-34.35, -58.48], P['08']],
-  [P['08'], [-35.0, -57.5], [-35.6, -56.7], [-37.3, -56.5], [-39.5, -58.5], [-42.5, -62.5], [-45.5, -64.8], [-47.4, -65.4], P['13']],
-  [P['13'], [-48.5, -66.0], [-49.2, -67.3], P['14']],
-  [P['14'], [-49.7, -67.4], P['15']],
-  [P['15'], [-49.98, -68.91], [-50.25, -70.0], [-50.2, -71.0], [-50.2, -71.3]], // se detiene antes de la Cordillera
+  [P['11'], [-32.2, -60.6], [-32.95, -60.58], [-33.3, -60.15], [-33.7, -59.55], [-34.05, -59.05], [-34.42, -58.58] /* Las Conchas */, P['08']],
+  [P['08'], [-34.95, -57.5], [-35.5, -56.4], [-36.6, -55.9], [-38.5, -57.0], [-40.6, -60.2], [-43.0, -63.0], [-45.5, -65.0], [-47.3, -65.3], P['13']],
+  [P['13'], [-48.3, -65.8], [-49.0, -67.0], P['14']],
+  [P['14'], [-49.7, -67.45], [-50.13, -68.3], P['15']],
+  [P['15'], ...SANTA_CRUZ],
 ];
 
 // ── Dibujo ─────────────────────────────────────────────────────
 const f = (n) => n.toFixed(2);
 
-function mapa({ latN, latS, lonW, W, H, gratLat, gratLon, etiquetas, extra }) {
+function mapa({ nombre, latN, latS, lonW, W, H, gratLat, gratLon, etiquetas, extra }) {
   const k = H / (latN - latS);
   const lat0 = (latN + latS) / 2;
   const kx = k * Math.cos((lat0 * Math.PI) / 180);
@@ -85,23 +66,23 @@ function mapa({ latN, latS, lonW, W, H, gratLat, gratLon, etiquetas, extra }) {
     return d + (cerrar ? 'Z' : '');
   };
   const recta = (pts) => pts.map(xy).map(([x, y], i) => `${i ? 'L' : 'M'}${f(x)} ${f(y)}`).join('');
-  const costa = [...COSTA_NORTE, ...COSTA_SUR];
+  const G = GEO[nombre];
+  const traza = (lineas, cerrar) => lineas.map((l) => l.map(([lon, lat]) => xy([lat, lon])).map(([x, y], i) => `${i ? 'L' : 'M'}${f(x)} ${f(y)}`).join('') + (cerrar ? 'Z' : '')).join('');
   const o = [];
   o.push(`<svg class="map" viewBox="0 0 ${f(W)} ${f(H)}" aria-hidden="true">`);
   o.push(`<defs><clipPath id="clip-${W | 0}"><rect width="${f(W)}" height="${f(H)}"/></clipPath></defs>`);
   o.push(`<g clip-path="url(#clip-${W | 0})">`);
-  // tierra: costa + cierre por el oeste y el norte
-  o.push(`<path class="map__land" d="${suave(costa)}${recta([[-60, -80], [-25, -80], [-25, -50], [-34.88, -50]]).replace('M', 'L')}Z"/>`);
-  o.push(`<path class="map__land" d="${suave(TIERRA_DEL_FUEGO, true)}"/>`);
-  for (const isla of ISLAS) o.push(`<path class="map__land" d="${suave(isla, true)}"/>`);
+  // tierra: países vecinos en tono más claro, la Argentina en el tono del sistema
+  o.push(`<path class="map__land map__land--otro" d="${traza(G.otros, true)}"/>`);
+  o.push(`<path class="map__land" d="${traza(G.arg, true)}"/>`);
   // retícula
   for (const lat of gratLat) { const [, y] = xy([lat, lonW]); o.push(`<path class="map__grat" d="M0 ${f(y)}H${f(W)}"/>`); }
   for (const lon of gratLon) { const [x] = xy([latN, lon]); o.push(`<path class="map__grat" d="M${f(x)} 0V${f(H)}"/>`); }
-  // costa y ríos
-  o.push(`<path class="map__coast" d="${suave(costa)}"/>`);
-  o.push(`<path class="map__coast" d="${suave(TIERRA_DEL_FUEGO, true)}"/>`);
-  for (const isla of ISLAS) o.push(`<path class="map__coast" d="${suave(isla, true)}"/>`);
-  for (const r of Object.values(RIOS)) o.push(`<path class="map__river" d="${suave(r)}"/>`);
+  // ríos, lagos, costa y límite internacional
+  for (const rio of Object.values(G.rios)) o.push(`<path class="map__river" d="${traza(rio)}"/>`);
+  for (const lago of Object.values(G.lagos)) o.push(`<path class="map__lake" d="${traza(lago, true)}"/>`);
+  o.push(`<path class="map__limit" d="${traza(G.limite)}"/>`);
+  o.push(`<path class="map__coast" d="${traza(G.costa)}"/>`);
   // recorridos
   o.push(`<path class="route--land" d="${suave(TIERRA)}"/>`);
   for (const tramo of AGUA) o.push(`<path class="route--water" d="${suave(tramo)}"/>`);
@@ -132,7 +113,7 @@ function mapa({ latN, latS, lonW, W, H, gratLat, gratLon, etiquetas, extra }) {
 // Detalle: de Carmen de Patagones a Santa Fe (3 columnas × 28 líneas)
 const DET = { latN: -31, latS: -41.3, lonW: -65.6, W: 92.34, H: 126 };
 const detalle = mapa({
-  ...DET, gratLat: [-32, -34, -36, -38, -40], gratLon: [-64, -62, -60, -58],
+  nombre: 'detalle', ...DET, gratLat: [-32, -34, -36, -38, -40], gratLon: [-64, -62, -60, -58],
   etiquetas: {
     r: 0.8,
     '02': { lado: 'izq' }, '03': { lado: 'izq' }, '04': { lado: 'izq' }, '05': { lado: 'izq', dy: -0.6, ry: 0.3 },
@@ -147,7 +128,7 @@ const detalle = mapa({
 
 // General: todo el recorrido (2 columnas × 28 líneas), con el recuadro del detalle
 const general = mapa({
-  latN: -30.5, latS: -55.6, lonW: -72.5, W: 60.34, H: 126,
+  nombre: 'general', latN: -30.5, latS: -55.6, lonW: -72.5, W: 60.34, H: 126,
   gratLat: [-35, -40, -45, -50, -55], gratLon: [-70, -65, -60],
   etiquetas: { r: 0.6, '01': { lado: 'der' }, '13': { lado: 'der' }, '14': { lado: 'der', dy: -0.4 }, '15': { lado: 'der', dy: 1.2 } },
   extra: ({ xy, f }) => {

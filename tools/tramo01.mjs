@@ -1,8 +1,8 @@
 // Mapa de tramo de la parada 01: aproximación a la bahía del Buen Suceso (página 013).
-// Genera assets/maps/tramo-01.svg. PROVISORIO: costa esquemática trazada con puntos
-// de referencia (lat, lon); los topónimos son los que nombra Darwin el 17 de diciembre de 1832.
+// Genera assets/maps/tramo-01.svg. Costa real: Natural Earth 1:10m (assets/maps/geo.json,
+// tools/geodatos.py); los topónimos son los que nombra Darwin el 17 de diciembre de 1832.
 // Uso: node tools/tramo01.mjs
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -14,17 +14,10 @@ const kx = k * Math.cos(((latN + latS) / 2) * Math.PI / 180);
 const f = (n) => n.toFixed(2);
 const xy = ([lat, lon]) => [(lon - lonW) * kx, (latN - lat) * k];
 
-const TIERRA_DEL_FUEGO = [ // extremo oriental de la isla Grande
-  [-54.2, -66.9], [-54.28, -66.7], [-54.4, -66.45], [-54.5, -66.2], [-54.55, -65.9], [-54.6, -65.55], [-54.63, -65.25],
-  [-54.62, -65.2], [-54.65, -65.12], [-54.72, -65.17], [-54.78, -65.2], [-54.8, -65.28], [-54.83, -65.22],
-  [-54.92, -65.37], [-54.9, -65.5], [-54.93, -65.95], [-54.97, -66.4], [-54.99, -66.75], [-54.95, -68],
-];
-const ISLA_ESTADOS = [
-  [-54.8, -64.76], [-54.73, -64.68], [-54.71, -64.5], [-54.77, -64.4], [-54.72, -64.2], [-54.76, -64.03], [-54.73, -63.87], [-54.72, -63.8],
-  [-54.8, -63.9], [-54.8, -64.1], [-54.85, -64.3], [-54.89, -64.6],
-];
-const RUTA = [[-54.3, -64.62], [-54.5, -64.9], [-54.6, -65.0], [-54.7, -65.08], [-54.78, -65.16], [-54.8, -65.23]];
-const BAHIA = [-54.8, -65.25];
+const G = JSON.parse(readFileSync(join(dirname(OUT), 'geo.json'), 'utf8')).tramo01;
+const traza = (lineas, cerrar) => lineas.map((l) => l.map(([lon, lat]) => xy([lat, lon])).map(([x, y], i) => `${i ? 'L' : 'M'}${f(x)} ${f(y)}`).join('') + (cerrar ? 'Z' : '')).join('');
+const RUTA = [[-54.3, -64.62], [-54.5, -64.88], [-54.62, -64.96], [-54.72, -65.02], [-54.79, -65.12], [-54.8, -65.215]];
+const BAHIA = [-54.8, -65.225];
 
 const suave = (pts, cerrar) => {
   const q = pts.map(xy);
@@ -41,12 +34,10 @@ const o = [];
 o.push(`<svg class="map" viewBox="0 0 ${W} ${H}" aria-hidden="true">`);
 o.push(`<defs><clipPath id="clip-tramo01"><rect width="${W}" height="${H}"/></clipPath></defs>`);
 o.push('<g clip-path="url(#clip-tramo01)">');
-o.push(`<path class="map__land" d="${suave(TIERRA_DEL_FUEGO)}L${xy([-54.2, -68]).map(f).join(' ')}Z"/>`);
-o.push(`<path class="map__land" d="${suave(ISLA_ESTADOS, true)}"/>`);
+o.push(`<path class="map__land" d="${traza(G.arg, true)}"/>`);
 for (const lat of [-54.5, -55]) { const [, y] = xy([lat, lonW]); o.push(`<path class="map__grat" d="M0 ${f(y)}H${W}"/>`); }
 for (const lon of [-66, -65, -64]) { const [x] = xy([latN, lon]); o.push(`<path class="map__grat" d="M${f(x)} 0V${H}"/>`); }
-o.push(`<path class="map__coast" d="${suave(TIERRA_DEL_FUEGO)}"/>`);
-o.push(`<path class="map__coast" d="${suave(ISLA_ESTADOS, true)}"/>`);
+o.push(`<path class="map__coast" d="${traza(G.costa)}"/>`);
 o.push(`<path class="route--water" d="${suave(RUTA)}"/>`);
 o.push('</g>');
 // retícula
