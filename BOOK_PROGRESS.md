@@ -471,3 +471,8 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Verificado comparando el PDF anterior y el nuevo página por página: solo cambian folios y esas referencias.
 - Respaldo previo: ../_respaldo_antes_de_renumerar.zip.
 - Pendientes en numeración nueva: guanaco 086, vizcacha 066, créditos 104, verificación documental 072, mapas provisorios 008, 009, 013, 018, 102; en revisión 073–105.
+
+## Publicación en GitHub (12 oct. 2026)
+- Repo público: https://github.com/patriciocampodonico/darwin-en-la-argentina-libro (carpeta book/, sin salida/ ni originales/).
+- Página para la compañera (GitHub Pages, rama main): https://patriciocampodonico.github.io/darwin-en-la-argentina-libro/
+- Después de cada cambio: node build.mjs → git add -A → git commit → git push. La página se actualiza sola en 1–2 minutos.
