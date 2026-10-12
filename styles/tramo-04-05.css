@@ -1,0 +1,81 @@
+/* Páginas 032–041: parada 04 (Camino a Bahía Blanca) y comienzo de la parada 05 (Bahía Blanca / Punta Alta). */
+
+/* ── Componentes ── */
+/* Cuerpo en dos columnas anchas (3 + 3 columnas de retícula), para fragmentos largos */
+.t-darwin--wide { column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; }
+/* Inventario numerado dentro del texto de Darwin */
+.inventory p { margin: 0; }
+.inventory p + p { margin-top: var(--baseline); text-indent: 0; }
+.inventory b { font-family: var(--font-ui); font-size: var(--meta-size); font-weight: 700; margin-right: 1mm; }
+/* Cifra destacada dentro de un esquema */
+.t-datum { font-family: var(--font-display); font-size: 6.35px; fill: var(--blue-deep); }   /* 18 pt */
+.diagram__ring2 { fill: var(--paper); stroke: var(--blue-deep); stroke-width: 0.4; }
+
+/* ── 032 · Apertura – Cambio de territorio ── */
+.p032__meta { grid-column: 1 / 4; grid-row: 1; }
+.p032__title { grid-column: 1 / 5; grid-row: 2 / 8; }
+.p032__kicker { grid-column: 1 / 4; grid-row: 9; }
+.p032__text { grid-column: 1 / 7; grid-row: 10 / 23; }
+.p032__strip { grid-column: 1 / 7; grid-row: 24 / 27; }
+.p032__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 033 · Dunas y agua dulce ── */
+.p033__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p033__text { grid-column: 1 / 4; grid-row: 7 / 22; }
+.p033__profile { grid-column: 4 / 7; grid-row: 7 / 17; }
+.p033__caption { grid-column: 4 / 7; grid-row: 18 / 21; }
+
+/* ── 034 · Posta, pantano y barro ── */
+.p034__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p034__text { grid-column: 1 / 4; grid-row: 7 / 28; }
+.p034__image { grid-column: 4 / 7; grid-row: 7 / 26; }
+
+/* ── 035 · Llegar al fuerte de Bahía Blanca ── */
+.p035__title { grid-column: 1 / 6; grid-row: 2 / 4; }
+.p035__text { grid-column: 1 / 4; grid-row: 7 / 19; }
+.p035__note-e { grid-column: 1 / 4; grid-row: 20 / 23; }
+.p035__note-ed { grid-column: 1 / 4; grid-row: 24; }
+.p035__plan { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p035__caption { grid-column: 4 / 7; grid-row: 22 / 25; }
+
+/* ── 036 · Apertura – Punta Alta ── */
+.p036__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border-top: 0; border-left: 0; border-right: 0; }
+.p036__meta { grid-column: 1 / 4; grid-row: 8; }
+.p036__title { grid-column: 1 / 5; grid-row: 9 / 15; }
+.p036__quote { grid-column: 1 / 7; grid-row: 16 / 22; }
+.p036__text { grid-column: 4 / 7; grid-row: 23 / 29; }
+
+/* ── 037 · Un lugar observado en más de una visita ── */
+.p037__title { grid-column: 1 / 7; grid-row: 2 / 4; }
+.p037__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p037__visits { grid-column: 4 / 7; grid-row: 7 / 13; }
+.p037__cut { grid-column: 4 / 7; grid-row: 14 / 23; }
+.p037__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
+
+/* ── 038 · Inventario fósil I ── */
+.p038__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p038__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p038__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p038__note-ed { grid-column: 1 / 4; grid-row: 25 / 27; }
+.p038__image { grid-column: 4 / 7; grid-row: 7 / 28; }
+
+/* ── 039 · Inventario fósil II ── */
+.p039__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p039__list { grid-column: 1 / 4; grid-row: 7 / 17; }
+.p039__plan { grid-column: 1 / 4; grid-row: 19 / 28; }
+.p039__caption { grid-column: 1 / 4; grid-row: 28; }
+.p039__text { grid-column: 4 / 7; grid-row: 7 / 26; }
+
+/* ── 040 · Otro yacimiento cercano ── */
+.p040__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p040__text { grid-column: 1 / 4; grid-row: 7 / 20; }
+.p040__dist { grid-column: 1 / 4; grid-row: 21 / 28; }
+.p040__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
+.p040__image { grid-column: 4 / 7; grid-row: 7 / 22; }
+
+/* ── 041 · Leer el estrato ── */
+.p041__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p041__text { grid-column: 1 / 4; grid-row: 7 / 17; }
+.p041__section { grid-column: 4 / 7; grid-row: 7 / 15; }
+.p041__shells { grid-column: 4 / 7; grid-row: 17 / 22; }
+.p041__caption { grid-column: 4 / 7; grid-row: 23 / 27; }

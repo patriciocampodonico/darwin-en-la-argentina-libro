@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+.page {
+  position: relative;
+  width: var(--page-width);
+  height: var(--page-height);
+  overflow: hidden;
+  background: var(--paper);
+  flex: none;
+}
+
+/* Caja tipográfica: 6 columnas × 28 líneas de base.
+   Los elementos se ubican con grid-column / grid-row, nunca con medidas sueltas. */
+.page__box {
+  position: absolute;
+  top: var(--margin-top);
+  bottom: var(--margin-bottom);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), var(--baseline));
+  column-gap: var(--column-gap);
+}
+/* Impar = página izquierda · par = página derecha (el build asigna la clase) */
+.page--left .page__box { left: var(--margin-outer); right: var(--margin-inner); }
+.page--right .page__box { left: var(--margin-inner); right: var(--margin-outer); }
+
+/* Retícula visible para revisión (tecla G o ?grid=1). Nunca se imprime. */
+.show-grid .page__box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  --col: calc((100% - (var(--columns) - 1) * var(--column-gap)) / var(--columns));
+  background:
+    repeating-linear-gradient(to bottom, transparent 0 calc(var(--baseline) - 0.1mm), rgba(214, 60, 60, .35) calc(var(--baseline) - 0.1mm) var(--baseline)),
+    repeating-linear-gradient(to right, rgba(53, 166, 190, .16) 0 var(--col), transparent var(--col) calc(var(--col) + var(--column-gap)));
+}
+@media print { .show-grid .page__box::before { display: none; } }
+
+/* Folio y sección: en el margen inferior, lado exterior. Lo agrega el build
+   a las páginas que declaran data-section. */
+.page__folio {
+  position: absolute;
+  bottom: 4.5mm;
+  display: flex;
+  gap: 2.5mm;
+  font-family: var(--font-ui);
+  font-size: var(--meta-small-size);
+  line-height: 1;
+  color: var(--blue-deep);
+}
+.page__folio b { font-weight: 600; }
+.page--left .page__folio { left: var(--margin-outer); }
+.page--right .page__folio { right: var(--margin-outer); flex-direction: row-reverse; }

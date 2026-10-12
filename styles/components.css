@@ -1,0 +1,46 @@
+/* Componentes del sistema: piezas que se repiten a lo largo del libro.
+   El código visual que explica la página 006 se define acá. */
+
+/* Texto de Darwin: siempre Lora */
+.t-darwin { font-family: var(--font-reading); font-size: var(--body-size); line-height: var(--body-leading); }
+
+.page .t-label--strong { font-weight: 600; }
+
+/* Fecha y lugar: número de parada + lugar / fecha */
+.stopline { display: grid; grid-template-columns: 5mm 1fr; }
+.stopline b { font-weight: 700; }
+
+/* Código de notas: D y E (originales) en contorno · ED (editorial) en lleno */
+.notetag {
+  display: inline-block;
+  min-width: 3.4mm;
+  margin-right: 1.2mm;
+  padding: 0 0.7mm;
+  font-family: var(--font-ui);
+  font-size: var(--meta-small-size);
+  font-weight: 700;
+  line-height: 3.4mm;
+  text-align: center;
+  box-shadow: inset 0 0 0 var(--rule-fine) var(--blue-deep);
+}
+.notetag--ed { background: var(--blue-deep); color: var(--paper); }
+
+/* Baldosa de registro en tamaño chico (2 líneas de base) */
+.minitile { width: calc(var(--baseline) * 2); height: calc(var(--baseline) * 2); background: var(--blue-deep); flex: none; display: block; }
+
+/* Trazos de recorrido */
+.route__line { fill: none; stroke: var(--blue-deep); stroke-width: 0.25; stroke-linecap: round; stroke-linejoin: round; }
+.route__dot { fill: var(--blue-deep); }
+
+/* Dibujos esquemáticos de piezas */
+.piece__line { fill: none; stroke: var(--blue-deep); stroke-width: 0.25; }
+.piece__fill { fill: var(--blue-deep); }
+
+/* Placeholder de asset pendiente: siempre rotulado, nunca ambiguo */
+.placeholder {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 2mm;
+  border: var(--rule-fine) dashed var(--blue-deep);
+  font-family: var(--font-ui); font-size: var(--meta-small-size); line-height: 1.35; font-weight: 500;
+  color: var(--blue-deep);
+}

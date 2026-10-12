@@ -1,0 +1,246 @@
+/* Páginas 073–104: cierre de la parada 10, parada 11 (Bajada), regreso por el Paraná, parada 12 (Buenos Aires II),
+   paradas 13–15 (Puerto Deseado, San Julián, río Santa Cruz) y cierre del libro. */
+
+/* ── Componentes ── */
+.fourlist .is-key b, .fourlist .is-key .t-editorial { font-weight: 700; }
+.fourlist .is-key { box-shadow: inset 0 calc(var(--rule-fine) * 4) 0 currentColor; }
+.diagram__siege { fill: none; stroke: var(--blue-deep); stroke-width: 1; stroke-dasharray: 2.4 1.2; }
+.concept--light svg { background: var(--paper); box-shadow: inset 0 0 0 var(--rule-fine) var(--blue-deep); }
+.concept--light .diagram__line { stroke-width: 0.4; }
+.halfband { position: absolute; top: 0; bottom: 0; left: 0; width: var(--half-bleed); border-left: 0; border-top: 0; border-bottom: 0; }
+
+/* ── 073 ── */
+.p073__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p073__text { grid-column: 1 / 4; grid-row: 7 / 12; }
+.p073__maze { grid-column: 1 / 7; grid-row: 13 / 26; }
+.p073__caption { grid-column: 1 / 6; grid-row: 27 / 29; }
+
+/* ── 074 ── */
+.p074__image { position: absolute; top: 0; bottom: 0; left: 0; width: var(--half-bleed); border-left: 0; border-top: 0; border-bottom: 0; }
+.p074__meta { grid-column: 4 / 7; grid-row: 2; }
+.p074__title { grid-column: 4 / 7; grid-row: 3 / 12; }
+.p074__text { grid-column: 4 / 7; grid-row: 14 / 18; }
+
+/* ── 075 ── */
+.p075__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p075__text { grid-column: 1 / 4; grid-row: 7 / 18; }
+.p075__column { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p075__caption { grid-column: 4 / 7; grid-row: 22 / 26; }
+
+/* ── 076 ── */
+.p076__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p076__text { grid-column: 1 / 4; grid-row: 7 / 12; }
+.p076__label { grid-column: 1 / 4; grid-row: 14; }
+.p076__list { grid-column: 1 / 4; grid-row: 15 / 23; }
+.p076__image { grid-column: 4 / 7; grid-row: 7 / 23; }
+
+/* ── 077 ── */
+.p077__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p077__text { grid-column: 1 / 4; grid-row: 7 / 11; }
+.p077__note-d { grid-column: 1 / 4; grid-row: 12 / 14; }
+.p077__label { grid-column: 4 / 7; grid-row: 7; }
+.p077__list { grid-column: 4 / 7; grid-row: 8 / 16; }
+.p077__caption { grid-column: 4 / 7; grid-row: 17 / 19; }
+
+/* ── 078 ── */
+.p078__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 11); border-top: 0; border-left: 0; border-right: 0; }
+.p078__title { grid-column: 1 / 4; grid-row: 13 / 15; }
+.p078__text { grid-column: 1 / 4; grid-row: 17 / 26; }
+.p078__years { grid-column: 4 / 7; grid-row: 17 / 23; }
+.p078__caption { grid-column: 4 / 7; grid-row: 24; }
+
+/* ── 079 ── */
+.p079__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p079__text { grid-column: 1 / 4; grid-row: 7 / 20; }
+.p079__seq { grid-column: 1 / 7; grid-row: 20 / 27; }
+.p079__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 080 ── */
+.p080__meta { grid-column: 1 / 4; grid-row: 2; }
+.p080__title { grid-column: 1 / 7; grid-row: 3 / 6; }
+.p080__text { grid-column: 1 / 4; grid-row: 8 / 26; }
+.p080__island { grid-column: 4 / 7; grid-row: 8 / 16; }
+.p080__caption { grid-column: 4 / 7; grid-row: 17 / 20; }
+
+/* ── 081 ── */
+.p081__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p081__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p081__note-e { grid-column: 1 / 4; grid-row: 25 / 27; }
+.p081__canal { grid-column: 4 / 7; grid-row: 7 / 15; }
+.p081__caption { grid-column: 4 / 7; grid-row: 15; align-self: end; }
+.p081__image { grid-column: 4 / 7; grid-row: 17 / 25; }
+.p081__note-ed { grid-column: 4 / 7; grid-row: 26 / 28; }
+
+/* ── 082 ── */
+.p082__meta { grid-column: 1 / 4; grid-row: 2; }
+.p082__title { grid-column: 1 / 7; grid-row: 3 / 6; }
+.p082__text { grid-column: 1 / 7; grid-row: 8 / 20; }
+.p082__access { grid-column: 1 / 7; grid-row: 22 / 27; }
+.p082__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 083 ── */
+.p083__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p083__text { grid-column: 1 / 7; grid-row: 6 / 21; }
+.p083__siege { grid-column: 1 / 7; grid-row: 23 / 28; }
+.p083__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 084 ── */
+.p084__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 10); border-top: 0; border-left: 0; border-right: 0; }
+.p084__meta { grid-column: 1 / 4; grid-row: 12; }
+.p084__title { grid-column: 1 / 7; grid-row: 13 / 16; }
+.p084__text { grid-column: 1 / 4; grid-row: 18 / 25; }
+.p084__ria { grid-column: 4 / 7; grid-row: 17 / 25; }
+.p084__caption { grid-column: 4 / 7; grid-row: 26 / 28; }
+
+/* ── 085 ── */
+.p085__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p085__text { grid-column: 1 / 4; grid-row: 7 / 22; }
+.p085__profile { grid-column: 4 / 7; grid-row: 7 / 17; }
+.p085__caption { grid-column: 4 / 7; grid-row: 18 / 22; }
+
+/* ── 086 ── */
+.p086__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p086__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p086__text { grid-column: 1 / 7; grid-row: 6 / 20; }
+.p086__note-e { grid-column: 1 / 4; grid-row: 22 / 28; }
+.p086__image { grid-column: 4 / 7; grid-row: 22 / 29; }
+
+/* ── 087 ── página de respiración: horizonte y grava al pie, a sangre */
+.p087__gravel { position: absolute; left: 0; bottom: var(--margin-bottom); width: 100%; height: 27mm; display: block; }
+.p087__quote { grid-column: 1 / 7; grid-row: 3 / 9; margin: 0; }
+.p087__text { grid-column: 1 / 4; grid-row: 11 / 17; }
+
+/* ── 088 ── */
+.p088__image { position: absolute; top: 0; bottom: 0; left: 0; width: var(--half-bleed); border-left: 0; border-top: 0; border-bottom: 0; }
+.p088__meta { grid-column: 4 / 7; grid-row: 2; }
+.p088__title { grid-column: 4 / 7; grid-row: 3 / 9; }
+.p088__text { grid-column: 4 / 7; grid-row: 11 / 17; }
+.p088__dist { grid-column: 4 / 7; grid-row: 19 / 24; }
+.p088__caption { grid-column: 4 / 7; grid-row: 25; }
+
+/* ── 089 ── */
+.p089__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p089__text { grid-column: 1 / 4; grid-row: 7 / 14; }
+.p089__fig-a { grid-column: 1 / 4; grid-row: 16 / 29; }
+.p089__fig-b { grid-column: 4 / 7; grid-row: 16 / 29; }
+
+/* ── 090 ── */
+.p090__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p090__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p090__column { grid-column: 4 / 7; grid-row: 7 / 16; }
+.p090__caption { grid-column: 4 / 7; grid-row: 17 / 20; }
+.p090__data { grid-column: 4 / 7; grid-row: 21 / 28; }
+
+/* ── 091 ── */
+.p091__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p091__text { grid-column: 1 / 7; grid-row: 7 / 21; }
+.p091__note-e { grid-column: 1 / 4; grid-row: 21 / 27; }
+.p091__seq { grid-column: 4 / 7; grid-row: 21 / 26; }
+.p091__caption { grid-column: 4 / 7; grid-row: 27; }
+
+/* ── 092 ── */
+.p092__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p092__text { grid-column: 1 / 4; grid-row: 7 / 27; }
+.p092__image { grid-column: 4 / 7; grid-row: 7 / 17; }
+.p092__rel { grid-column: 4 / 7; grid-row: 18 / 25; }
+.p092__caption { grid-column: 4 / 7; grid-row: 25 / 28; }
+
+/* ── 093 ── */
+.p093__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p093__quote { grid-column: 1 / 7; grid-row: 5 / 9; }
+.p093__text { grid-column: 1 / 7; grid-row: 10 / 21; }
+.p093__note-e { grid-column: 1 / 4; grid-row: 22 / 29; }
+.p093__line { grid-column: 4 / 7; grid-row: 22 / 27; }
+.p093__caption { grid-column: 4 / 7; grid-row: 27 / 29; }
+
+/* ── 094 ── */
+.p094__meta { grid-column: 1 / 4; grid-row: 2; }
+.p094__title { grid-column: 1 / 7; grid-row: 3 / 6; }
+.p094__text { grid-column: 1 / 4; grid-row: 8 / 22; }
+.p094__datalabel { grid-column: 4 / 7; grid-row: 8; }
+.p094__data { grid-column: 4 / 7; grid-row: 9 / 15; }
+.p094__river { grid-column: 1 / 7; grid-row: 23 / 28; }
+.p094__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 095 ── */
+.p095__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p095__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p095__valley { grid-column: 4 / 7; grid-row: 7 / 16; }
+.p095__caption { grid-column: 4 / 7; grid-row: 17; }
+.p095__data { grid-column: 4 / 6; grid-row: 19 / 26; }
+
+/* ── 096 ── */
+.p096__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p096__text { grid-column: 1 / 4; grid-row: 7 / 25; }
+.p096__image { grid-column: 4 / 7; grid-row: 7 / 16; }
+.p096__tow { grid-column: 4 / 7; grid-row: 18 / 25; }
+.p096__caption { grid-column: 4 / 7; grid-row: 26 / 28; }
+
+/* ── 097 ── */
+.p097__title { grid-column: 1 / 7; grid-row: 2 / 4; }
+.p097__text { grid-column: 1 / 4; grid-row: 7 / 24; }
+.p097__note-d { grid-column: 1 / 4; grid-row: 25 / 29; }
+.p097__same { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p097__caption { grid-column: 4 / 7; grid-row: 22 / 24; }
+
+/* ── 098 ── */
+.p098__title { grid-column: 1 / 6; grid-row: 2 / 4; }
+.p098__text { grid-column: 1 / 7; grid-row: 7 / 20; }
+.p098__label { grid-column: 1 / 4; grid-row: 21; }
+.p098__list { grid-column: 1 / 4; grid-row: 22 / 28; }
+.p098__list-b { grid-column: 4 / 7; grid-row: 22 / 26; }
+.p098__caption { grid-column: 4 / 7; grid-row: 27; }
+
+/* ── 099 ── */
+.p099__title { grid-column: 1 / 6; grid-row: 2 / 4; }
+.p099__text { grid-column: 1 / 4; grid-row: 7 / 28; }
+.p099__spring { grid-column: 4 / 7; grid-row: 7 / 16; }
+.p099__caption { grid-column: 4 / 7; grid-row: 17 / 20; }
+
+/* ── 100 ── */
+.p100__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p100__text { grid-column: 1 / 7; grid-row: 6 / 20; }
+.p100__far { grid-column: 1 / 7; grid-row: 21 / 27; }
+.p100__caption { grid-column: 1 / 7; grid-row: 27 / 29; align-self: end; }
+
+/* ── 100 ── */
+.p101__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p101__text { grid-column: 1 / 7; grid-row: 6 / 20; }
+.p101__end { grid-column: 1 / 7; grid-row: 21 / 27; }
+.p101__caption { grid-column: 1 / 7; grid-row: 27 / 29; align-self: end; }
+
+/* ── 102 · Mapa final ── */
+.p102__title { grid-column: 1 / 5; grid-row: 2 / 5; --size: var(--title-size); }
+.p102__label { grid-column: 1 / 5; grid-row: 6; }
+.p102__list-a { grid-column: 1 / 3; grid-row: 8 / 24; }
+.p102__list-b { grid-column: 3 / 5; grid-row: 8 / 24; }
+.p102__note { grid-column: 1 / 4; grid-row: 26 / 29; }
+.p102__map { grid-column: 5 / 7; grid-row: 1 / 29; }
+
+/* ── 103 · Cronología final ── */
+.p103__title { grid-column: 1 / 5; grid-row: 2 / 5; --size: var(--title-size); }
+.p103__label { grid-column: 1 / 4; grid-row: 6; }
+.p103__list-a { grid-column: 1 / 4; grid-row: 8 / 24; }
+.p103__list-b { grid-column: 4 / 7; grid-row: 8 / 24; }
+
+/* ── 104 · Fuentes y notas ── */
+.p104__title { grid-column: 1 / 5; grid-row: 2 / 5; --size: var(--title-size); }
+.p104__text { grid-column: 1 / 4; grid-row: 8 / 20; }
+.p104__text p { margin: 0; }
+.p104__text p + p { margin-top: var(--baseline); }
+.p104__label { grid-column: 4 / 7; grid-row: 8; }
+.p104__code { grid-column: 4 / 7; grid-row: 10 / 16; list-style: none; margin: 0; padding: 0; }
+.p104__code li { height: calc(var(--baseline) * 2); box-shadow: inset 0 var(--rule-fine) 0 var(--blue-deep); padding-top: calc(var(--baseline) / 2); }
+.p104__credits { grid-column: 4 / 7; grid-row: 18 / 26; }
+
+/* ── 105 · Colofón ── */
+.p105__kicker { grid-column: 1 / 4; grid-row: 6; }
+.p105__text { grid-column: 1 / 4; grid-row: 8 / 20; }
+.p105__text p { margin: 0; }
+.p105__text p + p { margin-top: var(--baseline); }
+.p105__qr { grid-column: 6 / 7; grid-row: 8 / 14; }
+.p105__image { grid-column: 4 / 6; grid-row: 8 / 20; }
+.p105__route { grid-column: 1 / 7; grid-row: 22 / 24; width: 100%; height: 100%; display: block; overflow: visible; }
+.p105__route path { fill: none; stroke: var(--blue-deep); stroke-width: 0.25; }
+.p105__route circle { fill: var(--blue-deep); }
+.p105__end { grid-column: 1 / 4; grid-row: 25; }

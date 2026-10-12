@@ -1,0 +1,26 @@
+@page { size: 210mm 148mm; margin: 0; }
+
+html, body { margin: 0; padding: 0; }
+
+/* Pantalla: dobles páginas enfrentadas sobre fondo neutro */
+@media screen {
+  body { background: #8f9499; padding: 12mm; display: flex; flex-direction: column; align-items: center; gap: 12mm; }
+  .spread { display: flex; box-shadow: 0 2mm 8mm rgba(0, 0, 0, .25); }
+  .slot--empty {
+    width: var(--page-width); height: var(--page-height); flex: none;
+    display: flex; align-items: center; justify-content: center;
+    background: #a4a9ad; color: #5d6367; font: 500 8pt Inter, Arial, sans-serif;
+  }
+  /* ?p=NNN → una sola página, sin marco (capturas de revisión) */
+  body.single { padding: 0; gap: 0; background: var(--paper); align-items: flex-start; }
+  body.single .spread { box-shadow: none; }
+  body.single .spread > :not(.is-target), body.single .spread:not(:has(.is-target)) { display: none; }
+}
+
+@media print {
+  .spread { display: contents; }
+  .slot--empty { display: none; }
+  .page { break-after: page; break-inside: avoid; }
+  body.single .page:not(.is-target) { display: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- Tapa, lomo y contratapa. La tapa y la contratapa también entran en index.html (build.mjs las toma de acá).
+     Desplegado: contratapa (izquierda) + lomo + tapa (derecha). Variantes de tapa: ?v=a (imagen) · ?v=b (tipográfica).
+     Vista de una sola pieza: ?solo=tapa · ?solo=contratapa. -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Darwin en la Argentina — tapa</title>
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/typography.css">
+<link rel="stylesheet" href="tapa.css">
+<style>
+  /* Solo del desplegado */
+  @page { size: calc(var(--page-width) * 2 + var(--spine)) var(--page-height); margin: 0; }
+  html, body { margin: 0; background: var(--paper); }
+  .cover { display: flex; width: calc(var(--page-width) * 2 + var(--spine)); height: var(--page-height); }
+  body[data-solo="tapa"] .back, body[data-solo="tapa"] .spine, body[data-solo="contratapa"] .front, body[data-solo="contratapa"] .spine { display: none; }
+</style>
+</head>
+<body>
+<main class="cover">
+
+  <!-- CONTRATAPA -->
+  <section class="back">
+    <p class="back__quote">Quince paradas<br>para leer un territorio</p>
+
+    <p class="back__text">Este libro recorre los pasajes del viaje de Charles Darwin vinculados con el actual territorio argentino. La selección reorganiza el material para seguir el desplazamiento de manera cronológica y territorial: llegar, atravesar, observar, registrar y comparar. El texto original conserva el centro de la lectura; mapas, fechas, registros de campo e imágenes permiten reconocer los lugares y comprender cómo una observación del paisaje puede convertirse en una pregunta científica.</p>
+
+    <div class="back__plate" role="img" aria-label="Esqueleto de Megatherium erguido contra un árbol"></div>
+
+    <svg class="route route--back" viewBox="0 0 188 9" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M2 6 C4.19 5.87 10.76 5.60 15.14 5.2 C19.52 4.80 23.91 3.97 28.29 3.6 C32.67 3.23 37.05 2.92 41.43 3 C45.81 3.08 50.19 3.70 54.57 4.1 C58.95 4.50 63.33 5.32 67.71 5.4 C72.09 5.48 76.48 4.98 80.86 4.6 C85.24 4.22 89.62 3.48 94 3.1 C98.38 2.72 102.76 2.32 107.14 2.3 C111.52 2.28 115.91 2.65 120.29 3 C124.67 3.35 129.05 3.92 133.43 4.4 C137.81 4.88 142.19 5.50 146.57 5.9 C150.95 6.30 155.33 6.77 159.71 6.8 C164.09 6.83 168.48 6.40 172.86 6.1 C177.24 5.80 183.81 5.18 186 5"/>
+      <circle cx="2" cy="6" r="0.55"/><circle cx="15.14" cy="5.2" r="0.55"/><circle cx="28.29" cy="3.6" r="0.55"/><circle cx="41.43" cy="3" r="0.55"/><circle cx="54.57" cy="4.1" r="0.55"/><circle cx="67.71" cy="5.4" r="0.55"/><circle cx="80.86" cy="4.6" r="0.55"/><circle cx="94" cy="3.1" r="0.55"/><circle cx="107.14" cy="2.3" r="0.55"/><circle cx="120.29" cy="3" r="0.55"/><circle cx="133.43" cy="4.4" r="0.55"/><circle cx="146.57" cy="5.9" r="0.55"/><circle cx="159.71" cy="6.8" r="0.55"/><circle cx="172.86" cy="6.1" r="0.55"/><circle cx="186" cy="5" r="0.55"/>
+    </svg>
+    <p class="back__stops">15 paradas, de la bahía del Buen Suceso al río Santa Cruz · 1832–1834</p>
+
+    <p class="back__credit back__credit--a">Selección y recontextualización editorial a partir de <i>Diario del viaje de un naturalista alrededor del mundo</i>, traducción española de Espasa-Calpe, 1921.</p>
+    <p class="back__credit back__credit--b">Proyecto académico de Diseño Editorial – FAPyD, Universidad Nacional de Rosario. 2026.<br>Patricio Campodonico · Martina Emma Calderón Calp</p>
+    <div class="back__qr" role="img" aria-label="Código QR: enlace al mapa digital"></div>
+  </section>
+
+  <!-- LOMO -->
+  <section class="spine">
+    <p><b>Darwin en la Argentina</b><span>Charles Darwin</span></p>
+  </section>
+
+  <!-- TAPA -->
+  <section class="front">
+    <div class="front__image" role="img" aria-label="Puerto San Julián: el Beagle anclado al anochecer"></div>
+    <div class="front__panel">
+      <svg class="front__mark" viewBox="0 0 9 9" aria-hidden="true">
+        <circle cx="4.5" cy="4.5" r="4.3"/>
+        <path d="M4.5 0.2V2.4M4.5 6.6V8.8M0.2 4.5H2.4M6.6 4.5H8.8"/>
+        <circle class="dot" cx="4.5" cy="4.5" r="0.55"/>
+      </svg>
+      <p class="front__author">Charles Darwin</p>
+      <h1 class="front__title">Darwin<br>en la Argentina</h1>
+      <p class="front__subtitle">Viaje, territorio y <br>observación científica</p>
+
+      <svg class="route route--front" viewBox="0 0 188 9" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M2 6 C4.19 5.87 10.76 5.60 15.14 5.2 C19.52 4.80 23.91 3.97 28.29 3.6 C32.67 3.23 37.05 2.92 41.43 3 C45.81 3.08 50.19 3.70 54.57 4.1 C58.95 4.50 63.33 5.32 67.71 5.4 C72.09 5.48 76.48 4.98 80.86 4.6 C85.24 4.22 89.62 3.48 94 3.1 C98.38 2.72 102.76 2.32 107.14 2.3 C111.52 2.28 115.91 2.65 120.29 3 C124.67 3.35 129.05 3.92 133.43 4.4 C137.81 4.88 142.19 5.50 146.57 5.9 C150.95 6.30 155.33 6.77 159.71 6.8 C164.09 6.83 168.48 6.40 172.86 6.1 C177.24 5.80 183.81 5.18 186 5"/>
+        <circle cx="2" cy="6" r="0.55"/><circle cx="15.14" cy="5.2" r="0.55"/><circle cx="28.29" cy="3.6" r="0.55"/><circle cx="41.43" cy="3" r="0.55"/><circle cx="54.57" cy="4.1" r="0.55"/><circle cx="67.71" cy="5.4" r="0.55"/><circle cx="80.86" cy="4.6" r="0.55"/><circle cx="94" cy="3.1" r="0.55"/><circle cx="107.14" cy="2.3" r="0.55"/><circle cx="120.29" cy="3" r="0.55"/><circle cx="133.43" cy="4.4" r="0.55"/><circle cx="146.57" cy="5.9" r="0.55"/><circle cx="159.71" cy="6.8" r="0.55"/><circle cx="172.86" cy="6.1" r="0.55"/><circle cx="186" cy="5" r="0.55"/>
+      </svg>
+      <p class="front__range"><span>01</span><span>1832–1834 · 15 paradas</span><span>15</span></p>
+    </div>
+  </section>
+
+</main>
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.get('v')) document.body.dataset.v = q.get('v');
+  if (q.get('solo')) document.body.dataset.solo = q.get('solo');
+</script>
+</body>
+</html>

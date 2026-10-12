@@ -1,0 +1,120 @@
+/* Páginas 042–055: cierre de la parada 05 (Punta Alta), parada 06 (Sierra de la Ventana)
+   y comienzo de la parada 07 (Travesía de las Pampas). */
+
+/* ── Componentes ── */
+/* Notas apiladas al pie de un fragmento */
+.notes { display: flex; flex-direction: column; gap: 1.5mm; align-self: start; }
+.notes p { margin: 0; }
+/* Hueso y veta en los esquemas; halo de papel para separar una figura de la trama */
+.diagram__bone { fill: none; stroke: var(--blue-deep); stroke-width: 1.5; stroke-linecap: round; }
+.diagram__vein { fill: none; stroke: var(--blue-deep); stroke-width: 0.7; stroke-linecap: round; }
+.diagram__halo { fill: var(--paper); stroke: var(--paper); stroke-width: 1.2; }
+.diagram__halo--wide { fill: none; stroke-width: 3.6; stroke-linecap: round; }
+/* Franja de imagen a sangre en la cabeza de la página */
+.topband { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 12); border-top: 0; border-left: 0; border-right: 0; }
+/* Esquemas sobre página oscura */
+.page[data-tone="dark"] .diagram__label { fill: var(--paper); }
+.page[data-tone="dark"] .diagram__line, .page[data-tone="dark"] .diagram__tick { stroke: var(--paper); }
+.page[data-tone="dark"] .diagram__dot { fill: var(--paper); }
+.page[data-tone="dark"] .diagram__ring2 { fill: var(--blue-deep); stroke: var(--paper); }
+
+/* ── 042 · La posición de los huesos ── */
+.p042__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p042__text { grid-column: 1 / 4; grid-row: 7 / 14; }
+.p042__image { grid-column: 1 / 4; grid-row: 16 / 29; }
+.p042__layer { grid-column: 4 / 7; grid-row: 7 / 18; }
+.p042__caption { grid-column: 4 / 7; grid-row: 19 / 23; }
+
+/* ── 043 · Inferir el tiempo ── */
+.p043__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p043__text { grid-column: 1 / 4; grid-row: 7 / 17; }
+.p043__note-d { grid-column: 4 / 7; grid-row: 7 / 9; }
+.p043__time { grid-column: 1 / 7; grid-row: 19 / 27; }
+.p043__caption { grid-column: 1 / 5; grid-row: 27 / 29; align-self: end; }
+
+/* ── 044 · Reconstruir el animal ── título e imagen afuera, texto adentro */
+.p044__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p044__image { grid-column: 1 / 4; grid-row: 7 / 22; }
+.p044__note-d { grid-column: 1 / 4; grid-row: 23 / 26; }
+.p044__note-ed { grid-column: 1 / 4; grid-row: 27; }
+.p044__text { grid-column: 4 / 7; grid-row: 2 / 29; }
+
+/* ── 045 · Del hueso al paisaje ── */
+.p045__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p045__quote { grid-column: 1 / 6; grid-row: 6 / 10; }
+.p045__text { grid-column: 1 / 4; grid-row: 12 / 29; }
+.p045__image { grid-column: 4 / 7; grid-row: 12 / 24; }
+.p045__note-ed { grid-column: 4 / 7; grid-row: 25 / 28; }
+
+/* ── 046 · Apertura – Sierra de la Ventana ── */
+.p046__meta { grid-column: 1 / 4; grid-row: 2; }
+.p046__title { grid-column: 1 / 7; grid-row: 3 / 9; }
+.p046__text { grid-column: 1 / 7; grid-row: 11 / 22; }
+.p046__strip { grid-column: 1 / 7; grid-row: 24 / 28; }
+.p046__caption { grid-column: 1 / 7; grid-row: 28; }
+
+/* ── 047 · Aproximarse ── */
+.p047__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p047__text { grid-column: 1 / 7; grid-row: 7 / 21; }
+.p047__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
+.p047__datalabel { grid-column: 4 / 7; grid-row: 22; }
+.p047__data { grid-column: 4 / 7; grid-row: 23 / 29; }
+
+/* ── 048 · Acampar al pie ── */
+.p048__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 12); border-top: 0; border-left: 0; border-right: 0; }
+.p048__title { grid-column: 1 / 4; grid-row: 15 / 17; }
+.p048__text { grid-column: 1 / 4; grid-row: 19 / 26; }
+.p048__profile { grid-column: 4 / 7; grid-row: 15 / 24; }
+.p048__caption { grid-column: 4 / 7; grid-row: 25 / 28; }
+
+/* ── 049 · Ascender ── título afuera, texto adentro; el corte, a todo el ancho */
+.p049__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p049__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p049__text { grid-column: 4 / 7; grid-row: 2 / 14; }
+.p049__cut { grid-column: 1 / 7; grid-row: 18 / 26; }
+.p049__caption { grid-column: 1 / 7; grid-row: 27; }
+
+/* ── 050 · Hasta donde pudo llegar ── */
+.p050__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p050__text { grid-column: 1 / 4; grid-row: 7 / 28; }
+.p050__peaks { grid-column: 4 / 7; grid-row: 7 / 18; }
+.p050__caption { grid-column: 4 / 7; grid-row: 18 / 21; }
+.p050__label { grid-column: 4 / 7; grid-row: 22; }
+.p050__list { grid-column: 4 / 7; grid-row: 23 / 29; }
+
+/* ── 051 · Mirar y regresar ── */
+.p051__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p051__text { grid-column: 1 / 4; grid-row: 7 / 25; }
+.p051__note-e { grid-column: 1 / 4; grid-row: 26; }
+.p051__image { grid-column: 4 / 7; grid-row: 7 / 19; }
+.p051__route { grid-column: 4 / 7; grid-row: 21 / 26; }
+.p051__caption { grid-column: 4 / 7; grid-row: 26 / 28; }
+
+/* ── 052 · Apertura – Travesía de las Pampas ── */
+.p052__meta { grid-column: 1 / 4; grid-row: 2; }
+.p052__title { grid-column: 1 / 7; grid-row: 3 / 9; }
+.p052__text { grid-column: 1 / 4; grid-row: 11 / 21; }
+.p052__image { grid-column: 4 / 7; grid-row: 11 / 20; }
+.p052__line { grid-column: 1 / 7; grid-row: 22 / 27; }
+.p052__caption { grid-column: 1 / 7; grid-row: 27 / 29; align-self: end; }
+
+/* ── 053 · Habitar el camino ── página oscura */
+.p053__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 11); border-top: 0; border-left: 0; border-right: 0; }
+.p053__kicker { grid-column: 1 / 4; grid-row: 13; }
+.p053__title { grid-column: 1 / 4; grid-row: 14 / 16; }
+.p053__scene { grid-column: 1 / 4; grid-row: 19 / 25; }
+.p053__caption { grid-column: 1 / 4; grid-row: 26 / 28; }
+.p053__text { grid-column: 4 / 7; grid-row: 14 / 29; }
+
+/* ── 054 · Entrar en la Pampa húmeda ── */
+.p054__title { grid-column: 1 / 6; grid-row: 2 / 4; }
+.p054__text { grid-column: 1 / 4; grid-row: 6 / 29; }
+.p054__region { grid-column: 4 / 7; grid-row: 6 / 19; }
+.p054__caption { grid-column: 4 / 7; grid-row: 20 / 23; }
+
+/* ── 055 · Fuego y lago ── el texto arranca una línea antes, a la par de 054 */
+.p055__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p055__text { grid-column: 1 / 4; grid-row: 6 / 20; }
+.p055__datalabel { grid-column: 4 / 7; grid-row: 6; }
+.p055__data { grid-column: 4 / 7; grid-row: 7 / 13; }
+.p055__image { grid-column: 1 / 7; grid-row: 21 / 29; }

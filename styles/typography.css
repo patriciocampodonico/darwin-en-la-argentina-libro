@@ -1,0 +1,70 @@
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 400 900; src: url('../assets/fonts/PlayfairDisplay.ttf') format('truetype'); }
+@font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 400 900; src: url('../assets/fonts/PlayfairDisplay-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-style: normal; font-weight: 400 700; src: url('../assets/fonts/Lora.ttf') format('truetype'); }
+@font-face { font-family: 'Lora'; font-style: italic; font-weight: 400 700; src: url('../assets/fonts/Lora-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; src: url('../assets/fonts/Inter.ttf') format('truetype'); }
+@font-face { font-family: 'Inter'; font-style: italic; font-weight: 100 900; src: url('../assets/fonts/Inter-Italic.ttf') format('truetype'); }
+
+.page {
+  font-family: var(--font-reading);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  color: var(--blue-deep);
+  font-kerning: normal;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+.page h1, .page h2, .page h3, .page p { margin: 0; font-weight: 400; }
+
+/* Grandes aperturas: Playfair, interlínea de 3 líneas de base */
+.t-opening {
+  font-family: var(--font-display);
+  font-size: var(--opening-size);
+  line-height: calc(var(--baseline) * 3);
+  letter-spacing: -0.005em;
+}
+
+/* Metadata, folios, rótulos del sistema */
+.t-meta {
+  font-family: var(--font-ui);
+  font-size: var(--meta-size);
+  line-height: var(--baseline);
+  font-weight: 500;
+}
+.t-meta--small { font-size: var(--meta-small-size); }
+
+/* Línea display de tamaño libre (--size) que conserva la línea de base de .t-opening:
+   0.4155 = ascendente de Playfair (1.082) − mitad de su caja (1.333 / 2). */
+.t-display-line {
+  font-family: var(--font-display);
+  font-size: var(--size);
+  line-height: calc(var(--baseline) * 3);
+  padding-top: calc((var(--opening-size) - var(--size)) * 0.4155);
+}
+
+/* Rótulo destacado (autor, nombre de sección) */
+.t-label {
+  font-family: var(--font-ui);
+  font-size: var(--label-size);
+  line-height: var(--baseline);
+  font-weight: 500;
+}
+
+/* Datos y créditos en bloque: Inter, 3 líneas cada 2 líneas de base */
+.t-data {
+  font-family: var(--font-ui);
+  font-size: var(--note-size);
+  line-height: var(--data-leading);
+}
+
+.nowrap { white-space: nowrap; }
+
+/* Voz editorial del proyecto (introducciones, explicaciones): Inter.
+   Lora queda reservada al texto de Darwin. */
+.t-editorial {
+  font-family: var(--font-ui);
+  font-size: var(--editorial-size);
+  line-height: var(--baseline);
+  hyphens: manual;
+}

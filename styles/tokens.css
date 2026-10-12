@@ -1,0 +1,54 @@
+/* Fuente única de valores repetibles. Cualquier cambio acá afecta a todo el libro:
+   avisar antes si toca páginas APROBADAS (ver BOOK_PROGRESS.md). */
+:root {
+  /* Formato */
+  --page-width: 210mm;
+  --page-height: 148mm;
+  --bleed: 3mm;
+
+  /* Márgenes */
+  --margin-top: 10mm;
+  --margin-bottom: 12mm;
+  --margin-inner: 12mm;
+  --margin-outer: 10mm;
+
+  /* Retícula: 6 columnas de 28,42 mm · 28 líneas de base */
+  --columns: 6;
+  --column-gap: 3.5mm;
+  --baseline: 4.5mm;
+  --rows: 28;
+
+  /* Color */
+  --blue-deep: #1A3A5C;
+  --blue-80: #48617D;
+  --blue-60: #76899D;
+  --blue-40: #A3B0BE;
+  --blue-20: #D1D8DE;
+  --blue-10: #E8EBEF;
+  --paper: #EFEEE6;
+  --tenue: 0.3; /* opacidad de imágenes de fondo "muy tenues" */
+
+  /* Familias */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-reading: 'Lora', Georgia, serif;
+  --font-ui: 'Inter', Arial, sans-serif;
+
+  /* Cuerpos (la interlínea de lectura coincide con la línea de base) */
+  --body-size: 9.25pt;
+  --body-leading: var(--baseline);
+  --meta-size: 7pt;
+  --meta-small-size: 6.5pt;
+  --note-size: 7.5pt;
+  --title-size: 26pt;
+  --page-title-size: 20pt;
+  --datum-size: 18pt;
+  --subtitle-size: 14pt;
+  --label-size: 9pt;
+  --data-leading: 3mm;
+  --editorial-size: 9.5pt;
+  --opening-size: 36pt;
+
+  /* Líneas */
+  --rule-fine: 0.25mm;
+  --rule-strong: 0.5mm;
+}
