@@ -258,3 +258,6 @@
 /* 031: la imagen empieza y termina con el texto (13 líneas, 7–19): borde superior a la altura de las mayúsculas
    de la primera línea y borde inferior en la línea de base de la última (pedido de Patricio, 12 oct. 2026) */
 .p031__image { grid-row: 7 / 20; margin-top: 0.85mm; margin-bottom: 1mm; }
+
+/* 034: la imagen empieza y termina con el texto (21 líneas, 7–27), con el mismo criterio que 031 */
+.p034__image { grid-row: 7 / 28; margin-top: 0.85mm; margin-bottom: 1mm; }
