@@ -191,3 +191,12 @@
    «Cuadra» va dentro de su cuadra, en papel, para que no la corte la cuadra de arriba */
 .diagram__label--big { font-size: 4.23px; }
 .diagram__label--in { font-size: 2.1px; }
+
+/* ── 064–067 ── ajustes del 12 oct. 2026 (misma información; solo posiciones) */
+/* 065: el texto sube una línea y termina en la 21, como el de 064; el folio va sobre chapa de papel (caía sobre la imagen) */
+.p065__text { grid-row: 6 / 23; }
+#p065 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+/* 066: la lista termina con el texto (línea 26); la lámina y el rótulo suben */
+.p066__image { grid-row: 7 / 15; background-size: auto 110%; }
+.p066__label { grid-row: 16; transform: translateY(2.25mm); }
+.p066__list { grid-row: 17 / 27; transform: translateY(2.25mm); }  /* media línea: «Fango seco» queda en el último renglón del texto */
