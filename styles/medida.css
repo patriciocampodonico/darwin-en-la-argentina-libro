@@ -62,3 +62,12 @@
 .p035__caption { grid-row: 26 / 28; align-self: end; }
 .p035__note-e { grid-row: 24 / 26; }
 .p035__note-ed { grid-row: 27; }
+
+/* ── 037 ── la franja de imagen de 036 continúa en esta página, a la misma altura (pedido de Patricio, 12 oct. 2026).
+   El contenido baja y se alinea con 036: título en la línea 9 (donde empieza el de 036), cierre en la línea 28 */
+.p037__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border: 0; }
+.p037__title { grid-row: 9 / 11; }
+.p037__text { grid-row: 12 / 28; }
+.p037__visits { grid-row: 12 / 18; }
+.p037__cut { grid-row: 18 / 27; }
+.p037__caption { grid-row: 27 / 29; align-self: end; }

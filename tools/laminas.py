@@ -59,3 +59,10 @@ w = round(im.height * 2 * 104.25 / 148) // 2 * 2
 x0 = (im.width - w) // 2
 guardar(im.crop((x0, 0, x0 + w // 2, im.height)), '014-senda-bosque', 104.25)
 guardar(im.crop((x0 + w // 2, 0, x0 + w, im.height)), '015-bosque-torrente', 104.25)
+
+# 037 · continuación hacia la derecha de la franja de Punta Alta (036): mismo recorte que hace tools/fotos.py
+# con la 036 (franja de 210 × 37 mm centrada en la altura), para que el horizonte siga en la misma línea.
+im = Image.open(os.path.join(IMG, 'originales', '037-punta-alta.webp')).convert('L')
+h = round(im.width * 37 / 210)
+y0 = round(im.height / 2 - h / 2)
+guardar(ImageOps.autocontrast(im.crop((0, y0, im.width, y0 + h)), cutoff=0.5), '037-punta-alta', 210)
