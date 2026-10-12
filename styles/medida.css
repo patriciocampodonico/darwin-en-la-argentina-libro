@@ -203,3 +203,16 @@
 /* 067: el río va a sangre también abajo (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
 .p067__river { height: calc(var(--baseline) * 8 + var(--margin-bottom)); background-image: url(../assets/images/067-agua-parana.jpg?v=2); }  /* ?v: el archivo cambió con el mismo nombre */
 #p067 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+
+/* ── 068–073 ── ajustes del 12 oct. 2026 (misma información) */
+/* 068: la nota ED termina con el texto (línea 27). 069: rótulo y láminas bajan una línea; sus pies cierran en la 27 */
+.p068__caption { align-self: end; }
+.p069__label { grid-row: 14; }
+.p069__fig-a, .p069__fig-b, .p069__fig-c { grid-row: 15 / 29; }
+/* 071: el esquema crece y su nota ED termina con el texto (línea 25) */
+.p071__cliff { grid-row: 7 / 23; }
+.p071__caption { grid-row: 24 / 26; align-self: end; }
+/* 072: el esquema se alarga; su nota ED y las notas del texto cierran en la línea 28, como la nota de 073 */
+.p072__lat { grid-row: 7 / 25; }
+.p072__caption { grid-row: 27 / 29; align-self: end; }
+.p072__notes { align-self: end; }
