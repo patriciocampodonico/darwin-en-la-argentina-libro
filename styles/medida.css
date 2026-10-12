@@ -216,3 +216,37 @@
 .p072__lat { grid-row: 7 / 25; }
 .p072__caption { grid-row: 27 / 29; align-self: end; }
 .p072__notes { align-self: end; }
+
+/* ── 074–105 ── revisión final del 12 oct. 2026 (misma información; alineación dentro de cada doble) */
+/* 077: la nota D termina donde termina la lista de la derecha (línea 15) */
+.p077__note-d { grid-row: 14 / 16; align-self: end; }
+/* 078: la nota ED termina con el texto (línea 25) */
+.p078__caption { grid-row: 25; }
+/* 080: el esquema de la isla, más alto, acompaña al texto; su nota ED termina con él (25). 081: las dos notas del pie, a la par */
+.p080__island { grid-row: 8 / 24; }
+.p080__caption { grid-row: 24 / 26; align-self: end; }
+.p081__note-e { grid-row: 26 / 28; }
+/* 082: la franja baja una línea, a la altura de la de 083 */
+.p082__access { grid-row: 23 / 28; }
+/* 084: el esquema del abra empieza con el texto. 085: el perfil crece y su nota ED termina con el texto (21) */
+.p084__ria { grid-row: 18 / 26; }
+.p084__caption { grid-row: 27 / 29; }
+.p085__profile { grid-row: 7 / 20; }
+.p085__caption { grid-row: 20 / 22; align-self: end; }
+/* 086: el texto baja a la línea 7 (como en el resto del libro); nota e imagen empiezan donde empieza la franja de grava de 087 */
+.p086__text { grid-row: 7 / 21; }
+.p086__note-e { grid-row: 23 / 29; }
+.p086__image { grid-row: 23 / 29; }
+/* 088: esquema y nota bajan; la nota queda a la altura de los pies de las figuras de 089 */
+.p088__dist { grid-row: 21 / 26; }
+.p088__caption { grid-row: 27; }
+/* 094: los tres números van apilados junto al texto y terminan con él (20), como en 055 */
+.p094__data { grid-row: 9 / 21; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); transform: translateY(1.3mm); }
+.p094__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 0.7mm; }
+/* 096: imagen, esquema y nota se compactan; la nota ED termina con el texto (23) */
+.p096__image { grid-row: 7 / 14; }
+.p096__tow { grid-row: 14 / 21; transform: translateY(2.25mm); }
+.p096__caption { grid-row: 22 / 24; align-self: end; }
+/* 099: el corte crece y su nota ED termina con el texto (25) */
+.p099__spring { grid-row: 7 / 23; }
+.p099__caption { grid-row: 24 / 26; align-self: end; }
