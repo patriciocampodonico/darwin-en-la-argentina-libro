@@ -200,3 +200,6 @@
 .p066__image { grid-row: 7 / 15; background-size: auto 110%; }
 .p066__label { grid-row: 16; transform: translateY(2.25mm); }
 .p066__list { grid-row: 17 / 27; transform: translateY(2.25mm); }  /* media línea: «Fango seco» queda en el último renglón del texto */
+/* 067: el río va a sangre también abajo (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
+.p067__river { height: calc(var(--baseline) * 8 + var(--margin-bottom)); background-image: url(../assets/images/067-agua-parana.jpg?v=2); }  /* ?v: el archivo cambió con el mismo nombre */
+#p067 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
