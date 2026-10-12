@@ -49,3 +49,9 @@
 .p031__image { grid-column: 4 / 7; grid-row: 7 / 21; }
 .p031__meander { grid-column: 1 / 7; grid-row: 22 / 28; }
 .p031__caption { grid-column: 1 / 7; grid-row: 28; align-self: end; }
+
+/* ── 033 ── recomposición pedida por Patricio (12 oct. 2026), a la par de 032: el texto empieza en la línea 10,
+   en dos columnas anchas (3 + 3); el perfil va en franja al pie y la nota ED en la línea 28 */
+.p033__text { grid-column: 1 / 7; grid-row: 10 / 18; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p033__profile { grid-column: 1 / 7; grid-row: 19 / 27; }
+.p033__caption { grid-column: 1 / 7; grid-row: 28; }
