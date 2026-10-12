@@ -61,7 +61,7 @@ writeFileSync(join(ROOT, 'index.html'), `<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=1678">
 <title>Darwin en la Argentina — libro</title>
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/typography.css">
@@ -88,12 +88,13 @@ ${spreads.join('\n')}
   if (q.has('grid')) document.body.classList.add('show-grid');
   if (q.get('p')) { document.body.classList.add('single'); for (const id of q.get('p').split('-')) document.getElementById('p' + id)?.classList.add('is-target'); }
   addEventListener('keydown', (e) => { if (e.key === 'g') document.body.classList.toggle('show-grid'); });
-  // Pantalla: la doble página entra completa en la ventana al abrir (444 × 172 mm con el marco).
-  // Se calcula en píxeles físicos para que el zoom del navegador siga acercando de verdad.
-  const MM = 96 / 25.4, dpr0 = devicePixelRatio;
+  // Pantalla: la doble página entra completa en la ventana al abrir (444 × 172 mm con el marco = 1678 × 650 px).
+  // En el teléfono lo resuelve el viewport de 1678 px; en escritorio, esta escala. Se calcula en píxeles
+  // físicos para que el zoom del navegador siga acercando de verdad.
+  const dpr0 = devicePixelRatio, raiz = document.documentElement;
   const encajar = () => {
-    const k = devicePixelRatio / dpr0;
-    document.documentElement.style.setProperty('--fit', Math.min(1, innerWidth * k / (444 * MM), innerHeight * k / (172 * MM)).toFixed(4));
+    const k = devicePixelRatio / dpr0, w = raiz.clientWidth * k, h = innerHeight * k;
+    if (w > 0 && h > 0) raiz.style.setProperty('--fit', Math.min(1, w / 1678, h / 650).toFixed(4));
   };
   encajar(); addEventListener('resize', encajar);
 </script>
