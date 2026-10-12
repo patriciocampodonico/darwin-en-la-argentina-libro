@@ -269,3 +269,8 @@
 
 /* 055: la imagen llega también hasta el lomo (la mitad de la doble): ocupa todo el ancho de la página (12 oct. 2026) */
 .p055__image { margin-left: calc(var(--margin-inner) * -1); }
+
+/* 075: recomposición pedida por Patricio (12 oct. 2026): el gráfico empieza con el texto (línea 7) y su nota ED
+   termina con él (línea 16), que es también donde termina el texto de 074 */
+.p075__column { grid-row: 7 / 15; }
+.p075__caption { grid-row: 15 / 17; align-self: end; margin-bottom: 1mm; }
