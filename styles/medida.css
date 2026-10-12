@@ -96,3 +96,6 @@
 .p040__image { grid-row: 7 / 23; }
 .p040__caption { grid-row: 24 / 26; align-self: end; }
 .p041__shells { grid-row: 19 / 24; transform: translateY(-1.2mm); }
+/* 038: esqueletos más grandes (caja de 15 líneas, 13–27); el mayor queda bajo la columna corta de la lista */
+.p038__image { grid-row: 13 / 28; }
+.p038__text { position: relative; z-index: 1; }
