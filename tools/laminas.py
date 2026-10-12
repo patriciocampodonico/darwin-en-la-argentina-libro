@@ -66,3 +66,39 @@ im = Image.open(os.path.join(IMG, 'originales', '037-punta-alta.webp')).convert(
 h = round(im.width * 37 / 210)
 y0 = round(im.height / 2 - h / 2)
 guardar(ImageOps.autocontrast(im.crop((0, y0, im.width, y0 + h)), cutoff=0.5), '037-punta-alta', 210)
+
+# 038 · los cuatro esqueletos, recortados uno por uno y vueltos a poner en fila con más aire entre ellos,
+# a todo el ancho de la caja (188 × 54 mm). Parte de assets/images/038-megaterios.jpg (lo prepara tools/fotos.py);
+# la escala del dibujo no cambia entre esqueletos: siguen a tamaños comparados.
+from scipy import ndimage
+src = Image.open(os.path.join(IMG, '038-megaterios.jpg')).convert('RGB')
+gris = np.asarray(src.convert('L')).astype(float)
+tinta = gris < 150
+marcas, n = ndimage.label(ndimage.binary_dilation(tinta, iterations=6))
+tam = ndimage.sum(tinta, marcas, range(1, n + 1))
+ids = sorted((np.argsort(tam)[-4:] + 1), key=lambda k: ndimage.center_of_mass(marcas == k)[1])
+# cada píxel va con el esqueleto más cercano (así la sombra del suelo queda con su esqueleto)
+dist = np.stack([ndimage.distance_transform_edt(marcas != k) for k in ids])
+cerca, dmin = dist.argmin(axis=0), dist.min(axis=0)
+papel = np.array(Image.new('RGB', (1, 1), PAPER))[0, 0]
+piezas = []
+for i in range(4):
+    m = (cerca == i) & (dmin < 45) & (gris < 232)
+    ys, xs = np.where(m)
+    x0, x1 = xs.min(), xs.max() + 1
+    a = np.asarray(src)[:, x0:x1].copy(); a[~m[:, x0:x1]] = papel
+    piezas.append(a)
+ys = np.where(np.any(np.stack([(cerca == i) & (dmin < 45) & (gris < 232) for i in range(4)]).any(axis=0), axis=1))[0]
+y0, y1 = ys.min(), ys.max() + 1
+px = (y1 - y0) / 52          # el dibujo ocupa 52 mm de los 54 de la caja
+W, H = round(188 * px), round(54 * px)
+lienzo = np.empty((H, W, 3), np.uint8); lienzo[:] = papel
+hueco = (W - sum(p.shape[1] for p in piezas)) / 3
+x = 0.0
+for p in piezas:
+    xi = round(x); rec = p[y0:y1]
+    zona = lienzo[H - (y1 - y0) - round(px):H - round(px), xi:xi + p.shape[1]]
+    np.minimum(zona, rec, out=zona)
+    x += p.shape[1] + hueco
+Image.fromarray(lienzo).save(os.path.join(IMG, '038-megaterios-fila.jpg'), quality=92)
+print('038-megaterios-fila', (W, H), round(W / 188 * 25.4), 'ppp', 'hueco', round(hueco / px, 1), 'mm')

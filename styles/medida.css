@@ -78,7 +78,7 @@
    centrada; termina en la línea 27, como el plano de 039, y la nota ED va en la 28, como la de 039 */
 .p038__text { grid-column: 1 / 7; grid-row: 7 / 16; column-count: 2; column-gap: var(--column-gap); column-fill: auto; orphans: 1; widows: 1; }
 .p038__text p:nth-child(3) { break-before: column; margin-top: 0; }
-.p038__image { grid-column: 1 / 7; grid-row: 16 / 28; background-size: 116mm auto; background-position: 50% 53.5%; }
+.p038__image { grid-column: 1 / 7; grid-row: 16 / 28; background-size: contain; background-position: center bottom; }
 .p038__note-ed { grid-column: 1 / 7; grid-row: 28; }
 /* 040–041: arriba, texto + imagen (040) y texto + corte (041) entre las líneas 7 y 19;
    abajo, desde la línea 21, el esquema a la izquierda y su nota ED a la derecha */
@@ -88,3 +88,6 @@
 .p041__section { grid-row: 7 / 20; }
 .p041__shells { grid-column: 1 / 4; grid-row: 21 / 26; }
 .p041__caption { grid-row: 21 / 25; align-self: start; }
+/* 039: el plano, achatado, termina en la línea 23, donde termina el texto de la derecha; su nota ED queda debajo */
+.p039__plan { grid-row: 19 / 24; }
+.p039__caption { grid-row: 25; }
