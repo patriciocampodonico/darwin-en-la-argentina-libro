@@ -105,9 +105,9 @@
 /* ── 023 · Vida en la salmuera ── */
 .p023__title { grid-column: 1 / 5; grid-row: 2 / 4; }
 .p023__text { grid-column: 1 / 5; grid-row: 7 / 22; }
-/* Mosaico 2 × 2 pegado al texto: ocupa las columnas 4–6 y las mismas 20 líneas que el texto (7–26) */
-.p023__label { grid-column: 4 / 7; grid-row: 6; }
-.p023__mosaic { grid-column: 4 / 7; grid-row: 7 / 27; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--column-gap); grid-template-rows: subgrid; }
+/* Mosaico 2 × 2 pegado al texto: ocupa las columnas 4–6; el pie de las imágenes de abajo coincide con la última línea del texto (fila 26) */
+.p023__label { grid-column: 4 / 7; grid-row: 8; }
+.p023__mosaic { grid-column: 4 / 7; grid-row: 9 / 29; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--column-gap); grid-template-rows: subgrid; }
 .p023__mosaic .tile { margin: 0; grid-row: span 10; display: grid; grid-template-rows: subgrid; }
 .p023__mosaic .tile .foto { grid-row: span 8; background-size: contain; outline: var(--rule-fine) solid var(--blue-deep); outline-offset: calc(var(--rule-fine) * -1); }
 .p023__mosaic .tile figcaption { grid-row: span 2; }
