@@ -165,3 +165,6 @@
 .p055__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
 .p055__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 0.7mm; }
 .p055__data { transform: translateY(1.3mm); }
+/* 055: la imagen va a sangre abajo y a la derecha (pedido de Patricio, 12 oct. 2026); el folio va sobre una chapa de papel, como en las otras páginas con imagen bajo el folio */
+.p055__image { margin-right: calc(var(--margin-outer) * -1); margin-bottom: calc(var(--margin-bottom) * -1); }
+#p055 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
