@@ -493,3 +493,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 023: el mosaico baja dos líneas (filas 9–28); el pie de las imágenes de abajo coincide con la última línea del texto. Solo CSS. Las láminas de 022 terminan ahora dos líneas más arriba que las viñetas de 023.
 - 025: el esquema del camino y su nota ED bajan al pie de la caja, a la altura de la imagen de 024. Solo CSS.
 - 023 (corrección): rótulo ED en la fila 7 (primera línea del texto), imágenes en 8–15 y 18–25, epígrafes en 16 y 26 (última línea del texto). Solo CSS.
+- 027: texto a 2 columnas (21 líneas) e imagen a 4 columnas, mismas filas 7–27: empiezan y terminan juntos. Excepción pedida por el usuario a la medida de 3 columnas del cuerpo. Imagen re-recortada (fotos.py, 124,3 × 94,5 mm).
