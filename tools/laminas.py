@@ -107,3 +107,10 @@ print('038-megaterios-fila', (W, H), round(W / 188 * 25.4), 'ppp', 'hueco', roun
 # recortada al alto del dibujo (y 132–880); va en el esquema de la página con 135 mm de ancho.
 im = lamina('060-afueras').crop((0, 132, 1536, 880))
 guardar(im, '060-afueras', 135)
+
+# 089 · «un magnífico lago» y «sal cristalizada en grandes cubos»: dos láminas que llenan su caja (92,34 × 45 mm).
+# (nombre, y0 del recorte: el alto sale de la proporción de la caja)
+for name, y0 in (('089a-lago', 190), ('089b-sal', 215)):
+    im = Image.open(os.path.join(IMG, 'originales', name + '.webp')).convert('L')
+    h = round(im.width * 45 / 92.34)
+    guardar(ImageOps.autocontrast(im.crop((0, y0, im.width, y0 + h)), cutoff=0.5), name, 92.34)
