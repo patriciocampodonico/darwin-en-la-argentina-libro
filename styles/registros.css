@@ -77,7 +77,7 @@
 .p019__title { grid-column: 1 / 7; grid-row: 2 / 4; }
 .p019__section { grid-column: 1 / 4; grid-row: 10 / 29; }   /* misma altura y mismo pie que el mapa de 018 */
 .p019__caption { grid-column: 4 / 7; grid-row: 27 / 29; align-self: end; }
-.p019__text { grid-column: 4 / 7; grid-row: 7 / 20; }
+.p019__text { grid-column: 4 / 7; grid-row: 11 / 24; }   /* arranca en la misma línea que el texto de 018 */
 
 /* ── 020 · El Carmen / Patagones ── */
 .p020__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 15); border-top: 0; border-left: 0; border-right: 0; }
