@@ -40,3 +40,12 @@
 /* 029: el rótulo ED arranca a la altura de la primera línea del texto (pedido de Patricio, 12 oct. 2026) */
 .p029__label { grid-row: 7; }
 .p029__list { grid-row: 9 / 17; }
+
+/* ── 030–031 ── recomposición pedida por Patricio (12 oct. 2026): texto e imagen empiezan (línea 7) y
+   terminan a la misma altura en las dos páginas; los esquemas van en franja al pie, a todo el ancho */
+.p030__fig { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p030__fig .foto { background-size: contain; background-position: left center; }
+.p030__caption { grid-column: 4 / 7; grid-row: 22 / 24; align-self: start; }
+.p031__image { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p031__meander { grid-column: 1 / 7; grid-row: 22 / 28; }
+.p031__caption { grid-column: 1 / 7; grid-row: 28; align-self: end; }
