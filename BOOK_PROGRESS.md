@@ -478,3 +478,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Después de cada cambio: node build.mjs → git add -A → git commit → git push. La página se actualiza sola en 1–2 minutos.
 - 010–011: un solo título para la doble («Cronología 1832–1834»); los rangos del v2 quedan como rótulos de tramo; índice de paradas subido. Aprobadas de nuevo por pedido del usuario.
 - Web: la doble entra completa al abrir (zoom --fit en print.css + viewport 1280) y los CSS llevan sello de versión.
+- 011: índice de paradas sobre panel azul a sangre (columnas 5–6, de arriba abajo), más interlineado (1,5 líneas) y rótulo a 13 pt; folio de 011 en color papel.

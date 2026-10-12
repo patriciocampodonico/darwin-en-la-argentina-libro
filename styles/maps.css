@@ -72,5 +72,10 @@
 .page[data-page="010"] .timeline, .page[data-page="011"] .timeline { grid-column: 1 / 7; grid-row: 7 / 23; }
 
 /* ── 011 · Cronología 1833–1834 e índice de paradas ── */
-.p011__label { grid-column: 5 / 7; grid-row: 3; }
-.p011__index { grid-column: 5 / 7; grid-row: 5 / 20; }
+/* Índice de paradas: panel azul a sangre, de arriba abajo de la página, sobre las columnas 5–6 */
+.p011__panel { grid-column: 5 / 7; grid-row: 1 / -1; background: var(--blue-deep);
+  margin: calc(var(--margin-top) * -1) calc(var(--margin-outer) * -1) calc(var(--margin-bottom) * -1) -6mm; }
+.p011__label { grid-column: 5 / 7; grid-row: 2 / 4; align-self: end; color: var(--paper); font-size: 13pt; line-height: calc(var(--baseline) * 1.5); position: relative; }
+.p011__index { grid-column: 5 / 7; grid-row: 5 / 28; color: var(--paper); position: relative; }
+.p011__index li { height: calc(var(--baseline) * 1.5); }
+#p011 .page__folio { color: var(--paper); }
