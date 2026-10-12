@@ -29,8 +29,8 @@
 /* ── 025 · Partir hacia el Colorado ── */
 .p025__title { grid-column: 1 / 5; grid-row: 2 / 4; }
 .p025__text { grid-column: 1 / 4; grid-row: 7 / 12; }
-.p025__route { grid-column: 1 / 7; grid-row: 15 / 23; }
-.p025__caption { grid-column: 1 / 4; grid-row: 24 / 26; }
+.p025__route { grid-column: 1 / 7; grid-row: 21 / 29; }   /* a la altura de la imagen de 024 (filas 22–28) */
+.p025__caption { grid-column: 1 / 4; grid-row: 28; align-self: end; }
 
 /* ── 026 · Apertura – Camino al Río Colorado ── */
 .p026__image { position: absolute; top: 0; bottom: 0; left: 0; width: var(--third-bleed); border-left: 0; border-top: 0; border-bottom: 0; }

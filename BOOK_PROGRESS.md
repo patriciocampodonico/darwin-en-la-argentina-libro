@@ -491,3 +491,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 022–023 reestructuradas: en 022 el texto sube arriba a la derecha (junto al título, como 044), la nota ED queda bajo el título y las dos láminas pasan a 12 líneas de alto (cristal sigue a 7 cm reales); en 023 el mosaico 2 × 2 ocupa las columnas 4–6, pegado al texto. El pie de las láminas de 022 coincide con el de las viñetas de 023.
 - 022 (ajuste pedido): texto de Darwin bajo el título (cols 1–3, filas 5–12), nota ED a su derecha terminando con la última línea del texto, láminas de 11 líneas (filas 14–24). 023 queda como estaba.
 - 023: el mosaico baja dos líneas (filas 9–28); el pie de las imágenes de abajo coincide con la última línea del texto. Solo CSS. Las láminas de 022 terminan ahora dos líneas más arriba que las viñetas de 023.
+- 025: el esquema del camino y su nota ED bajan al pie de la caja, a la altura de la imagen de 024. Solo CSS.
