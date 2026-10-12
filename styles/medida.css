@@ -161,7 +161,7 @@
 /* 055: los tres números van apilados junto al texto, de la línea 7 a la 19 (donde termina el texto);
    cada uno se apoya en su filete */
 .p055__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
-.p055__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 0.7mm; }
+.p055__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
 .p055__data { transform: translateY(1.3mm); }
 /* 055: la imagen va a sangre abajo y a la derecha (pedido de Patricio, 12 oct. 2026); el folio va sobre una chapa de papel, como en las otras páginas con imagen bajo el folio */
 .p055__image { margin-right: calc(var(--margin-outer) * -1); margin-bottom: calc(var(--margin-bottom) * -1); }
@@ -175,7 +175,7 @@
 /* 058: las dos medidas van apiladas junto al texto y terminan con él (línea 19), cada una apoyada en su filete;
    la nota ED baja a la línea 21, donde empiezan las notas de 059 */
 .p058__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; transform: translateY(0.7mm); }
-.p058__data > div { display: grid; align-content: end; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 1.4mm; }
+.p058__data > div { display: grid; align-content: end; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 1.4mm; }
 .p058__caption { grid-column: 1 / 4; grid-row: 21 / 23; }
 
 /* ── 060–063 ── ajustes del 12 oct. 2026 (misma información; solo posiciones) */
@@ -240,7 +240,7 @@
 .p088__caption { grid-row: 27; }
 /* 094: los tres números van apilados junto al texto y terminan con él (20), como en 055 */
 .p094__data { grid-row: 9 / 21; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); transform: translateY(1.3mm); }
-.p094__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; box-shadow: inset 0 calc(var(--rule-fine) * -1) 0 var(--blue-deep); padding-top: 0; padding-bottom: 0.7mm; }
+.p094__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
 /* 096: imagen, esquema y nota se compactan; la nota ED termina con el texto (23) */
 .p096__image { grid-row: 7 / 14; }
 .p096__tow { grid-row: 14 / 21; transform: translateY(2.25mm); }
@@ -285,3 +285,6 @@
 
 /* 083: más aire entre el texto y el esquema, que se achata y empieza una línea más abajo (pedido de Patricio, 12 oct. 2026) */
 .p083__siege { grid-row: 24 / 28; }
+
+/* Filetes de un solo lado (casillas de 006–007, listas, datos, fichas): se dibujan como fondo y no como sombra interior.
+   La sombra interior dejaba, al acercar la vista, un rastro de línea en los costados de la caja (12 oct. 2026). */

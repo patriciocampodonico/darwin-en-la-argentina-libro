@@ -13,7 +13,7 @@
 
 /* Lista numerada corta */
 .fourlist { list-style: none; margin: 0; padding: 0; }
-.fourlist li { display: grid; grid-template-columns: 7mm 1fr; box-shadow: inset 0 var(--rule-fine) 0 currentColor; padding-top: calc(var(--baseline) / 2); height: calc(var(--baseline) * 2); }
+.fourlist li { display: grid; grid-template-columns: 7mm 1fr; background: linear-gradient(currentColor, currentColor) top / 100% var(--rule-fine) no-repeat; padding-top: calc(var(--baseline) / 2); height: calc(var(--baseline) * 2); }
 .fourlist b { font-family: var(--font-ui); font-size: var(--editorial-size); line-height: var(--baseline); font-weight: 700; }
 
 /* Medio ancho de página a sangre por el lado exterior (3 columnas) y un tercio (2 columnas) */
