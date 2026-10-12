@@ -71,3 +71,20 @@
 .p037__visits { grid-row: 12 / 18; }
 .p037__cut { grid-row: 18 / 27; }
 .p037__caption { grid-row: 27 / 29; align-self: end; }
+
+/* ── 038–041 ── recomposición del 12 oct. 2026 (pedido de Patricio: sin huecos y con las dos páginas de cada doble
+   a la misma altura). La información de cada página no cambia. */
+/* 038: la lista va arriba en dos columnas anchas (1.º–2.º | 3.º–4.º) y la lámina, más grande, al pie;
+   centrada; termina en la línea 27, como el plano de 039, y la nota ED va en la 28, como la de 039 */
+.p038__text { grid-column: 1 / 7; grid-row: 7 / 16; column-count: 2; column-gap: var(--column-gap); column-fill: auto; orphans: 1; widows: 1; }
+.p038__text p:nth-child(3) { break-before: column; margin-top: 0; }
+.p038__image { grid-column: 1 / 7; grid-row: 16 / 28; background-size: 116mm auto; background-position: 50% 53.5%; }
+.p038__note-ed { grid-column: 1 / 7; grid-row: 28; }
+/* 040–041: arriba, texto + imagen (040) y texto + corte (041) entre las líneas 7 y 19;
+   abajo, desde la línea 21, el esquema a la izquierda y su nota ED a la derecha */
+.p040__image { grid-row: 7 / 20; }
+.p040__dist { grid-row: 21 / 26; }
+.p040__caption { grid-row: 21 / 24; align-self: start; }
+.p041__section { grid-row: 7 / 20; }
+.p041__shells { grid-column: 1 / 4; grid-row: 21 / 26; }
+.p041__caption { grid-row: 21 / 25; align-self: start; }
