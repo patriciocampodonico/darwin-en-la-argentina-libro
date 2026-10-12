@@ -18,16 +18,16 @@ def guardar(im, name, ancho_mm):
     print(name, im.size, round(im.width / ancho_mm * 25.4), 'ppp')
 
 # 022a · cristal de yeso a TAMAÑO REAL: de punta a punta (x 55–1484 del original) = 70 mm.
-# Caja 92,34 × 54 mm; el cristal empieza a 11,17 mm del borde izquierdo (bajo la regla de 7 cm) y a 12,25 mm del superior.
+# Caja 92,34 × 49,5 mm; el cristal empieza a 11,17 mm del borde izquierdo (bajo la regla de 7 cm) y a 10 mm del superior.
 im = lamina('022a-padre')
 px = (1484 - 55) / 70
-canvas = Image.new('L', (round(92.34 * px), round(54 * px)), 255)
-canvas.paste(im, (round(11.17 * px) - 55, round(12.25 * px) - 318))
+canvas = Image.new('L', (round(92.34 * px), round(49.5 * px)), 255)
+canvas.paste(im, (round(11.17 * px) - 55, round(10 * px) - 318))
 guardar(canvas, '022a-padre', 92.34)
 
 # 022b · sulfato de sodio: franja horizontal a la proporción de la caja
 im = lamina('022b-madre')
-h = round(im.width * 54 / 92.34)
+h = round(im.width * 49.5 / 92.34)
 guardar(im.crop((0, 512 - h // 2, im.width, 512 - h // 2 + h)), '022b-madre', 92.34)
 
 # 023 · cuatro viñetas, caja 28,42 × 27 mm

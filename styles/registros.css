@@ -94,12 +94,13 @@
 /* ── 022 · Cristales y sales ── */
 .p022__kicker { grid-column: 1 / 4; grid-row: 1; }
 .p022__title { grid-column: 1 / 4; grid-row: 2 / 4; }
-/* Arriba: título y nota a la izquierda, texto de Darwin a la derecha (como en 044). Abajo: las dos láminas, de 12 líneas de alto; su pie coincide con el de las viñetas de 023. */
-.p022__text { grid-column: 4 / 7; grid-row: 2 / 11; }
-.p022__note-ed { grid-column: 1 / 4; grid-row: 8 / 11; align-self: end; }
-.p022__fig-a { grid-column: 1 / 4; grid-row: 13 / 28; }
-.p022__fig-b { grid-column: 4 / 7; grid-row: 13 / 28; }
-.p022__fig-a svg, .p022__fig-b svg { grid-row: span 12; }
+/* Columna izquierda: título, texto de Darwin y lámina; a la derecha del texto, la nota editorial.
+   Abajo: las dos láminas, de 11 líneas de alto; su pie coincide con el de las viñetas de 023. */
+.p022__text { grid-column: 1 / 4; grid-row: 5 / 13; }
+.p022__note-ed { grid-column: 4 / 7; grid-row: 9 / 13; align-self: end; }   /* termina con la última línea del texto */
+.p022__fig-a { grid-column: 1 / 4; grid-row: 14 / 28; }
+.p022__fig-b { grid-column: 4 / 7; grid-row: 14 / 28; }
+.p022__fig-a svg, .p022__fig-b svg { grid-row: span 11; }
 
 /* ── 023 · Vida en la salmuera ── */
 .p023__title { grid-column: 1 / 5; grid-row: 2 / 4; }
