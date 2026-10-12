@@ -479,3 +479,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 010–011: un solo título para la doble («Cronología 1832–1834»); los rangos del v2 quedan como rótulos de tramo; índice de paradas subido. Aprobadas de nuevo por pedido del usuario.
 - Web: la doble entra completa al abrir (zoom --fit en print.css + viewport 1280) y los CSS llevan sello de versión.
 - 011: índice de paradas sobre panel azul a sangre (columnas 5–6, de arriba abajo), más interlineado (1,5 líneas) y rótulo a 13 pt; folio de 011 en color papel.
+- 058 y 067: las franjas de río pasan de azul plano a textura de agua en grabado (ChatGPT, tools/laminas.py → agua); nombre del río en Inter negrita a 15 pt. Solo CSS e imágenes: siguen bloqueadas.

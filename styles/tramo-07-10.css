@@ -34,13 +34,13 @@
 .p057__caption { grid-column: 4 / 7; grid-row: 21 / 26; }
 
 /* ── 058 · Cruzar el Salado ── el texto arranca una línea antes, a la par de 059; el río, franja vertical del lado del lomo */
-.p058__river { position: absolute; top: 0; bottom: 0; right: 0; width: calc(var(--margin-inner) + var(--col)); background: var(--blue-deep); }
+.p058__river { position: absolute; top: 0; bottom: 0; right: 0; width: calc(var(--margin-inner) + var(--col)); background: var(--blue-deep) url(../assets/images/058-agua-salado.jpg) center / cover; }
 .p058__title { grid-column: 1 / 5; grid-row: 2 / 4; }
 .p058__text { grid-column: 1 / 4; grid-row: 6 / 21; }
 .p058__datalabel { grid-column: 4 / 6; grid-row: 6; }
 .p058__data { grid-column: 4 / 6; grid-row: 7 / 13; }
 .p058__caption { grid-column: 4 / 6; grid-row: 15 / 20; }
-.p058__riverlabel { grid-column: 6; grid-row: 2; color: var(--paper); position: relative; padding-left: 2mm; }
+.p058__riverlabel { grid-column: 6; grid-row: 2 / 4; color: var(--paper); position: relative; padding-left: 3mm; font-size: 15pt; line-height: calc(var(--baseline) * 1.5); white-space: nowrap; }
 
 /* ── 059 · Un paisaje transformado ── */
 .p059__title { grid-column: 1 / 5; grid-row: 2 / 4; }
@@ -96,11 +96,11 @@
 .p066__list { grid-column: 4 / 7; grid-row: 19 / 29; }
 
 /* ── 067 · Arrecife y primera visión del Paraná ── el río, franja a sangre al pie */
-.p067__river { position: absolute; left: 0; width: 100%; top: calc(var(--margin-top) + var(--baseline) * 20); height: calc(var(--baseline) * 8); background: var(--blue-deep); }
+.p067__river { position: absolute; left: 0; width: 100%; top: calc(var(--margin-top) + var(--baseline) * 20); height: calc(var(--baseline) * 8); background: var(--blue-deep) url(../assets/images/067-agua-parana.jpg) center / cover; }
 .p067__title { grid-column: 1 / 7; grid-row: 2 / 4; }
 .p067__text { grid-column: 1 / 4; grid-row: 7 / 14; }
 .p067__quote { grid-column: 1 / 6; grid-row: 15 / 19; }
-.p067__riverlabel { grid-column: 1 / 4; grid-row: 22; color: var(--paper); position: relative; }
+.p067__riverlabel { grid-column: 1 / 4; grid-row: 22 / 24; color: var(--paper); position: relative; font-size: 15pt; line-height: calc(var(--baseline) * 1.5); }
 
 /* ── 068 · Rosario sobre la barranca ── */
 .p068__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 11); border-top: 0; border-left: 0; border-right: 0; }

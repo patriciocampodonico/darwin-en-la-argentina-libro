@@ -42,3 +42,12 @@ for name, y0, y1, cx in (('069a-conecta', 167, 933, 843), ('069b-abarca', 160, 9
     im = lamina(name)
     w = round((y1 - y0) * 60.34 / 45)
     guardar(im.crop((cx - w // 2, y0, cx - w // 2 + w, y1)), name, 60.34)
+
+# 058 y 067 · textura de agua de los ríos (franjas a sangre). Tono oscuro: el negro de la imagen pasa a la tinta.
+def agua(name, caja, x0, y0):
+    im = Image.open(os.path.join(IMG, 'originales', name + '.webp')).convert('L')
+    w, h = (im.width - x0, round((im.width - x0) * caja[1] / caja[0])) if caja[0] > caja[1] else (round((im.height - y0) * caja[0] / caja[1]), im.height - y0)
+    im = ImageOps.autocontrast(im.crop((x0, y0, x0 + w, y0 + h)), cutoff=(1, 0))
+    guardar(im.point([round(255 * (v / 255) ** 1.9) for v in range(256)]), name, caja[0])  # más denso: el nombre va encima
+agua('058-agua-salado', (40.42, 148), 20, 0)    # franja vertical junto al lomo
+agua('067-agua-parana', (210, 36), 0, 330)      # franja horizontal de lado a lado
