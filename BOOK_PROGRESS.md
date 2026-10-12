@@ -485,3 +485,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 014–015: una sola imagen del bosque para la doble (ChatGPT; tools/laminas.py la parte por el lomo; fotos.py las saltea con APARTE). Mismos nombres de archivo: las páginas siguen bloqueadas.
 - 019: la sección del cantil baja al pie de la caja (mismas filas que el mapa de 018) y su nota ED pasa a la derecha, abajo. Solo CSS.
 - 019: el texto de Darwin baja a la fila 11, la misma línea en que arranca el de 018. Solo CSS.
+- 019: el título baja a las filas 7–8; comparte línea de base con la segunda línea del título de 018. Solo CSS.
