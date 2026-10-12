@@ -274,3 +274,11 @@
    termina con él (línea 16), que es también donde termina el texto de 074 */
 .p075__column { grid-row: 7 / 15; }
 .p075__caption { grid-row: 15 / 17; align-self: end; margin-bottom: 1mm; }
+
+/* 074: caja de texto más angosta (2 columnas) para que el justificado no abra ríos (pedido de Patricio, 12 oct. 2026) */
+.p074__text { grid-column: 4 / 6; grid-row: 13 / 18; }  /* sube una línea: termina en la 16, como el texto de 075 */
+/* 079: sin hueco arriba a la derecha: el texto va en dos columnas anchas (líneas 7–13); la secuencia empieza en la 17,
+   donde empieza el texto de 078, y la nota ED queda en la 25, como la de 078 */
+.p079__text { grid-column: 1 / 7; grid-row: 7 / 14; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p079__seq { grid-row: 17 / 24; }
+.p079__caption { grid-row: 25; }
