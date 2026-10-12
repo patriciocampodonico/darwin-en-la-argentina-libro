@@ -136,8 +136,6 @@
    049: el corte sube (16–23) y su nota ED queda en la 25 */
 .p048__text { grid-row: 20 / 26; }
 .p048__caption { grid-row: 24 / 26; align-self: end; }
-.p049__cut { grid-row: 16 / 24; }
-.p049__caption { grid-row: 25; }
 /* 050: el esquema crece y su nota ED termina con el texto (línea 25); las tres rocas van en fila en una banda al pie
    (rótulo en la 27, lista en la 28, de una línea de alto) */
 .p050__peaks { grid-row: 7 / 22; }
@@ -261,3 +259,10 @@
 
 /* 034: la imagen empieza y termina con el texto (21 líneas, 7–27), con el mismo criterio que 031 */
 .p034__image { grid-row: 7 / 28; margin-top: 0.85mm; margin-bottom: 1mm; }
+
+/* 049: recomposición pedida por Patricio (12 oct. 2026): el texto deja de estar solo arriba a la derecha.
+   Va bajo el título en dos columnas anchas (líneas 7–12: termina donde termina la imagen de 048); el corte,
+   a todo el ancho, empieza en la línea 15 (donde empiezan el título y el perfil de 048) y la nota ED cierra en la 25 */
+.p049__text { grid-column: 1 / 7; grid-row: 7 / 13; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p049__cut { grid-row: 15 / 24; }
+.p049__caption { grid-row: 25; }
