@@ -89,7 +89,7 @@
 .p021__title { grid-column: 1 / 4; grid-row: 2 / 4; }
 .p021__text { grid-column: 1 / 4; grid-row: 7 / 19; }
 .p021__datalabel { grid-column: 1 / 4; grid-row: 21; }
-.p021__data { grid-column: 1 / 4; grid-row: 22 / 28; }
+.p021__data { grid-column: 1 / 4; grid-row: 23 / 29; }   /* una línea de aire bajo el rótulo */
 
 /* ── 022 · Cristales y sales ── */
 .p022__kicker { grid-column: 1 / 4; grid-row: 1; }
