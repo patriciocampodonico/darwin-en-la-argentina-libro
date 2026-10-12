@@ -99,3 +99,8 @@
 /* 038: esqueletos más grandes (caja de 15 líneas, 13–27); el mayor queda bajo la columna corta de la lista */
 .p038__image { grid-row: 13 / 28; }
 .p038__text { position: relative; z-index: 1; }
+/* 037 (ajuste del 12 oct. 2026): el texto termina en la línea 28, como el de 036; empieza en la 14, a la altura
+   del primer rótulo del esquema de la derecha, y termina con el último renglón de la nota ED */
+.p037__text { grid-row: 14 / 29; }
+.p037__visits { grid-row: 14 / 20; transform: translateY(-3.6mm); }
+.p037__cut { grid-row: 19 / 27; }
