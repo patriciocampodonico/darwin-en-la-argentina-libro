@@ -91,3 +91,8 @@
 /* 039: el plano, achatado, termina en la línea 23, donde termina el texto de la derecha; su nota ED queda debajo */
 .p039__plan { grid-row: 19 / 24; }
 .p039__caption { grid-row: 25; }
+/* 040: la imagen se alarga (líneas 7–22) y la nota ED termina donde termina el esquema de la izquierda (línea 25).
+   041: las conchas suben para terminar donde termina la nota ED de la derecha (línea 22) */
+.p040__image { grid-row: 7 / 23; }
+.p040__caption { grid-row: 24 / 26; align-self: end; }
+.p041__shells { grid-row: 19 / 24; transform: translateY(-1.2mm); }
