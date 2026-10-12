@@ -130,3 +130,23 @@
 .p047__notes { grid-row: 24 / 29; align-self: end; }
 .p047__datalabel { grid-row: 24; }
 .p047__data { grid-row: 25 / 29; }
+
+/* ── 048–051 ── recomposición del 12 oct. 2026 (misma información) */
+/* 048–049: bajo la imagen, las dos páginas cierran en la línea 25. 048: texto (20–25) y nota ED (24–25) terminan juntos.
+   049: el corte sube (16–23) y su nota ED queda en la 25 */
+.p048__text { grid-row: 20 / 26; }
+.p048__caption { grid-row: 24 / 26; align-self: end; }
+.p049__cut { grid-row: 16 / 24; }
+.p049__caption { grid-row: 25; }
+/* 050: el esquema crece y su nota ED termina con el texto (línea 25); las tres rocas van en fila en una banda al pie
+   (rótulo en la 27, lista en la 28, de una línea de alto) */
+.p050__peaks { grid-row: 7 / 22; }
+.p050__caption { grid-row: 24 / 26; align-self: end; }
+.p050__label { grid-column: 1 / 7; grid-row: 27; }
+.p050__list { grid-column: 1 / 7; grid-row: 28; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--column-gap); }
+.p050__list li { height: var(--baseline); padding-top: 0.5mm; }
+/* 051: la imagen empieza y termina con el texto (7–22); el regreso va en franja a todo el ancho y las notas al pie */
+.p051__image { grid-row: 7 / 23; }
+.p051__route { grid-column: 1 / 7; grid-row: 24 / 28; }
+.p051__note-e { grid-row: 28; }
+.p051__caption { grid-row: 28; }

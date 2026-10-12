@@ -14,7 +14,7 @@ FRAGMENTOS = [
     ('ave', '081-picotijera.jpg', 1250, 200, 640, False),
     ('planta', '016a-fagus-betuloides.jpg', 100, 200, 900, False),
     ('rio', '105-santa-cruz.jpg', 500, 173, 754, False),
-    ('montana', '051-horizonte-sierra.jpg', 0, 189, 560, False),
+    ('montana', '051-horizonte-sierra.jpg', 0, 200, 560, False),
     ('mapa', '../../salida/008.png', 1600, 850, 600, False),
 ]
 for name, src, x, y, w, raw in FRAGMENTOS:
