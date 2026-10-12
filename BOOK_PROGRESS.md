@@ -483,3 +483,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - MAPAS (008, 009, 013, 018, 102): cartografía real de Natural Earth 1:10m (tools/geodatos.py → assets/maps/geo.json): costa, límite internacional, ríos y lagos; Malvinas como Argentina; vecinos en tono claro. Recorrido a caballo posta por posta; Santa Cruz por el cauce real. Ya no son provisorios. 008, 009, 013 y 018 aprobadas y bloqueadas de nuevo (12 oct. 2026).
 - 006: la muestra de «Texto de Darwin» lleva […] y la descripción pasa a «Fragmentos seleccionados del diario, en la tipografía de la muestra.» Aprobada de nuevo.
 - 014–015: una sola imagen del bosque para la doble (ChatGPT; tools/laminas.py la parte por el lomo; fotos.py las saltea con APARTE). Mismos nombres de archivo: las páginas siguen bloqueadas.
+- 019: la sección del cantil baja al pie de la caja (mismas filas que el mapa de 018) y su nota ED pasa a la derecha, abajo. Solo CSS.
