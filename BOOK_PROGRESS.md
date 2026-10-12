@@ -486,3 +486,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 019: la sección del cantil baja al pie de la caja (mismas filas que el mapa de 018) y su nota ED pasa a la derecha, abajo. Solo CSS.
 - 019: el texto de Darwin baja a la fila 11, la misma línea en que arranca el de 018. Solo CSS.
 - 019: el título baja a las filas 7–8; comparte línea de base con la segunda línea del título de 018. Solo CSS.
+- 019: título en filas 3–4, con el tope de las mayúsculas a la misma altura que la primera línea del título de 018 (ajuste fino de 0,35 mm). Solo CSS.

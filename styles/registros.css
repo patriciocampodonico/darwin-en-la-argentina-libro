@@ -74,7 +74,7 @@
 .p018__map { grid-column: 4 / 7; grid-row: 10 / 29; }
 
 /* ── 019 · El Río Negro y su valle ── */
-.p019__title { grid-column: 1 / 7; grid-row: 7 / 9; }   /* línea de base de la segunda línea del título de 018 */
+.p019__title { grid-column: 1 / 7; grid-row: 3 / 5; position: relative; top: 0.35mm; }   /* misma altura de mayúsculas que la primera línea del título de 018 */
 .p019__section { grid-column: 1 / 4; grid-row: 10 / 29; }   /* misma altura y mismo pie que el mapa de 018 */
 .p019__caption { grid-column: 4 / 7; grid-row: 27 / 29; align-self: end; }
 .p019__text { grid-column: 4 / 7; grid-row: 11 / 24; }   /* arranca en la misma línea que el texto de 018 */
