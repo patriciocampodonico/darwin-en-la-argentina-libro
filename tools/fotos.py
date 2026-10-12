@@ -58,8 +58,10 @@ assert len(files) == len(FOTOS), f'{len(files)} originales para {len(FOTOS)} caj
 
 # Originales regenerados después (no entran en el orden de descarga)
 REEMPLAZOS = {'044': 'tapa-megatherium.webp'}  # Megatherium con el árbol completo
+APARTE = {'014', '015'}  # una sola imagen para la doble: la prepara tools/laminas.py
 
 for (pid, name, bw, bh, mode, fx, fy, faint), f in zip(FOTOS, files):
+    if pid in APARTE: continue
     f = os.path.join(SRC, REEMPLAZOS.get(pid, f))
     im = Image.open(f).convert('L')
     w, h = im.size

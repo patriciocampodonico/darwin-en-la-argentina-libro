@@ -51,3 +51,11 @@ def agua(name, caja, x0, y0):
     guardar(im.point([round(255 * (v / 255) ** 1.9) for v in range(256)]), name, caja[0])  # más denso: el nombre va encima
 agua('058-agua-salado', (40.42, 148), 20, 0)    # franja vertical junto al lomo
 agua('067-agua-parana', (210, 36), 0, 330)      # franja horizontal de lado a lado
+
+# 014–015 · una sola imagen del bosque para la doble: se recorta a la proporción de las dos cajas juntas
+# (2 × 104,25 × 148 mm), se pasa a las dos tintas de una vez y se parte por el lomo.
+im = ImageOps.autocontrast(Image.open(os.path.join(IMG, 'originales', '014-015-bosque.webp')).convert('L'), cutoff=0.5)
+w = round(im.height * 2 * 104.25 / 148) // 2 * 2
+x0 = (im.width - w) // 2
+guardar(im.crop((x0, 0, x0 + w // 2, im.height)), '014-senda-bosque', 104.25)
+guardar(im.crop((x0 + w // 2, 0, x0 + w, im.height)), '015-bosque-torrente', 104.25)
