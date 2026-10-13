@@ -299,3 +299,5 @@
 .p004__flor { height: 88mm; opacity: 0.17; }
 .p004__map { top: 11mm; height: 126mm; right: 18mm; }
 .p005__flor { position: absolute; right: -6mm; top: 3mm; height: 98mm; opacity: 0.17; }
+/* 004: el mapa lleva el mar alrededor (lienzo ampliado: 1600 × 2200 px); el territorio conserva su tamaño (126 mm de alto) */
+.p004__map { top: 0.3mm; height: 147.4mm; right: -2.1mm; }

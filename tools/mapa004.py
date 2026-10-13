@@ -5,12 +5,13 @@
 import os
 import numpy as np
 from PIL import Image, ImageFilter
+from scipy import ndimage
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INK = (0x1A, 0x3A, 0x5C)
 src = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '004-mapa-web.png')).convert('L')
 
-def tinta(caja, salida, borrar=(), borde=0):
+def tinta(caja, salida, borrar=(), borde=0, mar=None):
     g = np.asarray(src.crop(caja).filter(ImageFilter.GaussianBlur(0.6))).astype(float)
     papel = np.percentile(g, 90)                      # nivel del papel en ese recorte
     alfa = np.clip((papel - 10 - g) / (papel - 10 - 45), 0, 1) ** 0.85
@@ -21,11 +22,25 @@ def tinta(caja, salida, borrar=(), borde=0):
     if borde:                                         # se funde hacia los bordes libres (arriba y derecha)
         h, w = alfa.shape
         alfa *= np.clip(np.arange(h)[:, None] / borde, 0, 1) * np.clip((w - 1 - np.arange(w))[None, :] / borde, 0, 1)
+    if mar:                                           # mar alrededor del territorio: gris claro que se difumina hacia afuera
+        px, py, radio, nivel = mar
+        alfa = np.pad(alfa, ((py, py), (px, px)))
+        tierra = ndimage.binary_fill_holes(ndimage.binary_closing(alfa > 0.3, iterations=4))
+        d = ndimage.distance_transform_edt(~tierra)   # distancia a la costa, en px
+        t = np.clip(1 - d / radio, 0, 1)
+        rng = np.random.default_rng(4)                # borde irregular, como una mancha de tinta
+        grano = ndimage.gaussian_filter(rng.random(alfa.shape), 26); grano = (grano - grano.min()) / np.ptp(grano)
+        halo = nivel * np.clip(t * 1.9 - 0.75 * grano, 0, 1) ** 0.8
+        h, w = alfa.shape; m = 70                     # nunca llega al borde del recorte
+        halo *= np.clip(np.minimum.reduce([np.arange(h)[:, None] + 0 * np.arange(w), (h - 1 - np.arange(h))[:, None] + 0 * np.arange(w),
+                                           np.arange(w)[None, :] + 0 * np.arange(h)[:, None], (w - 1 - np.arange(w))[None, :] + 0 * np.arange(h)[:, None]]) / m, 0, 1)
+        alfa = np.where(tierra, alfa, np.maximum(alfa, ndimage.gaussian_filter(halo, 5)))
     out = np.zeros(alfa.shape + (4,), np.uint8); out[..., :3] = INK; out[..., 3] = (alfa * 255).round()
     Image.fromarray(out).save(os.path.join(ROOT, 'assets', salida)); print(salida, out.shape[1], 'x', out.shape[0])
 
 # mapa: se borra la esquina donde asoma la escala gráfica
-tinta((1330, 230, 2330, 2110), os.path.join('maps', 'argentina-tenue.png'), borrar=[(-40, 1790, 160, 1920)])
+tinta((1330, 230, 2330, 2110), os.path.join('maps', 'argentina-tenue.png'), borrar=[(-40, 1790, 160, 1920)],
+      mar=(300, 160, 250, 0.3))  # lienzo ampliado 300 px a los lados y 160 arriba y abajo; el mar llega a 250 px de la costa
 # flor: esquina inferior izquierda del original (sale a sangre por la izquierda y por abajo)
 tinta((0, 1210, 960, 2168), os.path.join('images', '004-flor.png'), borde=40)
 
