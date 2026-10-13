@@ -13,11 +13,13 @@ def guardar(im, mask, name):
     out = out.crop(alpha.getbbox())
     out.save(os.path.join(IMG, name)); print(name, out.size)
 
-# Web: la notebook es geométrica → pantalla y base como rectángulos redondeados (medidos sobre el original)
-im = Image.open(os.path.join(IMG, 'originales', 'mockup-web.webp')).convert('RGB')
+# Web: notebook y teléfono son geométricos → rectángulos redondeados medidos sobre el original
+# (mockup-web-2.webp, 12 oct. 2026; reemplaza al anterior, mockup-web.webp, que mostraba solo la notebook)
+im = Image.open(os.path.join(IMG, 'originales', 'mockup-web-2.webp')).convert('RGB')
 mask = Image.new('L', [s * 4 for s in im.size], 0); d = ImageDraw.Draw(mask)
-d.rounded_rectangle([220 * 4, 122 * 4, 1316 * 4, 830 * 4], radius=26 * 4, fill=255)
-d.rounded_rectangle([118 * 4, 825 * 4, 1419 * 4, 853 * 4], radius=7 * 4, fill=255)
+d.rounded_rectangle([122 * 4, 147 * 4, 1108 * 4 + 3, 790 * 4], radius=22 * 4, fill=255)    # pantalla
+d.rounded_rectangle([31 * 4, 780 * 4, 1199 * 4 + 3, 806 * 4], radius=6 * 4, fill=255)      # base
+d.rounded_rectangle([1162 * 4, 194 * 4, 1414 * 4 + 3, 708 * 4 + 3], radius=46 * 4, fill=255)  # teléfono
 guardar(im, mask.resize(im.size, Image.LANCZOS), '007-mockup-web.png')
 
 # Libro: el fondo y la sombra son grises neutros; papel y tapa tienen color → máscara por saturación,
