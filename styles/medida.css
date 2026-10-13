@@ -294,3 +294,8 @@
 
 /* 004: mapa nuevo de la web y flor, muy tenues (12 oct. 2026). La flor sale a sangre por la esquina inferior izquierda */
 .p004__flor { position: absolute; left: 0; bottom: 0; height: 46mm; opacity: var(--tenue); }
+/* 004–005 (pedido de Patricio, 12 oct. 2026): la flor de 004, bastante más grande y más tenue, para que se lea el texto
+   que queda encima; el mapa, más chico, con aire arriba y abajo; en 005, la flor de ceibo arriba a la derecha, a sangre */
+.p004__flor { height: 88mm; opacity: 0.17; }
+.p004__map { top: 11mm; height: 126mm; right: 18mm; }
+.p005__flor { position: absolute; right: -6mm; top: 3mm; height: 98mm; opacity: 0.17; }

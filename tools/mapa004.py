@@ -28,3 +28,12 @@ def tinta(caja, salida, borrar=(), borde=0):
 tinta((1330, 230, 2330, 2110), os.path.join('maps', 'argentina-tenue.png'), borrar=[(-40, 1790, 160, 1920)])
 # flor: esquina inferior izquierda del original (sale a sangre por la izquierda y por abajo)
 tinta((0, 1210, 960, 2168), os.path.join('images', '004-flor.png'), borde=40)
+
+# 005 · flor de ceibo (ilustración aparte, fondo blanco): mismo paso a una tinta con transparencia.
+# La rama entra por el borde derecho, así que en la página va a sangre por la derecha.
+im = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '005-flor.webp')).convert('RGBA')
+blanco = Image.new('RGBA', im.size, (255, 255, 255, 255)); blanco.alpha_composite(im)
+g = np.asarray(blanco.convert('L')).astype(float)
+alfa = np.clip((245 - g) / (245 - 60), 0, 1) ** 0.85
+out = np.zeros(alfa.shape + (4,), np.uint8); out[..., :3] = INK; out[..., 3] = (alfa * 255).round()
+Image.fromarray(out).save(os.path.join(ROOT, 'assets', 'images', '005-flor.png')); print('005-flor.png', im.size)
