@@ -5,23 +5,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=1280">
 <title>Darwin en la Argentina — libro</title>
-<link rel="stylesheet" href="styles/tokens.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/typography.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/grid.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/components.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/pages.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/maps.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/paradas.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/registros.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/tramo-03.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/tramo-04-05.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/tramo-05-07.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/tramo-07-10.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/tramo-10-15.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/fotos.css?v=ba6e112c">
-<link rel="stylesheet" href="tapa/tapa.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/medida.css?v=ba6e112c">
-<link rel="stylesheet" href="styles/print.css?v=ba6e112c">
+<link rel="stylesheet" href="styles/tokens.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/typography.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/grid.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/components.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/pages.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/maps.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/paradas.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/registros.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/tramo-03.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/tramo-04-05.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/tramo-05-07.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/tramo-07-10.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/tramo-10-15.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/fotos.css?v=7bfe227f">
+<link rel="stylesheet" href="tapa/tapa.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/medida.css?v=7bfe227f">
+<link rel="stylesheet" href="styles/print.css?v=7bfe227f">
 </head>
 <body>
 <div class="spread"><div class="slot--empty"></div><section class="page page--cover page--right front" id="ptapa">
@@ -79,8 +79,10 @@
 </div>
 <div class="spread"><!-- 004 · Introducción – El recorte argentino — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 003. -->
 <section class="page page--left" id="p004" data-page="004" data-section="Apertura" lang="es">
-  <!-- Mapa muy tenue como fondo. PROVISORIO: mapa ilustrado de la web, no es cartografía a escala. -->
-  <img class="p004__map" src="assets/maps/argentina-tenue.png" alt="">
+  <!-- Mapa muy tenue como fondo: es el mapa ilustrado de la web (versión del 12 oct. 2026), en una tinta; no es cartografía a escala.
+       La flor es la del fondo de la web, también en una tinta. Los prepara tools/mapa004.py. -->
+  <img class="p004__map" src="assets/maps/argentina-tenue.png?v=e875157e" alt="">
+  <img class="p004__flor" src="assets/images/004-flor.png?v=492c5fe4" alt="">
   <div class="page__box">
     <p class="p004__kicker t-label">Introducción</p>
     <h1 class="p004__title t-display-line">El recorte argentino</h1>
@@ -227,7 +229,7 @@
 </div>
 <div class="spread"><!-- 008 · Mapa general del recorrido I — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 007.
      Fechas sintéticas tomadas de la cronología (010–011) y de la metadata de cada parada en el v2.
-     Mapa: assets/maps/general.svg, generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
+     Mapa: assets/maps/general.svg?v=4fd9d2fa, generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page page--left" id="p008" data-page="008" data-section="Apertura" lang="es">
   <div class="page__box">
     <h1 class="p008__title t-display-line">Mapa general del recorrido</h1>
@@ -315,7 +317,7 @@
   <div class="page__folio"><b>008</b><span>Apertura</span></div>
 </section>
 <!-- 009 · Mapa general del recorrido II — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 008.
-     Mapa: assets/maps/detalle.svg, generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
+     Mapa: assets/maps/detalle.svg?v=fbcc95e1, generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page page--right" id="p009" data-page="009" data-section="Apertura" lang="es">
   <div class="page__box">
     <div class="p009__map"><svg class="map" viewBox="0 0 92.34 126.00" aria-hidden="true">
@@ -487,7 +489,7 @@
 </section>
 <!-- 013 · Llegar a un paisaje distinto — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 012.
      Cotejado con la capa de texto del escaneo (págs. 291–292 del libro): coincide.
-     Mapa: assets/maps/tramo-01.svg, generado por tools/tramo01.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
+     Mapa: assets/maps/tramo-01.svg?v=2efbf6bf, generado por tools/tramo01.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page page--right" id="p013" data-page="013" data-section="01 Bahía del Buen Suceso" lang="es">
   <div class="page__box">
     <div class="p013__map"><svg class="map" viewBox="0 0 188 76.5" aria-hidden="true">
@@ -617,7 +619,7 @@
      Cotejo con la capa de texto del escaneo (pág. 91 del libro, cap. IV). La fuente dice «24 de julio 1833.—El Beagle
      zarpó de Maldonado y el 3 de agosto llegó…»; el v2 arranca en «3 de agosto llegó», sin sujeto. Se compone
      «El Beagle […] el 3 de agosto llegó», con palabras de la fuente y el corte marcado (Maldonado queda fuera: Uruguay).
-     Mapa: assets/maps/tramo-02.svg, generado por tools/tramo02.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
+     Mapa: assets/maps/tramo-02.svg?v=c928d68e, generado por tools/tramo02.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page page--left" id="p018" data-page="018" data-section="02 Carmen de Patagones / Río Negro" lang="es">
   <div class="page__box">
     <p class="p018__meta stopline t-meta"><b>02</b> 3–10 ago. 1833</p>
@@ -2550,7 +2552,7 @@
 </div>
 <div class="spread"><!-- 102 · Mapa final del recorrido — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 101.
      Nombres, números y fechas: los de 008–008. Medio de viaje de cada parada: tomado de los fragmentos del libro.
-     Mapa: assets/maps/general.svg (el mismo de 008), generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
+     Mapa: assets/maps/general.svg?v=4fd9d2fa (el mismo de 008), generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page page--left" id="p102" data-page="102" data-section="Cierre" lang="es">
   <div class="page__box">
     <h1 class="p102__title t-display-line">Mapa final del recorrido</h1>

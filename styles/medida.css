@@ -291,3 +291,6 @@
 
 /* 024: la imagen llega también hasta el lomo (la mitad de la doble): ocupa todo el ancho de la página (12 oct. 2026) */
 .p024__image { margin-right: calc(var(--margin-inner) * -1); }
+
+/* 004: mapa nuevo de la web y flor, muy tenues (12 oct. 2026). La flor sale a sangre por la esquina inferior izquierda */
+.p004__flor { position: absolute; left: 0; bottom: 0; height: 46mm; opacity: var(--tenue); }

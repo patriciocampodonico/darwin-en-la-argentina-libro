@@ -63,7 +63,7 @@ const sello = createHash('sha256').update(['styles', 'tapa'].flatMap((d) => read
 // Sello de versión de cada imagen: si el archivo cambia, cambia su dirección y el navegador baja la nueva
 // (sin esto, una imagen reemplazada con el mismo nombre se sigue viendo vieja hasta que vence la caché)
 const selloImg = (ruta) => existsSync(join(ROOT, ruta)) ? `${ruta}?v=${createHash('sha256').update(readFileSync(join(ROOT, ruta))).digest('hex').slice(0, 8)}` : ruta;
-const conSello = (html) => html.replace(/assets\/images\/[\w.-]+\.(?:jpg|png|svg|webp)/g, selloImg);
+const conSello = (html) => html.replace(/assets\/(?:images|maps)\/[\w.-]+\.(?:jpg|png|svg|webp)/g, selloImg);
 
 writeFileSync(join(ROOT, 'index.html'), conSello(`<!doctype html>
 <!-- GENERADO por build.mjs — no editar a mano. Editar pages/NNN.html y styles/. -->
