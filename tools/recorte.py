@@ -32,3 +32,27 @@ obj = nd.binary_dilation(obj, structure=np.ones((33, 1)), origin=(-16, 0)) | obj
 obj = nd.binary_fill_holes(obj)
 obj = nd.gaussian_filter(obj.astype(float), 3) > 0.5  # borde liso
 guardar(im, Image.fromarray((obj * 255).astype('uint8')), '007-mockup-libro.png')
+
+# Fichas: son tres rectángulos en perspectiva. De cada una se toma la envolvente convexa de sus píxeles con color
+# (papel cálido, R > B; tinta y reverso azules, B > R; el fondo y las sombras son grises neutros), dentro de una
+# zona aproximada marcada a mano. Así los bordes salen rectos y sin halo de sombra.
+from shapely.geometry import Polygon, MultiPoint
+from shapely.ops import unary_union
+im = Image.open(os.path.join(IMG, 'originales', '007-mockup-fichas.webp')).convert('RGB')
+a = np.asarray(im.filter(ImageFilter.GaussianBlur(1.2))).astype(int)
+rb = a[..., 0] - a[..., 2]
+col = nd.binary_opening((rb >= 5) | (rb <= -14), iterations=2)
+ZONAS = [[(150, 170), (632, 68), (785, 745), (300, 856)],     # Megatherium, con el canto de la pila
+         [(728, 50), (1167, 80), (1092, 713), (655, 683)],    # Guanaco
+         [(1190, 95), (1655, 165), (1570, 835), (1080, 750)]] # reverso azul
+formas = []
+for q in ZONAS:
+    roi = Image.new('L', im.size, 0); ImageDraw.Draw(roi).polygon(list(Polygon(q).buffer(10).exterior.coords), fill=255)
+    ys, xs = np.where(col & (np.asarray(roi) > 0))
+    formas.append(MultiPoint(list(zip(xs[::5], ys[::5]))).convex_hull.simplify(2.5).buffer(-1.2, join_style=2))
+forma = unary_union(formas)
+K = 4
+mask = Image.new('L', (im.width * K, im.height * K), 0); dr = ImageDraw.Draw(mask)
+for g in getattr(forma, 'geoms', [forma]):
+    dr.polygon([(x * K, y * K) for x, y in g.exterior.coords], fill=255)
+guardar(im, mask.resize(im.size, Image.LANCZOS), '007-mockup-fichas.png')
