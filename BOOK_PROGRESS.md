@@ -536,3 +536,17 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 2026-10-12 · 004–005 (pedido de Patricio): la flor de 004 pasa de 46 a 88 mm de alto y baja su opacidad a 0,17 (queda detrás del texto, que se lee); el mapa se achica a 126 mm de alto, con 11 mm de aire arriba y abajo; en 005 se suma la flor de ceibo (original assets/images/originales/005-flor.webp → tools/mapa004.py → assets/images/005-flor.png), en una tinta y tenue, arriba a la derecha, a sangre (98 mm de alto). HTML de 005 cambiado: re-aprobada; 004 solo CSS.
 - 2026-10-12 · 004: el mapa lleva alrededor una mancha gris clara (el mar), que se difumina hacia afuera con borde irregular, como tenía el mapa anterior (pedido de Patricio). La genera tools/mapa004.py a partir de la distancia a la costa (hasta 250 px ≈ 14 mm); el lienzo crece a 1600 × 2200 px y el territorio conserva su tamaño. Solo CSS e imagen: 004 sigue bloqueada.
 - 2026-10-13 · Prueba de impresión: tools/prueba.py arma un cuadernillo cosido a caballete en pliegos SRA3 (450 × 320 mm), dos tiras de 420 × 148 mm por cara, con 3 mm de demasía (espejando el borde de cada página) y marcas de corte y plegado. Un A3 justo no alcanza para dos tiras con demasía (426 × 308 mm). Salidas en la carpeta LIBRO: Darwin_prueba_001-016_SRA3.pdf (2 pliegos) y Darwin_prueba_001-020_SRA3.pdf (3 pliegos, incluye la doble 016–017). Doble faz, voltear por el borde corto. No cambia ninguna página.
+
+## RENUMERACIÓN −2 (14 oct. 2026) — síntesis de mapas, cronología e índice — LEER ANTES DE USAR NÚMEROS DE PÁGINA
+- Pedido de la profesora (vía Patricio): no repetir las 15 paradas en 008–011. Se reemplaza 008–011 por una sola doble:
+  008 «Índice del recorrido» (página azul a sangre: número, parada, fechas y página, agrupado por año; las fechas y los hitos
+  de la cronología quedan en el índice) y 009 «Mapa general del recorrido» (mapa general + detalle en la misma página, leyenda y nota ED).
+- Se quitan las páginas 010 y 011. Todo lo que era 012–105 pasa a 010–103 (página nueva = vieja − 2). 001 cortesía y 104 guarda final.
+  El libro queda en 104 páginas (múltiplo de 4).
+- Se renombraron: pages/, clases pNNN__ y #pNNN, data-page, approved.lock, imágenes assets/images/NNN-* y originales, tablas de tools/,
+  tapa.css (086-san-julian.jpg), ASSET_MANIFEST. Los comentarios «entrada NNN» del v2 no se tocaron.
+- Referencias visibles actualizadas: índice (008), «páginas 049–057» (050), «páginas 059 y 060» (060), «página 059» (081).
+- Verificado comparando el PDF anterior y el nuevo página por página: mismo texto salvo números.
+- Notas anteriores a esta entrada usan la numeración vieja (+2 respecto de la actual desde la 010).
+- tools/fragmentos.py toma el fragmento «mapa» de salida/008.png, que ahora es el índice azul: no regenerar 005 sin cambiarlo a la 009.
+- Las fichas de campo (carpeta FICHAS) citan páginas del libro: hay que restarles 2 a las de la 012 en adelante.

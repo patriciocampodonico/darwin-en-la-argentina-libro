@@ -11,10 +11,10 @@ AR = 31.5 / 28.42
 # nombre, origen, x0, y0, ancho del recorte (el alto sale de la proporción), lámina sin procesar
 FRAGMENTOS = [
     ('fosil', 'originales/tapa-megatherium.webp', 520, 300, 440, True),
-    ('ave', '081-picotijera.jpg', 1250, 200, 640, False),
-    ('planta', '016a-fagus-betuloides.jpg', 100, 200, 900, False),
-    ('rio', '105-santa-cruz.jpg', 500, 173, 754, False),
-    ('montana', '051-horizonte-sierra.jpg', 0, 200, 560, False),
+    ('ave', '079-picotijera.jpg', 1250, 200, 640, False),
+    ('planta', '014a-fagus-betuloides.jpg', 100, 200, 900, False),
+    ('rio', '103-santa-cruz.jpg', 500, 173, 754, False),
+    ('montana', '049-horizonte-sierra.jpg', 0, 200, 560, False),
     ('mapa', '../../salida/008.png', 1600, 850, 600, False),
 ]
 for name, src, x, y, w, raw in FRAGMENTOS:

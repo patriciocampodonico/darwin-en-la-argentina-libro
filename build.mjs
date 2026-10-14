@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path';
 import { guionesEnHtml } from './tools/silabas.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
-const PRIMERA = 2, ULTIMA = 105; // 001 = carilla de cortesía en blanco · 106 = guarda final en blanco
+const PRIMERA = 2, ULTIMA = 103; // 001 = carilla de cortesía en blanco · 104 = guarda final en blanco
 const LOCK = join(ROOT, 'approved.lock');
 const [cmd, arg] = process.argv.slice(2);
 
@@ -53,7 +53,7 @@ const cover = (pieza, side, id) => tapaSrc.match(new RegExp(`<section class="${p
 const spreads = [`<div class="spread"><div class="slot--empty"></div>${cover('front', 'right', 'ptapa')}</div>`,
   `<div class="spread"><div class="slot--empty"></div>${guard('right', 'p001')}</div>`];
 for (let n = PRIMERA; n <= ULTIMA; n += 2) spreads.push(`<div class="spread">${slot(n)}${slot(n + 1)}</div>`);
-spreads.push(`<div class="spread">${guard('left', 'p106')}<div class="slot--empty"></div></div>`,
+spreads.push(`<div class="spread">${guard('left', 'p104')}<div class="slot--empty"></div></div>`,
   `<div class="spread">${cover('back', 'left', 'pcontratapa')}<div class="slot--empty"></div></div>`);
 
 // Sello de versión de los estilos: obliga al navegador a bajar los CSS nuevos cuando cambian (sin esperar su caché)

@@ -1,4 +1,4 @@
-// Mapa de tramo de la parada 02: desembocadura del río Negro y El Carmen o Patagones (página 018).
+// Mapa de tramo de la parada 02: desembocadura del río Negro y El Carmen o Patagones (página 016).
 // Genera assets/maps/tramo-02.svg. Costa y cauce reales: Natural Earth 1:10m (assets/maps/geo.json,
 // tools/geodatos.py). Uso: node tools/tramo02.mjs
 import { readFileSync, writeFileSync } from 'node:fs';

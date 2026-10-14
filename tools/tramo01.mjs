@@ -1,4 +1,4 @@
-// Mapa de tramo de la parada 01: aproximación a la bahía del Buen Suceso (página 013).
+// Mapa de tramo de la parada 01: aproximación a la bahía del Buen Suceso (página 011).
 // Genera assets/maps/tramo-01.svg. Costa real: Natural Earth 1:10m (assets/maps/geo.json,
 // tools/geodatos.py); los topónimos son los que nombra Darwin el 17 de diciembre de 1832.
 // Uso: node tools/tramo01.mjs
