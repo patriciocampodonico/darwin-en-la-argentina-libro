@@ -1,5 +1,5 @@
 /* Componentes del sistema: piezas que se repiten a lo largo del libro.
-   El código visual que explica la página 006 se define acá. */
+   El código visual que explica la página 004 se define acá. */
 
 /* Texto de Darwin: siempre Lora */
 .t-darwin { font-family: var(--font-reading); font-size: var(--body-size); line-height: var(--body-leading); }

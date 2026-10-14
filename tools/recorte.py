@@ -1,4 +1,4 @@
-# Recorta los mockups fotográficos de la página 007 de su fondo gris (fondo y sombra → transparente).
+# Recorta los mockups fotográficos de la página 005 de su fondo gris (fondo y sombra → transparente).
 # Uso: py tools/recorte.py   (originales en assets/images/originales/mockup-*.webp)
 import os
 import numpy as np
@@ -20,7 +20,7 @@ mask = Image.new('L', [s * 4 for s in im.size], 0); d = ImageDraw.Draw(mask)
 d.rounded_rectangle([122 * 4, 147 * 4, 1108 * 4 + 3, 790 * 4], radius=22 * 4, fill=255)    # pantalla
 d.rounded_rectangle([31 * 4, 780 * 4, 1199 * 4 + 3, 806 * 4], radius=6 * 4, fill=255)      # base
 d.rounded_rectangle([1162 * 4, 194 * 4, 1414 * 4 + 3, 708 * 4 + 3], radius=46 * 4, fill=255)  # teléfono
-guardar(im, mask.resize(im.size, Image.LANCZOS), '007-mockup-web.png')
+guardar(im, mask.resize(im.size, Image.LANCZOS), '005-mockup-web.png')
 
 # Libro: el fondo y la sombra son grises neutros; papel y tapa tienen color → máscara por saturación,
 # extendida hacia abajo para incluir el canto de las hojas (gris, igual que la sombra)
@@ -33,14 +33,14 @@ obj = lab == (np.argmax(nd.sum(obj, lab, range(1, n + 1))) + 1)
 obj = nd.binary_dilation(obj, structure=np.ones((33, 1)), origin=(-16, 0)) | obj
 obj = nd.binary_fill_holes(obj)
 obj = nd.gaussian_filter(obj.astype(float), 3) > 0.5  # borde liso
-guardar(im, Image.fromarray((obj * 255).astype('uint8')), '007-mockup-libro.png')
+guardar(im, Image.fromarray((obj * 255).astype('uint8')), '005-mockup-libro.png')
 
 # Fichas: son tres rectángulos en perspectiva. De cada una se toma la envolvente convexa de sus píxeles con color
 # (papel cálido, R > B; tinta y reverso azules, B > R; el fondo y las sombras son grises neutros), dentro de una
 # zona aproximada marcada a mano. Así los bordes salen rectos y sin halo de sombra.
 from shapely.geometry import Polygon, MultiPoint
 from shapely.ops import unary_union
-im = Image.open(os.path.join(IMG, 'originales', '007-mockup-fichas.webp')).convert('RGB')
+im = Image.open(os.path.join(IMG, 'originales', '005-mockup-fichas.webp')).convert('RGB')
 a = np.asarray(im.filter(ImageFilter.GaussianBlur(1.2))).astype(int)
 rb = a[..., 0] - a[..., 2]
 col = nd.binary_opening((rb >= 5) | (rb <= -14), iterations=2)
@@ -57,4 +57,4 @@ K = 4
 mask = Image.new('L', (im.width * K, im.height * K), 0); dr = ImageDraw.Draw(mask)
 for g in getattr(forma, 'geoms', [forma]):
     dr.polygon([(x * K, y * K) for x, y in g.exterior.coords], fill=255)
-guardar(im, mask.resize(im.size, Image.LANCZOS), '007-mockup-fichas.png')
+guardar(im, mask.resize(im.size, Image.LANCZOS), '005-mockup-fichas.png')

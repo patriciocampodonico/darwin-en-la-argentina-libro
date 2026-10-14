@@ -6,7 +6,7 @@
 /* Texto de Darwin en bloque: alineado a la izquierda, con corte de palabras */
 /* Cuerpo de texto: justificado con la última línea a la izquierda. El corte de palabras usa los guiones
    opcionales que inserta el build (tools/silabas.mjs). Sin viudas ni huérfanas al pasar de columna. */
-.t-darwin.body, .p004__text, .p005__text {
+.t-darwin.body, .p006__text, .p007__text {
   text-align: justify;
   text-align-last: left;
   hyphens: manual;

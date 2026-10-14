@@ -1,7 +1,7 @@
-# Mapa y flor de la página 004, tomados de la imagen de fondo de la web (WEB/Darwin-Explorar/assets/mapa-argentina.png,
-# copiada en assets/images/originales/004-mapa-web.png). Salen en una sola tinta (el azul del libro) con transparencia:
+# Mapa y flor de la página 006, tomados de la imagen de fondo de la web (WEB/Darwin-Explorar/assets/mapa-argentina.png,
+# copiada en assets/images/originales/006-mapa-web.png). Salen en una sola tinta (el azul del libro) con transparencia:
 # lo oscuro del original pasa a tinta y el papel a transparente. La página los muestra muy tenues (opacidad --tenue).
-# Uso: py tools/mapa004.py
+# Uso: py tools/mapa006.py
 import os
 import numpy as np
 from PIL import Image, ImageFilter
@@ -9,7 +9,7 @@ from scipy import ndimage
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INK = (0x1A, 0x3A, 0x5C)
-src = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '004-mapa-web.png')).convert('L')
+src = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '006-mapa-web.png')).convert('L')
 
 def tinta(caja, salida, borrar=(), borde=0, mar=None):
     g = np.asarray(src.crop(caja).filter(ImageFilter.GaussianBlur(0.6))).astype(float)
@@ -42,13 +42,13 @@ def tinta(caja, salida, borrar=(), borde=0, mar=None):
 tinta((1330, 230, 2330, 2110), os.path.join('maps', 'argentina-tenue.png'), borrar=[(-40, 1790, 160, 1920)],
       mar=(300, 160, 250, 0.3))  # lienzo ampliado 300 px a los lados y 160 arriba y abajo; el mar llega a 250 px de la costa
 # flor: esquina inferior izquierda del original (sale a sangre por la izquierda y por abajo)
-tinta((0, 1210, 960, 2168), os.path.join('images', '004-flor.png'), borde=40)
+tinta((0, 1210, 960, 2168), os.path.join('images', '006-flor.png'), borde=40)
 
-# 005 · flor de ceibo (ilustración aparte, fondo blanco): mismo paso a una tinta con transparencia.
+# 007 · flor de ceibo (ilustración aparte, fondo blanco): mismo paso a una tinta con transparencia.
 # La rama entra por el borde derecho, así que en la página va a sangre por la derecha.
-im = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '005-flor.webp')).convert('RGBA')
+im = Image.open(os.path.join(ROOT, 'assets', 'images', 'originales', '007-flor.webp')).convert('RGBA')
 blanco = Image.new('RGBA', im.size, (255, 255, 255, 255)); blanco.alpha_composite(im)
 g = np.asarray(blanco.convert('L')).astype(float)
 alfa = np.clip((245 - g) / (245 - 60), 0, 1) ** 0.85
 out = np.zeros(alfa.shape + (4,), np.uint8); out[..., :3] = INK; out[..., 3] = (alfa * 255).round()
-Image.fromarray(out).save(os.path.join(ROOT, 'assets', 'images', '005-flor.png')); print('005-flor.png', im.size)
+Image.fromarray(out).save(os.path.join(ROOT, 'assets', 'images', '007-flor.png')); print('007-flor.png', im.size)

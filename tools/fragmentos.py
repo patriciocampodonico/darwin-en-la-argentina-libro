@@ -1,4 +1,4 @@
-# Fragmentos de las láminas del libro para el mosaico de la página 005 (caja 28,4 × 31,5 mm).
+# Fragmentos de las láminas del libro para el mosaico de la página 007 (caja 28,4 × 31,5 mm).
 # Uso: py tools/fragmentos.py   (el de «Mapa» sale de salida/008.png: antes, node build.mjs shot 008)
 import os
 from PIL import Image, ImageOps
@@ -24,5 +24,5 @@ for name, src, x, y, w, raw in FRAGMENTOS:
         g = im.convert('L')
         lut = [min(255, round(255 * (v - 40) / (228 - 40))) if v > 40 else 0 for v in range(256)]
         im = ImageOps.colorize(g.point(lut), black=INK, white=PAPER)
-    im.convert('RGB').save(os.path.join(IMG, f'005-{name}.jpg'), quality=92)
+    im.convert('RGB').save(os.path.join(IMG, f'007-{name}.jpg'), quality=92)
     print(name, im.size, round(w / 28.42 * 25.4), 'ppp')

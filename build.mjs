@@ -41,7 +41,7 @@ for (const f of readdirSync(join(ROOT, 'pages')).filter((f) => /^\d{3}\.html$/.t
     // <!--include ruta--> inserta un archivo (mapas SVG generados por tools/mapas.mjs)
     .replace(/<!--include (\S+)-->/g, (_, file) => readFileSync(join(ROOT, file), 'utf8').trim())
     // Cuerpo de texto (clase body, y los párrafos de la introducción): guiones opcionales para el justificado
-    .replace(/<(p|div) class="[^"]*(?:\bbody\b|p00[45]__text)[^"]*">[\s\S]*?<\/\1>/g, (bloque) => guionesEnHtml(bloque));
+    .replace(/<(p|div) class="[^"]*(?:\bbody\b|p00[67]__text)[^"]*">[\s\S]*?<\/\1>/g, (bloque) => guionesEnHtml(bloque));
 }
 
 const slot = (n) => pages[pad(n)] ?? `<div class="slot--empty">${pad(n)} · pendiente</div>`;

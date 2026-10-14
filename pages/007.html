@@ -1,33 +1,38 @@
-<!-- 007 · Cómo leer el libro II — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 006. -->
+<!-- 007 · Introducción – Qué va a encontrar el lector — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 004. -->
 <section class="page" data-page="007" data-section="Apertura" lang="es">
+  <!-- Flor de ceibo muy tenue, a sangre por la derecha (12 oct. 2026); la prepara tools/mapa006.py -->
+  <img class="p007__flor" src="assets/images/007-flor.png" alt="">
   <div class="page__box">
-    <h1 class="p007__title t-display-line">Un sistema, tres modos de explorar</h1>
+    <p class="p007__kicker t-label">Introducción</p>
+    <h1 class="p007__title t-display-line">Qué va a encontrar el lector</h1>
+    <p class="p007__text t-editorial">En estas páginas aparecen relatos de viaje, paisajes, plantas y animales, fósiles, formaciones geológicas, ríos, ciudades y caminos. Algunas observaciones se leen de forma continua y otras se presentan como registros breves para detenerse en una especie, un hallazgo o una transformación del territorio. Las capas editoriales acompañan el texto sin reemplazarlo: orientan, relacionan y hacen visible la información que en el diario aparece dispersa.</p>
 
-    <div class="p007__pieces">
-      <div class="piece">
-        <!-- Libro: mockup fotográfico recortado (tools/recorte.py) -->
-        <div class="foto" style="background-image:url(assets/images/007-mockup-libro.png)" role="img" aria-label="Mockup del libro abierto boca abajo: contratapa, lomo y tapa"></div>
-        <h2 class="t-label t-label--strong">Libro</h2>
-        <p class="t-editorial">Lectura secuencial e inmersiva del viaje.</p>
-      </div>
-
-      <div class="piece">
-        <!-- Mapa digital: mockup fotográfico recortado (tools/recorte.py) -->
-        <div class="foto" style="background-image:url(assets/images/007-mockup-web.png)" role="img" aria-label="Mockup del mapa digital en una notebook y en un teléfono: mapa de la Argentina con las paradas y una ficha abierta"></div>
-        <h2 class="t-label t-label--strong">Mapa digital</h2>
-        <p class="t-editorial">Exploración espacial de las paradas y recorridos.</p>
-      </div>
-
-      <div class="piece">
-        <!-- Fichas de campo: mockup de tres fichas A7, recortado de su fondo (tools/recorte.py) -->
-        <div class="foto" style="background-image:url(assets/images/007-mockup-fichas.png)" role="img" aria-label="Mockup de las fichas de campo: una pila con la ficha del Megatherium, la ficha del guanaco y el reverso azul de la parada 09"></div>
-        <h2 class="t-label t-label--strong">Fichas de campo</h2>
-        <p class="t-editorial">Consulta fragmentada de especies, fósiles, paisajes y observaciones.</p>
-      </div>
+    <!-- Tira de seis fragmentos de las láminas del libro, uno por columna (tools/fragmentos.py). -->
+    <div class="p007__mosaic">
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-fosil.jpg)" role="img" aria-label="Fragmento: costillar y cráneo del Megatherium (044)"></div>
+        <figcaption class="t-meta">Fósil</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-ave.jpg)" role="img" aria-label="Fragmento: picotijera en vuelo rasante (081)"></div>
+        <figcaption class="t-meta">Ave</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-planta.jpg)" role="img" aria-label="Fragmento: rama de haya, Fagus betuloides (016)"></div>
+        <figcaption class="t-meta">Planta</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-rio.jpg)" role="img" aria-label="Fragmento: el río Santa Cruz (105)"></div>
+        <figcaption class="t-meta">Río</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-montana.jpg)" role="img" aria-label="Fragmento: roquedal de la sierra de la Ventana (051)"></div>
+        <figcaption class="t-meta">Montaña</figcaption>
+      </figure>
+      <figure class="tile">
+        <div class="foto" style="background-image:url(assets/images/007-mapa.jpg)" role="img" aria-label="Fragmento: costa patagónica con las paradas 13, 14, 15 y 01 (008)"></div>
+        <figcaption class="t-meta">Mapa</figcaption>
+      </figure>
     </div>
-
-    <hr class="p007__rule">
-    <p class="p007__shared t-editorial">Las tres piezas comparten fechas, nomenclaturas, iconografía y lenguaje visual. El código QR de esta página conecta con el mapa digital.</p>
-    <div class="p007__qr qr" role="img" aria-label="Código QR: enlace al mapa digital"></div>
   </div>
 </section>
