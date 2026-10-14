@@ -550,3 +550,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Notas anteriores a esta entrada usan la numeración vieja (+2 respecto de la actual desde la 010).
 - tools/fragmentos.py toma el fragmento «mapa» de salida/008.png, que ahora es el índice azul: no regenerar 005 sin cambiarlo a la 009.
 - Las fichas de campo (carpeta FICHAS) citan páginas del libro: hay que restarles 2 a las de la 012 en adelante.
+- 2026-10-14 · 008: se quitan los rótulos de año sueltos (1832, 1833, 1834) del índice; cada fecha lleva ahora su año. Las dos columnas empiezan en la misma línea. Re-aprobada.

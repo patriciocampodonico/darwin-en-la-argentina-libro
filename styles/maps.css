@@ -58,7 +58,7 @@
 .p008__title { grid-column: 1 / 7; grid-row: 2 / 5; --size: var(--title-size); }
 .p008__sub { grid-column: 1 / 4; grid-row: 6; }
 .p008__col { grid-column: 1 / 4; grid-row: 8 / 28; }
-.p008__col--b { grid-column: 4 / 7; grid-row: 9 / 28; }  /* empieza a la altura de la parada 01 */
+.p008__col--b { grid-column: 4 / 7; }
 .p008__col li { display: grid; grid-template-columns: 8mm 1fr auto; column-gap: 2mm; height: calc(var(--baseline) * 2); align-content: start; }
 .p008__col li > b { font-family: var(--font-ui); font-size: var(--editorial-size); line-height: var(--baseline); font-weight: 700; }
 .p008__col li > i { font-style: normal; font-family: var(--font-ui); font-size: var(--editorial-size); line-height: var(--baseline); font-weight: 600; }
