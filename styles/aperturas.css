@@ -1,0 +1,31 @@
+/* Aperturas de parada: marcas que se repiten en las 15 aperturas (todas en página izquierda).
+   Las agrega build.mjs a la página que lleva el número de parada en .stopline. No tocan la retícula:
+   el número y el recorrido van en el margen de arriba (16 mm); la pestaña, en el margen de afuera. */
+.apertura { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+
+/* 1 · Número grande: bloque azul a sangre arriba y afuera; la cifra empieza en la columna 1 */
+.apertura__numero {
+  position: absolute; top: 0; left: 0; height: calc(var(--margin-top) - 3mm);
+  width: calc(var(--margin-outer) + (var(--page-width) - var(--margin-outer) - var(--margin-inner) + var(--column-gap)) / 6 - var(--column-gap)); /* margen + columna 1 */
+  padding: 0 0 0 var(--margin-outer); box-sizing: border-box;
+  background: var(--blue-deep); color: var(--paper);
+  font-family: var(--font-display); font-size: 34pt; line-height: 1; font-variant-numeric: lining-nums;
+  display: flex; align-items: flex-end; padding-bottom: 1.6mm;
+}
+
+/* 2 · Las 15 paradas en una línea, la de la apertura llena (sobre una plaquita de papel, por si hay imagen debajo) */
+.apertura__recorrido {
+  position: absolute; top: calc(var(--margin-top) - 3mm - 8.2mm); left: calc(var(--margin-outer) + (var(--page-width) - var(--margin-outer) - var(--margin-inner) + var(--column-gap)) / 6); width: calc(var(--page-width) - var(--margin-inner) - var(--margin-outer) - (var(--page-width) - var(--margin-outer) - var(--margin-inner) + var(--column-gap)) / 6); height: auto; overflow: visible;
+  background: var(--paper); padding: 0.6mm 1.6mm; box-sizing: content-box; margin-left: -1.6mm;
+}
+.apertura__linea { stroke: var(--blue-deep); stroke-width: 0.25; }
+.apertura__actual { fill: var(--blue-deep); }
+.apertura__otra { fill: var(--paper); stroke: var(--blue-deep); stroke-width: 0.25; }
+.apertura__recorrido text { font-family: var(--font-ui); font-size: 2.3px; fill: var(--blue-deep); }
+
+/* 3 · Pestaña en el canto: 15 escalones de 8,4 mm repartidos en el alto de la caja (126 mm) */
+.apertura__pestana {
+  position: absolute; left: 0; width: 4mm; height: calc(var(--baseline) * var(--rows) / 15);
+  top: calc(var(--margin-top) + (var(--parada) - 1) * var(--baseline) * var(--rows) / 15);
+  background: var(--blue-deep);
+}

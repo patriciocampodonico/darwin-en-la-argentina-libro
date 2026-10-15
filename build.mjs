@@ -27,6 +27,23 @@ if (cmd === 'approve') {
   console.log(`🔒 ${arg} aprobada y bloqueada`);
 }
 
+// Marcas de apertura de parada (15 oct. 2026, corrección de la profesora: que se note cada capítulo nuevo).
+// 1 · número de parada grande en un bloque azul, a sangre en la esquina superior de afuera (en el margen de arriba);
+// 2 · la línea de las 15 paradas, como en la tapa, con la parada de la apertura llena;
+// 3 · pestaña azul en el canto: baja un escalón por parada (01 arriba, 15 abajo), se ve con el libro cerrado.
+const marcasApertura = (n) => {
+  const L = 153, paso = L / 14; // en mm: la línea va de la columna 2 a la 6
+  const puntos = Array.from({ length: 15 }, (_, i) => i + 1 === n
+    ? `<circle class="apertura__actual" cx="${(i * paso).toFixed(2)}" cy="3" r="1.25"/>`
+    : `<circle class="apertura__otra" cx="${(i * paso).toFixed(2)}" cy="3" r="0.75"/>`).join('');
+  return `  <div class="apertura" style="--parada:${n}" aria-hidden="true">
+    <div class="apertura__numero">${String(n).padStart(2, '0')}</div>
+    <svg class="apertura__recorrido" viewBox="-1.5 0 ${L + 3} 8.2"><line class="apertura__linea" x1="0" y1="3" x2="${L}" y2="3"/>${puntos}<text x="0" y="7.9">01</text><text x="${L}" y="7.9" text-anchor="end">15</text></svg>
+    <div class="apertura__pestana"></div>
+  </div>
+`;
+};
+
 // Páginas existentes; par = izquierda, impar = derecha (la 001 es la carilla de cortesía, a la derecha)
 const pages = {};
 for (const f of readdirSync(join(ROOT, 'pages')).filter((f) => /^\d{3}\.html$/.test(f)).sort()) {
@@ -37,7 +54,10 @@ for (const f of readdirSync(join(ROOT, 'pages')).filter((f) => /^\d{3}\.html$/.t
   const section = src.match(/data-section="([^"]*)"/)?.[1];
   // Folio + sección: solo en las páginas que declaran data-section
   const folio = section ? `  <div class="page__folio"><b>${id}</b><span>${section}</span></div>\n` : '';
-  pages[id] = src.replace('class="page"', `class="page page--${side}" id="p${id}"`).replace(/<\/section>\s*$/, `${folio}</section>\n`)
+  // Apertura de parada (la página que lleva el número en .stopline): número grande, recorrido y pestaña en el canto
+  const parada = src.match(/class="[^"]*\bstopline\b[^"]*"><b>(\d\d)<\/b>/)?.[1];
+  const apertura = parada && src.includes("t-opening") ? marcasApertura(Number(parada)) : '';
+  pages[id] = src.replace('class="page"', `class="page page--${side}" id="p${id}"`).replace(/<\/section>\s*$/, `${apertura}${folio}</section>\n`)
     // <!--include ruta--> inserta un archivo (mapas SVG generados por tools/mapas.mjs)
     .replace(/<!--include (\S+)-->/g, (_, file) => readFileSync(join(ROOT, file), 'utf8').trim())
     // Cuerpo de texto (clase body, y los párrafos de la introducción): guiones opcionales para el justificado
@@ -88,6 +108,7 @@ writeFileSync(join(ROOT, 'index.html'), conSello(`<!doctype html>
 <link rel="stylesheet" href="styles/fotos.css?v=${sello}">
 <link rel="stylesheet" href="tapa/tapa.css?v=${sello}">
 <link rel="stylesheet" href="styles/medida.css?v=${sello}">
+<link rel="stylesheet" href="styles/aperturas.css?v=${sello}">
 <link rel="stylesheet" href="styles/print.css?v=${sello}">
 </head>
 <body>
