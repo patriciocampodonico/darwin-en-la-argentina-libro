@@ -11,12 +11,12 @@ OUT = ROOT.parent / 'Darwin_en_la_Argentina_revision.pdf'
 TAPA = 'a'  # variante de tapa elegida
 
 DOBLES = '''<style>
-@page { size: 420mm 148mm; margin: 0; }
+@page { size: 420mm 160mm; margin: 0; }
 @media print {
-  .spread { display: flex !important; width: 420mm; height: 148mm; break-after: page; break-inside: avoid; }
+  .spread { display: flex !important; width: 420mm; height: 160mm; break-after: page; break-inside: avoid; }
   .spread:has(.page--cover) { display: none !important; }
   /* Carilla de cortesía (001) y guarda final (106): se muestran en blanco, frente al retiro de tapa */
-  .spread:has(.page--guard) .slot--empty { display: block !important; width: 210mm; height: 148mm; flex: none; background: var(--paper); font-size: 0; }
+  .spread:has(.page--guard) .slot--empty { display: block !important; width: 210mm; height: 160mm; flex: none; background: var(--paper); font-size: 0; }
   .page { break-after: auto !important; }
 }
 </style>

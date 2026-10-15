@@ -3,12 +3,12 @@
 :root {
   /* Formato */
   --page-width: 210mm;
-  --page-height: 148mm;
+  --page-height: 160mm;
   --bleed: 3mm;
 
   /* Márgenes */
-  --margin-top: 10mm;
-  --margin-bottom: 12mm;
+  --margin-top: 16mm;
+  --margin-bottom: 18mm;
   --margin-inner: 12mm;
   --margin-outer: 10mm;
 

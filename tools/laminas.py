@@ -49,21 +49,21 @@ def agua(name, caja, x0, y0):
     w, h = (im.width - x0, round((im.width - x0) * caja[1] / caja[0])) if caja[0] > caja[1] else (round((im.height - y0) * caja[0] / caja[1]), im.height - y0)
     im = ImageOps.autocontrast(im.crop((x0, y0, x0 + w, y0 + h)), cutoff=(1, 0))
     guardar(im.point([round(255 * (v / 255) ** 1.9) for v in range(256)]), name, caja[0])  # más denso: el nombre va encima
-agua('056-agua-salado', (40.42, 148), 20, 0)    # franja vertical junto al lomo
-agua('065-agua-parana', (210, 48), 0, 330)      # franja horizontal de lado a lado, a sangre abajo
+agua('056-agua-salado', (40.42, 160), 20, 0)    # franja vertical junto al lomo
+agua('065-agua-parana', (210, 54), 0, 330)      # franja horizontal de lado a lado, a sangre abajo
 
 # 012–013 · una sola imagen del bosque para la doble: se recorta a la proporción de las dos cajas juntas
-# (2 × 104,25 × 148 mm), se pasa a las dos tintas de una vez y se parte por el lomo.
-im = ImageOps.autocontrast(Image.open(os.path.join(IMG, 'originales', '012-013-bosque.webp')).convert('L'), cutoff=0.5)
-w = round(im.height * 2 * 104.25 / 148) // 2 * 2
+# (2 × 104,25 × 160 mm), se pasa a las dos tintas de una vez y se parte por el lomo.
+im = ImageOps.autocontrast(Image.open(os.path.join(IMG, 'originales', '012-015-bosque.webp')).convert('L'), cutoff=0.5)
+w = round(im.height * 2 * 104.25 / 160) // 2 * 2
 x0 = (im.width - w) // 2
 guardar(im.crop((x0, 0, x0 + w // 2, im.height)), '012-senda-bosque', 104.25)
 guardar(im.crop((x0 + w // 2, 0, x0 + w, im.height)), '013-bosque-torrente', 104.25)
 
 # 035 · continuación hacia la derecha de la franja de Punta Alta (034): mismo recorte que hace tools/fotos.py
-# con la 034 (franja de 210 × 37 mm centrada en la altura), para que el horizonte siga en la misma línea.
+# con la 034 (franja de 210 × 43 mm centrada en la altura), para que el horizonte siga en la misma línea.
 im = Image.open(os.path.join(IMG, 'originales', '035-punta-alta.webp')).convert('L')
-h = round(im.width * 37 / 210)
+h = round(im.width * 43 / 210)
 y0 = round(im.height / 2 - h / 2)
 guardar(ImageOps.autocontrast(im.crop((0, y0, im.width, y0 + h)), cutoff=0.5), '035-punta-alta', 210)
 

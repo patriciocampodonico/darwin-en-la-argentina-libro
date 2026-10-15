@@ -97,13 +97,13 @@ ${spreads.join('\n')}
   if (q.has('grid')) document.body.classList.add('show-grid');
   if (q.get('p')) { document.body.classList.add('single'); for (const id of q.get('p').split('-')) document.getElementById('p' + id)?.classList.add('is-target'); }
   addEventListener('keydown', (e) => { if (e.key === 'g') document.body.classList.toggle('show-grid'); });
-  // Pantalla: la doble página entra completa en la ventana al abrir (444 × 172 mm con el marco = 1678 × 650 px).
+  // Pantalla: la doble página entra completa en la ventana al abrir (444 × 184 mm con el marco = 1678 × 695 px).
   // En el teléfono el viewport es de 1280 px (entra en cualquier pantalla) y esta escala hace el resto.
   // Se calcula en píxeles físicos para que el zoom del navegador siga acercando de verdad.
   const dpr0 = devicePixelRatio, raiz = document.documentElement;
   const encajar = () => {
     const k = devicePixelRatio / dpr0, w = Math.min(raiz.clientWidth, innerWidth) * k, h = innerHeight * k;
-    if (w > 0 && h > 0) raiz.style.setProperty('--fit', Math.min(1, w / 1678, h / 650).toFixed(4));
+    if (w > 0 && h > 0) raiz.style.setProperty('--fit', Math.min(1, w / 1678, h / 695).toFixed(4));
   };
   encajar(); addEventListener('resize', encajar);
 </script>
@@ -121,7 +121,7 @@ if (cmd === 'shot' || cmd === 'pdf') {
     run([`--print-to-pdf=${out('libro.pdf')}`, '--no-pdf-header-footer', url]);
   } else {
     for (const g of ['', '-grilla'])
-      run([`--screenshot=${out(`${arg}${g}.png`)}`, `--window-size=${794 * arg.split('-').length},560`, '--force-device-scale-factor=3', `${url}?p=${arg}${g ? '&grid=1' : ''}`]);
+      run([`--screenshot=${out(`${arg}${g}.png`)}`, `--window-size=${794 * arg.split('-').length},605`, '--force-device-scale-factor=3', `${url}?p=${arg}${g ? '&grid=1' : ''}`]);
     if (!arg.includes('-')) run([`--print-to-pdf=${out(`${arg}.pdf`)}`, '--no-pdf-header-footer', `${url}?p=${arg}`]);
   }
   console.log(`Salida en salida/`);

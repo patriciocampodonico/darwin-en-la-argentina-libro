@@ -34,7 +34,7 @@
 .p055__caption { grid-column: 4 / 7; grid-row: 21 / 26; }
 
 /* ── 056 · Cruzar el Salado ── el texto arranca una línea antes, a la par de 057; el río, franja vertical del lado del lomo */
-.p056__river { position: absolute; top: 0; bottom: 0; right: 0; width: calc(var(--margin-inner) + var(--col)); background: var(--blue-deep) url(../assets/images/056-agua-salado.jpg) center / cover; }
+.p056__river { position: absolute; top: 0; bottom: 0; right: 0; width: calc(var(--margin-inner) + var(--col)); background: var(--blue-deep) url(../assets/images/056-agua-salado.jpg?v=2) center / cover; }
 .p056__title { grid-column: 1 / 5; grid-row: 2 / 4; }
 .p056__text { grid-column: 1 / 4; grid-row: 6 / 21; }
 .p056__datalabel { grid-column: 4 / 6; grid-row: 6; }

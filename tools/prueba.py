@@ -1,6 +1,7 @@
 # Prueba de impresión en cuadernillo cosido a caballete (acaballado), montada en pliegos SRA3 (450 × 320 mm).
-# Cada pliego lleva dos tiras de 420 × 148 mm (dos páginas enfrentadas), con 3 mm de demasía y marcas de corte y de plegado.
-# Un A3 justo (420 × 297 mm) no alcanza: dos tiras con demasía miden 426 × 308 mm.
+# Cada pliego lleva las tiras de 420 × 160 mm (dos páginas enfrentadas) que entren, con 3 mm de demasía y marcas de corte y de plegado.
+# Desde el 15 oct. 2026 la página mide 210 × 160 mm: una tira con demasía mide 426 × 166 mm, así que entra una sola por pliego SRA3
+# (con 148 mm entraban dos). Un A3 justo (420 × 297 mm) no alcanza ni para una: la tira mide 426 mm de ancho.
 # La demasía se arma espejando 3 mm del borde de cada página (las imágenes a sangre continúan; el papel sigue siendo papel).
 # Uso: py tools/prueba.py 1 16   (primera y última página del cuadernillo; la cantidad tiene que ser múltiplo de 4)
 #      antes: node build.mjs pdf   → sale ../Darwin_prueba_NNN-NNN_SRA3.pdf (carpeta LIBRO)
@@ -11,9 +12,10 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MM = 72 / 25.4
-PW, PH, B = 210, 148, 3            # página y demasía, en mm
+PW, PH, B = 210, 160, 3            # página y demasía, en mm
 SW, SH = 450, 320                  # pliego SRA3 apaisado
-X0, Y0 = (SW - 2 * PW) / 2, (SH - 2 * (PH + 2 * B)) / 2 + B   # esquina de corte de la tira de arriba
+TIRAS = int(SH // (PH + 2 * B))    # tiras por pliego (1 con 160 mm de alto)
+X0, Y0 = (SW - 2 * PW) / 2, (SH - TIRAS * (PH + 2 * B)) / 2 + B   # esquina de corte de la tira de arriba
 DPI = 300
 AZUL = (0x1A / 255, 0x3A / 255, 0x5C / 255)
 
@@ -43,10 +45,10 @@ def tira(hoja, y, izq, der):
         hoja.draw_line((( X0 - B - 8) * MM, yy * MM), ((X0 - B - 1.5) * MM, yy * MM), **m)
         hoja.draw_line(((X0 + 2 * PW + B + 1.5) * MM, yy * MM), ((X0 + 2 * PW + B + 8) * MM, yy * MM), **m)
 
-def pliego(doc, arriba, abajo, rotulo):
+def pliego(doc, pares, rotulo):
     hoja = doc.new_page(width=SW * MM, height=SH * MM)
-    for y, par in ((Y0, arriba), (Y0 + PH + 2 * B, abajo)):
-        if par: tira(hoja, y, *par)
+    for i, par in enumerate(pares):
+        tira(hoja, Y0 + i * (PH + 2 * B), *par)
     m = dict(color=(0, 0, 0), width=0.25)
     for x in (X0, X0 + 2 * PW):                                      # marcas de corte verticales, arriba y abajo
         hoja.draw_line((x * MM, 0.8 * MM), (x * MM, (Y0 - B - 1) * MM), **m)
@@ -60,12 +62,12 @@ pag = lambda i: a + i - 1
 frente = [(pag(N - 2 * k), pag(1 + 2 * k)) for k in range(N // 4)]
 dorso = [(pag(2 + 2 * k), pag(N - 1 - 2 * k)) for k in range(N // 4)]
 doc = pymupdf.open()
-for s in range(0, N // 4, 2):
+for s in range(0, N // 4, TIRAS):
     for cara, lista in (('frente', frente), ('dorso', dorso)):
-        arr, aba = lista[s], lista[s + 1] if s + 1 < len(lista) else None
-        txt = ' · '.join(f'{p[0]:03d}|{p[1]:03d}' for p in (arr, aba) if p)
-        pliego(doc, arr, aba, f'Darwin en la Argentina · prueba {a:03d}–{z:03d} · pliego {s // 2 + 1} {cara} · {txt} · doble faz, voltear por el borde corto')
-        print(f'pliego {s // 2 + 1} {cara}: {txt}')
+        pares = lista[s:s + TIRAS]
+        txt = ' · '.join(f'{p[0]:03d}|{p[1]:03d}' for p in pares)
+        pliego(doc, pares, f'Darwin en la Argentina · prueba {a:03d}–{z:03d} · pliego {s // TIRAS + 1} {cara} · {txt} · doble faz, voltear por el borde corto')
+        print(f'pliego {s // TIRAS + 1} {cara}: {txt}')
 out = ROOT.parent / f'Darwin_prueba_{a:03d}-{z:03d}_SRA3.pdf'
 doc.save(out, deflate=True, garbage=3)
 print(out.name, len(doc), 'caras', round(out.stat().st_size / 1e6, 1), 'MB')
