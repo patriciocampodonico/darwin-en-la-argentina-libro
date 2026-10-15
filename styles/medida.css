@@ -332,3 +332,13 @@
 .p037__caption { grid-row: 26; }
 .p091__note-e { grid-row: 23 / 29; }                    /* el texto ganó un renglón: la nota E y el esquema bajan uno */
 .p091__line { grid-row: 23 / 27; }
+
+/* 102: créditos de imágenes (15 oct. 2026), en columnas 4–6 debajo del código de notas: un rubro por renglón corrido
+   (rubro en negrita y su texto a continuación), con línea fina arriba como el código de notas; termina con la caja */
+.p102__credlabel { grid-column: 4 / 7; grid-row: 18; }
+.p102__credits { grid-column: 4 / 7; grid-row: 18 / 29; margin: 0; align-self: end; }
+.p102__credits > div { padding: 0.9mm 0 1.2mm;
+  background: linear-gradient(var(--blue-deep), var(--blue-deep)) top / 100% var(--rule-fine) no-repeat; }
+.p102__credits dt { display: inline; font-weight: 600; }
+.p102__credits dt::after { content: '. '; }
+.p102__credits dd { display: inline; margin: 0; }

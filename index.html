@@ -5,24 +5,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=1280">
 <title>Darwin en la Argentina — libro</title>
-<link rel="stylesheet" href="styles/tokens.css?v=5b84595d">
-<link rel="stylesheet" href="styles/typography.css?v=5b84595d">
-<link rel="stylesheet" href="styles/grid.css?v=5b84595d">
-<link rel="stylesheet" href="styles/components.css?v=5b84595d">
-<link rel="stylesheet" href="styles/pages.css?v=5b84595d">
-<link rel="stylesheet" href="styles/maps.css?v=5b84595d">
-<link rel="stylesheet" href="styles/paradas.css?v=5b84595d">
-<link rel="stylesheet" href="styles/registros.css?v=5b84595d">
-<link rel="stylesheet" href="styles/tramo-03.css?v=5b84595d">
-<link rel="stylesheet" href="styles/tramo-04-05.css?v=5b84595d">
-<link rel="stylesheet" href="styles/tramo-05-07.css?v=5b84595d">
-<link rel="stylesheet" href="styles/tramo-07-10.css?v=5b84595d">
-<link rel="stylesheet" href="styles/tramo-10-15.css?v=5b84595d">
-<link rel="stylesheet" href="styles/fotos.css?v=5b84595d">
-<link rel="stylesheet" href="tapa/tapa.css?v=5b84595d">
-<link rel="stylesheet" href="styles/medida.css?v=5b84595d">
-<link rel="stylesheet" href="styles/aperturas.css?v=5b84595d">
-<link rel="stylesheet" href="styles/print.css?v=5b84595d">
+<link rel="stylesheet" href="styles/tokens.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/typography.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/grid.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/components.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/pages.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/maps.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/paradas.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/registros.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/tramo-03.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/tramo-04-05.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/tramo-05-07.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/tramo-07-10.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/tramo-10-15.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/fotos.css?v=904e4b0f">
+<link rel="stylesheet" href="tapa/tapa.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/medida.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/aperturas.css?v=904e4b0f">
+<link rel="stylesheet" href="styles/print.css?v=904e4b0f">
 </head>
 <body>
 <div class="spread"><div class="slot--empty"></div><section class="page page--cover page--right front" id="ptapa">
@@ -2730,7 +2730,8 @@
 </div>
 <div class="spread"><!-- 102 · Notas, fuentes y créditos — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 103. Texto del v2 sin cambios.
      OJO: el v2 dice que la selección «se contrastó con el escaneo de la edición fuente». En esta maqueta el cotejo se hizo solo contra
-     la capa de texto del escaneo; falta el cotejo visual de las palabras dudosas (ver BOOK_PROGRESS) y la verificación de 071. -->
+     la capa de texto del escaneo; falta el cotejo visual de las palabras dudosas (ver BOOK_PROGRESS) y la verificación de 071.
+     15 oct. 2026: créditos de imágenes completos (fuentes: ASSET_MANIFEST, tools/fotos.py, laminas.py, recorte.py, mapa004.py, geodatos.py). -->
 <section class="page page--left" id="p102" data-page="102" data-section="Cierre" lang="es">
   <div class="page__box">
     <h1 class="p102__title t-display-line">Fuentes y notas</h1>
@@ -2744,7 +2745,15 @@
       <li><span class="notetag">E</span><span class="t-editorial">Nota de la edición española</span></li>
       <li><span class="notetag notetag--ed">ED</span><span class="t-editorial">Nota editorial del proyecto</span></li>
     </ul>
-    <div class="p102__credits placeholder">[CRÉDITOS DE IMÁGENES PENDIENTES — se completan cuando estén los assets definitivos: procedencia de cada ilustración, mapa y lámina histórica]</div>
+    <h2 class="p102__credlabel t-label t-label--strong">Créditos de imágenes</h2>
+    <dl class="p102__credits t-data">
+      <div><dt>Ilustraciones, láminas y texturas</dt><dd>Generadas con ChatGPT (OpenAI) para esta reedición, a partir de las referencias de estilo del proyecto, y pasadas a las dos tintas del libro. No son imágenes de época.</dd></div>
+      <div><dt>010, 019 y 006</dt><dd>Imágenes de la bahía del Buen Suceso y de la salina, mapa y flor de fondo: del mapa digital del proyecto.</dd></div>
+      <div><dt>005 y 007</dt><dd>Mockups del sistema y flor de ceibo: aportados por los autores.</dd></div>
+      <div><dt>Mapas</dt><dd>009, 011, 016 y 100: costa, ríos y límites de Natural Earth (1:10m, dominio público); recorridos trazados según el diario.</dd></div>
+      <div><dt>Esquemas</dt><dd>Elaboración del proyecto con los datos del diario.</dd></div>
+      <div><dt>Tipografías</dt><dd>Playfair Display, Lora e Inter (SIL Open Font License).</dd></div>
+    </dl>
   </div>
   <div class="page__folio"><b>102</b><span>Cierre</span></div>
 </section>
