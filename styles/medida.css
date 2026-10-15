@@ -301,3 +301,12 @@
 .p007__flor { position: absolute; right: -6mm; top: 3mm; height: 98mm; opacity: 0.17; }
 /* 006: el mapa lleva el mar alrededor (lienzo ampliado: 1600 × 2200 px); el territorio conserva su tamaño (126 mm de alto) */
 .p006__map { top: 0.3mm; height: 147.4mm; right: -2.1mm; }
+
+/* Interlínea pareja (15 oct. 2026): las cursivas, negritas, cortes […] y etiquetas D/E/ED usan otra fuente u otro cuerpo
+   y agrandaban algunos renglones unas décimas de milímetro. Así no cuentan para la altura del renglón: manda la grilla. */
+:is(.t-darwin, .t-data, .t-editorial, .t-meta, .body, .notes) :is(i, em, b, strong, .cut, .nowrap) { line-height: 0; }
+.notetag { margin-block: -0.6mm; }
+
+/* Notas y datos: 3 mm = 11,34 px, y el navegador redondea cada renglón al píxel (salían renglones de 11 y de 12 px,
+   0,26 mm de diferencia). Con 11 px exactos (2,91 mm) todos los renglones quedan iguales. */
+:root { --data-leading: 11px; }
