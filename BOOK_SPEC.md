@@ -12,6 +12,7 @@ Registro de decisiones del sistema. Los valores viven en `styles/tokens.css`; ac
 |---|---|---|
 | Formato | Apaisado 210 × 160 mm (antes A5, 148 mm; alargado el 15 oct. 2026 por corrección de la profesora), sangrado 3 mm | Fijo |
 | Paginación | **Par = página izquierda, impar = derecha** (desde el 12 oct. 2026). 001 = carilla de cortesía en blanco, sin folio; 002–105 = contenido; 106 = guarda final en blanco. 106 páginas físicas + tapa y contratapa. **Página del libro = entrada del plan v2 + 1** (la entrada 004 del v2 es la página 005). |
+| Medianil | 5 mm (antes 3,5; ampliado el 15 oct. 2026: el texto quedaba pegado a imágenes y esquemas). Columnas de 27,17 mm | |
 | Márgenes | Sup. 16 · inf. 18 · interior 12 · exterior 10 mm (los 12 mm nuevos se repartieron arriba y abajo; la retícula de 28 líneas no cambió) | Folio a 7 mm del borde inferior |
 | Retícula | 6 columnas de 28,42 mm, medianil 3,5 mm, caja 188 × 126 mm | Valores base del encargo |
 | Línea de base | 4,5 mm (12,76 pt), 28 líneas | 4 mm (11,3 pt) quedaba por debajo de la interlínea pedida de 12,5–13 pt; 4,5 mm entra en el rango y divide la caja en 28 líneas exactas |

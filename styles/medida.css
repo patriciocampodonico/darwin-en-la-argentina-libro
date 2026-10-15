@@ -325,3 +325,10 @@
 .p100__modes > div { grid-template-columns: 1fr; height: calc(var(--baseline) * 2); }
 .p100__modes dt { font-size: var(--meta-size); line-height: var(--baseline); white-space: nowrap; }
 .p100__note { grid-column: 6 / 7; grid-row: 21 / 29; align-self: end; }
+
+/* Medianil de 5 mm (15 oct. 2026): los tres bloques que ganaron un renglón al angostarse las columnas */
+.p025__text, .p025__image { grid-row: 7 / 29; }         /* el texto termina un renglón más abajo: la imagen baja con él */
+.p037__plan { grid-row: 20 / 25; }                      /* la lista ganó un renglón: el esquema y su nota bajan uno */
+.p037__caption { grid-row: 26; }
+.p091__note-e { grid-row: 23 / 29; }                    /* el texto ganó un renglón: la nota E y el esquema bajan uno */
+.p091__line { grid-row: 23 / 27; }
