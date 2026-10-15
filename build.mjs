@@ -30,16 +30,14 @@ if (cmd === 'approve') {
 // Marcas de apertura de parada (15 oct. 2026, corrección de la profesora: que se note cada capítulo nuevo).
 // 1 · número de parada grande en un bloque azul, a sangre en la esquina superior de afuera (en el margen de arriba);
 // 2 · la línea de las 15 paradas, como en la tapa, con la parada de la apertura llena;
-// 3 · pestaña azul en el canto: baja un escalón por parada (01 arriba, 15 abajo), se ve con el libro cerrado.
 const marcasApertura = (n) => {
-  const L = 153, paso = L / 14; // en mm: la línea va de la columna 2 a la 6
+  const L = 150, x0 = 6, x1 = L - 6, paso = (x1 - x0) / 14; // en mm: «01» · línea · «15», de la columna 2 a la 6
   const puntos = Array.from({ length: 15 }, (_, i) => i + 1 === n
-    ? `<circle class="apertura__actual" cx="${(i * paso).toFixed(2)}" cy="3" r="1.25"/>`
-    : `<circle class="apertura__otra" cx="${(i * paso).toFixed(2)}" cy="3" r="0.75"/>`).join('');
-  return `  <div class="apertura" style="--parada:${n}" aria-hidden="true">
-    <div class="apertura__numero">${String(n).padStart(2, '0')}</div>
-    <svg class="apertura__recorrido" viewBox="-1.5 0 ${L + 3} 8.2"><line class="apertura__linea" x1="0" y1="3" x2="${L}" y2="3"/>${puntos}<text x="0" y="7.9">01</text><text x="${L}" y="7.9" text-anchor="end">15</text></svg>
-    <div class="apertura__pestana"></div>
+    ? `<circle class="apertura__actual" cx="${(x0 + i * paso).toFixed(2)}" cy="2" r="1.25"/>`
+    : `<circle class="apertura__otra" cx="${(x0 + i * paso).toFixed(2)}" cy="2" r="0.75"/>`).join('');
+  return `  <div class="apertura" aria-hidden="true">
+    <div class="apertura__numero"><span>${String(n).padStart(2, '0')}</span></div>
+    <div class="apertura__recorrido"><svg viewBox="0 0 ${L} 4"><line class="apertura__linea" x1="${x0}" y1="2" x2="${x1}" y2="2"/>${puntos}<text x="0" y="2.82">01</text><text x="${L}" y="2.82" text-anchor="end">15</text></svg></div>
   </div>
 `;
 };
@@ -54,7 +52,7 @@ for (const f of readdirSync(join(ROOT, 'pages')).filter((f) => /^\d{3}\.html$/.t
   const section = src.match(/data-section="([^"]*)"/)?.[1];
   // Folio + sección: solo en las páginas que declaran data-section
   const folio = section ? `  <div class="page__folio"><b>${id}</b><span>${section}</span></div>\n` : '';
-  // Apertura de parada (la página que lleva el número en .stopline): número grande, recorrido y pestaña en el canto
+  // Apertura de parada (la página que lleva el número en .stopline): número grande y recorrido
   const parada = src.match(/class="[^"]*\bstopline\b[^"]*"><b>(\d\d)<\/b>/)?.[1];
   const apertura = parada && src.includes("t-opening") ? marcasApertura(Number(parada)) : '';
   pages[id] = src.replace('class="page"', `class="page page--${side}" id="p${id}"`).replace(/<\/section>\s*$/, `${apertura}${folio}</section>\n`)
