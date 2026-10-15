@@ -335,8 +335,9 @@
 
 /* 102: créditos de imágenes (15 oct. 2026), en columnas 4–6 debajo del código de notas: un rubro por renglón corrido
    (rubro en negrita y su texto a continuación), con línea fina arriba como el código de notas; termina con la caja */
-.p102__credlabel { grid-column: 4 / 7; grid-row: 18; }
-.p102__credits { grid-column: 4 / 7; grid-row: 18 / 29; margin: 0; align-self: end; }
+.p102__credbox { grid-column: 4 / 7; grid-row: 17 / 29; align-self: end; }  /* rótulo y lista juntos, terminan con la caja */
+.p102__credlabel { margin: 0 0 1.5mm; height: var(--baseline); line-height: var(--baseline); }
+.p102__credits { margin: 0; }
 .p102__credits > div { padding: 0.9mm 0 1.2mm;
   background: linear-gradient(var(--blue-deep), var(--blue-deep)) top / 100% var(--rule-fine) no-repeat; }
 .p102__credits dt { display: inline; font-weight: 600; }
