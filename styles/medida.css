@@ -310,3 +310,6 @@
 /* Notas y datos: 3 mm = 11,34 px, y el navegador redondea cada renglón al píxel (salían renglones de 11 y de 12 px,
    0,26 mm de diferencia). Con 11 px exactos (2,91 mm) todos los renglones quedan iguales. */
 :root { --data-leading: 11px; }
+
+/* 100: la nota ED termina donde termina la lista de 101 (línea 23) */
+.p100__note { grid-row: 20 / 24; align-self: end; }

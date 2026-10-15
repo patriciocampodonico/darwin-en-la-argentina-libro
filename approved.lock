@@ -1,4 +1,12 @@
 {
+  "100": {
+    "sha256": "4cfd6fbe83247999ff42eae1dcba34127202a307b27c451bd1b07c362d9d3dd0",
+    "fecha": "2026-10-15"
+  },
+  "101": {
+    "sha256": "b04e5f0d74ff08169fcdd13ce2b46fe56f40e3b03f6a1c96aa7a71e43f678e39",
+    "fecha": "2026-10-15"
+  },
   "002": {
     "sha256": "bbfbfafb4de8564546bb72b05b0454391c31220ca87dffcc6b00580c9b86af7e",
     "fecha": "2026-10-07"
