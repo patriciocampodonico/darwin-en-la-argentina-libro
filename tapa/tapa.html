@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- Tapa, lomo y contratapa. La tapa y la contratapa también entran en index.html (build.mjs las toma de acá).
-     Desplegado: contratapa (izquierda) + lomo + tapa (derecha). Variantes de tapa: ?v=a (imagen) · ?v=b (tipográfica).
+     Desplegado: solapa de atrás + contratapa (izquierda) + lomo + tapa (derecha) + solapa de adelante. Variantes de tapa: ?v=a (imagen) · ?v=b (tipográfica).
      Vista de una sola pieza: ?solo=tapa · ?solo=contratapa. -->
 <html lang="es">
 <head>
@@ -11,14 +11,27 @@
 <link rel="stylesheet" href="tapa.css">
 <style>
   /* Solo del desplegado */
-  @page { size: calc(var(--page-width) * 2 + var(--spine)) var(--page-height); margin: 0; }
+  @page { size: calc(var(--page-width) * 2 + var(--spine) + var(--flap) * 2) var(--page-height); margin: 0; }
   html, body { margin: 0; background: var(--paper); }
-  .cover { display: flex; width: calc(var(--page-width) * 2 + var(--spine)); height: var(--page-height); }
-  body[data-solo="tapa"] .back, body[data-solo="tapa"] .spine, body[data-solo="contratapa"] .front, body[data-solo="contratapa"] .spine { display: none; }
+  .cover { display: flex; width: calc(var(--page-width) * 2 + var(--spine) + var(--flap) * 2); height: var(--page-height); }
+  body[data-solo] .flap, body[data-solo="tapa"] .back, body[data-solo="tapa"] .spine, body[data-solo="contratapa"] .front, body[data-solo="contratapa"] .spine { display: none; }
 </style>
 </head>
 <body>
 <main class="cover">
+
+  <!-- SOLAPA DE ATRÁS (se pliega hacia adentro de la contratapa) -->
+  <section class="flap flap--back">
+    <svg class="flap__mark" viewBox="0 0 9 9" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4.3"/>
+      <path d="M4.5 0.2V2.4M4.5 6.6V8.8M0.2 4.5H2.4M6.6 4.5H8.8"/>
+      <circle class="dot" cx="4.5" cy="4.5" r="0.55"/>
+    </svg>
+    <p class="flap__label">Esta edición</p>
+    <p class="flap__text">Reúne los pa&shy;sa&shy;jes del dia&shy;rio de Darwin que trans&shy;cu&shy;rren en el ac&shy;tual te&shy;rri&shy;to&shy;rio ar&shy;gen&shy;tino, en el orden del viaje y en quince pa&shy;ra&shy;das. Los tex&shy;tos si&shy;guen la tra&shy;duc&shy;ción es&shy;pa&shy;ñola de Espasa-Calpe (1921): se con&shy;ser&shy;van sus nom&shy;bres cien&shy;tí&shy;fi&shy;cos y sus gra&shy;fías. Las notas de aque&shy;lla edi&shy;ción van mar&shy;ca&shy;das con <span class="flap__tag">E</span>; las de este pro&shy;yecto, con <span class="flap__tag flap__tag--ed">ED</span>.</p>
+    <p class="flap__small flap__small--map">El recorrido completo puede seguirse en el mapa digital: código QR en la contratapa.</p>
+    <p class="flap__credit"><span>Selección, edición y diseño</span>Patricio Campodonico<br>Martina Emma Calderón Calp</p>
+  </section>
 
   <!-- CONTRATAPA -->
   <section class="back">
@@ -68,6 +81,20 @@
       </svg>
       <p class="front__range"><span>01</span><span>1832–1834 · 15 paradas</span><span>15</span></p>
     </div>
+  </section>
+
+  <!-- SOLAPA DE ADELANTE (se pliega hacia adentro de la tapa) -->
+  <section class="flap flap--front">
+    <svg class="flap__mark" viewBox="0 0 9 9" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4.3"/>
+      <path d="M4.5 0.2V2.4M4.5 6.6V8.8M0.2 4.5H2.4M6.6 4.5H8.8"/>
+      <circle class="dot" cx="4.5" cy="4.5" r="0.55"/>
+    </svg>
+    <p class="flap__label">El autor</p>
+    <h2 class="flap__name">Charles Darwin</h2>
+    <p class="flap__dates">1809–1882</p>
+    <p class="flap__text">Naturalista in&shy;glés. A fines de 1831 par&shy;tió de Inglaterra a bordo del Beagle, un barco de la ma&shy;rina bri&shy;tá&shy;nica al mando del ca&shy;pi&shy;tán Robert FitzRoy, con el en&shy;cargo de re&shy;le&shy;var las cos&shy;tas de América del Sur. El viaje duró casi cinco años. Entre 1832 y 1834 re&shy;co&shy;rrió buena parte del ac&shy;tual te&shy;rri&shy;to&shy;rio ar&shy;gen&shy;tino, mu&shy;chas veces a ca&shy;ba&shy;llo, mien&shy;tras el barco tra&shy;ba&shy;jaba en la costa. Publicó su dia&shy;rio del viaje en 1839 y, veinte años des&shy;pués, <i>El ori&shy;gen de las es&shy;pe&shy;cies</i>.</p>
+    <p class="flap__credit"><span>El viaje del Beagle</span>1831–1836<br>En el actual territorio argentino: 1832–1834</p>
   </section>
 
 </main>
