@@ -46,8 +46,6 @@
 
 /* Párrafos dentro de un bloque y ítems de las listas del inventario: el mismo ajuste, párrafo por párrafo */
 .p033__text > p:nth-of-type(1) { letter-spacing: 0.014em; word-spacing: -0.02em; }
-.p036__text > p:nth-of-type(3) { letter-spacing: -0.006em; }
-.p037__list > p:nth-of-type(2) { letter-spacing: -0.008em; }
 .p048__text > p:nth-of-type(1) { letter-spacing: -0.004em; }
 .p055__text > p:nth-of-type(1) { letter-spacing: 0.010em; word-spacing: 0.04em; }
 .p061__text > p:nth-of-type(1) { word-spacing: 0.02em; }
@@ -57,3 +55,6 @@
 .p097__text > p:nth-of-type(1) { letter-spacing: 0.008em; word-spacing: 0.06em; }
 .p099__text > p:nth-of-type(2) { letter-spacing: -0.004em; word-spacing: 0.02em; }
 .p099__text > p:nth-of-type(3) { letter-spacing: 0.014em; }
+
+/* Inventario fósil (036–037): la lista numerada va en bandera, alineada a la izquierda (pedido de Patricio, 20 oct. 2026) */
+.p036__text > p, .p037__list > p { text-align: left; text-wrap: balance; }  /* renglones parejos: sin palabras sueltas al final */
