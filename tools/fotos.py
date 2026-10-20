@@ -58,7 +58,8 @@ files = sorted(glob.glob(os.path.join(SRC, 'Imagen*.png')), key=os.path.getmtime
 assert len(files) == len(FOTOS), f'{len(files)} originales para {len(FOTOS)} cajas'
 
 # Originales regenerados después (no entran en el orden de descarga)
-REEMPLAZOS = {'042': 'tapa-megatherium.webp'}  # Megatherium con el árbol completo
+REEMPLAZOS = {'042': 'tapa-megatherium.webp',  # Megatherium con el árbol completo
+              '090': '090-macrauchenia-suelo.webp'}  # 20 oct. 2026: medio esqueleto en el suelo, sin cráneo (sin la trompa de hueso)
 APARTE = {'012', '013'}  # una sola imagen para la doble: la prepara tools/laminas.py
 
 SOLO = set(__import__('sys').argv[1:])  # py tools/fotos.py 018 022 … rehace solo esas
