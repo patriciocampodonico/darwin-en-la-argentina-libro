@@ -17,7 +17,8 @@
 .back__quote { grid-column: 1 / 5; grid-row: 2 / 6; font-family: var(--font-display); font-size: 22pt; line-height: calc(var(--line) * 2); letter-spacing: -0.005em; }
 .back__source { grid-column: 1 / 5; grid-row: 10; font-family: var(--font-ui); font-size: var(--meta-size); line-height: var(--line); }
 .tag { display: inline-block; border: var(--rule-fine) solid currentColor; font-weight: 600; font-size: 5.5pt; line-height: 1; padding: 0.45mm 0.8mm; margin-right: 1.4mm; vertical-align: 0.2mm; }
-.back__text { grid-column: 1 / 4; grid-row: 9 / 18; font-family: var(--font-reading); font-size: var(--body-size); line-height: var(--line); text-align: justify; text-align-last: left; hyphens: auto; }
+.back__text { grid-column: 1 / 4; grid-row: 9 / 18; font-family: var(--font-reading); font-size: var(--body-size); line-height: var(--line); text-align: justify; text-align-last: left; hyphens: manual; letter-spacing: 0.014em; }
+/* 20 oct. 2026: cortes silábicos (&shy; en tapa.html, los del cuerpo del libro) e interletra +0,014 em: sin viuda en el último renglón ni renglones abiertos */
 .back__plate { grid-column: 4 / 7; grid-row: 6 / 21; background: url(../assets/images/tapa-megatherium.jpg) center / contain no-repeat; }
 .route--back { grid-column: 1 / 6; grid-row: 22 / 24; width: 100%; height: 100%; }
 .back__stops { grid-column: 1 / 5; grid-row: 24; font-family: var(--font-ui); font-size: var(--meta-small-size); line-height: var(--line); }
