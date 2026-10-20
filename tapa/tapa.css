@@ -1,6 +1,6 @@
 /* Tapa, lomo y contratapa. Mismos valores que el interior (tokens.css).
    Este archivo lo usan el desplegado (tapa.html) y el libro (index.html): solo reglas de las piezas. */
-:root { --spine: 7mm; /* provisorio: depende del papel */ --line: var(--baseline); }
+:root { --spine: 10mm; /* 20 oct. 2026: 1 cm, pedido de Patricio */ --line: var(--baseline); }
 .back, .front, .spine { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .back *, .front *, .spine * { box-sizing: border-box; }
 .back p, .front p, .front h1, .spine p { margin: 0; font-weight: 400; }
@@ -28,7 +28,11 @@
 .back__qr { position: absolute; right: var(--margin-inner); bottom: var(--margin-bottom); width: 22mm; height: 22mm; background: url(../assets/images/qr-mapa-digital.svg) center / contain no-repeat; }
 
 /* ── Lomo: azul ── */
-.spine { width: var(--spine); height: var(--page-height); flex: none; background: var(--blue-deep); color: var(--paper); display: flex; align-items: center; justify-content: center; }
+.spine { position: relative; width: var(--spine); height: var(--page-height); flex: none; background: var(--blue-deep); color: var(--paper); display: flex; align-items: center; justify-content: center; }
+/* Marca del sistema (la misma de la tapa) arriba del lomo, en papel sobre azul, a la altura del margen superior */
+.spine__mark { position: absolute; top: var(--margin-top); left: 50%; width: 6mm; height: 6mm; transform: translateX(-50%); overflow: visible; }
+.spine__mark circle, .spine__mark path { fill: none; stroke: currentColor; stroke-width: 0.35; }
+.spine__mark .dot { fill: currentColor; stroke: none; }
 .spine p { writing-mode: vertical-rl; white-space: nowrap; display: flex; gap: 6mm; align-items: baseline; font-size: 7.5pt; line-height: 1; }
 .spine b { font-family: var(--font-display); font-weight: 400; font-size: 9pt; }
 .spine span { font-family: var(--font-ui); font-size: 6.5pt; letter-spacing: 0.02em; }
