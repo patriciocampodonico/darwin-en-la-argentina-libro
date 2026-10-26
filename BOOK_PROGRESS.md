@@ -599,3 +599,8 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Mancha tipográfica muy marcada en las citas de Darwin: pasan a Lora 8 pt (como en las fichas), con la misma línea de base de 4,5 mm (más blanco entre renglones), y 7 mm entre las dos columnas de un mismo bloque (antes 4 mm). Regla al final de styles/medida.css.
 - Ajustes finos de interletra rehechos con tools/medir-texto.js (styles/texto.css).
 - Los textos terminan 1–3 renglones antes: las imágenes de al lado se acortaron para seguir terminando con el texto en 027, 034, 042, 051, 052 y 063. Donde el texto convivía con un pie o un esquema, queda más aire debajo.
+
+## DISTANCIA TÍTULO–TEXTO (26 oct. 2026)
+- Regla única: entre el título de página (o de apertura) y el texto de abajo quedan siempre dos líneas de base libres (9 mm). Antes variaba entre 4,5 y 27 mm.
+- Se bajó el título (y su etiqueta «Registro de campo») una línea en 50 páginas; 019, 033, 037, 047 y 048 bajan más. En 014, 022, 064 y 074 baja el texto. Reglas al final de styles/medida.css.
+- Sin tocar: las citas destacadas en Playfair debajo del título (045, 093) y los títulos que van al lado del texto (013, 020, 044).

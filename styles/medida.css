@@ -354,3 +354,17 @@
 .p051__image { grid-row: 7 / 21; }
 .p052__image { grid-row: 11 / 20; }
 .p063__image { grid-row: 19 / 26; }
+
+/* Distancia título–texto (pedido de Patricio, 26 oct. 2026): siempre dos líneas de base libres (9 mm), como en las aperturas.
+   Se baja el título (y su etiqueta) en vez de subir el texto, para no tocar cómo terminan los bloques ni lo que está al lado. */
+.p015__title, .p016__title, .p017__title, .p021__title, .p023__title, .p024__title, .p025__title, .p027__title, .p028__title, .p029__title, .p030__title, .p031__title, .p034__title, .p035__title, .p038__title, .p039__title, .p040__title, .p041__title, .p042__title, .p043__title, .p049__title, .p050__title, .p051__title, .p056__title, .p057__title, .p061__title, .p062__title, .p063__title, .p066__title, .p067__title, .p069__title, .p071__title, .p072__title, .p073__title, .p075__title, .p076__title, .p077__title, .p079__title, .p081__title, .p085__title, .p086__title, .p089__title, .p090__title, .p091__title, .p092__title, .p095__title, .p096__title, .p097__title, .p098__title, .p099__title { grid-row: 3 / 5; }
+.p016__kicker, .p038__kicker, .p049__kicker, .p066__kicker, .p086__kicker { grid-row: 2; }
+.p014__title { grid-row: 3 / 7; }  .p014__text { grid-row: 9 / 19; }
+.p022__kicker { grid-row: 2; }  .p022__title { grid-row: 3 / 5; }  .p022__text { grid-row: 7 / 15; }
+.p019__title { grid-row: 6 / 8; }
+.p033__title { grid-row: 6 / 8; }
+.p037__title { grid-row: 10 / 12; }
+.p047__title { grid-row: 4 / 6; }
+.p048__title { grid-row: 16 / 18; }
+.p064__text { grid-row: 11 / 23; }
+.p074__text { grid-row: 14 / 19; }
