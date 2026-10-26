@@ -44,9 +44,9 @@ for n in range(1, 105):
                      f'{"frente: cortar por el borde de adentro de la línea negra" if frente else "dorso: 3 mm de demasía"} · '
                      'A4 al 100 %, doble faz, voltear por el borde corto', fontsize=6, color=(0.45, 0.45, 0.45))
 if LIVIANO:                                            # todas las imágenes (también las de los fondos que Chrome dibuja como patrón):
-    # achicadas a 760 px de lado mayor (~90 dpi a página entera) y en JPEG; las máscaras de transparencia, achicadas y sin pérdida.
+    # achicadas a 680 px de lado mayor (~90 dpi a página entera) y en JPEG; las máscaras de transparencia, achicadas y sin pérdida.
     # (rewrite_images de PyMuPDF rompía esos patrones; acá cada imagen se reemplaza en su mismo lugar)
-    LADO = 760
+    LADO = 680
     mascaras = {int(doc.xref_get_key(x, 'SMask')[1].split()[0]) for x in range(1, doc.xref_length())
                 if doc.xref_is_stream(x) and doc.xref_get_key(x, 'SMask')[0] == 'xref'}
     for x in range(1, doc.xref_length()):

@@ -1,60 +1,99 @@
 /* Ajuste fino del cuerpo de texto (20 oct. 2026, pedido de Patricio): sin viudas en el último renglón
    (una o dos palabras cortas solas) y sin renglones con espacios muy abiertos ni ríos.
    Por bloque, una interletra y un espaciado de palabras mínimos, buscados con una medición de cada renglón;
-   ninguno cambia la cantidad de renglones del bloque. No se toca el texto. */
-.p013__text { letter-spacing: -0.010em; }
+   ninguno cambia la cantidad de renglones del bloque.
+   26 oct. 2026: rehechos para la caja más angosta (margen exterior de 16 mm): cada bloque recupera los renglones que tenía. No se toca el texto. */
+.p006__text { letter-spacing: -0.004em; word-spacing: -0.02em; }
+.p007__text { letter-spacing: -0.002em; word-spacing: -0.02em; }
+.p010__text { letter-spacing: -0.008em; }
+.p013__text { letter-spacing: -0.006em; word-spacing: -0.04em; }
 .p015__text { letter-spacing: -0.004em; }
 .p016__text { letter-spacing: -0.004em; word-spacing: 0.06em; }
 .p017__text { word-spacing: 0.02em; }
-.p019__text { word-spacing: 0.02em; }
-.p025__text { letter-spacing: 0.016em; }
-.p026__text { letter-spacing: 0.014em; word-spacing: -0.02em; }
-.p027__text { word-spacing: 0.02em; }
-.p029__text { word-spacing: 0.06em; }
-.p032__text { word-spacing: 0.02em; }
+.p018__text { letter-spacing: -0.008em; word-spacing: -0.02em; }
+.p019__text { letter-spacing: -0.002em; }
+.p021__text { letter-spacing: -0.006em; }
+.p022__text { letter-spacing: -0.002em; }
+.p024__text { letter-spacing: -0.004em; word-spacing: -0.02em; }
+.p025__text { letter-spacing: 0.010em; word-spacing: -0.04em; }
+.p026__text { letter-spacing: 0.008em; word-spacing: -0.04em; }
+.p028__text { word-spacing: -0.02em; }
+.p030__text { letter-spacing: -0.012em; }
+.p031__text { letter-spacing: -0.004em; word-spacing: -0.04em; }
 .p033__text { letter-spacing: 0.002em; }
-.p035__text { letter-spacing: -0.004em; word-spacing: -0.02em; }
+.p035__text { letter-spacing: -0.010em; word-spacing: -0.02em; }
 .p036__text { letter-spacing: 0.004em; word-spacing: -0.02em; }
 .p037__text { letter-spacing: 0.014em; word-spacing: -0.02em; }
-.p038__text { letter-spacing: 0.012em; }
+.p039__text { letter-spacing: -0.008em; }
 .p041__text { letter-spacing: 0.016em; }
-.p042__text { letter-spacing: -0.002em; word-spacing: -0.02em; }
-.p044__text { word-spacing: 0.06em; }
+.p042__text { letter-spacing: -0.012em; word-spacing: -0.04em; }
+.p043__text { word-spacing: -0.02em; }
+.p044__text { letter-spacing: -0.002em; }
+.p045__text { letter-spacing: -0.012em; }
 .p046__text { letter-spacing: -0.002em; word-spacing: 0.06em; }
+.p047__text { letter-spacing: -0.006em; word-spacing: -0.04em; }
 .p048__text { letter-spacing: -0.008em; }
 .p049__text { letter-spacing: 0.012em; word-spacing: 0.02em; }
+.p052__text { letter-spacing: -0.010em; }
 .p053__text { letter-spacing: 0.010em; word-spacing: -0.02em; }
 .p054__text { letter-spacing: 0.012em; word-spacing: -0.02em; }
 .p055__text { letter-spacing: 0.010em; word-spacing: 0.02em; }
-.p062__text { letter-spacing: -0.008em; }
-.p070__text { letter-spacing: -0.002em; word-spacing: 0.02em; }
+.p057__text { letter-spacing: -0.010em; }
+.p058__text { letter-spacing: -0.008em; }
+.p060__text { letter-spacing: -0.010em; }
+.p062__text { letter-spacing: -0.008em; word-spacing: -0.04em; }
+.p063__text { letter-spacing: -0.014em; }
+.p064__text { letter-spacing: -0.004em; word-spacing: -0.02em; }
+.p066__text { letter-spacing: -0.002em; word-spacing: -0.04em; }
+.p067__text { letter-spacing: -0.006em; word-spacing: -0.04em; }
+.p069__text { letter-spacing: -0.010em; }
+.p070__text { letter-spacing: -0.018em; word-spacing: -0.04em; }
 .p071__text { letter-spacing: 0.016em; }
 .p072__text { letter-spacing: 0.008em; word-spacing: 0.06em; }
 .p073__text { letter-spacing: 0.006em; }
+.p074__text { letter-spacing: -0.008em; word-spacing: -0.02em; }
 .p075__text { letter-spacing: 0.014em; word-spacing: 0.04em; }
 .p077__text { letter-spacing: 0.008em; word-spacing: 0.02em; }
 .p079__text { letter-spacing: 0.016em; }
+.p080__text { letter-spacing: -0.006em; }
 .p081__text { letter-spacing: -0.002em; word-spacing: 0.04em; }
-.p086__text { letter-spacing: -0.006em; }
+.p083__text { word-spacing: -0.02em; }
+.p084__text { letter-spacing: -0.008em; }
+.p085__text { letter-spacing: -0.006em; }
+.p086__text { letter-spacing: 0.008em; }
+.p087__text { letter-spacing: -0.002em; word-spacing: -0.04em; }
 .p088__text { letter-spacing: -0.006em; }
-.p091__text { letter-spacing: 0.006em; word-spacing: 0.02em; }
-.p093__text { letter-spacing: -0.006em; }
+.p089__text { letter-spacing: -0.008em; word-spacing: -0.02em; }
+.p091__text { letter-spacing: -0.004em; }
+.p092__text { letter-spacing: -0.008em; }
+.p093__text { letter-spacing: -0.014em; word-spacing: -0.02em; }
+.p094__text { letter-spacing: -0.008em; }
+.p095__text { letter-spacing: 0.002em; }
 .p096__text { letter-spacing: -0.002em; word-spacing: 0.02em; }
 .p097__text { letter-spacing: 0.004em; }
-.p098__text { letter-spacing: 0.008em; }
+.p098__text { letter-spacing: 0.002em; word-spacing: -0.04em; }
 .p099__text { letter-spacing: -0.012em; }
 
 /* Párrafos dentro de un bloque y ítems de las listas del inventario: el mismo ajuste, párrafo por párrafo */
-.p033__text > p:nth-of-type(1) { letter-spacing: 0.014em; word-spacing: -0.02em; }
+.p033__text > p:nth-of-type(1) { letter-spacing: 0.020em; word-spacing: 0; }
+.p033__text > p:nth-of-type(2) { letter-spacing: -0.004em; word-spacing: 0; }
 .p048__text > p:nth-of-type(1) { letter-spacing: -0.004em; }
+.p049__text > p:nth-of-type(1) { letter-spacing: 0.002em; word-spacing: 0; }
+.p054__text > p:nth-of-type(1) { letter-spacing: -0.002em; word-spacing: -0.02em; }
+.p054__text > p:nth-of-type(2) { letter-spacing: 0; word-spacing: -0.02em; }
 .p055__text > p:nth-of-type(1) { letter-spacing: 0.010em; word-spacing: 0.04em; }
+.p055__text > p:nth-of-type(2) { letter-spacing: 0; word-spacing: 0; }
 .p061__text > p:nth-of-type(1) { word-spacing: 0.02em; }
+.p079__text > p:nth-of-type(2) { letter-spacing: 0.006em; word-spacing: 0; }
 .p081__text > p:nth-of-type(1) { letter-spacing: -0.002em; }
-.p081__text > p:nth-of-type(2) { letter-spacing: 0.010em; word-spacing: 0.02em; }
+.p081__text > p:nth-of-type(2) { letter-spacing: -0.010em; word-spacing: 0.06em; }
 .p096__text > p:nth-of-type(1) { word-spacing: 0.04em; }
-.p097__text > p:nth-of-type(1) { letter-spacing: 0.008em; word-spacing: 0.06em; }
+.p097__text > p:nth-of-type(1) { letter-spacing: -0.002em; word-spacing: 0.02em; }
 .p099__text > p:nth-of-type(2) { letter-spacing: -0.004em; word-spacing: 0.02em; }
 .p099__text > p:nth-of-type(3) { letter-spacing: 0.014em; }
 
 /* Inventario fósil (036–037): la lista numerada va en bandera, alineada a la izquierda (pedido de Patricio, 20 oct. 2026) */
 .p036__text > p, .p037__list > p { text-align: left; text-wrap: balance; }  /* renglones parejos: sin palabras sueltas al final */
+
+/* 034: la cita de la apertura vuelve a sus tres renglones con la caja más angosta (26 oct. 2026) */
+.p034__quote { letter-spacing: -0.010em; }

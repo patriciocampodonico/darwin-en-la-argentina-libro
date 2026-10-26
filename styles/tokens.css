@@ -10,11 +10,11 @@
   --margin-top: 16mm;
   --margin-bottom: 18mm;
   --margin-inner: 12mm;
-  --margin-outer: 10mm;
+  --margin-outer: 16mm; /* antes 10 mm: más lugar para el pulgar (corrección de la profesora, 26 oct. 2026) */
 
-  /* Retícula: 6 columnas de 27,17 mm, medianil de 5 mm (antes 3,5 mm, hasta el 15 oct. 2026) · 28 líneas de base */
+  /* Retícula: 6 columnas de 27 mm, medianil de 4 mm (5 mm hasta el 26 oct. 2026; 3,5 mm hasta el 15 oct.) · 28 líneas de base */
   --columns: 6;
-  --column-gap: 5mm;
+  --column-gap: 4mm;
   --baseline: 4.5mm;
   --rows: 28;
 

@@ -2,6 +2,7 @@
    Este archivo lo usan el desplegado (tapa.html) y el libro (index.html): solo reglas de las piezas. */
 :root { --spine: 10mm; /* 20 oct. 2026: 1 cm, pedido de Patricio */ --line: var(--baseline);
   --flap: 80mm; /* 20 oct. 2026: solapas para el lomo plano */ }
+.back, .front, .spine, .flap { --margin-outer: 10mm; --column-gap: 5mm; } /* 26 oct. 2026: el interior pasó a 16 y 4 mm; la tapa, ya impresa en prueba y aprobada, queda como estaba */
 .back, .front, .spine { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .back *, .front *, .spine * { box-sizing: border-box; }
 .back p, .front p, .front h1, .spine p { margin: 0; font-weight: 400; }
