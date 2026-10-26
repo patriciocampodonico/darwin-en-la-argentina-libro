@@ -3,6 +3,7 @@
 # Uso: py tools/revision.py     → ../Darwin_en_la_Argentina_revision.pdf (carpeta LIBRO)
 import io, os, pathlib, subprocess
 import pymupdf
+from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CHROME = next(p for p in ['C:/Program Files/Google/Chrome/Application/chrome.exe',
@@ -35,11 +36,34 @@ pdf((ROOT / 'tapa' / 'tapa.html').as_uri() + f'?v={TAPA}', tmp_tapa)
 pdf((ROOT / '_revision.html').as_uri(), tmp_dobles)
 
 # Unión y versión liviana para reenviar (la calidad de imprenta está en salida/libro.pdf).
-# rewrite_images conserva las transparencias (mapa tenue de 003).
+# Cada imagen se achica en su mismo lugar (rewrite_images de PyMuPDF rompía los fondos que Chrome dibuja como patrón);
+# las máscaras de transparencia (mapa tenue de 003) se achican sin pérdida.
 doc = pymupdf.open(tmp_tapa)
 with pymupdf.open(tmp_dobles) as dobles:
     doc.insert_pdf(dobles)
-doc.rewrite_images(dpi_threshold=160, dpi_target=150, quality=75)
+LADO, CALIDAD = 1600, 75
+mascaras = {int(doc.xref_get_key(x, 'SMask')[1].split()[0]) for x in range(1, doc.xref_length())
+            if doc.xref_is_stream(x) and doc.xref_get_key(x, 'SMask')[0] == 'xref'}
+for x in range(1, doc.xref_length()):
+    if not doc.xref_is_stream(x) or doc.xref_get_key(x, 'Subtype')[1] != '/Image' or doc.xref_get_key(x, 'ImageMask')[1] == 'true':
+        continue
+    pix = pymupdf.Pixmap(doc, x)
+    if max(pix.width, pix.height) <= LADO and x in mascaras:
+        continue
+    if pix.alpha: pix = pymupdf.Pixmap(pix, 0)
+    if pix.colorspace and pix.colorspace.n not in (1, 3): pix = pymupdf.Pixmap(pymupdf.csRGB, pix)
+    im = Image.frombytes('L' if pix.n == 1 else 'RGB', (pix.width, pix.height), pix.samples)
+    im.thumbnail((LADO, LADO), Image.LANCZOS)
+    if x in mascaras:
+        doc.update_stream(x, im.tobytes(), compress=True); filtro = '/FlateDecode'
+    else:
+        buf = io.BytesIO(); im.save(buf, 'JPEG', quality=CALIDAD)
+        if buf.tell() >= len(doc.xref_stream_raw(x)):   # ya estaba más liviana: se deja como está
+            continue
+        doc.update_stream(x, buf.getvalue(), compress=False); filtro = '/DCTDecode'
+    for k, v in (('Filter', filtro), ('DecodeParms', 'null'), ('Width', str(im.width)), ('Height', str(im.height)),
+                 ('BitsPerComponent', '8'), ('ColorSpace', '/DeviceGray' if im.mode == 'L' else '/DeviceRGB')):
+        doc.xref_set_key(x, k, v)
 doc.set_metadata({'title': 'Darwin en la Argentina — revisión'})
 paginas = len(doc)
 doc.save(OUT, garbage=4, deflate=True)
