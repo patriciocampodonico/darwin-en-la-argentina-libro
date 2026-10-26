@@ -29,27 +29,29 @@
     </svg>
     <p class="flap__label">Esta edición</p>
     <p class="flap__text">Reúne los pa&shy;sa&shy;jes del dia&shy;rio de Darwin que trans&shy;cu&shy;rren en el ac&shy;tual te&shy;rri&shy;to&shy;rio ar&shy;gen&shy;tino, en el orden del viaje y en quince pa&shy;ra&shy;das. Los tex&shy;tos si&shy;guen la tra&shy;duc&shy;ción es&shy;pa&shy;ñola de Espasa-Calpe (1921): se con&shy;ser&shy;van sus nom&shy;bres cien&shy;tí&shy;fi&shy;cos y sus gra&shy;fías. Las notas de aque&shy;lla edi&shy;ción van mar&shy;ca&shy;das con <span class="flap__tag">E</span>; las de este pro&shy;yecto, con <span class="flap__tag flap__tag--ed">ED</span>.</p>
-    <p class="flap__small flap__small--map">El recorrido completo puede seguirse en el mapa digital: código QR en la contratapa.</p>
+    <div class="flap__map"><div class="flap__qr" role="img" aria-label="Código QR: enlace al mapa digital"></div><p class="flap__small">Mapa digital del recorrido: las quince paradas sobre el territorio, para seguir el viaje fuera del libro.</p></div>
     <p class="flap__credit"><span>Selección, edición y diseño</span>Patricio Campodonico<br>Martina Emma Calderón Calp</p>
   </section>
 
-  <!-- CONTRATAPA -->
+  <!-- CONTRATAPA (26 oct. 2026, corrección: más carácter de contratapa, sin QR).
+       De arriba abajo, como se lee una contratapa: la voz de Darwin (cita de 034, textual), la presentación del libro,
+       el grabado, y al pie el sello y el código de barras. Todo en la retícula de 6 columnas y 28 renglones. -->
   <section class="back">
-    <p class="back__quote">Quince paradas<br>para leer un territorio</p>
+    <svg class="back__mark" viewBox="0 0 9 9" aria-hidden="true">
+      <circle cx="4.5" cy="4.5" r="4.3"/>
+      <path d="M4.5 0.2V2.4M4.5 6.6V8.8M0.2 4.5H2.4M6.6 4.5H8.8"/>
+      <circle class="dot" cx="4.5" cy="4.5" r="0.55"/>
+    </svg>
 
-    <p class="back__text">Este libro re&shy;co&shy;rre los pa&shy;sa&shy;jes del viaje de Charles Darwin vin&shy;cu&shy;la&shy;dos con el ac&shy;tual te&shy;rri&shy;to&shy;rio ar&shy;gen&shy;tino. La se&shy;lec&shy;ción re&shy;or&shy;ga&shy;niza el ma&shy;te&shy;rial para se&shy;guir el des&shy;pla&shy;za&shy;miento de ma&shy;nera cro&shy;no&shy;ló&shy;gica y te&shy;rri&shy;to&shy;rial: lle&shy;gar, atra&shy;ve&shy;sar, ob&shy;ser&shy;var, re&shy;gis&shy;trar y com&shy;pa&shy;rar. El texto ori&shy;gi&shy;nal con&shy;serva el cen&shy;tro de la lec&shy;tura; mapas, fe&shy;chas, re&shy;gis&shy;tros de campo e imá&shy;ge&shy;nes per&shy;mi&shy;ten re&shy;co&shy;no&shy;cer los lu&shy;ga&shy;res y com&shy;pren&shy;der cómo una ob&shy;ser&shy;va&shy;ción del pai&shy;saje puede con&shy;ver&shy;tirse en una pre&shy;gunta cien&shy;tí&shy;fica.</p>
+    <blockquote class="back__quote"><p>«Pasamos la noche en Punta Alta, y me ocupé en buscar huesos fósiles; el sitio me invitaba a ello, pues este punto es una perfecta catacumba de monstruos de razas extintas.»</p>
+      <cite>Charles Darwin, <i>Diario del viaje de un naturalista alrededor del mundo</i></cite></blockquote>
+
+    <p class="back__text">Entre 1832 y 1834, Charles Darwin re&shy;co&shy;rrió buena parte del ac&shy;tual te&shy;rri&shy;to&shy;rio ar&shy;gen&shy;tino, mu&shy;chas veces a ca&shy;ba&shy;llo, mien&shy;tras el <i>Beagle</i> re&shy;le&shy;vaba la costa. Este libro sigue ese viaje en quince pa&shy;ra&shy;das, de la bahía del Buen Suceso al río Santa Cruz: sus pro&shy;pias pa&shy;la&shy;bras, en la tra&shy;duc&shy;ción es&shy;pa&shy;ñola de 1921, acom&shy;pa&shy;ña&shy;das por mapas, fe&shy;chas, re&shy;gis&shy;tros de campo y lá&shy;mi&shy;nas. Una in&shy;vi&shy;ta&shy;ción a mirar el pai&shy;saje como lo miró un na&shy;tu&shy;ra&shy;lista: bus&shy;cando en cada pie&shy;dra, cada planta y cada hueso una pre&shy;gunta.</p>
 
     <div class="back__plate" role="img" aria-label="Esqueleto de Megatherium erguido contra un árbol"></div>
 
-    <svg class="route route--back" viewBox="0 0 188 9" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M2 6 C4.19 5.87 10.76 5.60 15.14 5.2 C19.52 4.80 23.91 3.97 28.29 3.6 C32.67 3.23 37.05 2.92 41.43 3 C45.81 3.08 50.19 3.70 54.57 4.1 C58.95 4.50 63.33 5.32 67.71 5.4 C72.09 5.48 76.48 4.98 80.86 4.6 C85.24 4.22 89.62 3.48 94 3.1 C98.38 2.72 102.76 2.32 107.14 2.3 C111.52 2.28 115.91 2.65 120.29 3 C124.67 3.35 129.05 3.92 133.43 4.4 C137.81 4.88 142.19 5.50 146.57 5.9 C150.95 6.30 155.33 6.77 159.71 6.8 C164.09 6.83 168.48 6.40 172.86 6.1 C177.24 5.80 183.81 5.18 186 5"/>
-      <circle cx="2" cy="6" r="0.55"/><circle cx="15.14" cy="5.2" r="0.55"/><circle cx="28.29" cy="3.6" r="0.55"/><circle cx="41.43" cy="3" r="0.55"/><circle cx="54.57" cy="4.1" r="0.55"/><circle cx="67.71" cy="5.4" r="0.55"/><circle cx="80.86" cy="4.6" r="0.55"/><circle cx="94" cy="3.1" r="0.55"/><circle cx="107.14" cy="2.3" r="0.55"/><circle cx="120.29" cy="3" r="0.55"/><circle cx="133.43" cy="4.4" r="0.55"/><circle cx="146.57" cy="5.9" r="0.55"/><circle cx="159.71" cy="6.8" r="0.55"/><circle cx="172.86" cy="6.1" r="0.55"/><circle cx="186" cy="5" r="0.55"/>
-    </svg>
-    <p class="back__stops">15 paradas, de la bahía del Buen Suceso al río Santa Cruz · 1832–1834</p>
-
-    <p class="back__credit back__credit--a">Selección y recontextualización editorial a partir de <i>Diario del viaje de un naturalista alrededor del mundo</i>, traducción española de Espasa-Calpe, 1921.</p>
-    <p class="back__credit back__credit--b">Proyecto académico de Diseño Editorial – FAPyD, Universidad Nacional de Rosario. 2026.<br>Patricio Campodonico · Martina Emma Calderón Calp</p>
-    <div class="back__qr" role="img" aria-label="Código QR: enlace al mapa digital"></div>
+    <p class="back__imprint"><b>Diseño Editorial · FAPyD</b>Universidad Nacional de Rosario · 2026</p>
+    <svg class="back__isbn" viewBox="0 -14 113 94" role="img" aria-label="ISBN 978-987-00-0000-6"><g font-size="9"><text x="58.5" y="-5" text-anchor="middle" font-size="8">ISBN 978-987-00-0000-6</text><rect x="11" y="0" width="1" height="71"/><rect x="13" y="0" width="1" height="71"/><rect x="15" y="0" width="3" height="66"/><rect x="19" y="0" width="2" height="66"/><rect x="24" y="0" width="1" height="66"/><rect x="27" y="0" width="1" height="66"/><rect x="30" y="0" width="1" height="66"/><rect x="32" y="0" width="3" height="66"/><rect x="36" y="0" width="2" height="66"/><rect x="39" y="0" width="3" height="66"/><rect x="44" y="0" width="1" height="66"/><rect x="48" y="0" width="1" height="66"/><rect x="52" y="0" width="2" height="66"/><rect x="55" y="0" width="1" height="66"/><rect x="57" y="0" width="1" height="71"/><rect x="59" y="0" width="1" height="71"/><rect x="61" y="0" width="3" height="66"/><rect x="66" y="0" width="1" height="66"/><rect x="68" y="0" width="3" height="66"/><rect x="73" y="0" width="1" height="66"/><rect x="75" y="0" width="3" height="66"/><rect x="80" y="0" width="1" height="66"/><rect x="82" y="0" width="3" height="66"/><rect x="87" y="0" width="1" height="66"/><rect x="89" y="0" width="3" height="66"/><rect x="94" y="0" width="1" height="66"/><rect x="96" y="0" width="1" height="66"/><rect x="98" y="0" width="1" height="66"/><rect x="103" y="0" width="1" height="71"/><rect x="105" y="0" width="1" height="71"/><text x="9" y="79" text-anchor="end">9</text><text x="35" y="79" text-anchor="middle">789870</text><text x="82" y="79" text-anchor="middle">000006</text></g></svg>
   </section>
 
   <!-- LOMO -->
