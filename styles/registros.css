@@ -52,65 +52,65 @@
 
 /* ── 014 · Registro de flora ── */
 /* El tamaño de cada espécimen sigue al texto: una especie domina, la otra «carecía de importancia». */
-.p014__kicker { grid-column: 1 / 4; grid-row: 1; }
-.p014__title { grid-column: 1 / 4; grid-row: 2 / 4; }
-.p014__text { grid-column: 1 / 4; grid-row: 7 / 15; }
-.p014__note-e { grid-column: 1 / 4; grid-row: 16 / 19; }
-.p014__ficha { grid-column: 1 / 4; grid-row: 20 / 25; }
-.p014__note-ed { grid-column: 1 / 4; grid-row: 26 / 28; }
-.p014__fig-a { grid-column: 4 / 6; grid-row: 2 / 28; }
-.p014__fig-b { grid-column: 6 / 7; grid-row: 2 / 15; }
+.p016__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p016__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p016__text { grid-column: 1 / 4; grid-row: 7 / 15; }
+.p016__note-e { grid-column: 1 / 4; grid-row: 16 / 19; }
+.p016__ficha { grid-column: 1 / 4; grid-row: 20 / 25; }
+.p016__note-ed { grid-column: 1 / 4; grid-row: 26 / 28; }
+.p016__fig-a { grid-column: 4 / 6; grid-row: 2 / 28; }
+.p016__fig-b { grid-column: 6 / 7; grid-row: 2 / 15; }
 
 /* ── 015 · Ascender y mirar ── */
-.p015__title { grid-column: 1 / 7; grid-row: 2 / 4; }
-.p015__text { grid-column: 1 / 7; grid-row: 7 / 19; }
-.p015__profile { grid-column: 1 / 7; grid-row: 20 / 28; }
-.p015__caption { grid-column: 1 / 7; grid-row: 28; }
+.p017__title { grid-column: 1 / 7; grid-row: 2 / 4; }
+.p017__text { grid-column: 1 / 7; grid-row: 7 / 19; }
+.p017__profile { grid-column: 1 / 7; grid-row: 20 / 28; }
+.p017__caption { grid-column: 1 / 7; grid-row: 28; }
 
 /* ── 016 · Apertura – Carmen de Patagones / Río Negro ── */
-.p016__meta { grid-column: 1 / 4; grid-row: 2; }
-.p016__title { grid-column: 1 / 7; grid-row: 3 / 9; }
-.p016__text { grid-column: 1 / 4; grid-row: 11 / 20; }
-.p016__map { grid-column: 4 / 7; grid-row: 10 / 29; }
+.p018__meta { grid-column: 1 / 4; grid-row: 2; }
+.p018__title { grid-column: 1 / 7; grid-row: 3 / 9; }
+.p018__text { grid-column: 1 / 4; grid-row: 11 / 20; }
+.p018__map { grid-column: 4 / 7; grid-row: 10 / 29; }
 
 /* ── 017 · El Río Negro y su valle ── */
-.p017__title { grid-column: 1 / 7; grid-row: 3 / 5; position: relative; top: 0.35mm; }   /* misma altura de mayúsculas que la primera línea del título de 016 */
-.p017__section { grid-column: 1 / 4; grid-row: 10 / 29; }   /* misma altura y mismo pie que el mapa de 016 */
-.p017__caption { grid-column: 4 / 7; grid-row: 27 / 29; align-self: end; }
-.p017__text { grid-column: 4 / 7; grid-row: 11 / 24; }   /* arranca en la misma línea que el texto de 016 */
+.p019__title { grid-column: 1 / 7; grid-row: 3 / 5; position: relative; top: 0.35mm; }   /* misma altura de mayúsculas que la primera línea del título de 016 */
+.p019__section { grid-column: 1 / 4; grid-row: 10 / 29; }   /* misma altura y mismo pie que el mapa de 016 */
+.p019__caption { grid-column: 4 / 7; grid-row: 27 / 29; align-self: end; }
+.p019__text { grid-column: 4 / 7; grid-row: 11 / 24; }   /* arranca en la misma línea que el texto de 016 */
 
 /* ── 018 · El Carmen / Patagones ── */
-.p018__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 15); border-top: 0; border-left: 0; border-right: 0; }
-.p018__title { grid-column: 1 / 3; grid-row: 18 / 22; }
-.p018__text { grid-column: 3 / 7; grid-row: 18 / 26; }
+.p020__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 15); border-top: 0; border-left: 0; border-right: 0; }
+.p020__title { grid-column: 1 / 3; grid-row: 18 / 22; }
+.p020__text { grid-column: 3 / 7; grid-row: 18 / 26; }
 
 /* ── 019 · Excursión a la salina ── */
-.p019__image { position: absolute; top: 0; right: 0; height: calc(100% - var(--margin-bottom)); width: calc(var(--margin-outer) + (var(--page-width) - var(--margin-inner) - var(--margin-outer) + var(--column-gap)) / 2 - var(--column-gap)); object-fit: cover; display: block; }
-.p019__title { grid-column: 1 / 4; grid-row: 2 / 4; }
-.p019__text { grid-column: 1 / 4; grid-row: 7 / 19; }
-.p019__datalabel { grid-column: 1 / 4; grid-row: 21; }
-.p019__data { grid-column: 1 / 4; grid-row: 23 / 29; }   /* una línea de aire bajo el rótulo */
+.p021__image { position: absolute; top: 0; right: 0; height: calc(100% - var(--margin-bottom)); width: calc(var(--margin-outer) + (var(--page-width) - var(--margin-inner) - var(--margin-outer) + var(--column-gap)) / 2 - var(--column-gap)); object-fit: cover; display: block; }
+.p021__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p021__text { grid-column: 1 / 4; grid-row: 7 / 19; }
+.p021__datalabel { grid-column: 1 / 4; grid-row: 21; }
+.p021__data { grid-column: 1 / 4; grid-row: 23 / 29; }   /* una línea de aire bajo el rótulo */
 
 /* ── 020 · Cristales y sales ── */
-.p020__kicker { grid-column: 1 / 4; grid-row: 1; }
-.p020__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p022__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p022__title { grid-column: 1 / 4; grid-row: 2 / 4; }
 /* Columna izquierda: título, texto de Darwin y lámina; a la derecha del texto, la nota editorial.
    Abajo: las dos láminas, de 11 líneas de alto; su pie coincide con el de las viñetas de 023. */
-.p020__text { grid-column: 1 / 4; grid-row: 5 / 13; }
-.p020__note-ed { grid-column: 4 / 7; grid-row: 9 / 13; align-self: end; }   /* termina con la última línea del texto */
-.p020__fig-a { grid-column: 1 / 4; grid-row: 14 / 28; }
-.p020__fig-b { grid-column: 4 / 7; grid-row: 14 / 28; }
-.p020__fig-a svg, .p020__fig-b svg { grid-row: span 11; }
+.p022__text { grid-column: 1 / 4; grid-row: 5 / 13; }
+.p022__note-ed { grid-column: 4 / 7; grid-row: 9 / 13; align-self: end; }   /* termina con la última línea del texto */
+.p022__fig-a { grid-column: 1 / 4; grid-row: 14 / 28; }
+.p022__fig-b { grid-column: 4 / 7; grid-row: 14 / 28; }
+.p022__fig-a svg, .p022__fig-b svg { grid-row: span 11; }
 
 /* ── 021 · Vida en la salmuera ── */
-.p021__title { grid-column: 1 / 5; grid-row: 2 / 4; }
-.p021__text { grid-column: 1 / 5; grid-row: 7 / 22; }
+.p023__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p023__text { grid-column: 1 / 5; grid-row: 7 / 22; }
 /* Mosaico 2 × 2 pegado al texto: ocupa las columnas 4–6; rótulo en la primera línea del texto (fila 7) y epígrafes de abajo en la última (fila 26); una línea de aire entre las dos filas de imágenes */
-.p021__label { grid-column: 4 / 7; grid-row: 7; }
-.p021__mosaic { grid-column: 4 / 7; grid-row: 8 / 28; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--column-gap); grid-template-rows: subgrid; }
-.p021__mosaic .tile { margin: 0; grid-row: span 10; display: grid; grid-template-rows: subgrid; }
-.p021__mosaic .tile .foto { grid-row: span 8; background-size: contain; outline: var(--rule-fine) solid var(--blue-deep); outline-offset: calc(var(--rule-fine) * -1); }
-.p021__mosaic .tile figcaption { grid-row: span 2; }
+.p023__label { grid-column: 4 / 7; grid-row: 7; }
+.p023__mosaic { grid-column: 4 / 7; grid-row: 8 / 28; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--column-gap); grid-template-rows: subgrid; }
+.p023__mosaic .tile { margin: 0; grid-row: span 10; display: grid; grid-template-rows: subgrid; }
+.p023__mosaic .tile .foto { grid-row: span 8; background-size: contain; outline: var(--rule-fine) solid var(--blue-deep); outline-offset: calc(var(--rule-fine) * -1); }
+.p023__mosaic .tile figcaption { grid-row: span 2; }
 
 /* Cauce principal en mapas de tramo */
 .map__river--main { stroke: var(--blue-deep); stroke-width: 0.6; }

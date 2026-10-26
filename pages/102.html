@@ -1,28 +1,21 @@
-<!-- 102 · Notas, fuentes y créditos — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 103. Texto del v2 sin cambios.
-     OJO: el v2 dice que la selección «se contrastó con el escaneo de la edición fuente». En esta maqueta el cotejo se hizo solo contra
-     la capa de texto del escaneo; falta el cotejo visual de las palabras dudosas (ver BOOK_PROGRESS) y la verificación de 071.
-     15 oct. 2026: créditos de imágenes completos (fuentes: ASSET_MANIFEST, tools/fotos.py, laminas.py, recorte.py, mapa004.py, geodatos.py). -->
+<!-- 100 · Mapa final del recorrido — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 101.
+     Medio de viaje de cada parada: tomado de los fragmentos del libro. Síntesis del 15 oct. 2026: en vez de repetir
+     las 15 paradas, las maneras de viajar se agrupan con los números de parada (los nombres están en 101 y en el índice, 008).
+     Mapas: assets/maps/general.svg y detalle.svg (los mismos de 009; desde el 15 oct. 2026 la página lleva los dos, como la 009), generado por tools/mapas.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
 <section class="page" data-page="102" data-section="Cierre" lang="es">
   <div class="page__box">
-    <h1 class="p102__title t-display-line">Fuentes y notas</h1>
-    <div class="p102__text t-editorial">
-      <p>Texto principal: Charles Darwin, <i>Diario del viaje de un naturalista alrededor del mundo</i>, traducción española publicada por Espasa-Calpe en 1921. La selección se realizó a partir del corpus de trabajo del proyecto y se contrastó con el escaneo de la edición fuente.</p>
-      <p>Las ilustraciones, mapas y reconstrucciones generadas para esta reedición deben acreditarse según su procedencia y distinguirse de las imágenes históricas.</p>
-    </div>
-    <h2 class="p102__label t-label t-label--strong">Código de notas</h2>
-    <ul class="p102__code">
-      <li><span class="notetag">D</span><span class="t-editorial">Nota de Darwin</span></li>
-      <li><span class="notetag">E</span><span class="t-editorial">Nota de la edición española</span></li>
-      <li><span class="notetag notetag--ed">ED</span><span class="t-editorial">Nota editorial del proyecto</span></li>
-    </ul>
-    <div class="p102__credbox">
-    <h2 class="p102__credlabel t-label t-label--strong">Créditos</h2>
-    <dl class="p102__credits t-data">
-      <div><dt>Imágenes</dt><dd>Todas las imágenes del libro (ilustraciones, láminas, texturas, flores y mockups) fueron generadas con ChatGPT (OpenAI) para este proyecto, a partir de sus referencias de estilo, y adaptadas al sistema gráfico del libro.</dd></div>
-      <div><dt>Mapas</dt><dd>009, 011, 016 y 100: costa, ríos y límites de Natural Earth (1:10m, dominio público); recorridos trazados según el diario.</dd></div>
-      <div><dt>Esquemas</dt><dd>Elaboración del proyecto con los datos del diario.</dd></div>
-      <div><dt>Tipografías</dt><dd>Playfair Display, Lora e Inter (SIL Open Font License).</dd></div>
+    <h1 class="p102__title t-label t-label--strong">Mapa final del recorrido</h1>
+    <p class="p102__captions t-meta">Izquierda: recorrido completo, 1832–1834.<br>Derecha: detalle de las paradas 02 a 12.</p>
+    <h2 class="p102__label t-label t-label--strong">Cómo se llega a cada parada</h2>
+    <dl class="p102__modes">
+      <div><dt class="t-editorial">Por mar, en el <i>Beagle</i></dt><dd class="t-meta">01 · 02 · 13 · 14</dd></div>
+      <div><dt class="t-editorial">A caballo</dt><dd class="t-meta">03 a 10</dd></div>
+      <div><dt class="t-editorial">Cruce del río</dt><dd class="t-meta">11</dd></div>
+      <div><dt class="t-editorial">Por el río, en balandra</dt><dd class="t-meta">12</dd></div>
+      <div><dt class="t-editorial">En botes balleneros</dt><dd class="t-meta">15</dd></div>
     </dl>
-    </div>
+    <p class="p102__note t-data"><span class="notetag notetag--ed">ED</span>Cuatro maneras de viajar: navegación marítima en el <i>Beagle</i>, desplazamiento a caballo, travesía fluvial y expedición en botes. Costa, ríos y límites actuales; el trazo entre paradas es orientativo.</p>
+    <div class="p102__map"><!--include assets/maps/general.svg--></div>
+    <div class="p102__detalle"><!--include assets/maps/detalle.svg--></div>
   </div>
 </section>

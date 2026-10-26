@@ -12,70 +12,70 @@
 .diagram__ring2 { fill: var(--paper); stroke: var(--blue-deep); stroke-width: 0.4; }
 
 /* ── 030 · Apertura – Cambio de territorio ── */
-.p030__meta { grid-column: 1 / 4; grid-row: 1; }
-.p030__title { grid-column: 1 / 5; grid-row: 2 / 8; }
-.p030__kicker { grid-column: 1 / 4; grid-row: 9; }
-.p030__text { grid-column: 1 / 7; grid-row: 10 / 23; }
-.p030__strip { grid-column: 1 / 7; grid-row: 24 / 27; }
-.p030__caption { grid-column: 1 / 7; grid-row: 28; }
+.p032__meta { grid-column: 1 / 4; grid-row: 1; }
+.p032__title { grid-column: 1 / 5; grid-row: 2 / 8; }
+.p032__kicker { grid-column: 1 / 4; grid-row: 9; }
+.p032__text { grid-column: 1 / 7; grid-row: 10 / 23; }
+.p032__strip { grid-column: 1 / 7; grid-row: 24 / 27; }
+.p032__caption { grid-column: 1 / 7; grid-row: 28; }
 
 /* ── 031 · Dunas y agua dulce ── */
-.p031__title { grid-column: 1 / 5; grid-row: 2 / 4; }
-.p031__text { grid-column: 1 / 4; grid-row: 7 / 22; }
-.p031__profile { grid-column: 4 / 7; grid-row: 7 / 17; }
-.p031__caption { grid-column: 4 / 7; grid-row: 18 / 21; }
+.p033__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p033__text { grid-column: 1 / 4; grid-row: 7 / 22; }
+.p033__profile { grid-column: 4 / 7; grid-row: 7 / 17; }
+.p033__caption { grid-column: 4 / 7; grid-row: 18 / 21; }
 
 /* ── 032 · Posta, pantano y barro ── */
-.p032__title { grid-column: 1 / 5; grid-row: 2 / 4; }
-.p032__text { grid-column: 1 / 4; grid-row: 7 / 28; }
-.p032__image { grid-column: 4 / 7; grid-row: 7 / 26; }
+.p034__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p034__text { grid-column: 1 / 4; grid-row: 7 / 28; }
+.p034__image { grid-column: 4 / 7; grid-row: 7 / 26; }
 
 /* ── 033 · Llegar al fuerte de Bahía Blanca ── */
-.p033__title { grid-column: 1 / 6; grid-row: 2 / 4; }
-.p033__text { grid-column: 1 / 4; grid-row: 7 / 19; }
-.p033__note-e { grid-column: 1 / 4; grid-row: 20 / 23; }
-.p033__note-ed { grid-column: 1 / 4; grid-row: 24; }
-.p033__plan { grid-column: 4 / 7; grid-row: 7 / 21; }
-.p033__caption { grid-column: 4 / 7; grid-row: 22 / 25; }
+.p035__title { grid-column: 1 / 6; grid-row: 2 / 4; }
+.p035__text { grid-column: 1 / 4; grid-row: 7 / 19; }
+.p035__note-e { grid-column: 1 / 4; grid-row: 20 / 23; }
+.p035__note-ed { grid-column: 1 / 4; grid-row: 24; }
+.p035__plan { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p035__caption { grid-column: 4 / 7; grid-row: 22 / 25; }
 
 /* ── 034 · Apertura – Punta Alta ── */
-.p034__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border-top: 0; border-left: 0; border-right: 0; }
-.p034__meta { grid-column: 1 / 4; grid-row: 8; }
-.p034__title { grid-column: 1 / 5; grid-row: 9 / 15; }
-.p034__quote { grid-column: 1 / 7; grid-row: 16 / 22; }
-.p034__text { grid-column: 4 / 7; grid-row: 23 / 29; }
+.p036__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border-top: 0; border-left: 0; border-right: 0; }
+.p036__meta { grid-column: 1 / 4; grid-row: 8; }
+.p036__title { grid-column: 1 / 5; grid-row: 9 / 15; }
+.p036__quote { grid-column: 1 / 7; grid-row: 16 / 22; }
+.p036__text { grid-column: 4 / 7; grid-row: 23 / 29; }
 
 /* ── 035 · Un lugar observado en más de una visita ── */
-.p035__title { grid-column: 1 / 7; grid-row: 2 / 4; }
-.p035__text { grid-column: 1 / 4; grid-row: 7 / 23; }
-.p035__visits { grid-column: 4 / 7; grid-row: 7 / 13; }
-.p035__cut { grid-column: 4 / 7; grid-row: 14 / 23; }
-.p035__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
+.p037__title { grid-column: 1 / 7; grid-row: 2 / 4; }
+.p037__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p037__visits { grid-column: 4 / 7; grid-row: 7 / 13; }
+.p037__cut { grid-column: 4 / 7; grid-row: 14 / 23; }
+.p037__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
 
 /* ── 036 · Inventario fósil I ── */
-.p036__kicker { grid-column: 1 / 4; grid-row: 1; }
-.p036__title { grid-column: 1 / 4; grid-row: 2 / 4; }
-.p036__text { grid-column: 1 / 4; grid-row: 7 / 23; }
-.p036__note-ed { grid-column: 1 / 4; grid-row: 25 / 27; }
-.p036__image { grid-column: 4 / 7; grid-row: 7 / 28; }
+.p038__kicker { grid-column: 1 / 4; grid-row: 1; }
+.p038__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p038__text { grid-column: 1 / 4; grid-row: 7 / 23; }
+.p038__note-ed { grid-column: 1 / 4; grid-row: 25 / 27; }
+.p038__image { grid-column: 4 / 7; grid-row: 7 / 28; }
 
 /* ── 037 · Inventario fósil II ── */
-.p037__title { grid-column: 1 / 4; grid-row: 2 / 4; }
-.p037__list { grid-column: 1 / 4; grid-row: 7 / 17; }
-.p037__plan { grid-column: 1 / 4; grid-row: 19 / 28; }
-.p037__caption { grid-column: 1 / 4; grid-row: 28; }
-.p037__text { grid-column: 4 / 7; grid-row: 7 / 26; }
+.p039__title { grid-column: 1 / 4; grid-row: 2 / 4; }
+.p039__list { grid-column: 1 / 4; grid-row: 7 / 17; }
+.p039__plan { grid-column: 1 / 4; grid-row: 19 / 28; }
+.p039__caption { grid-column: 1 / 4; grid-row: 28; }
+.p039__text { grid-column: 4 / 7; grid-row: 7 / 26; }
 
 /* ── 038 · Otro yacimiento cercano ── */
-.p038__title { grid-column: 1 / 5; grid-row: 2 / 4; }
-.p038__text { grid-column: 1 / 4; grid-row: 7 / 20; }
-.p038__dist { grid-column: 1 / 4; grid-row: 21 / 28; }
-.p038__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
-.p038__image { grid-column: 4 / 7; grid-row: 7 / 22; }
+.p040__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p040__text { grid-column: 1 / 4; grid-row: 7 / 20; }
+.p040__dist { grid-column: 1 / 4; grid-row: 21 / 28; }
+.p040__caption { grid-column: 4 / 7; grid-row: 24 / 27; }
+.p040__image { grid-column: 4 / 7; grid-row: 7 / 22; }
 
 /* ── 039 · Leer el estrato ── */
-.p039__title { grid-column: 1 / 5; grid-row: 2 / 4; }
-.p039__text { grid-column: 1 / 4; grid-row: 7 / 17; }
-.p039__section { grid-column: 4 / 7; grid-row: 7 / 15; }
-.p039__shells { grid-column: 4 / 7; grid-row: 17 / 22; }
-.p039__caption { grid-column: 4 / 7; grid-row: 23 / 27; }
+.p041__title { grid-column: 1 / 5; grid-row: 2 / 4; }
+.p041__text { grid-column: 1 / 4; grid-row: 7 / 17; }
+.p041__section { grid-column: 4 / 7; grid-row: 7 / 15; }
+.p041__shells { grid-column: 4 / 7; grid-row: 17 / 22; }
+.p041__caption { grid-column: 4 / 7; grid-row: 23 / 27; }

@@ -22,10 +22,10 @@ X, Y = (SW - PW) / 2, (SH - PH) / 2        # esquina de corte de la página
 LINEA = 0.3
 R = lambda x0, y0, x1, y1: pymupdf.Rect(x0 * MM, y0 * MM, x1 * MM, y1 * MM)
 
-libro = pymupdf.open(ROOT / 'salida' / 'libro.pdf')   # la hoja n del PDF es la página n (0 = tapa, 1 = carilla de cortesía, 104 = guarda)
+libro = pymupdf.open(ROOT / 'salida' / 'libro.pdf')   # la hoja n del PDF es la página n (0 = tapa, 1 = carilla de cortesía, 106–108 = guardas)
 corte = R(0, 0, PW, PH)                                # Chrome deja unas décimas de más: se toma la caja exacta
 doc = pymupdf.open()
-for n in range(1, 105):
+for n in range(1, 109):
     hoja = doc.new_page(width=SW * MM, height=SH * MM)
     frente = n % 2 == 1
     if not frente:                                     # demasía: la página como imagen, con 3 mm espejados alrededor

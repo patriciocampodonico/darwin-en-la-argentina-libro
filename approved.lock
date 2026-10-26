@@ -1,10 +1,10 @@
 {
-  "100": {
-    "sha256": "b2a137065aa512c7560df2c8ea774ad3fab6d5efa7f1e02599a27586c7ddf9ee",
+  "102": {
+    "sha256": "3d4aaf108c8859e7238b9f0501438f17c2184409ae29dc4591132d8499eeabcc",
     "fecha": "2026-10-15"
   },
-  "101": {
-    "sha256": "b04e5f0d74ff08169fcdd13ce2b46fe56f40e3b03f6a1c96aa7a71e43f678e39",
+  "103": {
+    "sha256": "41dfee01859921f72d798672ee88e4fd90753db432d52ae2fd7845d8f98075a3",
     "fecha": "2026-10-15"
   },
   "002": {
@@ -32,255 +32,255 @@
     "fecha": "2026-10-26"
   },
   "008": {
-    "sha256": "01be285a7ca64447c1159c07f6a4bd36b7eb7bf13c8c4e743324ace118607aa4",
+    "sha256": "e82599f33b16ef5640f43451728ec2db184fc88ae102e4c3abd2c5f72fa963dd",
     "fecha": "2026-10-14"
   },
   "009": {
     "sha256": "72a74bcb743fa56decdb91e69cd768886ee80c8f7a6bcabdfc3dc861803cebe5",
     "fecha": "2026-10-14"
   },
-  "010": {
-    "sha256": "7da7a7d972083c56789fe88a24efe35062b086dfffd82783e0fe3afae79fbde6",
-    "fecha": "2026-10-07"
-  },
-  "011": {
-    "sha256": "d17032e249cf2023a174c70b39f10db70f28aae9a2fedcbab9c0cf156746044c",
-    "fecha": "2026-10-12"
-  },
   "012": {
-    "sha256": "46c40a1a4d1f36bbfee80c095d42cb1186dee4c40189af5ddcfc604d4068e71d",
-    "fecha": "2026-10-26"
+    "sha256": "d64b5f40ac8fae727e342a3f54c0647dcc34965cb5dded0bcf4dc9e79ac30255",
+    "fecha": "2026-10-07"
   },
   "013": {
-    "sha256": "6b2417fd35a828db347a684c820189a5554b782026bd7c8c9c3f06fc78db02bf",
-    "fecha": "2026-10-07"
+    "sha256": "cb93844688f2e61f1d843bfde7ca5077e219a6a97f56127ac49f804269852886",
+    "fecha": "2026-10-12"
   },
   "014": {
-    "sha256": "47972c086fab108154ba1f17aeb99ace6dd0ec338b742f8e015bdc070fdf7db1",
+    "sha256": "7d49368577f22d238ea5ac367f2759f0655c4411ee708310af84663a11baeb98",
     "fecha": "2026-10-26"
   },
   "015": {
-    "sha256": "549018ebad46c8b2b58a0685d785b9c4de1cfbe1d1b0089845cd5ac16c5d94f9",
+    "sha256": "ae2404c15dfc3f120d66f50f7b36e4f731c82c934a32be33e9018efbc6a81411",
     "fecha": "2026-10-07"
   },
   "016": {
-    "sha256": "29fac8d3bcfbd6986edcfed1e567fddb82f0b0d8dd58f214fded1a20684bc90a",
-    "fecha": "2026-10-12"
+    "sha256": "2fb60a8b9a67097d3e49814f0f2ed742b3561bd327976db3b1295d830fff62b1",
+    "fecha": "2026-10-26"
   },
   "017": {
-    "sha256": "1a810b2131c31759191cada0b83e0be54a136da6195e86d4c3e80526458effc6",
+    "sha256": "10b4e6f5e88551bd1d1808aa8adff117f66705130ae99e32425856e3f22222f3",
     "fecha": "2026-10-07"
   },
   "018": {
-    "sha256": "f0c80d7593ebf5a8b14f1dc0801e48ec8e072185f2595c8a6ef53ded12e4ea89",
-    "fecha": "2026-10-07"
+    "sha256": "46e4b0741be9c5ce6424ce7d915ae1229acccb7f4f51f7a5f560b64b69586e80",
+    "fecha": "2026-10-12"
   },
   "019": {
-    "sha256": "06364e7f8c6f8fb431e29081cd46c2a2a7db1fa99831549cec2aa03f07384a8c",
+    "sha256": "1bb0c976fc0723765c093b5ea0a5118e5639a3e1f7afda08c5334b37569f7bd4",
     "fecha": "2026-10-07"
   },
   "020": {
-    "sha256": "7193686bbb5dae43163ba1a90184a069920075497f7c68dafd88a2b0e59df80b",
-    "fecha": "2026-10-12"
+    "sha256": "e2c862a862892c8ea93e50bc14ad0c0f367b08e88fcad39ec8057823cd64803d",
+    "fecha": "2026-10-07"
   },
   "021": {
-    "sha256": "ac8c49aab7cb783cb240b7cbc9b1e122a1429ffe673dbc2bc14d6b017a90860d",
-    "fecha": "2026-10-12"
+    "sha256": "2a7c18f04ce7017346179e47808bb418d5c2b939477f745cea1b4bc9f0719abc",
+    "fecha": "2026-10-07"
   },
   "022": {
-    "sha256": "57b7fffedaf53852537cdbae0b7993cb949ec4ab4432e5a5ce0bbc3244e51b00",
-    "fecha": "2026-10-07"
+    "sha256": "7bc7a81d570191f7b590578ae971c6539bac1cb6ed5ac1003b9130d35edf62c1",
+    "fecha": "2026-10-12"
   },
   "023": {
-    "sha256": "12b85ca597c9fc852365f8e0512cfac858a3f5306bbb3bed3183f7b12148c806",
-    "fecha": "2026-10-07"
+    "sha256": "3bad1266b2a0236b15a9980ad32c01f49b3f3e418275bc4f7bd5ed48fc614506",
+    "fecha": "2026-10-12"
   },
   "024": {
-    "sha256": "107583438422ce258e7bbfdecac475faac2abff7516164819a687f8c62bfc76c",
+    "sha256": "d6c17d68c37b940ad08895f1cc077adee4dd37c3159b8e74f7393573839c446c",
     "fecha": "2026-10-07"
   },
   "025": {
-    "sha256": "dddb306fc0221469f8f4247faea6bc1f212a53f5b5c502f5338b481fdad7fddc",
+    "sha256": "4c65685d9b4355844185c08f5149b05346555aa02ed81e89b91703c1aa50990c",
     "fecha": "2026-10-07"
   },
   "026": {
-    "sha256": "f1a0543c6e6e79de6d068400da8ea6829078320e0739c5dbed542360aca9a2ac",
+    "sha256": "7b66583ba3b89a55ede72d383f448a3aae6481acf3b899c30527e5040f00b295",
     "fecha": "2026-10-07"
   },
   "027": {
-    "sha256": "a7ccec4ab3d6aa8833757d1856b2d3fcecb02754cce7d9b5df7c9fbbb1df76b5",
+    "sha256": "939f4159564018322cfe9fec50acffdfd3df4a5b985c45b5b4d16d94e32ec8a3",
     "fecha": "2026-10-07"
   },
   "028": {
-    "sha256": "a217e192aa4a6ced89088cd51472ea5dc4eebf14d2fb532534c11b2606ece79d",
+    "sha256": "5ea19522cedde2aa5d8a2aeefd12fbdaffc4a918db3bc01eadb9bf20f094297c",
     "fecha": "2026-10-07"
   },
   "029": {
-    "sha256": "46f382603ad2ba3ada48856b70af80420657fb8dc8a17523311e87aa09c3f84d",
-    "fecha": "2026-10-12"
+    "sha256": "4c9bd1b6006a82e33bb4d11f9764a3d0df03563c6d262ddde4e0cb2391e5cb8a",
+    "fecha": "2026-10-07"
   },
   "030": {
-    "sha256": "89a4a1683041ef7d0c0b209cd999140aefc9845666ebe8960df6c0fcd8b9c9db",
+    "sha256": "0e74534bab7464baf1d216f48de6ad13b7afcc684405e57a39179dcb53cec278",
     "fecha": "2026-10-07"
   },
   "031": {
-    "sha256": "460a203077e2623ba96fa1c5193602cae0c67ffd0c4af159c977f0d086cb888c",
+    "sha256": "defb1f2260e59e6bf61180f78352bf842d84fd9f073a8340f6663cd17aa0415b",
     "fecha": "2026-10-12"
   },
   "032": {
-    "sha256": "aceb501ca4fa941a395826ea34aa66016cc2ec8c373ba9363482d613b5cc352e",
+    "sha256": "6ca633ae157091fe8084f4c05415dd5c8146e7b55f1a311b7963dd7b54522261",
     "fecha": "2026-10-07"
   },
   "033": {
-    "sha256": "0ee075544fc6740f1ce340f850492fd333077caafb91728261bb8ab0925c2526",
-    "fecha": "2026-10-26"
+    "sha256": "8d7e5b4586ee9e263ee57b7c1e0e7d6a551dec51a1a334d80ec36cf3bac8b2c3",
+    "fecha": "2026-10-12"
   },
   "034": {
-    "sha256": "16562540ed51236863b1e65934fc7e6544e255049cdd8784016ef39e8b9b3371",
+    "sha256": "6ebc11e119322bc5c33f159f316fd81b027ec0f900080f7141c7ec0d119bf094",
     "fecha": "2026-10-07"
   },
   "035": {
-    "sha256": "bd0e3b56f69a885db4175d1c35658132e04a730f9bc2962dc305b7d28fa3d7db",
-    "fecha": "2026-10-12"
+    "sha256": "cdfc23cd0410e7df4b3871ab26d919da2f9e6a0ba3966665d00c76354162fce1",
+    "fecha": "2026-10-26"
   },
   "036": {
-    "sha256": "24fe041a75c8dc8a60a1808e50c2a9eca44f57499e23d34736be7a1e82208ba9",
-    "fecha": "2026-10-12"
+    "sha256": "934716431ead64fa7efa2730d823c03414dc1076cb35a36530c87d0032259c11",
+    "fecha": "2026-10-07"
   },
   "037": {
-    "sha256": "64ced095c428bbbb161cbb8e58910cedbc369f47b709c4fccd3be02b2593f392",
+    "sha256": "55c565379107d1115c4d26f211034d90b11ac8de717811c25da82e9874cd8b35",
     "fecha": "2026-10-12"
   },
   "038": {
-    "sha256": "d9bca08452b15e1c13e660451ec7a2fcc4ee52b4aa3dc8b21e3200c48438673b",
+    "sha256": "a55fbedfcb5422392a370ff3035a26737719d0600be1244920696ae3d1fde519",
     "fecha": "2026-10-12"
   },
   "039": {
-    "sha256": "5f5f234e6f0442416e17f47e1c68f941027aa1f9842891d2c56d329b54508dac",
+    "sha256": "bc801ca0986b7308a4d0fc97aa9600713426499d183320ed0c77269ad4782693",
     "fecha": "2026-10-12"
   },
   "040": {
-    "sha256": "f572b4a56b59a92eee8fd0fa1d39c6ceac1ffdbeaec5b95a2603a8cca5673dfd",
+    "sha256": "fe5fe2c8f266a4e41abd7538f5bc03f46eb747f569d10c19f232972609e4db52",
     "fecha": "2026-10-12"
   },
   "041": {
-    "sha256": "f23881aa3614be064a31046ea91eb0df605382ce382ae06b4224930d9fd23570",
-    "fecha": "2026-10-07"
+    "sha256": "7f8dd0f8fc718ad764d0936ed4ffc6bf179eab908a9da76f71984a124dd84d8a",
+    "fecha": "2026-10-12"
   },
   "042": {
-    "sha256": "c65cb9d85a3aad95c6588343ff406f59e4d7eab362e76ec11cf818d7abf05c97",
-    "fecha": "2026-10-26"
+    "sha256": "caf37b43a9a6b1a19da4dcee4be943e3d2ac8dc213639ea3d8484bfc3de2a74a",
+    "fecha": "2026-10-12"
   },
   "043": {
-    "sha256": "9f052e348743006769c97e382ccb04fa91283e108d7f9236ead84b695dc0fcc9",
+    "sha256": "f4995ce711c514c498630cff8e1d9c86ea4890d27a58c1d97f994761ef4fc92b",
     "fecha": "2026-10-07"
   },
   "044": {
-    "sha256": "761ea7007238b36775ee09daff3f27e1b530f373bf691c95a2e9e2a53ad9034c",
-    "fecha": "2026-10-07"
+    "sha256": "4660cd98f1e4475fd640b794860bcc77910ae67bd4b56811d931a5f7d43be1f9",
+    "fecha": "2026-10-26"
   },
   "045": {
-    "sha256": "fb7c9f2143ae15c10864c2bca368a3c8efdb07bd4fa780e468f75de93862f47b",
+    "sha256": "60983ba22d63cc779d24027779fa8083b73ddb97171bb317e950a8de9ce898cc",
     "fecha": "2026-10-07"
   },
   "046": {
-    "sha256": "c86bb4484ec141a3589128833a98c3f0b52b89150ec5410044a031e3dcc06df5",
+    "sha256": "14016d74e6bca26f2ef26e3f23df06c7e2e6549a15c44f1519e9c2d77e5355dc",
     "fecha": "2026-10-07"
   },
   "047": {
-    "sha256": "cbd83c1d0a467dc039561e06d350c35379ca7f982ef8d815c132e57d0b28db11",
+    "sha256": "36454fd5235319b965d001c8291eaa73d33f3f9dafa8948d9a2f34c67b4a7cf6",
     "fecha": "2026-10-07"
   },
   "048": {
-    "sha256": "dac1acc1fac17c6c1ff037a689dde7439e0343f8170e4f2bdce97cd6f1d9d42d",
-    "fecha": "2026-10-12"
+    "sha256": "81e83e840f4fbb41ced9bf2cd658eacc0067e4ecb3f76a41a96d95677e280360",
+    "fecha": "2026-10-07"
   },
   "049": {
-    "sha256": "ff1636a34d6291af06c457fe76b3f788f90b104651e4d329f6d0fc73b9e2eec3",
-    "fecha": "2026-10-12"
+    "sha256": "e4257e09948782f1d253f474ac39d04cdbe9b77a1ed5c307dab8c52bb0524cb4",
+    "fecha": "2026-10-07"
   },
   "050": {
-    "sha256": "9f1312f65f8b6c7ca25c1d68f694b76bcbae7efda9c67164d7db2b8d2b419d59",
-    "fecha": "2026-10-07"
-  },
-  "051": {
-    "sha256": "d494038184a97bf6d713c587edd393b4b5c60e8afc1a550dffd7eb407c232ad7",
-    "fecha": "2026-10-07"
-  },
-  "052": {
-    "sha256": "e1951cb8ff4fb812493c2cbfd4785c84aeb768a7eb54c55efe7aaebb2327ea2f",
+    "sha256": "5851d55bbd5c38d85ef1ee01eb3300adc65454718334d39c6504bde73feb24df",
     "fecha": "2026-10-12"
   },
+  "051": {
+    "sha256": "9a4cc67508dfbfc1bb2b07ad8b67d0749f11440eb9105b701b5f18649731b58b",
+    "fecha": "2026-10-12"
+  },
+  "052": {
+    "sha256": "a736d78118af93a5b541e96870d77b03b944e415969990c0def2c86d00991ad3",
+    "fecha": "2026-10-07"
+  },
   "053": {
-    "sha256": "917f452a1c12bddde10936107e8438648e480bc06356ce44c744ca7f7d7abbe3",
+    "sha256": "65efe99075ef45ef798aa35899974c57166a105300b220cbf4ac24b5707e9d29",
     "fecha": "2026-10-07"
   },
   "054": {
-    "sha256": "d460c354b7b8c0296a03039e4f92626894ae6786a5c3b0690c0930701779a581",
-    "fecha": "2026-10-07"
-  },
-  "055": {
-    "sha256": "c2da89801c366cf07d65cc8eeedc810f52f9f024b0592425bec99dff19c46007",
+    "sha256": "33e6ecb60b55350ec5dbbe6e0f03e535682f270ec1bc2379cf7c194e40a77a52",
     "fecha": "2026-10-12"
   },
+  "055": {
+    "sha256": "31cb64e76ea26c789ceb38a0420e5f634adff3bbb5741912c574e975f426f2ec",
+    "fecha": "2026-10-07"
+  },
   "056": {
-    "sha256": "834c194accf262f5332838c86f119b2374c83e83b2a93c32482f3f3d5d9f6814",
+    "sha256": "063ef1cd123f3b34bcf70d04a960b5dc107cc8e4c7251a26a29ab349934b5b7c",
     "fecha": "2026-10-07"
   },
   "057": {
-    "sha256": "ff929a09470e6a1231c5a44e0c257de98fdd84437effb4b0bc6d9248fc68982e",
-    "fecha": "2026-10-07"
+    "sha256": "d6c3e066501f7877b845522f537d9469c91d949cdad82fb5f4451654fe99d6d8",
+    "fecha": "2026-10-12"
   },
   "058": {
-    "sha256": "e95a364a9d76f4d3ce751641d5638a4e91f4618ad945654e7c3c43ff95810a8d",
-    "fecha": "2026-10-12"
+    "sha256": "61b3c1210016f0c4c88d51730b8b861ba6e5dc6606fa41c2d7bf6d8f9e83a97d",
+    "fecha": "2026-10-07"
   },
   "059": {
-    "sha256": "16c4da13f455ce7845aed942f3c694a54c7ca3f4b1f39c1f2c44dcf96275a1e5",
-    "fecha": "2026-10-12"
+    "sha256": "47aba546fa563d54220ec2bb3a1cbdb2d7cc18f396922d47b2aefe7a4fd93418",
+    "fecha": "2026-10-07"
   },
   "060": {
-    "sha256": "5b20a9c15c982bfcda1c7072e19a1e1f5ef12749e90f597d91ec3c55b25e96d4",
-    "fecha": "2026-10-07"
+    "sha256": "0924ec2fc0a93d4d35cf6b31ee1ef5115d9362055e7bcfc339fa01c87b5a8091",
+    "fecha": "2026-10-12"
   },
   "061": {
-    "sha256": "e273b5cb1d0fed91426de8465db2c2574897b9274ccd12d8ca7b741db14ca28e",
-    "fecha": "2026-10-07"
+    "sha256": "821a2f6fcf768f0b1aa73fe0031ad7d3e63e96f644045fabce8d9d136a72821d",
+    "fecha": "2026-10-12"
   },
   "062": {
-    "sha256": "bfc8224345d7a12da578b5e1b4d6862753f36af1926bab4b633975fcfbae11e1",
+    "sha256": "a9fe9eb7a315d0fedb4675a98a0ed242584957e373bc50bbd6d5ad72af916150",
     "fecha": "2026-10-07"
   },
   "063": {
-    "sha256": "8de981b8344e1a590a6488bc40a9d6a24b02e432dfaf49ef7fb75713b0feaa5b",
+    "sha256": "0d059d1a9d3913e3ed7d447f7b70394023bf5de9f8e11da6f31631dca43f9031",
     "fecha": "2026-10-07"
   },
   "064": {
-    "sha256": "a01f9fb93abb800eab1c33c7228de80bac9a9d09be7b7b31795b38c801982a48",
+    "sha256": "bf91ba3ff0227a42f92219c7fbdf8bd4f64efb6c19bd6ed0798b39f510539914",
     "fecha": "2026-10-07"
   },
   "065": {
-    "sha256": "9b2925e82f2d4b689064793205f4a6b2e7398bff0e5e73e3ef36b7e958297320",
+    "sha256": "48147b56eeafa9ee91a15e07adba2ab201b1216e8b47f2870cd5ba1daa1b5e0f",
     "fecha": "2026-10-07"
   },
   "066": {
-    "sha256": "028d8afc78a95884acd60093f9918053dc10af08385083da80d023400b09f7aa",
+    "sha256": "7cacbdae37bfa3697701d9b1d008ced6cd715e4387febf62c90b176e05e45966",
     "fecha": "2026-10-07"
   },
   "067": {
-    "sha256": "74a75907ceffb5eb1386b2c79a2a26ee143148f0cb98dd08f1f9f6e59f6a2dcb",
-    "fecha": "2026-10-12"
+    "sha256": "b10d46057238c86b44a8a3d1f7141546545d52d72cb00f89f397678ebfce4579",
+    "fecha": "2026-10-07"
   },
   "068": {
-    "sha256": "3139e3c7603020a594dd334e538f1270cd17551388317c18124cf5e8f33ea292",
+    "sha256": "9899b03e4219b3da1daca678debfdc550ef578bf083d4fe731bf9a9ca86856ac",
     "fecha": "2026-10-07"
   },
   "069": {
-    "sha256": "00782842f94c7906f802876202c7e63fe531339c16cbbeaa56cc9dacfd3f5bb1",
+    "sha256": "b77aa21bd90dbd8a4fcc879432a45e8a622b0f19764d27b921fdd1ea681db5d9",
     "fecha": "2026-10-12"
   },
   "070": {
-    "sha256": "100a97f5f0584cf11bcf39a2558d28b415616648a9f7ffc1ea9f8d93a7548f18",
+    "sha256": "32867603c2adb38e83e751d91d2d7a7122e2f83e63f5854f7684e0cbbca97105",
+    "fecha": "2026-10-07"
+  },
+  "071": {
+    "sha256": "73233b844aa086d6f0cc70521494476ec6f94270b2d4caef4f66c619ea65fc2c",
+    "fecha": "2026-10-12"
+  },
+  "072": {
+    "sha256": "af3391380ea56e859339724b7592b03eb80d14f2e67890cc035aaf3d7e73c29a",
     "fecha": "2026-10-12"
   }
 }

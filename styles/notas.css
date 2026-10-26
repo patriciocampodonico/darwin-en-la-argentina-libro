@@ -5,42 +5,42 @@
    Los pies de imagen ED siguen junto a su imagen: no son notas al pie.
    Quedan afuera: 022 (la imagen a sangre ocupa el pie de página) y 059 (la cuadrícula sigue desde 058 hasta el pie). */
 
-.p012__notes, .p014__notes, .p020__note-ed, .p026__note-ed, .p027__note-e, .p033__notes, .p041__note-d, .p042__notes,
-.p043__note-ed, .p045__notes, .p049__note-e, .p057__notes, .p070__notes, .p075__note-d, .p079__note-e, .p079__note-ed,
-.p084__note-e, .p089__note-e, .p091__note-e, .p095__note-d {
+.p014__notes, .p016__notes, .p022__note-ed, .p028__note-ed, .p029__note-e, .p035__notes, .p043__note-d, .p044__notes,
+.p045__note-ed, .p047__notes, .p051__note-e, .p059__notes, .p072__notes, .p077__note-d, .p081__note-e, .p081__note-ed,
+.p086__note-e, .p091__note-e, .p093__note-e, .p097__note-d {
   align-self: end; padding-top: 1.8mm;
   background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat;
 }
 
 /* Páginas donde las notas solo bajan al pie */
-.p012__notes { grid-column: 1 / 4; grid-row: 18 / 29; }
-.p026__note-ed { grid-row: 23 / 29; }
-.p033__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
-.p042__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
-.p043__note-ed { grid-row: 26 / 29; }
-.p045__notes { grid-row: 22 / 29; }
-.p057__notes { grid-row: 21 / 29; }
-.p070__notes { grid-row: 22 / 29; }
-.p075__note-d { grid-row: 25 / 29; }
-.p079__note-e, .p079__note-ed { grid-row: 25 / 29; }
-.p084__note-e, .p089__note-e, .p091__note-e { grid-row: 21 / 29; }
-.p095__note-d { grid-row: 25 / 29; }
-.p049__note-e { grid-row: 28 / 29; }
+.p014__notes { grid-column: 1 / 4; grid-row: 18 / 29; }
+.p028__note-ed { grid-row: 23 / 29; }
+.p035__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
+.p044__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
+.p045__note-ed { grid-row: 26 / 29; }
+.p047__notes { grid-row: 22 / 29; }
+.p059__notes { grid-row: 21 / 29; }
+.p072__notes { grid-row: 22 / 29; }
+.p077__note-d { grid-row: 25 / 29; }
+.p081__note-e, .p081__note-ed { grid-row: 25 / 29; }
+.p086__note-e, .p091__note-e, .p093__note-e { grid-row: 21 / 29; }
+.p097__note-d { grid-row: 25 / 29; }
+.p051__note-e { grid-row: 28 / 29; }
 
 /* 014: la ficha sube al lugar que dejó la nota E; las dos notas, juntas al pie */
-.p014__ficha { grid-row: 16 / 21; }
-.p014__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
+.p016__ficha { grid-row: 16 / 21; }
+.p016__notes { grid-column: 1 / 4; grid-row: 22 / 29; }
 
 /* 020: los dos cuadros de cristales pierden un renglón de alto para dejar lugar a la nota al pie */
-.p020__fig-a, .p020__fig-b { grid-row: 14 / 27; }
-.p020__fig-a svg, .p020__fig-b svg { grid-row: span 10; }
-.p020__note-ed { grid-column: 1 / 4; grid-row: 27 / 29; }
+.p022__fig-a, .p022__fig-b { grid-row: 14 / 27; }
+.p022__fig-a svg, .p022__fig-b svg { grid-row: span 10; }
+.p022__note-ed { grid-column: 1 / 4; grid-row: 27 / 29; }
 
 /* 027: la franja del fogón sube dos renglones (mismo alto); la nota E queda debajo, al pie */
-.p027__image { grid-row: 21 / 27; }
-.p027__note-e { grid-column: 1 / 5; grid-row: 27 / 29; }
+.p029__image { grid-row: 21 / 27; }
+.p029__note-e { grid-column: 1 / 5; grid-row: 27 / 29; }
 
 /* 041: el esquema de Lyell pierde un renglón de alto y, con su pie, sube; la nota D pasa del costado del texto al pie */
-.p041__time { grid-row: 18 / 25; }
-.p041__caption { grid-row: 25 / 27; }
-.p041__note-d { grid-column: 1 / 4; grid-row: 28 / 29; }
+.p043__time { grid-row: 18 / 25; }
+.p043__caption { grid-row: 25 / 27; }
+.p043__note-d { grid-column: 1 / 4; grid-row: 28 / 29; }

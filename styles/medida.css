@@ -9,182 +9,182 @@
 .t-darwin--3col { column-count: 2; }
 
 /* ── 011 ── título a la izquierda, texto en columnas 4–6 (como 010) */
-.p011__title { grid-column: 1 / 4; grid-row: 19 / 23; }
-.p011__text { grid-column: 4 / 7; grid-row: 19 / 29; }
+.p013__title { grid-column: 1 / 4; grid-row: 19 / 23; }
+.p013__text { grid-column: 4 / 7; grid-row: 19 / 29; }
 
 /* ── 013 ── la imagen ocupa la mitad interior (continúa la de 012); texto en columnas 4–6 */
-.p013__image { width: calc(var(--margin-inner) + (var(--page-width) - var(--margin-inner) - var(--margin-outer) + var(--column-gap)) / 2 - var(--column-gap)); }
-.p013__title { grid-column: 4 / 7; grid-row: 2 / 4; }
-.p013__text { grid-column: 4 / 7; grid-row: 7 / 26; }
+.p015__image { width: calc(var(--margin-inner) + (var(--page-width) - var(--margin-inner) - var(--margin-outer) + var(--column-gap)) / 2 - var(--column-gap)); }
+.p015__title { grid-column: 4 / 7; grid-row: 2 / 4; }
+.p015__text { grid-column: 4 / 7; grid-row: 7 / 26; }
 
 /* ── 015 ── texto en dos columnas anchas; el perfil queda debajo */
-.p015__text { grid-column: 1 / 7; grid-row: 7 / 19; }
+.p017__text { grid-column: 1 / 7; grid-row: 7 / 19; }
 
 /* ── 018 ── título en columnas 1–3, texto en 4–6 */
-.p018__title { grid-column: 1 / 4; grid-row: 18 / 22; }
-.p018__text { grid-column: 4 / 7; grid-row: 18 / 27; }
+.p020__title { grid-column: 1 / 4; grid-row: 18 / 22; }
+.p020__text { grid-column: 4 / 7; grid-row: 18 / 27; }
 
 /* ── 021 ── texto en columnas 1–3; las baldosas siguen en 5–6 */
-.p021__text { grid-column: 1 / 4; grid-row: 7 / 28; }
+.p023__text { grid-column: 1 / 4; grid-row: 7 / 28; }
 
 /* ── 027 ── texto en columnas 1–3; nota e imagen bajan */
-.p027__text { grid-column: 1 / 4; grid-row: 7 / 20; }
-.p027__note-e { grid-column: 1 / 4; grid-row: 21; }
-.p027__image { grid-row: 23 / 29; }
+.p029__text { grid-column: 1 / 4; grid-row: 7 / 20; }
+.p029__note-e { grid-column: 1 / 4; grid-row: 21; }
+.p029__image { grid-row: 23 / 29; }
 
 /* ── 028 ── texto en columnas 1–3; el pie del esquema sube junto a la figura y la franja baja al pie de la caja */
-.p028__text { grid-column: 1 / 4; grid-row: 7 / 24; }
-.p028__fig { grid-row: 7 / 20; }
-.p028__caption { grid-column: 5 / 7; grid-row: 21 / 23; }
-.p028__strip { grid-row: 24 / 29; transform: translateY(2.25mm); /* media línea de aire bajo el texto */ }
+.p030__text { grid-column: 1 / 4; grid-row: 7 / 24; }
+.p030__fig { grid-row: 7 / 20; }
+.p030__caption { grid-column: 5 / 7; grid-row: 21 / 23; }
+.p030__strip { grid-row: 24 / 29; transform: translateY(2.25mm); /* media línea de aire bajo el texto */ }
 /* 027: el rótulo ED arranca a la altura de la primera línea del texto (pedido de Patricio, 12 oct. 2026) */
-.p027__label { grid-row: 7; }
-.p027__list { grid-row: 9 / 17; }
+.p029__label { grid-row: 7; }
+.p029__list { grid-row: 9 / 17; }
 
 /* ── 028–029 ── recomposición pedida por Patricio (12 oct. 2026): texto e imagen empiezan (línea 7) y
    terminan a la misma altura en las dos páginas; los esquemas van en franja al pie, a todo el ancho */
-.p028__fig { grid-column: 4 / 7; grid-row: 7 / 21; }
-.p028__fig .foto { background-size: contain; background-position: left center; }
-.p028__caption { grid-column: 4 / 7; grid-row: 22 / 24; align-self: start; }
-.p029__image { grid-column: 4 / 7; grid-row: 7 / 21; }
-.p029__meander { grid-column: 1 / 7; grid-row: 22 / 28; }
-.p029__caption { grid-column: 1 / 7; grid-row: 28; align-self: end; }
+.p030__fig { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p030__fig .foto { background-size: contain; background-position: left center; }
+.p030__caption { grid-column: 4 / 7; grid-row: 22 / 24; align-self: start; }
+.p031__image { grid-column: 4 / 7; grid-row: 7 / 21; }
+.p031__meander { grid-column: 1 / 7; grid-row: 22 / 28; }
+.p031__caption { grid-column: 1 / 7; grid-row: 28; align-self: end; }
 
 /* ── 031 ── recomposición pedida por Patricio (12 oct. 2026), a la par de 030: el texto empieza en la línea 10,
    en dos columnas anchas (3 + 3); el perfil va en franja al pie y la nota ED en la línea 28 */
-.p031__text { grid-column: 1 / 7; grid-row: 10 / 18; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
-.p031__profile { grid-column: 1 / 7; grid-row: 19 / 27; }
-.p031__caption { grid-column: 1 / 7; grid-row: 28; }
+.p033__text { grid-column: 1 / 7; grid-row: 10 / 18; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p033__profile { grid-column: 1 / 7; grid-row: 19 / 27; }
+.p033__caption { grid-column: 1 / 7; grid-row: 28; }
 
 /* ── 033 ── a la par de 032 (pedido de Patricio, 12 oct. 2026): la planta termina donde termina la imagen de 032
    (línea 25) y las notas van al pie, hasta la línea 27, donde termina el texto de 032 */
-.p033__plan { grid-row: 7 / 26; }
-.p033__caption { grid-row: 26 / 28; align-self: end; }
-.p033__note-e { grid-row: 24 / 26; }
-.p033__note-ed { grid-row: 27; }
+.p035__plan { grid-row: 7 / 26; }
+.p035__caption { grid-row: 26 / 28; align-self: end; }
+.p035__note-e { grid-row: 24 / 26; }
+.p035__note-ed { grid-row: 27; }
 
 /* ── 035 ── la franja de imagen de 034 continúa en esta página, a la misma altura (pedido de Patricio, 12 oct. 2026).
    El contenido baja y se alinea con 034: título en la línea 9 (donde empieza el de 034), cierre en la línea 28 */
-.p035__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border: 0; }
-.p035__title { grid-row: 9 / 11; }
-.p035__text { grid-row: 12 / 28; }
-.p035__visits { grid-row: 12 / 18; }
-.p035__cut { grid-row: 18 / 27; }
-.p035__caption { grid-row: 27 / 29; align-self: end; }
+.p037__image { position: absolute; top: 0; left: 0; width: 100%; height: calc(var(--margin-top) + var(--baseline) * 6); border: 0; }
+.p037__title { grid-row: 9 / 11; }
+.p037__text { grid-row: 12 / 28; }
+.p037__visits { grid-row: 12 / 18; }
+.p037__cut { grid-row: 18 / 27; }
+.p037__caption { grid-row: 27 / 29; align-self: end; }
 
 /* ── 036–039 ── recomposición del 12 oct. 2026 (pedido de Patricio: sin huecos y con las dos páginas de cada doble
    a la misma altura). La información de cada página no cambia. */
 /* 036: la lista va arriba en dos columnas anchas (1.º–2.º | 3.º–4.º) y la lámina, más grande, al pie;
    centrada; termina en la línea 27, como el plano de 037, y la nota ED va en la 28, como la de 037 */
-.p036__text { grid-column: 1 / 7; grid-row: 7 / 16; column-count: 2; column-gap: var(--column-gap); column-fill: auto; orphans: 1; widows: 1; }
-.p036__text p:nth-child(3) { break-before: column; margin-top: 0; }
-.p036__image { grid-column: 1 / 7; grid-row: 16 / 28; background-size: contain; background-position: center bottom; }
-.p036__note-ed { grid-column: 1 / 7; grid-row: 28; }
+.p038__text { grid-column: 1 / 7; grid-row: 7 / 16; column-count: 2; column-gap: var(--column-gap); column-fill: auto; orphans: 1; widows: 1; }
+.p038__text p:nth-child(3) { break-before: column; margin-top: 0; }
+.p038__image { grid-column: 1 / 7; grid-row: 16 / 28; background-size: contain; background-position: center bottom; }
+.p038__note-ed { grid-column: 1 / 7; grid-row: 28; }
 /* 038–039: arriba, texto + imagen (038) y texto + corte (039) entre las líneas 7 y 19;
    abajo, desde la línea 21, el esquema a la izquierda y su nota ED a la derecha */
-.p038__image { grid-row: 7 / 20; }
-.p038__dist { grid-row: 21 / 26; }
-.p038__caption { grid-row: 21 / 24; align-self: start; }
-.p039__section { grid-row: 7 / 20; }
-.p039__shells { grid-column: 1 / 4; grid-row: 21 / 26; }
-.p039__caption { grid-row: 21 / 25; align-self: start; }
+.p040__image { grid-row: 7 / 20; }
+.p040__dist { grid-row: 21 / 26; }
+.p040__caption { grid-row: 21 / 24; align-self: start; }
+.p041__section { grid-row: 7 / 20; }
+.p041__shells { grid-column: 1 / 4; grid-row: 21 / 26; }
+.p041__caption { grid-row: 21 / 25; align-self: start; }
 /* 037: el plano, achatado, termina en la línea 23, donde termina el texto de la derecha; su nota ED queda debajo */
-.p037__plan { grid-row: 19 / 24; }
-.p037__caption { grid-row: 25; }
+.p039__plan { grid-row: 19 / 24; }
+.p039__caption { grid-row: 25; }
 /* 038: la imagen se alarga (líneas 7–22) y la nota ED termina donde termina el esquema de la izquierda (línea 25).
    039: las conchas suben para terminar donde termina la nota ED de la derecha (línea 22) */
-.p038__image { grid-row: 7 / 23; }
-.p038__caption { grid-row: 24 / 26; align-self: end; }
-.p039__shells { grid-row: 19 / 24; transform: translateY(-1.2mm); }
+.p040__image { grid-row: 7 / 23; }
+.p040__caption { grid-row: 24 / 26; align-self: end; }
+.p041__shells { grid-row: 19 / 24; transform: translateY(-1.2mm); }
 /* 036: esqueletos más grandes (caja de 15 líneas, 13–27); el mayor queda bajo la columna corta de la lista */
-.p036__image { grid-row: 13 / 28; }
-.p036__text { position: relative; z-index: 1; }
+.p038__image { grid-row: 13 / 28; }
+.p038__text { position: relative; z-index: 1; }
 /* 035 (ajuste del 12 oct. 2026): el texto termina en la línea 28, como el de 034; empieza en la 14, a la altura
    del primer rótulo del esquema de la derecha, y termina con el último renglón de la nota ED */
-.p035__text { grid-row: 14 / 29; }
-.p035__visits { grid-row: 14 / 20; transform: translateY(-3.6mm); }
-.p035__cut { grid-row: 19 / 27; }
+.p037__text { grid-row: 14 / 29; }
+.p037__visits { grid-row: 14 / 20; transform: translateY(-3.6mm); }
+.p037__cut { grid-row: 19 / 27; }
 
 /* ── 040–041 ── recomposición del 12 oct. 2026: las dos páginas con la misma estructura.
    Arriba: texto (columnas 1–3, desde la línea 7) y, a su derecha, la lámina (040) o la nota D (041), que terminan
    donde termina el texto. Abajo: esquema en franja a todo el ancho (líneas 19–26) y nota ED al pie (27–28). */
-.p040__image { grid-column: 4 / 7; grid-row: 7 / 14; background-size: 100% auto; background-position: 0 53.7%; }
-.p040__layer { grid-column: 1 / 7; grid-row: 19 / 27; }
-.p040__caption { grid-column: 1 / 5; grid-row: 27 / 29; align-self: end; }
-.p041__note-d { grid-row: 15; align-self: end; }
+.p042__image { grid-column: 4 / 7; grid-row: 7 / 14; background-size: 100% auto; background-position: 0 53.7%; }
+.p042__layer { grid-column: 1 / 7; grid-row: 19 / 27; }
+.p042__caption { grid-column: 1 / 5; grid-row: 27 / 29; align-self: end; }
+.p043__note-d { grid-row: 15; align-self: end; }
 
 /* ── 042–045 ── recomposición del 12 oct. 2026 (misma información; alineación dentro de cada doble) */
 /* 042: el Megatherium, más grande (ocupa todo el ancho de las columnas 1–3), y las notas al pie de la columna:
    la ED termina en la línea 28, donde termina el texto */
-.p042__image { grid-row: 9 / 23; background-size: 102.9mm auto; background-position: -7.8mm -4.4mm; }
-.p042__note-d { grid-row: 24 / 27; }
-.p042__note-ed { grid-row: 28; }
+.p044__image { grid-row: 9 / 23; background-size: 102.9mm auto; background-position: -7.8mm -4.4mm; }
+.p044__note-d { grid-row: 24 / 27; }
+.p044__note-ed { grid-row: 28; }
 /* 043: el texto baja para terminar en la línea 28, como el de 042; la imagen empieza con el texto
    y la nota ED termina con él */
-.p043__quote { grid-row: 8 / 12; }
-.p043__text { grid-row: 15 / 29; }
-.p043__image { grid-row: 15 / 26; }
-.p043__note-ed { grid-row: 27 / 29; align-self: end; }
+.p045__quote { grid-row: 8 / 12; }
+.p045__text { grid-row: 15 / 29; }
+.p045__image { grid-row: 15 / 26; }
+.p045__note-ed { grid-row: 27 / 29; align-self: end; }
 /* 045: el texto termina en la línea 21, como el de 044; notas y medidas ocupan la banda de la franja de 044 (24–28) */
-.p045__text { grid-row: 8 / 22; }
-.p045__notes { grid-row: 24 / 29; align-self: end; }
-.p045__datalabel { grid-row: 24; }
-.p045__data { grid-row: 25 / 29; }
+.p047__text { grid-row: 8 / 22; }
+.p047__notes { grid-row: 24 / 29; align-self: end; }
+.p047__datalabel { grid-row: 24; }
+.p047__data { grid-row: 25 / 29; }
 
 /* ── 046–049 ── recomposición del 12 oct. 2026 (misma información) */
 /* 046–047: bajo la imagen, las dos páginas cierran en la línea 25. 046: texto (20–25) y nota ED (24–25) terminan juntos.
    047: el corte sube (16–23) y su nota ED queda en la 25 */
-.p046__text { grid-row: 20 / 26; }
-.p046__caption { grid-row: 24 / 26; align-self: end; }
+.p048__text { grid-row: 20 / 26; }
+.p048__caption { grid-row: 24 / 26; align-self: end; }
 /* 048: el esquema crece y su nota ED termina con el texto (línea 25); las tres rocas van en fila en una banda al pie
    (rótulo en la 27, lista en la 28, de una línea de alto) */
-.p048__peaks { grid-row: 7 / 22; }
-.p048__caption { grid-row: 24 / 26; align-self: end; }
-.p048__label { grid-column: 1 / 7; grid-row: 27; }
-.p048__list { grid-column: 1 / 7; grid-row: 28; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--column-gap); }
-.p048__list li { height: var(--baseline); padding-top: 0.5mm; }
+.p050__peaks { grid-row: 7 / 22; }
+.p050__caption { grid-row: 24 / 26; align-self: end; }
+.p050__label { grid-column: 1 / 7; grid-row: 27; }
+.p050__list { grid-column: 1 / 7; grid-row: 28; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--column-gap); }
+.p050__list li { height: var(--baseline); padding-top: 0.5mm; }
 /* 049: la imagen empieza y termina con el texto (7–22); el regreso va en franja a todo el ancho y las notas al pie */
-.p049__image { grid-row: 7 / 23; }
-.p049__route { grid-column: 1 / 7; grid-row: 24 / 28; }
-.p049__note-e { grid-row: 28; }
-.p049__caption { grid-row: 28; }
+.p051__image { grid-row: 7 / 23; }
+.p051__route { grid-column: 1 / 7; grid-row: 24 / 28; }
+.p051__note-e { grid-row: 28; }
+.p051__caption { grid-row: 28; }
 
 /* ── 050–053 ── recomposición del 12 oct. 2026 (misma información) */
 /* 050: la imagen termina con el texto (línea 20). 051: texto, esquema y nota bajan una línea: cierran en la 28, como 050 */
-.p050__image { grid-row: 11 / 21; }
-.p051__text { grid-row: 15 / 29; }
-.p051__scene { grid-row: 20 / 26; }
-.p051__caption { grid-row: 27 / 29; align-self: end; }
+.p052__image { grid-row: 11 / 21; }
+.p053__text { grid-row: 15 / 29; }
+.p053__scene { grid-row: 20 / 26; }
+.p053__caption { grid-row: 27 / 29; align-self: end; }
 /* 052: el esquema, más alto, acompaña al texto; su nota ED termina con él (línea 28) */
-.p052__region { grid-row: 6 / 26; }
-.p052__caption { grid-row: 27 / 29; align-self: end; }
+.p054__region { grid-row: 6 / 26; }
+.p054__caption { grid-row: 27 / 29; align-self: end; }
 /* 053: los tres números van apilados junto al texto, de la línea 7 a la 19 (donde termina el texto);
    cada uno se apoya en su filete */
-.p053__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
-.p053__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
-.p053__data { transform: translateY(1.3mm); }
+.p055__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); }
+.p055__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
+.p055__data { transform: translateY(1.3mm); }
 /* 053: la imagen va a sangre abajo y a la derecha (pedido de Patricio, 12 oct. 2026); el folio va sobre una chapa de papel, como en las otras páginas con imagen bajo el folio */
-.p053__image { margin-right: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más (lo recorta la página): sin él quedaba un hilo de papel abajo en pantalla */
-#p053 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
+.p055__image { margin-right: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más (lo recorta la página): sin él quedaba un hilo de papel abajo en pantalla */
+#p055 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* ── 054–057 ── recomposición del 12 oct. 2026 (misma información) */
 /* 054–055: las dos páginas cierran en la línea 27. 055: la planta crece y su nota ED termina con el texto */
-.p054__caption { grid-row: 27; }
-.p055__plan { grid-row: 7 / 24; }
-.p055__caption { grid-row: 25 / 28; align-self: end; }
+.p056__caption { grid-row: 27; }
+.p057__plan { grid-row: 7 / 24; }
+.p057__caption { grid-row: 25 / 28; align-self: end; }
 /* 056: las dos medidas van apiladas junto al texto y terminan con él (línea 19), cada una apoyada en su filete;
    la nota ED baja a la línea 21, donde empiezan las notas de 057 */
-.p056__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; transform: translateY(0.7mm); }
-.p056__data > div { display: grid; align-content: end; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 1.4mm; }
-.p056__caption { grid-column: 1 / 4; grid-row: 21 / 23; }
+.p058__data { grid-row: 7 / 20; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; transform: translateY(0.7mm); }
+.p058__data > div { display: grid; align-content: end; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 1.4mm; }
+.p058__caption { grid-column: 1 / 4; grid-row: 21 / 23; }
 
 /* ── 058–061 ── ajustes del 12 oct. 2026 (misma información; solo posiciones) */
 /* 058–059: los dos textos ya terminan en la línea 11. La nota ED de 058 pasa a la derecha del texto, como las notas
    de 059, y las dos columnas de notas terminan con el texto (línea 11) */
-.p058__caption { grid-column: 4 / 7; grid-row: 9 / 12; align-self: end; }
-.p059__notes { align-self: end; }
+.p060__caption { grid-column: 4 / 7; grid-row: 9 / 12; align-self: end; }
+.p061__notes { align-self: end; }
 /* 060: la nota ED cierra en la línea 28, donde terminan el texto y la imagen de 061 */
-.p060__caption { grid-row: 27 / 29; align-self: end; }
+.p062__caption { grid-row: 27 / 29; align-self: end; }
 /* 058–059 (pedido de Patricio, 12 oct. 2026): rótulo «Ciudad de Buenos Aires» más grande (12 pt);
    «Cuadra» va dentro de su cuadra, en papel, para que no la corte la cuadra de arriba */
 .diagram__label--big { font-size: 4.23px; }
@@ -192,105 +192,105 @@
 
 /* ── 062–065 ── ajustes del 12 oct. 2026 (misma información; solo posiciones) */
 /* 063: el texto sube una línea y termina en la 21, como el de 062; el folio va sobre chapa de papel (caía sobre la imagen) */
-.p063__text { grid-row: 6 / 23; }
-#p063 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
-/* 064: la lista termina con el texto (línea 26); la lámina y el rótulo suben */
-.p064__image { grid-row: 7 / 15; background-size: auto 110%; }
-.p064__label { grid-row: 16; transform: translateY(2.25mm); }
-.p064__list { grid-row: 17 / 27; transform: translateY(2.25mm); }  /* media línea: «Fango seco» queda en el último renglón del texto */
-/* 065: el río va a sangre también abajo (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
-.p065__river { height: calc(var(--baseline) * 8 + var(--margin-bottom)); background-image: url(../assets/images/065-agua-parana.jpg?v=3); }  /* ?v: el archivo cambió con el mismo nombre */
+.p065__text { grid-row: 6 / 23; }
 #p065 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
+/* 064: la lista termina con el texto (línea 26); la lámina y el rótulo suben */
+.p066__image { grid-row: 7 / 15; background-size: auto 110%; }
+.p066__label { grid-row: 16; transform: translateY(2.25mm); }
+.p066__list { grid-row: 17 / 27; transform: translateY(2.25mm); }  /* media línea: «Fango seco» queda en el último renglón del texto */
+/* 065: el río va a sangre también abajo (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
+.p067__river { height: calc(var(--baseline) * 8 + var(--margin-bottom)); background-image: url(../assets/images/067-agua-parana.jpg?v=3); }  /* ?v: el archivo cambió con el mismo nombre */
+#p067 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* ── 066–071 ── ajustes del 12 oct. 2026 (misma información) */
 /* 066: la nota ED termina con el texto (línea 27). 067: rótulo y láminas bajan una línea; sus pies cierran en la 27 */
-.p066__caption { align-self: end; }
-.p067__label { grid-row: 14; }
-.p067__fig-a, .p067__fig-b, .p067__fig-c { grid-row: 15 / 29; }
+.p068__caption { align-self: end; }
+.p069__label { grid-row: 14; }
+.p069__fig-a, .p069__fig-b, .p069__fig-c { grid-row: 15 / 29; }
 /* 069: el esquema crece y su nota ED termina con el texto (línea 25) */
-.p069__cliff { grid-row: 7 / 23; }
-.p069__caption { grid-row: 24 / 26; align-self: end; }
+.p071__cliff { grid-row: 7 / 23; }
+.p071__caption { grid-row: 24 / 26; align-self: end; }
 /* 070: el esquema se alarga; su nota ED y las notas del texto cierran en la línea 28, como la nota de 071 */
-.p070__lat { grid-row: 7 / 25; }
-.p070__caption { grid-row: 27 / 29; align-self: end; }
-.p070__notes { align-self: end; }
+.p072__lat { grid-row: 7 / 25; }
+.p072__caption { grid-row: 27 / 29; align-self: end; }
+.p072__notes { align-self: end; }
 
 /* ── 072–105 ── revisión final del 12 oct. 2026 (misma información; alineación dentro de cada doble) */
 /* 075: la nota D termina donde termina la lista de la derecha (línea 15) */
-.p075__note-d { grid-row: 14 / 16; align-self: end; }
+.p077__note-d { grid-row: 14 / 16; align-self: end; }
 /* 076: la nota ED termina con el texto (línea 25) */
-.p076__caption { grid-row: 25; }
+.p078__caption { grid-row: 25; }
 /* 078: el esquema de la isla, más alto, acompaña al texto; su nota ED termina con él (25). 079: las dos notas del pie, a la par */
-.p078__island { grid-row: 8 / 24; }
-.p078__caption { grid-row: 24 / 26; align-self: end; }
-.p079__note-e { grid-row: 26 / 28; }
+.p080__island { grid-row: 8 / 24; }
+.p080__caption { grid-row: 24 / 26; align-self: end; }
+.p081__note-e { grid-row: 26 / 28; }
 /* 080: la franja baja una línea, a la altura de la de 081 */
-.p080__access { grid-row: 23 / 28; }
+.p082__access { grid-row: 23 / 28; }
 /* 082: el esquema del abra empieza con el texto. 083: el perfil crece y su nota ED termina con el texto (21) */
-.p082__ria { grid-row: 18 / 26; }
-.p082__caption { grid-row: 27 / 29; }
-.p083__profile { grid-row: 7 / 20; }
-.p083__caption { grid-row: 20 / 22; align-self: end; }
+.p084__ria { grid-row: 18 / 26; }
+.p084__caption { grid-row: 27 / 29; }
+.p085__profile { grid-row: 7 / 20; }
+.p085__caption { grid-row: 20 / 22; align-self: end; }
 /* 084: el texto baja a la línea 7 (como en el resto del libro); nota e imagen empiezan donde empieza la franja de grava de 085 */
-.p084__text { grid-row: 7 / 21; }
-.p084__note-e { grid-row: 23 / 29; }
-.p084__image { grid-row: 23 / 29; }
+.p086__text { grid-row: 7 / 21; }
+.p086__note-e { grid-row: 23 / 29; }
+.p086__image { grid-row: 23 / 29; }
 /* 086: esquema y nota bajan; la nota queda a la altura de los pies de las figuras de 087 */
-.p086__dist { grid-row: 21 / 26; }
-.p086__caption { grid-row: 27; }
+.p088__dist { grid-row: 21 / 26; }
+.p088__caption { grid-row: 27; }
 /* 092: los tres números van apilados junto al texto y terminan con él (20), como en 053 */
-.p092__data { grid-row: 9 / 21; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); transform: translateY(1.3mm); }
-.p092__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
+.p094__data { grid-row: 9 / 21; grid-template-columns: 1fr; grid-template-rows: repeat(3, 1fr); transform: translateY(1.3mm); }
+.p094__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }
 /* 094: imagen, esquema y nota se compactan; la nota ED termina con el texto (23) */
-.p094__image { grid-row: 7 / 14; }
-.p094__tow { grid-row: 14 / 21; transform: translateY(2.25mm); }
-.p094__caption { grid-row: 22 / 24; align-self: end; }
+.p096__image { grid-row: 7 / 14; }
+.p096__tow { grid-row: 14 / 21; transform: translateY(2.25mm); }
+.p096__caption { grid-row: 22 / 24; align-self: end; }
 /* 097: el corte crece y su nota ED termina con el texto (25) */
-.p097__spring { grid-row: 7 / 23; }
-.p097__caption { grid-row: 24 / 26; align-self: end; }
+.p099__spring { grid-row: 7 / 23; }
+.p099__caption { grid-row: 24 / 26; align-self: end; }
 
 /* 022: la imagen va a sangre abajo y a la izquierda (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
-.p022__image { margin-left: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más, como en la 053 */
-#p022 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
+.p024__image { margin-left: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más, como en la 053 */
+#p024 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* 029: la imagen empieza y termina con el texto (13 líneas, 7–19): borde superior a la altura de las mayúsculas
    de la primera línea y borde inferior en la línea de base de la última (pedido de Patricio, 12 oct. 2026) */
-.p029__image { grid-row: 7 / 20; margin-top: 0.85mm; margin-bottom: 1mm; }
+.p031__image { grid-row: 7 / 20; margin-top: 0.85mm; margin-bottom: 1mm; }
 
 /* 032: la imagen empieza y termina con el texto (21 líneas, 7–27), con el mismo criterio que 029 */
-.p032__image { grid-row: 7 / 28; margin-top: 0.85mm; margin-bottom: 1mm; }
+.p034__image { grid-row: 7 / 28; margin-top: 0.85mm; margin-bottom: 1mm; }
 
 /* 047: recomposición pedida por Patricio (12 oct. 2026): el texto deja de estar solo arriba a la derecha.
    Va bajo el título en dos columnas anchas (líneas 7–12: termina donde termina la imagen de 046); el corte,
    a todo el ancho, empieza en la línea 15 (donde empiezan el título y el perfil de 046) y la nota ED cierra en la 25 */
-.p047__text { grid-column: 1 / 7; grid-row: 7 / 13; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
-.p047__cut { grid-row: 15 / 24; }
-.p047__caption { grid-row: 25; }
+.p049__text { grid-column: 1 / 7; grid-row: 7 / 13; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p049__cut { grid-row: 15 / 24; }
+.p049__caption { grid-row: 25; }
 
 /* 053: la imagen llega también hasta el lomo (la mitad de la doble): ocupa todo el ancho de la página (12 oct. 2026) */
-.p053__image { margin-left: calc(var(--margin-inner) * -1); }
+.p055__image { margin-left: calc(var(--margin-inner) * -1); }
 
 /* 073: recomposición pedida por Patricio (12 oct. 2026): el gráfico empieza con el texto (línea 7) y su nota ED
    termina con él (línea 16), que es también donde termina el texto de 072 */
-.p073__column { grid-row: 7 / 15; }
-.p073__caption { grid-row: 15 / 17; align-self: end; margin-bottom: 1mm; }
+.p075__column { grid-row: 7 / 15; }
+.p075__caption { grid-row: 15 / 17; align-self: end; margin-bottom: 1mm; }
 
 /* 072: caja de texto más angosta (2 columnas) para que el justificado no abra ríos (pedido de Patricio, 12 oct. 2026) */
-.p072__text { grid-column: 4 / 6; grid-row: 13 / 18; }  /* sube una línea: termina en la 16, como el texto de 073 */
+.p074__text { grid-column: 4 / 6; grid-row: 13 / 18; }  /* sube una línea: termina en la 16, como el texto de 073 */
 /* 077: sin hueco arriba a la derecha: el texto va en dos columnas anchas (líneas 7–13); la secuencia empieza en la 17,
    donde empieza el texto de 076, y la nota ED queda en la 25, como la de 076 */
-.p077__text { grid-column: 1 / 7; grid-row: 7 / 14; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
-.p077__seq { grid-row: 17 / 24; }
-.p077__caption { grid-row: 25; }
+.p079__text { grid-column: 1 / 7; grid-row: 7 / 14; column-count: 2; column-gap: var(--column-gap); column-fill: balance; align-self: start; orphans: 1; widows: 1; }
+.p079__seq { grid-row: 17 / 24; }
+.p079__caption { grid-row: 25; }
 
 /* 081: más aire entre el texto y el esquema, que se achata y empieza una línea más abajo (pedido de Patricio, 12 oct. 2026) */
-.p081__siege { grid-row: 24 / 28; }
+.p083__siege { grid-row: 24 / 28; }
 
 /* Filetes de un solo lado (casillas de 004–005, listas, datos, fichas): se dibujan como fondo y no como sombra interior.
    La sombra interior dejaba, al acercar la vista, un rastro de línea en los costados de la caja (12 oct. 2026). */
 
 /* 022: la imagen llega también hasta el lomo (la mitad de la doble): ocupa todo el ancho de la página (12 oct. 2026) */
-.p022__image { margin-right: calc(var(--margin-inner) * -1); }
+.p024__image { margin-right: calc(var(--margin-inner) * -1); }
 
 /* 006: mapa nuevo de la web y flor, muy tenues (12 oct. 2026). La flor sale a sangre por la esquina inferior izquierda */
 .p006__flor { position: absolute; left: 0; bottom: 0; height: 46mm; opacity: var(--tenue); }
@@ -312,34 +312,34 @@
 :root { --data-leading: 11px; }
 
 /* 100: la nota ED termina donde termina la lista de 101 (línea 23) */
-.p100__note { grid-row: 20 / 24; align-self: end; }
+.p102__note { grid-row: 20 / 24; align-self: end; }
 
 /* 100: los dos mapas, como en 009 (pedido de Patricio, 15 oct. 2026): general en columnas 1–2, detalle en 3–5;
    en la 6, título, maneras de viajar (en cuerpo de rótulo, para que entren en la columna) y nota ED, que termina con los mapas */
-.p100__map { grid-column: 1 / 3; grid-row: 1 / 29; }
-.p100__detalle { grid-column: 3 / 6; grid-row: 1 / 29; }
-.p100__title { grid-column: 6 / 7; grid-row: 1 / 3; padding-top: 0; }
-.p100__captions { grid-column: 6 / 7; grid-row: 4 / 7; }
-.p100__label { grid-column: 6 / 7; grid-row: 9 / 11; }
-.p100__modes { grid-column: 6 / 7; grid-row: 11 / 21; }
-.p100__modes > div { grid-template-columns: 1fr; height: calc(var(--baseline) * 2); }
-.p100__modes dt { font-size: var(--meta-size); line-height: var(--baseline); white-space: nowrap; }
-.p100__note { grid-column: 6 / 7; grid-row: 21 / 29; align-self: end; }
+.p102__map { grid-column: 1 / 3; grid-row: 1 / 29; }
+.p102__detalle { grid-column: 3 / 6; grid-row: 1 / 29; }
+.p102__title { grid-column: 6 / 7; grid-row: 1 / 3; padding-top: 0; }
+.p102__captions { grid-column: 6 / 7; grid-row: 4 / 7; }
+.p102__label { grid-column: 6 / 7; grid-row: 9 / 11; }
+.p102__modes { grid-column: 6 / 7; grid-row: 11 / 21; }
+.p102__modes > div { grid-template-columns: 1fr; height: calc(var(--baseline) * 2); }
+.p102__modes dt { font-size: var(--meta-size); line-height: var(--baseline); white-space: nowrap; }
+.p102__note { grid-column: 6 / 7; grid-row: 21 / 29; align-self: end; }
 
 /* Medianil de 5 mm (15 oct. 2026): los tres bloques que ganaron un renglón al angostarse las columnas */
-.p025__text, .p025__image { grid-row: 7 / 29; }         /* el texto termina un renglón más abajo: la imagen baja con él */
-.p037__plan { grid-row: 20 / 25; }                      /* la lista ganó un renglón: el esquema y su nota bajan uno */
-.p037__caption { grid-row: 26; }
-.p091__note-e { grid-row: 23 / 29; }                    /* el texto ganó un renglón: la nota E y el esquema bajan uno */
-.p091__line { grid-row: 23 / 27; }
+.p027__text, .p027__image { grid-row: 7 / 29; }         /* el texto termina un renglón más abajo: la imagen baja con él */
+.p039__plan { grid-row: 20 / 25; }                      /* la lista ganó un renglón: el esquema y su nota bajan uno */
+.p039__caption { grid-row: 26; }
+.p093__note-e { grid-row: 23 / 29; }                    /* el texto ganó un renglón: la nota E y el esquema bajan uno */
+.p093__line { grid-row: 23 / 27; }
 
 /* 102: créditos de imágenes (15 oct. 2026), en columnas 4–6 debajo del código de notas: un rubro por renglón corrido
    (rubro en negrita y su texto a continuación), con línea fina arriba como el código de notas; termina con la caja */
-.p102__credbox { grid-column: 4 / 7; grid-row: 17 / 29; align-self: end; }  /* rótulo y lista juntos, terminan con la caja */
-.p102__credlabel { margin: 0 0 2.2mm; height: var(--baseline); line-height: var(--baseline); font-size: 11pt; } /* un poco más grande que los rótulos (9 pt), pedido de Patricio */
-.p102__credits { margin: 0; }
-.p102__credits > div { padding: 0.9mm 0 1.2mm;
+.p104__credbox { grid-column: 4 / 7; grid-row: 17 / 29; align-self: end; }  /* rótulo y lista juntos, terminan con la caja */
+.p104__credlabel { margin: 0 0 2.2mm; height: var(--baseline); line-height: var(--baseline); font-size: 11pt; } /* un poco más grande que los rótulos (9 pt), pedido de Patricio */
+.p104__credits { margin: 0; }
+.p104__credits > div { padding: 0.9mm 0 1.2mm;
   background: linear-gradient(var(--blue-deep), var(--blue-deep)) top / 100% var(--rule-fine) no-repeat; }
-.p102__credits dt { display: inline; font-weight: 600; }
-.p102__credits dt::after { content: '. '; }
-.p102__credits dd { display: inline; margin: 0; }
+.p104__credits dt { display: inline; font-weight: 600; }
+.p104__credits dt::after { content: '. '; }
+.p104__credits dd { display: inline; margin: 0; }

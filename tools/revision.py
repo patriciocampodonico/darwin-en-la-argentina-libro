@@ -16,7 +16,7 @@ DOBLES = '''<style>
 @media print {
   .spread { display: flex !important; width: 420mm; height: 160mm; break-after: page; break-inside: avoid; }
   .spread:has(.page--cover) { display: none !important; }
-  /* Carilla de cortesía (001) y guarda final (106): se muestran en blanco, frente al retiro de tapa */
+  /* Carilla de cortesía (001) y guardas finales (106–108): se muestran en blanco, frente al retiro de tapa */
   .spread:has(.page--guard) .slot--empty { display: block !important; width: 210mm; height: 160mm; flex: none; background: var(--paper); font-size: 0; }
   .page { break-after: auto !important; }
 }

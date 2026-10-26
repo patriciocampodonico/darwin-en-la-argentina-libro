@@ -1,13 +1,31 @@
-<!-- 014 · Apertura – Carmen de Patagones / Río Negro — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 017.
-     Cotejo con la capa de texto del escaneo (pág. 91 del libro, cap. IV). La fuente dice «24 de julio 1833.—El Beagle
-     zarpó de Maldonado y el 3 de agosto llegó…»; el v2 arranca en «3 de agosto llegó», sin sujeto. Se compone
-     «El Beagle […] el 3 de agosto llegó», con palabras de la fuente y el corte marcado (Maldonado queda fuera: Uruguay).
-     Mapa: assets/maps/tramo-02.svg, generado por tools/tramo02.mjs. Cartografía real: Natural Earth 1:10m (tools/geodatos.py). -->
-<section class="page" data-page="016" data-section="02 Carmen de Patagones / Río Negro" lang="es">
+<!-- 012 · Registro de flora — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 015.
+     Cotejo con la capa de texto del escaneo (pág. 300 del libro): el escaneo lee «Fagas» y «Drymis zuinteri»
+     (errores de reconocimiento); se compone «Fagus» y «Drymis winteri», como indica el v2. Falta cotejo visual.
+     El v2 corta en «sombrío» a mitad de frase: se marca el corte con […].
+     Nota (1): nota de la edición española (pág. 300). -->
+<section class="page" data-page="016" data-section="01 Bahía del Buen Suceso" lang="es">
   <div class="page__box">
-    <p class="p016__meta stopline t-meta"><b>02</b> 3–10 ago. 1833</p>
-    <h1 class="p016__title t-opening">Carmen de Patagones<br>Río Negro</h1>
-    <p class="p016__text t-darwin body">El Beagle <span class="cut">[…]</span> el 3 de agosto llegó frente a la desembocadura del río Negro. Este es el río más importante de toda la línea de la costa, entre el estrecho de Magallanes y el Plata. Entra en el mar cerca de 300 millas al sur del estuario de este último. Hace unos cincuenta años, bajo el antiguo gobierno español, se estableció aquí una pequeña colonia, y ella es, a la fecha en que escribo, la posición más meridional (41° de latitud) de la costa este de América habitada por el hombre civilizado.</p>
-    <div class="p016__map"><!--include assets/maps/tramo-02.svg--></div>
+    <p class="p016__kicker reg-kicker t-meta"><svg class="minitile" viewBox="0 0 28 27" aria-hidden="true"><path class="tile__fill" d="M14 4C20.5 8.5 20.5 17 14 21.5C7.5 17 7.5 8.5 14 4Z"/><path class="tile__line" d="M14 21.5V24.5"/><path class="tile__cut" d="M14 7V21.5M14 11L17 8.8M14 11L11 8.8M14 14.5L17.6 12M14 14.5L10.4 12M14 18L17 15.8M14 18L11 15.8"/></svg>Registro de campo</p>
+    <h1 class="p016__title t-pagetitle">Registro de flora</h1>
+    <p class="p016__text t-darwin body">Todos los árboles pertenecían a una especie, el <i>Fagus betuloides</i>; porque el número de otras especies de <i>Fagus</i> y el de <i>Drymis winteri</i> (1) carecía de importancia. El haya que acabo de citar conserva sus hojas durante el año entero, pero su follaje tiene un color verde pardusco peculiar, con un tinte amarillento. Como en todo el paisaje domina esa coloración, el conjunto resulta sombrío <span class="cut">[…]</span></p>
+    <div class="p016__notes notes">  <!-- notas al pie, juntas abajo (26 oct. 2026) -->
+      <p class="p016__note-e t-data"><span class="notetag">E</span>(1) Arbolito de la familia de las magnoliáceas, que se extiende del sur de Méjico al estrecho de Magallanes.</p>
+      <p class="p016__note-ed t-data"><span class="notetag notetag--ed">ED</span>Los nombres científicos se conservan como figuran en la edición de 1921.</p>
+    </div>
+
+    <dl class="p016__ficha ficha t-data">
+      <dt>Lugar</dt><dd>Bahía del Buen Suceso, Tierra del Fuego</dd>
+      <dt>Fecha</dt><dd>Diciembre de 1832</dd>
+      <dt>Nombres en la edición</dt><dd><i>Fagus betuloides</i> · <i>Fagus</i> spp. · <i>Drymis winteri</i></dd>
+    </dl>
+
+    <figure class="p016__fig-a specimen">
+      <div class="foto" style="background-image:url(assets/images/016a-fagus-betuloides.jpg)" role="img" aria-label="ilustración botánica de Fagus betuloides (haya): rama con hojas"></div>
+      <figcaption class="t-meta"><i>Fagus betuloides</i></figcaption>
+    </figure>
+    <figure class="p016__fig-b specimen">
+      <div class="foto" style="background-image:url(assets/images/016b-drymis-winteri.jpg)" role="img" aria-label="ilustración botánica de Drymis winteri"></div>
+      <figcaption class="t-meta"><i>Drymis winteri</i></figcaption>
+    </figure>
   </div>
 </section>

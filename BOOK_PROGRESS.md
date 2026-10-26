@@ -584,3 +584,11 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 26 oct. 2026 — Notas al pie: 022 y 059 quedan como excepciones aprobadas (la nota sigue al lado del texto; la imagen a sangre de la 022 y la cuadrícula 058–059 ocupan el pie). Decisión de Patricio.
 
 - 26 oct. 2026 — Corrección de la profesora: se quita el folio (número y sección) en las páginas donde iba sobre una chapa de papel encima de una imagen: 022, 024, 026, 053, 063, 065, 068, 072 y 086. La imagen queda entera; esas páginas no llevan folio.
+
+## RENUMERACIÓN +2 (26 oct. 2026) — doble de respiro — LEER ANTES DE USAR NÚMEROS DE PÁGINA
+- Corrección de la profesora: «más descanso para el lector». Se agrega una doble sin texto ni folio entre el mapa (009) y la apertura de la parada 01: 010–011, una sola ilustración a sangre del Beagle fondeado (tools/laminas.py; original de ChatGPT de 2000 px ampliado ×2, ≈ 212 ppp: elegido así por Patricio para no perder tiempo).
+- Todo lo que era 010–103 pasa a 012–105 (página nueva = vieja + 2). Guardas finales en blanco 106, 107 y 108: el libro queda en 108 páginas (múltiplo de 4; con 106 no cerraba el pliego).
+- Se renombraron: pages/, clases pNNN__ y #pNNN, data-page, approved.lock (hashes recalculados: mismas 71 aprobadas), imágenes assets/images/NNN-* y originales (012-015-bosque → 014-017-bosque), tablas de tools/, tapa.css (088-san-julian.jpg), ASSET_MANIFEST. Comentarios «entrada NNN» y encabezados de comentario no se tocaron.
+- Referencias visibles actualizadas: índice (008), «páginas 051–059» (052), «páginas 061 y 062» (062), «Mapas 009, 013, 018 y 102» (104).
+- Verificado comparando el PDF anterior y el nuevo página por página: mismo texto salvo números.
+- Respaldo previo: ../_respaldo_antes_de_respiro.zip. Las fichas de campo (FICHAS) citan páginas: sumarles 2 desde la 010.
