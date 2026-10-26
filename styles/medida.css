@@ -368,3 +368,7 @@
 .p048__title { grid-row: 16 / 18; }
 .p064__text { grid-row: 11 / 23; }
 .p074__text { grid-row: 14 / 19; }
+/* 019 (pedido de Patricio, 26 oct. 2026): texto y nota a la izquierda, el corte a la derecha; el texto arranca con el corte, 9 mm bajo el título */
+.p019__text { grid-column: 1 / 4; grid-row: 10 / 24; }
+.p019__caption { grid-column: 1 / 4; }
+.p019__section { grid-column: 4 / 7; }

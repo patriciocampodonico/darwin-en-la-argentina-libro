@@ -604,3 +604,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Regla única: entre el título de página (o de apertura) y el texto de abajo quedan siempre dos líneas de base libres (9 mm). Antes variaba entre 4,5 y 27 mm.
 - Se bajó el título (y su etiqueta «Registro de campo») una línea en 50 páginas; 019, 033, 037, 047 y 048 bajan más. En 014, 022, 064 y 074 baja el texto. Reglas al final de styles/medida.css.
 - Sin tocar: las citas destacadas en Playfair debajo del título (045, 093) y los títulos que van al lado del texto (013, 020, 044).
+- 019: texto y nota ED a la izquierda, corte del cantil a la derecha (26 oct. 2026).
