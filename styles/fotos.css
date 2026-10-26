@@ -2,8 +2,8 @@
    La caja no cambia: la imagen la llena (recorte centrado) sin mover el texto. */
 .foto { background-size: cover; background-position: center; background-repeat: no-repeat; min-width: 0; min-height: 0; }
 .specimen .foto { min-height: 0; }
-/* Folio sobre imagen a toda altura (lado del folio): chapa de papel para que se lea */
-#p024 .page__folio, #p026 .page__folio, #p068 .page__folio, #p072 .page__folio, #p086 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+/* Folio sobre imagen a toda altura: se quita para no tapar la imagen (corrección de la profesora, 26 oct. 2026) */
+#p024 .page__folio, #p026 .page__folio, #p068 .page__folio, #p072 .page__folio, #p086 .page__folio { display: none; }
 
 /* QR del mapa digital: vectorial, en las dos tintas */
 .qr { background: url(../assets/images/qr-mapa-digital.svg) right bottom / contain no-repeat; min-width: 0; min-height: 0; }

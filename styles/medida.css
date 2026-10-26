@@ -165,7 +165,7 @@
 .p053__data { transform: translateY(1.3mm); }
 /* 053: la imagen va a sangre abajo y a la derecha (pedido de Patricio, 12 oct. 2026); el folio va sobre una chapa de papel, como en las otras páginas con imagen bajo el folio */
 .p053__image { margin-right: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más (lo recorta la página): sin él quedaba un hilo de papel abajo en pantalla */
-#p053 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+#p053 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* ── 054–057 ── recomposición del 12 oct. 2026 (misma información) */
 /* 054–055: las dos páginas cierran en la línea 27. 055: la planta crece y su nota ED termina con el texto */
@@ -193,14 +193,14 @@
 /* ── 062–065 ── ajustes del 12 oct. 2026 (misma información; solo posiciones) */
 /* 063: el texto sube una línea y termina en la 21, como el de 062; el folio va sobre chapa de papel (caía sobre la imagen) */
 .p063__text { grid-row: 6 / 23; }
-#p063 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+#p063 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 /* 064: la lista termina con el texto (línea 26); la lámina y el rótulo suben */
 .p064__image { grid-row: 7 / 15; background-size: auto 110%; }
 .p064__label { grid-row: 16; transform: translateY(2.25mm); }
 .p064__list { grid-row: 17 / 27; transform: translateY(2.25mm); }  /* media línea: «Fango seco» queda en el último renglón del texto */
 /* 065: el río va a sangre también abajo (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
 .p065__river { height: calc(var(--baseline) * 8 + var(--margin-bottom)); background-image: url(../assets/images/065-agua-parana.jpg?v=3); }  /* ?v: el archivo cambió con el mismo nombre */
-#p065 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+#p065 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* ── 066–071 ── ajustes del 12 oct. 2026 (misma información) */
 /* 066: la nota ED termina con el texto (línea 27). 067: rótulo y láminas bajan una línea; sus pies cierran en la 27 */
@@ -251,7 +251,7 @@
 
 /* 022: la imagen va a sangre abajo y a la izquierda (pedido de Patricio, 12 oct. 2026); el folio, sobre chapa de papel */
 .p022__image { margin-left: calc(var(--margin-outer) * -1 - 1mm); margin-bottom: calc(var(--margin-bottom) * -1 - 1mm); } /* 1 mm de más, como en la 053 */
-#p022 .page__folio { background: var(--paper); padding: 0.7mm 1.6mm; margin: -0.7mm -1.6mm; }
+#p022 .page__folio { display: none; } /* sin folio: no tapa la imagen (corrección de la profesora, 26 oct. 2026) */
 
 /* 029: la imagen empieza y termina con el texto (13 líneas, 7–19): borde superior a la altura de las mayúsculas
    de la primera línea y borde inferior en la línea de base de la última (pedido de Patricio, 12 oct. 2026) */
