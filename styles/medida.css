@@ -343,3 +343,14 @@
 .p104__credits dt { display: inline; font-weight: 600; }
 .p104__credits dt::after { content: '. '; }
 .p104__credits dd { display: inline; margin: 0; }
+
+/* Citas de Darwin más livianas (corrección de la profesora, 26 oct. 2026): Lora de 8 pt como en las fichas, con la misma
+   línea de base de 4,5 mm (más blanco entre renglones), y más aire entre las dos columnas de un mismo bloque. */
+.t-darwin { font-size: 8pt; column-gap: 7mm; }
+/* Con las citas en 8 pt los textos terminan antes: las imágenes de al lado se acortan para terminar con el texto */
+.p027__image { grid-row: 7 / 26; }
+.p034__image { grid-row: 7 / 25; }
+.p042__image { grid-row: 7 / 13; }
+.p051__image { grid-row: 7 / 21; }
+.p052__image { grid-row: 11 / 20; }
+.p063__image { grid-row: 19 / 26; }

@@ -594,3 +594,8 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Respaldo previo: ../_respaldo_antes_de_respiro.zip. Las fichas de campo (FICHAS) citan páginas: sumarles 2 desde la 010.
 - 2026-10-26 · 010–011: imagen de respiro más tenue (pedido de Patricio): 30 % de mezcla con el papel (tools/laminas.py).
 - 010–011: imagen de respiro aclarada al 45 % hacia el papel (26 oct. 2026).
+
+## CITAS MÁS LIVIANAS (26 oct. 2026) — corrección de la profesora
+- Mancha tipográfica muy marcada en las citas de Darwin: pasan a Lora 8 pt (como en las fichas), con la misma línea de base de 4,5 mm (más blanco entre renglones), y 7 mm entre las dos columnas de un mismo bloque (antes 4 mm). Regla al final de styles/medida.css.
+- Ajustes finos de interletra rehechos con tools/medir-texto.js (styles/texto.css).
+- Los textos terminan 1–3 renglones antes: las imágenes de al lado se acortaron para seguir terminando con el texto en 027, 034, 042, 051, 052 y 063. Donde el texto convivía con un pie o un esquema, queda más aire debajo.
