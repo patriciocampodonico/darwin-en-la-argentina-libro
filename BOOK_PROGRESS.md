@@ -593,3 +593,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Verificado comparando el PDF anterior y el nuevo página por página: mismo texto salvo números.
 - Respaldo previo: ../_respaldo_antes_de_respiro.zip. Las fichas de campo (FICHAS) citan páginas: sumarles 2 desde la 010.
 - 2026-10-26 · 010–011: imagen de respiro más tenue (pedido de Patricio): 30 % de mezcla con el papel (tools/laminas.py).
+- 010–011: imagen de respiro aclarada al 45 % hacia el papel (26 oct. 2026).
