@@ -123,5 +123,7 @@ w = round(im.height * 420 / 160) // 2 * 2
 x0 = 200
 im = im.crop((x0, 0, x0 + w, im.height))
 im = im.resize((im.width * 2, im.height * 2), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.6, percent=60, threshold=2))
+# Más tenue (pedido de Patricio, 26 oct. 2026): 30 % de mezcla con el papel, como el «tenue» de tools/fotos.py
+im = im.point(lambda v: round(v + (255 - v) * 0.3))
 guardar(im.crop((0, 0, im.width // 2, im.height)), '010-respiro-beagle', 210)
 guardar(im.crop((im.width // 2, 0, im.width, im.height)), '011-respiro-beagle', 210)

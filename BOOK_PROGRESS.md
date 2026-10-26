@@ -592,3 +592,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - Referencias visibles actualizadas: índice (008), «páginas 051–059» (052), «páginas 061 y 062» (062), «Mapas 009, 013, 018 y 102» (104).
 - Verificado comparando el PDF anterior y el nuevo página por página: mismo texto salvo números.
 - Respaldo previo: ../_respaldo_antes_de_respiro.zip. Las fichas de campo (FICHAS) citan páginas: sumarles 2 desde la 010.
+- 2026-10-26 · 010–011: imagen de respiro más tenue (pedido de Patricio): 30 % de mezcla con el papel (tools/laminas.py).
