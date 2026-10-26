@@ -28,11 +28,14 @@
 .back__quote cite i { font-style: italic; }
 /* interletra y espacio medidos: 8 renglones parejos, sin calles abiertas */
 .back__text { grid-column: 1 / 4; grid-row: 13 / 21; letter-spacing: -0.006em; word-spacing: -0.04em; font-family: var(--font-reading); font-size: var(--body-size); line-height: var(--line); text-align: justify; text-align-last: left; hyphens: manual; }
-.back__plate { grid-column: 4 / 7; grid-row: 13 / 23; background: url(../assets/images/tapa-megatherium.jpg) center top / contain no-repeat; }
+/* 26 oct. 2026: el grabado sube un renglón (arranca con la fuente de la cita) y crece un 10 %: menos vacío arriba */
+.back__plate { grid-column: 4 / 7; grid-row: 12 / 23; background: url(../assets/images/tapa-megatherium.jpg) center top / contain no-repeat; }
 .back__imprint { grid-column: 1 / 4; grid-row: 27 / 29; align-self: end; font-family: var(--font-ui); font-size: var(--meta-small-size); line-height: var(--data-leading);
   border-top: var(--rule-fine) solid currentColor; padding-top: 1.2mm; }
 .back__imprint b { display: block; font-weight: 600; font-size: var(--meta-size); }
-.back__isbn { grid-column: 5 / 7; grid-row: 23 / 29; justify-self: end; align-self: end; width: 30mm; height: auto; display: block; overflow: visible; }
+/* El pie de las barras va en la línea base del último renglón del sello (las cifras quedan debajo, en el margen):
+   13 módulos de 0,2655 mm entre el pie de las barras y la base de las cifras, menos 0,6 mm que ya bajaban (26 oct. 2026). */
+.back__isbn { grid-column: 5 / 7; grid-row: 23 / 29; justify-self: end; align-self: end; width: 30mm; height: auto; display: block; overflow: visible; margin-bottom: -2.85mm; }
 .back__isbn g { fill: currentColor; font-family: var(--font-ui); }
 .tag { display: inline-block; border: var(--rule-fine) solid currentColor; font-weight: 600; font-size: 5.5pt; line-height: 1; padding: 0.45mm 0.8mm; margin-right: 1.4mm; vertical-align: 0.2mm; }
 
