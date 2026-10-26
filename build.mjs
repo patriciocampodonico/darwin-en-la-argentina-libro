@@ -108,6 +108,7 @@ writeFileSync(join(ROOT, 'index.html'), conSello(`<!doctype html>
 <link rel="stylesheet" href="styles/medida.css?v=${sello}">
 <link rel="stylesheet" href="styles/aperturas.css?v=${sello}">
 <link rel="stylesheet" href="styles/texto.css?v=${sello}">
+<link rel="stylesheet" href="styles/notas.css?v=${sello}">
 <link rel="stylesheet" href="styles/print.css?v=${sello}">
 </head>
 <body>
