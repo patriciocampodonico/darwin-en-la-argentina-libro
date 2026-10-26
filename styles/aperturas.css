@@ -42,3 +42,8 @@
   font-variant-numeric: lining-nums; margin-top: 0.4mm; }
 .p008__col li > i { font-weight: 400; }
 .p008__col li > i::before { content: 'p. '; opacity: 0.7; }
+
+/* Índice (008): más aire entre paradas (corrección de la profesora, 26 oct. 2026).
+   Cada fila pasa de 2 a 2,5 renglones: las 8 paradas de la primera columna llenan justo la caja (filas 8 a 27). */
+.p008__col li { height: calc(var(--baseline) * 2.5); }
+.p008__col li.largo { height: calc(var(--baseline) * 3.5); }
