@@ -609,3 +609,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026: número grande de las aperturas de 34 pt a 26 pt (tenía poco aire en la franja azul).
 - 3 nov. 2026: notas al pie (D, E y ED de texto) con la medida de las fichas: Inter 6,25 pt / 2,8125 mm, sangría francesa, etiqueta 5,5 pt (notas.css). Los pies ED de imágenes y mapas no cambian.
 - 3 nov. 2026: 058, «Río Salado» con ~4,5 mm de aire desde el borde de la franja del río (medida.css).
+- 3 nov. 2026 · 022: el texto sube un renglón (6/14) para dejar aire antes de las láminas (pedido de Patricio).

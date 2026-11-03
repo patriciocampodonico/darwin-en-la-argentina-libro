@@ -374,3 +374,5 @@
 .p019__section { grid-column: 4 / 7; }
 /* 058 (pedido de Patricio, 3 nov. 2026): «Río Salado» con más aire respecto del borde de la franja del río */
 .p058__riverlabel { transform: translateX(4mm); } /* la caja del rótulo queda anclada a la derecha: se corre el rótulo entero; el texto queda ~4,5 mm adentro de la franja */
+/* 022 (pedido de Patricio, 3 nov. 2026): el texto sube un renglón para dejar un renglón de aire antes de las láminas (mismo aire que entre título y texto) */
+.p022__text { grid-row: 6 / 14; }
