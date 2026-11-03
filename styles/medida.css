@@ -378,3 +378,12 @@
 .p022__text { grid-row: 6 / 14; }
 /* 023 (pedido de Patricio, 3 nov. 2026): sube un renglón junto con 022 para que los bloques de texto de la doble arranquen a la misma altura */
 .p023__text { grid-row: 6 / 27; }  .p023__label { grid-row: 6; }  .p023__mosaic { grid-row: 7 / 27; }
+/* 025 (pedido de Patricio, 3 nov. 2026): el esquema del próximo tramo crece y sube al centro de la página para llenar el blanco */
+.p025__route { grid-row: 14 / 26; }
+.p025__caption { grid-row: 27; align-self: start; }
+.p025__route .diagram__label { font-size: 3.2px; }                       /* 9 pt */
+.p025__route .p025__num { font-size: 6px; font-weight: 700; }           /* 17 pt */
+.p025__route .route--land { stroke-width: 0.8; }
+.p025__route .diagram__path { stroke-width: 0.6; stroke-dasharray: 1.6 1.6; }
+.p025__route .diagram__line { stroke-width: 0.6; }
+.p025__route .diagram__tick { stroke-width: 0.3; }

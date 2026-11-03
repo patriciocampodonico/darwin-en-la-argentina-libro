@@ -611,3 +611,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026: 058, «Río Salado» con ~4,5 mm de aire desde el borde de la franja del río (medida.css).
 - 3 nov. 2026 · 022: el texto sube un renglón (6/14) para dejar aire antes de las láminas (pedido de Patricio).
 - 3 nov. 2026 · 023: texto, rótulo ED y mosaico suben un renglón para alinear con 022 (pedido de Patricio).
+- 3 nov. 2026 · 025: esquema del próximo tramo más grande (números 17 pt, nombres 9 pt, ruta más gruesa) y al centro de la página (filas 14–25); ED en fila 27. Página re-aprobada (pedido de Patricio).
