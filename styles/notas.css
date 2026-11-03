@@ -44,3 +44,12 @@
 .p043__time { grid-row: 18 / 25; }
 .p043__caption { grid-row: 25 / 27; }
 .p043__note-d { grid-column: 1 / 4; grid-row: 28 / 29; }
+
+/* Cuerpo de las notas al pie como en las fichas de campo (pedido de Patricio, 3 nov. 2026; a la profesora le gustó ahí):
+   Inter 6,25 pt sobre 2,8125 mm (antes 7,5 pt sobre 11 px), sangría francesa para que el texto corra después de la etiqueta,
+   y la etiqueta D/E/ED en el tamaño de las fichas. Los pies ED de imágenes y mapas no cambian. */
+.notes, .notes p, [class*="__note-"] { font-size: 6.25pt; line-height: 2.8125mm; }
+.notes p, [class*="__note-"] { padding-left: 5.2mm; text-indent: -5.2mm; }
+:is(.notes, [class*="__note-"]) .notetag {
+  text-indent: 0; min-width: 3mm; margin-right: 1mm; padding: 0 0.6mm; font-size: 5.5pt; line-height: 3mm;
+}
