@@ -376,3 +376,5 @@
 .p058__riverlabel { transform: translateX(4mm); } /* la caja del rótulo queda anclada a la derecha: se corre el rótulo entero; el texto queda ~4,5 mm adentro de la franja */
 /* 022 (pedido de Patricio, 3 nov. 2026): el texto sube un renglón para dejar un renglón de aire antes de las láminas (mismo aire que entre título y texto) */
 .p022__text { grid-row: 6 / 14; }
+/* 023 (pedido de Patricio, 3 nov. 2026): sube un renglón junto con 022 para que los bloques de texto de la doble arranquen a la misma altura */
+.p023__text { grid-row: 6 / 27; }  .p023__label { grid-row: 6; }  .p023__mosaic { grid-row: 7 / 27; }
