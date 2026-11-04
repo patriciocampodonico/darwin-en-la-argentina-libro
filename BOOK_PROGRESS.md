@@ -615,3 +615,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026 · 019: vuelve al orden original (pedido de Patricio): corte del cantil a la izquierda, texto y nota ED a la derecha; el texto arranca en la misma línea que el de 018. Solo CSS.
 - 3 nov. 2026 · 022: «La madre» sube arriba a la derecha, junto al texto (filas 2–12); «El padre de la sal» ocupa el ancho entero abajo (filas 14–26), cristal a la misma escala. Solo CSS (pedido de Patricio).
 - 3 nov. 2026 · 022: en cambio, las dos láminas apiladas en columnas 4–6 (padre filas 2–14, madre 16–28), texto a la izquierda, nota ED al pie. Reemplaza el arreglo anterior del mismo día. Solo CSS (pedido de Patricio).
+- 3 nov. 2026 · 022: vuelven las dos láminas lado a lado debajo del texto (con un renglón de aire); la nota ED sigue al pie a la izquierda. Se quita el arreglo de láminas apiladas.
