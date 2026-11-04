@@ -384,3 +384,9 @@
 .p025__route .diagram__path { stroke-width: 0.6; stroke-dasharray: 1.6 1.6; }
 .p025__route .diagram__line { stroke-width: 0.6; }
 .p025__route .diagram__tick { stroke-width: 0.3; }
+/* 023 (pedido de Patricio, 3 nov. 2026): el mosaico termina con la última línea del texto (fila 23); cajas más bajas (7 filas + 1 de pie), mismo ancho; un renglón entre las dos hileras */
+.page .p023__mosaic { grid-row: 7 / 24; }
+.page .p023__mosaic .tile { grid-row: 1 / span 8; }
+.page .p023__mosaic .tile:nth-child(n+3) { grid-row: 10 / span 8; }
+.page .p023__mosaic .tile .foto { grid-row: span 7; }
+.page .p023__mosaic .tile figcaption { grid-row: span 1; }
