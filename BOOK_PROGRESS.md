@@ -617,3 +617,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026 · 022: en cambio, las dos láminas apiladas en columnas 4–6 (padre filas 2–14, madre 16–28), texto a la izquierda, nota ED al pie. Reemplaza el arreglo anterior del mismo día. Solo CSS (pedido de Patricio).
 - 3 nov. 2026 · 022: vuelven las dos láminas lado a lado debajo del texto (con un renglón de aire); la nota ED sigue al pie a la izquierda. Se quita el arreglo de láminas apiladas.
 - 3 nov. 2026 · 023: mosaico más bajo (cajas de 7 renglones, mismo ancho, pie en 1 renglón); termina en la misma línea que el texto.
+- 3 nov. 2026 · 024: la frase destacada pasa a la derecha del texto, en cursiva y cuerpo menor (menos peso que el título), sin «Bien» al comienzo por pedido de Patricio; la nota D va debajo del texto, antes de la foto. Página re-aprobada.
