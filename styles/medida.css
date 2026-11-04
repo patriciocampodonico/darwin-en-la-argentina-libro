@@ -393,3 +393,6 @@
 /* 024 (pedido de Patricio, 3 nov. 2026): la frase destacada pasa al blanco de la derecha, alineada con el texto y con menos peso que el título (cursiva, cuerpo menor); la nota D va debajo del texto, antes de la foto */
 .page .p024__quote { grid-column: 4 / 7; grid-row: 7 / 12; font-size: 5.4mm; line-height: calc(var(--baseline) * 1.5); font-style: italic; }
 .page .p024__note-d { grid-column: 1 / 4; grid-row: 15 / 17; }
+/* 024 (pedido de Patricio, 3 nov. 2026): la nota D y la frase destacada bajan al pie del blanco, justo antes de la foto (un renglón de aire) */
+.page .p024__quote { grid-row: 17 / 21; align-self: end; }
+.page .p024__note-d { grid-row: 20 / 21; align-self: end; }
