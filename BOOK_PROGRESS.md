@@ -619,3 +619,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026 · 023: mosaico más bajo (cajas de 7 renglones, mismo ancho, pie en 1 renglón); termina en la misma línea que el texto.
 - 3 nov. 2026 · 024: la frase destacada pasa a la derecha del texto, en cursiva y cuerpo menor (menos peso que el título), sin «Bien» al comienzo por pedido de Patricio; la nota D va debajo del texto, antes de la foto. Página re-aprobada.
 - 3 nov. 2026 · 024: la nota D (izq.) y la frase destacada (der.) bajan al pie del blanco, justo antes de la foto; terminan en la misma línea.
+- 3 nov. 2026 · 024: foto de la salina más grande (desde la fila 17); la frase destacada va sobre el cielo en color papel, con un velo de la misma tinta azul para que se lea; nota D al pie del texto.

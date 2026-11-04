@@ -396,3 +396,9 @@
 /* 024 (pedido de Patricio, 3 nov. 2026): la nota D y la frase destacada bajan al pie del blanco, justo antes de la foto (un renglón de aire) */
 .page .p024__quote { grid-row: 17 / 21; align-self: end; }
 .page .p024__note-d { grid-row: 20 / 21; align-self: end; }
+/* 024 (pedido de Patricio, 3 nov. 2026): foto más grande (arranca 5 renglones antes) y la frase destacada sobre el cielo, en color papel; la nota D al pie del texto */
+.page .p024__image { grid-row: 17 / 29; background-position: center top; }
+.page .p024__note-d { grid-row: 15 / 16; align-self: start; }
+.page .p024__quote { grid-column: 1 / 5; grid-row: 18 / 21; align-self: start; color: var(--paper); position: relative; z-index: 1; }
+.page .p024__image { position: relative; }
+.page .p024__image::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(26 58 92 / 0.6) 0%, rgb(26 58 92 / 0.35) 28%, rgb(26 58 92 / 0) 45%); } /* velo de la misma tinta azul para que la frase se lea sobre las nubes */
