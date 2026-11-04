@@ -402,3 +402,5 @@
 .page .p024__quote { grid-column: 1 / 5; grid-row: 18 / 21; align-self: start; color: var(--paper); position: relative; z-index: 1; }
 .page .p024__image { position: relative; }
 .page .p024__image::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(26 58 92 / 0.6) 0%, rgb(26 58 92 / 0.35) 28%, rgb(26 58 92 / 0) 45%); } /* velo de la misma tinta azul para que la frase se lea sobre las nubes */
+/* 024 (pedido de Patricio, 4 nov. 2026): la frase destacada pasa al lado derecho de la foto, alineada a la derecha con el margen */
+.page .p024__quote { grid-column: 3 / 7; text-align: right; }
