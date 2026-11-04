@@ -404,3 +404,6 @@
 .page .p024__image::before { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(26 58 92 / 0.6) 0%, rgb(26 58 92 / 0.35) 28%, rgb(26 58 92 / 0) 45%); } /* velo de la misma tinta azul para que la frase se lea sobre las nubes */
 /* 024 (pedido de Patricio, 4 nov. 2026): la frase destacada pasa al lado derecho de la foto, alineada a la derecha con el margen */
 .page .p024__quote { grid-column: 3 / 7; text-align: right; }
+/* 025 (pedido de Patricio, 4 nov. 2026): la línea temporal gana alto (más aire entre fecha, línea, números y nombres, con una guía fina de cada parada a su número); arranca un renglón antes y la nota ED baja al último renglón */
+.p025__route { grid-row: 13 / 27; }
+.p025__caption { grid-row: 28; }
