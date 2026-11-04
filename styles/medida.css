@@ -384,3 +384,9 @@
 .p025__route .diagram__path { stroke-width: 0.6; stroke-dasharray: 1.6 1.6; }
 .p025__route .diagram__line { stroke-width: 0.6; }
 .p025__route .diagram__tick { stroke-width: 0.3; }
+/* 022 (pedido de Patricio, 3 nov. 2026): «La madre» sube arriba a la derecha, al lado del texto (empieza con la etiqueta y termina un renglón antes de la otra lámina);
+   «El padre de la sal» ocupa todo el ancho abajo, con el cristal a la misma escala (alto de 10 renglones, como antes) */
+.page .p022__fig-b { grid-column: 4 / 7; grid-row: 2 / 13; }   /* .page: notas.css carga después */
+.page .p022__fig-b svg { grid-row: span 9; }
+.page .p022__fig-b figcaption { grid-row: span 2; }
+.page .p022__fig-a { grid-column: 1 / 7; grid-row: 14 / 27; }

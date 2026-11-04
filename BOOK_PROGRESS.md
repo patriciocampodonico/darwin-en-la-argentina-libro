@@ -613,3 +613,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 3 nov. 2026 · 023: texto, rótulo ED y mosaico suben un renglón para alinear con 022 (pedido de Patricio).
 - 3 nov. 2026 · 025: esquema del próximo tramo más grande (números 17 pt, nombres 9 pt, ruta más gruesa) y al centro de la página (filas 14–25); ED en fila 27. Página re-aprobada (pedido de Patricio).
 - 3 nov. 2026 · 019: vuelve al orden original (pedido de Patricio): corte del cantil a la izquierda, texto y nota ED a la derecha; el texto arranca en la misma línea que el de 018. Solo CSS.
+- 3 nov. 2026 · 022: «La madre» sube arriba a la derecha, junto al texto (filas 2–12); «El padre de la sal» ocupa el ancho entero abajo (filas 14–26), cristal a la misma escala. Solo CSS (pedido de Patricio).
