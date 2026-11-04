@@ -368,10 +368,7 @@
 .p048__title { grid-row: 16 / 18; }
 .p064__text { grid-row: 11 / 23; }
 .p074__text { grid-row: 14 / 19; }
-/* 019 (pedido de Patricio, 26 oct. 2026): texto y nota a la izquierda, el corte a la derecha; el texto arranca con el corte, 9 mm bajo el título */
-.p019__text { grid-column: 1 / 4; grid-row: 10 / 24; }
-.p019__caption { grid-column: 1 / 4; }
-.p019__section { grid-column: 4 / 7; }
+/* 019 (pedido de Patricio, 3 nov. 2026): vuelve al orden original, el corte a la izquierda y el texto y la nota a la derecha; el texto vuelve a arrancar en la misma línea que el de 018 (filas de registros.css) */
 /* 058 (pedido de Patricio, 3 nov. 2026): «Río Salado» con más aire respecto del borde de la franja del río */
 .p058__riverlabel { transform: translateX(4mm); } /* la caja del rótulo queda anclada a la derecha: se corre el rótulo entero; el texto queda ~4,5 mm adentro de la franja */
 /* 022 (pedido de Patricio, 3 nov. 2026): el texto sube un renglón para dejar un renglón de aire antes de las láminas (mismo aire que entre título y texto) */
