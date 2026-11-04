@@ -407,3 +407,5 @@
 /* 025 (pedido de Patricio, 4 nov. 2026): la línea temporal gana alto (más aire entre fecha, línea, números y nombres, con una guía fina de cada parada a su número); arranca un renglón antes y la nota ED baja al último renglón */
 .p025__route { grid-row: 13 / 27; }
 .p025__caption { grid-row: 28; }
+/* 024 (pedido de Patricio, 4 nov. 2026): la nota D baja un renglón, pegada al pie del blanco, sobre la foto */
+.page .p024__note-d { grid-row: 16 / 17; align-self: start; }
