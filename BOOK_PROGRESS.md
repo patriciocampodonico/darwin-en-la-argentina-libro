@@ -639,3 +639,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 — 059 (pedido de Patricio): «El razonamiento, paso a paso» pasa a la izquierda (columnas 1–3) y las notas D y ED a la derecha (4–6), en la esquina exterior junto al folio. Solo CSS.
 - 11 nov. 2026 — 055 (pedido de Patricio): los números (18, 21, 3 y 7) se comprimen (líneas 7–17) y el último filete termina en el último renglón del texto. Solo CSS.
 - 11 nov. 2026 — 056 (pedido de Patricio): en el esquema, la cifra y su explicación van en el mismo renglón unidas por una raya («20 ciervos — 13 hallados…»), sin el hueco entre las dos. HTML cambiado (SVG): re-aprobada.
+- 11 nov. 2026 · 065: título y texto bajan una línea; el título arranca a la altura del de la 064 y el texto termina en la misma línea que el de la 064.
