@@ -132,3 +132,48 @@
 .p075__column { grid-column: 1 / 7; grid-row: 14 / 27; height: auto; align-self: start; }
 .p075__caption { grid-column: 1 / 5; grid-row: 26 / 29; align-self: end; margin-bottom: 0; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
 .p075__column .diagram__label--big { font-size: 3.2px; }
+/* 076: lista con más aire y el diente más grande, hasta abajo (11 nov. 2026) */
+.p076__label { grid-row: 14; }
+.p076__list { grid-row: 15 / 29; }
+.p076__list li { height: calc(var(--baseline) * 3); padding-top: calc(var(--baseline) * 0.8); }
+.p076__image { grid-row: 7 / 29; background-size: auto 92%; background-position: center 45%; }
+/* 077: el método en cuatro columnas a todo el ancho, con números grandes (11 nov. 2026) */
+.p077__label { grid-column: 1 / 7; grid-row: 13; }
+.p077__list { grid-column: 1 / 7; grid-row: 14 / 24; display: grid; grid-template-columns: repeat(4, 1fr); column-gap: var(--column-gap); align-self: start; }
+.p077__list li { display: block; height: auto; padding-top: calc(var(--baseline) / 2); }
+.p077__list b { display: block; font-family: var(--font-display); font-weight: 400; font-size: var(--datum-size); line-height: calc(var(--baseline) * 3); }
+.p077__list .t-editorial { display: block; }
+.p077__caption { grid-column: 1 / 7; grid-row: 24 / 26; align-self: start; }
+.p076__image { background-size: 100% auto; background-position: center 62%; }
+.p077__caption { grid-column: 4 / 7; grid-row: 7 / 10; align-self: start; padding-top: 1.2mm; }
+.p077__label { grid-row: 13; }
+.p077__list { grid-row: 14 / 26; }
+.p077__list b { font-size: 46pt; line-height: calc(var(--baseline) * 5); }
+/* 076–077: las dos listas en cuatro columnas con números grandes, a la misma altura en la doble */
+.p076__image { grid-column: 4 / 7; grid-row: 7 / 14; background-size: 100% auto; background-position: center 55%; }
+.p076__label, .p077__label { grid-column: 1 / 7; grid-row: 15; }
+.p076__list, .p077__list { grid-column: 1 / 7; grid-row: 16 / 27; display: grid; grid-template-columns: repeat(4, 1fr); column-gap: var(--column-gap); align-self: start; }
+.p076__list li, .p077__list li { display: block; height: auto; padding-top: calc(var(--baseline) / 2); }
+.p076__list b, .p077__list b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 46pt; line-height: calc(var(--baseline) * 4); }
+.p076__list .t-editorial { display: block; }
+.p076__list .is-key b { font-weight: 700; }
+/* 076 (definitivo): texto e inventario arriba, el diente grande a todo el ancho abajo */
+.p076__label { grid-column: 4 / 7; grid-row: 7; }
+.p076__list { grid-column: 4 / 7; grid-row: 8 / 15; display: block; }
+.p076__list li { display: grid; grid-template-columns: 7mm 1fr; height: calc(var(--baseline) * 2); padding-top: calc(var(--baseline) / 2); }
+.p076__list b { display: inline; font-family: var(--font-ui); font-size: var(--editorial-size); line-height: var(--baseline); font-weight: 700; }
+.p076__list .t-editorial { display: inline; }
+.p076__image { grid-column: 1 / 7; grid-row: 16 / 29; background-size: contain; background-position: center bottom; }
+/* 077 (definitivo) */
+.p077__list b { line-height: calc(var(--baseline) * 3); }
+.p077__label { grid-row: 16; }
+.p077__list { grid-row: 17 / 27; }
+.p077__caption { grid-column: 4 / 7; grid-row: 7 / 10; }
+.p076__image { grid-row: 15 / 29; background-size: auto 128%; background-position: center 70%; }
+.p076__image { grid-row: 16 / 29; background-position: center 80%; }
+.p077__list b { font-size: 40pt; line-height: calc(var(--baseline) * 4); }
+.p077__label { grid-row: 14; }
+.p077__list { grid-row: 15 / 27; }
+.p076__image { background-size: auto 122%; background-position: center 62%; }
+.p077__label { grid-row: 13; }
+.p077__list { grid-row: 14 / 26; }
