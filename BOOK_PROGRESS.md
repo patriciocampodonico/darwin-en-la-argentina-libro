@@ -624,3 +624,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 4 nov. 2026 · 025: la línea temporal gana alto (más aire entre fecha, corchete, línea, números y nombres; guía fina de cada parada a su número); arranca un renglón antes y la nota ED baja al último renglón. Página re-aprobada.
 - 4 nov. 2026 · 024: la nota D baja un renglón, al pie del blanco, justo sobre la foto.
 - 11 nov. 2026 · contratapa: la cita sube un renglón; el grabado del megaterio crece (renglones 9–21) y apoya en la base del último renglón de la presentación.
+- 11 nov. 2026 · 005: mockups de libro y fichas reemplazados por los nuevos de la web (Acerca de); originales en assets/images/originales (mockup-libro-2026.webp, 005-mockup-fichas-2026.webp), recortados con tools/recorte.py.
