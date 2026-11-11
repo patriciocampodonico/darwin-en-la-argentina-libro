@@ -649,3 +649,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 069: las láminas bajan dos renglones (menos altas); el rótulo ED y las leyendas bajan con ellas.
 - 11 nov. 2026 · 075: texto en dos columnas; la sección geológica a todo el ancho, más grande y con rótulos mayores; nota ED al pie con filete. Reaprobada.
 - 11 nov. 2026 · 076: el inventario pasa a la derecha del texto y el diente de caballo, grande, ocupa toda la mitad inferior. 077: los cuatro pasos del método en cuatro columnas a todo el ancho con números grandes; la nota ED de los pasos 3 y 4 arriba a la derecha; nota D al pie.
+- 11 nov. 2026 · 076: el diente de caballo se aleja un poco (más chico, con más aire alrededor).
