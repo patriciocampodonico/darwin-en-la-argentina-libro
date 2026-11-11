@@ -178,3 +178,9 @@
 .p077__label { grid-row: 13; }
 .p077__list { grid-row: 14 / 26; }
 .p076__image { background-size: auto 108%; background-position: center 70%; }
+/* 076: el diente en dos piezas separadas; la vista de lado, más grande, bajo el texto (11 nov. 2026) */
+.p076__image { background-size: contain; background-position: center bottom; }
+.p076__image--lado { grid-column: 1 / 4; grid-row: 13 / 29; }
+.p076__image--corona { grid-column: 4 / 7; grid-row: 17 / 29; }
+.p076__image--lado { grid-column: 1 / 4; grid-row: 13 / 29; background-size: auto 112%; background-position: 80% 88%; }
+.p076__image--corona { grid-column: 4 / 7; grid-row: 16 / 29; background-size: auto 122%; background-position: 15% 92%; }
