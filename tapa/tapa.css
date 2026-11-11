@@ -96,3 +96,7 @@ body[data-v="b"] .front__subtitle br { display: none; }
 .flap__qr { width: calc(var(--line) * 4); height: calc(var(--line) * 4); background: url(../assets/images/qr-mapa-digital.svg) center / contain no-repeat; }
 .flap__credit { grid-row: 25 / 29; align-self: end; font-family: var(--font-ui); font-size: var(--meta-size); line-height: var(--data-leading); border-top: var(--rule-fine) solid currentColor; padding-top: 1.2mm; }
 .flap__credit span { display: block; font-size: var(--meta-small-size); opacity: 0.75; margin-bottom: 0.6mm; }
+
+/* 11 nov. 2026: la cita sube un renglón; el grabado crece y apoya en la base del último renglón de la presentación */
+.back__quote { grid-row: 5 / 11; }
+.back__plate { grid-row: 9 / 21; background-position: center bottom; margin-bottom: -0.3mm; }
