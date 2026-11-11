@@ -192,3 +192,13 @@
 .p081__canal { grid-row: 15 / 23; } .p081__caption { grid-row: 23 / 24; }
 .p081__image { background-size: 82% auto; background-position: center 40%; }
 .p081__image { background-size: 94% auto; background-position: center 25%; }
+/* 084–085: gráfico a la altura del texto y nota ED al pie con filete, como en el resto del libro (11 nov. 2026) */
+.p084__ria { grid-row: 18 / 24; align-self: start; }
+.p084__caption, .p085__caption { grid-column: 4 / 7; grid-row: 26 / 29; align-self: end; margin-bottom: 0; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+.p085__profile { grid-row: 7 / 22; align-self: end; }
+.p085__text { grid-column: 1 / 7; grid-row: 7 / 14; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p085__profile { grid-column: 1 / 7; grid-row: 15 / 27; height: auto; align-self: start; }
+.p085__caption { grid-column: 1 / 5; }
+.p084__ria { grid-row: 18 / 26; align-self: start; height: auto; }
+.p084__caption { grid-column: 1 / 4; }
+.p084__caption { grid-row: 23 / 26; }
