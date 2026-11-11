@@ -652,3 +652,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 076: el diente de caballo se aleja un poco (más chico, con más aire alrededor).
 - 11 nov. 2026 · 076: el diente se separa en dos piezas (076-diente-lado.jpg y 076-diente-corona.jpg, recortes de la misma lámina) con más espacio entre ellas; la vista de lado, más grande, sube hacia el texto; la corona vuelve al tamaño anterior. Reaprobada.
 - 11 nov. 2026 · 077: más aire entre los números grandes y el texto de cada paso.
+- 11 nov. 2026 · 081: el picotijera pasa arriba y el corte del canal abajo (su base termina con el texto).

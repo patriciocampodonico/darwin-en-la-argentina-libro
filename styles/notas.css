@@ -185,3 +185,8 @@
 .p076__image--lado { grid-column: 1 / 4; grid-row: 13 / 29; background-size: auto 112%; background-position: 80% 88%; }
 .p076__image--corona { grid-column: 4 / 7; grid-row: 16 / 29; background-size: auto 122%; background-position: 15% 92%; }
 .p077__list .t-editorial { display: block; margin-top: calc(var(--baseline) * 0.8); }
+/* 081: el picotijera arriba y el corte del canal abajo (11 nov. 2026) */
+.p081__image { grid-row: 7 / 15; }
+.p081__canal { grid-row: 16 / 23; }
+.p081__caption { grid-row: 23 / 24; align-self: start; padding-top: 1mm; }
+.p081__canal { grid-row: 15 / 23; } .p081__caption { grid-row: 23 / 24; }
