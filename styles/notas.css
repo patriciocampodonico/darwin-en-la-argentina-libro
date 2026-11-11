@@ -65,3 +65,7 @@
    el paisaje sube y crece: empieza con la pregunta y termina con el texto */
 .p045__quote { grid-column: 1 / 4; grid-row: 9 / 13; align-self: start; text-wrap: balance; }
 .p045__image { grid-row: 9 / 26; }
+
+/* 11 nov. 2026 (pedido de Patricio): 058, la nota ED de la franja del río baja al pie, como las demás notas */
+.p058__caption { grid-column: 1 / 4; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm;
+  background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
