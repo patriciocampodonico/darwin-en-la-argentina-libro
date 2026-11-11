@@ -190,3 +190,5 @@
 .p081__canal { grid-row: 16 / 23; }
 .p081__caption { grid-row: 23 / 24; align-self: start; padding-top: 1mm; }
 .p081__canal { grid-row: 15 / 23; } .p081__caption { grid-row: 23 / 24; }
+.p081__image { background-size: 82% auto; background-position: center 40%; }
+.p081__image { background-size: 94% auto; background-position: center 25%; }
