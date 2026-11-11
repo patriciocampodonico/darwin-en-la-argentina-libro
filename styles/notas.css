@@ -127,3 +127,8 @@
 .p069__fig-a .concept__img, .p069__fig-b .concept__img, .p069__fig-c .concept__img { background-size: auto 114%; background-position: center; }
 .p069__fig-a .concept__img { background-position: 15% center; }
 .p069__label { grid-row: 15; } .p069__fig-a, .p069__fig-b, .p069__fig-c { grid-row: 16 / 29; }
+/* 075: texto en dos columnas; la sección a todo el ancho; nota ED al pie (11 nov. 2026) */
+.p075__text { grid-column: 1 / 7; grid-row: 7 / 13; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p075__column { grid-column: 1 / 7; grid-row: 14 / 27; height: auto; align-self: start; }
+.p075__caption { grid-column: 1 / 5; grid-row: 26 / 29; align-self: end; margin-bottom: 0; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+.p075__column .diagram__label--big { font-size: 3.2px; }

@@ -647,3 +647,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 067: la cita baja al centro del blanco y lleva comillas «» (la de apertura colgada en el margen).
 - 11 nov. 2026 · 069: las tres láminas a sangre (abajo y a los costados, sin marco); los rótulos 1.º/2.º/3.º pasan arriba de cada lámina; sin folio para no tapar la imagen.
 - 11 nov. 2026 · 069: las láminas bajan dos renglones (menos altas); el rótulo ED y las leyendas bajan con ellas.
+- 11 nov. 2026 · 075: texto en dos columnas; la sección geológica a todo el ancho, más grande y con rótulos mayores; nota ED al pie con filete. Reaprobada.
