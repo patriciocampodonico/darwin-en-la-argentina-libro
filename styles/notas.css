@@ -76,3 +76,9 @@
 .p058__data { grid-column: 1 / 6; grid-row: 16 / 25; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; column-gap: var(--column-gap); transform: none; }
 .p058__data > div { padding-bottom: 1.4mm; }
 .p058__g { display: block; width: 100%; height: auto; margin-bottom: 2mm; }
+
+/* 11 nov. 2026 (pedido de Patricio): 059, el razonamiento paso a paso pasa a la izquierda (debajo de las medidas de 058)
+   y las notas a la derecha, en la esquina exterior, junto al folio */
+.p059__label { grid-column: 1 / 4; }
+.p059__list { grid-column: 1 / 4; }
+.p059__notes { grid-column: 4 / 7; }
