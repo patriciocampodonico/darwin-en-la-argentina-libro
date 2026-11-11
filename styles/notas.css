@@ -126,3 +126,4 @@
 .p069__label { grid-row: 13; }
 .p069__fig-a .concept__img, .p069__fig-b .concept__img, .p069__fig-c .concept__img { background-size: auto 114%; background-position: center; }
 .p069__fig-a .concept__img { background-position: 15% center; }
+.p069__label { grid-row: 15; } .p069__fig-a, .p069__fig-b, .p069__fig-c { grid-row: 16 / 29; }

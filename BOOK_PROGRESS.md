@@ -646,3 +646,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 067: se quita la franja de agua; mapa ED del recorrido Buenos Aires → Luján → Areco → Arrecife → San Nicolás → Rosario junto al Paraná; cita a 15 pt bajo el texto; dato ED «31 leguas» (unos 150 km). Reaprobada.
 - 11 nov. 2026 · 067: la cita baja al centro del blanco y lleva comillas «» (la de apertura colgada en el margen).
 - 11 nov. 2026 · 069: las tres láminas a sangre (abajo y a los costados, sin marco); los rótulos 1.º/2.º/3.º pasan arriba de cada lámina; sin folio para no tapar la imagen.
+- 11 nov. 2026 · 069: las láminas bajan dos renglones (menos altas); el rótulo ED y las leyendas bajan con ellas.
