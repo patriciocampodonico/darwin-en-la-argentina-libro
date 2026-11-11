@@ -115,3 +115,4 @@
 .p067__data { grid-column: 1 / 4; grid-row: 24 / 29; grid-template-columns: 1fr; align-self: end; }
 .p067__datalabel { grid-row: 24; }
 .p067__data { grid-row: 25 / 29; align-self: start; }
+.p067__quote { grid-row: 17 / 22; text-indent: -0.42em; }
