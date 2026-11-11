@@ -116,3 +116,13 @@
 .p067__datalabel { grid-row: 24; }
 .p067__data { grid-row: 25 / 29; align-self: start; }
 .p067__quote { grid-row: 17 / 22; text-indent: -0.42em; }
+/* 069: las tres láminas a sangre (abajo y a los costados); los rótulos pasan arriba (11 nov. 2026) */
+.p069__fig-a, .p069__fig-b, .p069__fig-c { grid-row: 14 / 29; padding-top: 1mm; display: flex; flex-direction: column; margin-bottom: calc(-1 * var(--margin-bottom)); }
+.p069__fig-a figcaption, .p069__fig-b figcaption, .p069__fig-c figcaption { order: -1; padding-top: 0; min-height: calc(var(--baseline) * 3); padding-bottom: calc(var(--baseline) / 2); }
+.p069 .concept__img, .p069__fig-a .concept__img, .p069__fig-b .concept__img, .p069__fig-c .concept__img { flex: 1; height: auto; outline: none; }
+.p069__fig-a .concept__img { margin-left: calc(-1 * var(--margin-inner)); }
+.p069__fig-c .concept__img { margin-right: calc(-1 * var(--margin-outer)); }
+#p069 .page__folio { display: none; }
+.p069__label { grid-row: 13; }
+.p069__fig-a .concept__img, .p069__fig-b .concept__img, .p069__fig-c .concept__img { background-size: auto 114%; background-position: center; }
+.p069__fig-a .concept__img { background-position: 15% center; }
