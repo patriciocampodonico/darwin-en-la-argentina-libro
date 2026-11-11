@@ -235,3 +235,11 @@
 .p093__text { grid-row: 9 / 20; }
 .p093__line { grid-row: 20 / 25; }
 .p093__line { grid-row: 20 / 25; align-self: start; padding-top: 1mm; }
+/* 094–095: misma lógica en la doble (11 nov. 2026) */
+.p094__data { grid-row: 9 / 20; transform: none; }
+.p094__river { grid-row: 21 / 26; }
+.p094__caption, .p095__caption { grid-column: 1 / 5; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+.p095__text { grid-column: 1 / 7; grid-row: 7 / 16; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p095__valley { grid-column: 1 / 4; grid-row: 16 / 26; height: auto; align-self: start; }
+.p095__data { grid-column: 4 / 7; grid-row: 16 / 25; grid-template-columns: 1fr; grid-template-rows: repeat(2, 1fr); }
+.p095__data > div { display: grid; grid-template-columns: calc((100% - 2 * var(--column-gap)) / 3 + var(--column-gap)) 1fr; align-content: end; align-items: baseline; background: linear-gradient(var(--blue-deep), var(--blue-deep)) bottom / 100% var(--rule-fine) no-repeat; padding-top: 0; padding-bottom: 0.7mm; }

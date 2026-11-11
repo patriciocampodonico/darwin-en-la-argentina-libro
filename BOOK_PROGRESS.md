@@ -658,3 +658,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 089: texto en dos columnas a todo el ancho (se va el blanco de arriba a la derecha); las dos láminas suben y son más altas.
 - 11 nov. 2026 · 090: texto en dos columnas; abajo el esquema de capas (izq.) y las tres cifras con la nota ED (der.), terminando juntos. 091: la secuencia roca → fragmento → guijarro → capa de grava a todo el ancho, más grande; notas E y ED al pie a la misma altura. Reaprobada 091.
 - 11 nov. 2026 · 093: la pregunta de Darwin baja a 14 pt (no compite con el título); el esquema abundante → rara → extinta ocupa todo el ancho (mismos elementos); notas E y ED al pie a la misma altura. Reaprobada.
+- 11 nov. 2026 · 094: las cifras terminan con el texto; el esquema del río sube; nota ED al pie con filete. 095: texto en dos columnas; abajo el corte del valle (izq.) y las cifras con filetes como en la 094 (der.); nota ED al pie.
