@@ -53,3 +53,6 @@
 :is(.notes, [class*="__note-"]) .notetag {
   text-indent: 0; min-width: 3mm; margin-right: 1mm; padding: 0 0.6mm; font-size: 5.5pt; line-height: 3mm;
 }
+
+/* 11 nov. 2026: 043 lleva una lámina a la derecha del texto (columnas 4–6), como la de 042; empieza y termina con el texto */
+.p043__image { grid-column: 4 / 7; grid-row: 7 / 15; background-size: 100% auto; background-position: center bottom; background-repeat: no-repeat; }

@@ -60,10 +60,13 @@ assert len(files) == len(FOTOS), f'{len(files)} originales para {len(FOTOS)} caj
 # Originales regenerados después (no entran en el orden de descarga)
 REEMPLAZOS = {'042': 'tapa-megatherium.webp',  # Megatherium con el árbol completo
               '090': '092-macrauchenia-suelo.webp'}  # 20 oct. 2026: medio esqueleto en el suelo, sin cráneo (sin la trompa de hueso)
+# Imágenes sumadas después, con su original propio (no entran en el orden de descarga)
+EXTRA = [(('043', 'conchas-hueso', 92.3, 36, 'l', .5, .5, 0), '043-conchas-hueso.png')]  # 11 nov. 2026: llena el hueco a la derecha del texto
+RECORTAR = {'043'}  # lámina con mucho aire: se recorta al dibujo antes de ubicarla en la caja
 APARTE = {'012', '013'}  # una sola imagen para la doble: la prepara tools/laminas.py
 
 SOLO = set(__import__('sys').argv[1:])  # py tools/fotos.py 018 022 … rehace solo esas
-for (pid, name, bw, bh, mode, fx, fy, faint), f in zip(FOTOS, files):
+for (pid, name, bw, bh, mode, fx, fy, faint), f in list(zip(FOTOS, files)) + EXTRA:
     if pid in APARTE or (SOLO and pid not in SOLO): continue
     f = os.path.join(SRC, REEMPLAZOS.get(pid, f))
     im = Image.open(f).convert('L')
@@ -79,6 +82,11 @@ for (pid, name, bw, bh, mode, fx, fy, faint), f in zip(FOTOS, files):
         bg = sorted(im.resize((64, 64)).getdata())[int(64 * 64 * .6)]
         lut = [min(255, round(255 * (v - 40) / (bg - 12 - 40))) if v > 40 else 0 for v in range(256)]
         im = im.point(lut)
+        if pid in RECORTAR:
+            x0, y0, x1, y1 = ImageOps.invert(im.point(lambda v: 255 if v > 235 else v)).getbbox()
+            m = 12
+            im = im.crop((max(x0 - m, 0), max(y0 - m, 0), min(x1 + m, w), min(y1 + m, h)))
+            w, h = im.size
         cw, ch = (round(h * ar), h) if w / h < ar else (w, round(w / ar))
         canvas = Image.new('L', (cw, ch), 255)
         canvas.paste(im, ((cw - w) // 2, (ch - h) // 2))
