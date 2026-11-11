@@ -225,3 +225,13 @@
 .p090__column { grid-row: 17 / 26; align-self: start; }
 .p090__data { grid-row: 17 / 23; }
 .p090__caption { grid-row: 22 / 26; align-self: end; }
+/* 093: la pregunta a tamaño intermedio (no compite con el título); esquema a todo el ancho; notas al pie a la misma altura (11 nov. 2026) */
+.p093__quote { grid-row: 5 / 8; align-self: start; font-size: 15pt; line-height: calc(var(--baseline) * 1.5); }
+.p093__text { grid-row: 8 / 20; }
+.p093__line { grid-column: 1 / 7; grid-row: 19 / 25; height: auto; align-self: center; }
+.p093__note-e { grid-column: 1 / 4; grid-row: 25 / 29; align-self: start; }
+.p093__caption { grid-column: 4 / 7; grid-row: 25 / 29; align-self: start; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+.p093__quote { font-size: 14pt; }
+.p093__text { grid-row: 9 / 20; }
+.p093__line { grid-row: 20 / 25; }
+.p093__line { grid-row: 20 / 25; align-self: start; padding-top: 1mm; }
