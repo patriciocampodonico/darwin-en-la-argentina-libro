@@ -638,3 +638,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 — 058: la leyenda de las 7 leguas suma la equivalencia (pedido de Patricio): «(una legua: unos 5 km)»; la legua de Buenos Aires ≈ 5,2 km, redondeada. Re-aprobada.
 - 11 nov. 2026 — 059 (pedido de Patricio): «El razonamiento, paso a paso» pasa a la izquierda (columnas 1–3) y las notas D y ED a la derecha (4–6), en la esquina exterior junto al folio. Solo CSS.
 - 11 nov. 2026 — 055 (pedido de Patricio): los números (18, 21, 3 y 7) se comprimen (líneas 7–17) y el último filete termina en el último renglón del texto. Solo CSS.
+- 11 nov. 2026 — 056 (pedido de Patricio): en el esquema, la cifra y su explicación van en el mismo renglón unidas por una raya («20 ciervos — 13 hallados…»), sin el hueco entre las dos. HTML cambiado (SVG): re-aprobada.
