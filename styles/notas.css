@@ -72,7 +72,7 @@
 /* 11 nov. 2026 (pedido de Patricio): 058 sin blancos. El texto va en dos columnas a todo el ancho libre (columnas 1–5)
    y las medidas, una al lado de la otra, ocupan la franja de abajo, cada una con su esquema; la nota ED sigue al pie */
 .p058__text { grid-column: 1 / 6; grid-row: 6 / 16; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
-.p058__datalabel { grid-column: 1 / 6; grid-row: 15; }
+.p058__datalabel { grid-column: 1 / 6; grid-row: 17; }
 .p058__data { grid-column: 1 / 6; grid-row: 16 / 25; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; column-gap: var(--column-gap); transform: none; }
 .p058__data > div { padding-bottom: 1.4mm; }
 .p058__g { display: block; width: 100%; height: auto; margin-bottom: 2mm; }
