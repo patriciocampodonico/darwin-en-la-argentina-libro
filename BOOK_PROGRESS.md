@@ -642,3 +642,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 065: título y texto bajan una línea; el título arranca a la altura del de la 064 y el texto termina en la misma línea que el de la 064.
 - 11 nov. 2026 · 066: texto en dos columnas a todo el ancho; abajo la vizcacha (más grande, a la izquierda) y la lista del montón (a la derecha), terminando juntas.
 - 11 nov. 2026 · 067: se deshace el cambio anterior (vuelve como estaba).
+- 11 nov. 2026 · 067: la cita va sobre el río, en color papel y a tamaño intermedio (14 pt); el río sube; «Río Paraná» queda como rótulo chico.

@@ -97,3 +97,9 @@
 .p066__image { grid-row: 18 / 28; }
 .p066__image { background-size: 126% auto; background-position: center 100%; }
 .p066__image { grid-row: 18 / 29; }
+/* 067: la cita va sobre el río, en color papel y a tamaño intermedio; el río sube */
+.p067__river { top: calc(var(--margin-top) + var(--baseline) * 14); height: calc(var(--baseline) * 14 + var(--margin-bottom)); }
+.p067__riverlabel { grid-column: 1 / 4; grid-row: 16; font-size: var(--label-size); line-height: var(--baseline); }
+.p067__quote { grid-column: 1 / 5; grid-row: 17 / 21; align-self: start; position: relative; color: var(--paper); font-size: 19pt; line-height: calc(var(--baseline) * 1.5); }
+.p067__river { background-image: linear-gradient(to bottom, var(--blue-deep) 0, var(--blue-deep) 30%, rgba(26,58,92,0) 55%), url(../assets/images/067-agua-parana.jpg?v=3); }
+.p067__quote { grid-column: 1 / 4; grid-row: 18 / 22; font-size: 14pt; line-height: calc(var(--baseline) * 1.5); }
