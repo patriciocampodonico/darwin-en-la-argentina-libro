@@ -103,3 +103,15 @@
 .p067__quote { grid-column: 1 / 5; grid-row: 17 / 21; align-self: start; position: relative; color: var(--paper); font-size: 19pt; line-height: calc(var(--baseline) * 1.5); }
 .p067__river { background-image: linear-gradient(to bottom, var(--blue-deep) 0, var(--blue-deep) 30%, rgba(26,58,92,0) 55%), url(../assets/images/067-agua-parana.jpg?v=3); }
 .p067__quote { grid-column: 1 / 4; grid-row: 18 / 22; font-size: 14pt; line-height: calc(var(--baseline) * 1.5); }
+/* 067: el agua se reemplaza por un mapa del recorrido (11 nov. 2026) */
+.p067__title { grid-column: 1 / 7; grid-row: 3 / 5; }
+.p067__text { grid-column: 1 / 4; grid-row: 7 / 14; }
+.p067__quote { grid-column: 1 / 4; grid-row: 15 / 21; align-self: start; color: var(--blue-deep); font-size: 15pt; line-height: calc(var(--baseline) * 1.5); }
+.p067__map { grid-column: 4 / 7; grid-row: 7 / 29; height: auto; align-self: end; padding-left: 4mm; }
+.p067__river { fill: none; stroke: var(--blue-deep); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+#p067 .page__folio { display: flex; }
+.p067__river { stroke-width: 1.1; }
+.p067__datalabel { grid-column: 1 / 4; grid-row: 23; }
+.p067__data { grid-column: 1 / 4; grid-row: 24 / 29; grid-template-columns: 1fr; align-self: end; }
+.p067__datalabel { grid-row: 24; }
+.p067__data { grid-row: 25 / 29; align-self: start; }

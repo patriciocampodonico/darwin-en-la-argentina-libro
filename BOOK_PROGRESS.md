@@ -643,3 +643,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 066: texto en dos columnas a todo el ancho; abajo la vizcacha (más grande, a la izquierda) y la lista del montón (a la derecha), terminando juntas.
 - 11 nov. 2026 · 067: se deshace el cambio anterior (vuelve como estaba).
 - 11 nov. 2026 · 067: la cita va sobre el río, en color papel y a tamaño intermedio (14 pt); el río sube; «Río Paraná» queda como rótulo chico.
+- 11 nov. 2026 · 067: se quita la franja de agua; mapa ED del recorrido Buenos Aires → Luján → Areco → Arrecife → San Nicolás → Rosario junto al Paraná; cita a 15 pt bajo el texto; dato ED «31 leguas» (unos 150 km). Reaprobada.

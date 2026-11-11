@@ -5,26 +5,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=1280">
 <title>Darwin en la Argentina — libro</title>
-<link rel="stylesheet" href="styles/tokens.css?v=8908298d">
-<link rel="stylesheet" href="styles/typography.css?v=8908298d">
-<link rel="stylesheet" href="styles/grid.css?v=8908298d">
-<link rel="stylesheet" href="styles/components.css?v=8908298d">
-<link rel="stylesheet" href="styles/pages.css?v=8908298d">
-<link rel="stylesheet" href="styles/maps.css?v=8908298d">
-<link rel="stylesheet" href="styles/paradas.css?v=8908298d">
-<link rel="stylesheet" href="styles/registros.css?v=8908298d">
-<link rel="stylesheet" href="styles/tramo-03.css?v=8908298d">
-<link rel="stylesheet" href="styles/tramo-04-05.css?v=8908298d">
-<link rel="stylesheet" href="styles/tramo-05-07.css?v=8908298d">
-<link rel="stylesheet" href="styles/tramo-07-10.css?v=8908298d">
-<link rel="stylesheet" href="styles/tramo-10-15.css?v=8908298d">
-<link rel="stylesheet" href="styles/fotos.css?v=8908298d">
-<link rel="stylesheet" href="tapa/tapa.css?v=8908298d">
-<link rel="stylesheet" href="styles/medida.css?v=8908298d">
-<link rel="stylesheet" href="styles/aperturas.css?v=8908298d">
-<link rel="stylesheet" href="styles/texto.css?v=8908298d">
-<link rel="stylesheet" href="styles/notas.css?v=8908298d">
-<link rel="stylesheet" href="styles/print.css?v=8908298d">
+<link rel="stylesheet" href="styles/tokens.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/typography.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/grid.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/components.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/pages.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/maps.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/paradas.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/registros.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/tramo-03.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/tramo-04-05.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/tramo-05-07.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/tramo-07-10.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/tramo-10-15.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/fotos.css?v=0fd54fe4">
+<link rel="stylesheet" href="tapa/tapa.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/medida.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/aperturas.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/texto.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/notas.css?v=0fd54fe4">
+<link rel="stylesheet" href="styles/print.css?v=0fd54fe4">
 </head>
 <body>
 <div class="spread"><div class="slot--empty"></div><section class="page page--cover page--right front" id="ptapa">
@@ -1781,9 +1781,8 @@
 </section>
 <!-- 063 · Arrecife y primera visión del Paraná — fuente: Darwin_textos_para_maquetar_v2.pdf, entrada 066.
      Cotejo con la capa de texto del escaneo (págs. 179–180 del libro): coincide; el corte […] es del v2.
-     La última frase se compone en cuerpo mayor, en su lugar: no se repite. La franja azul al pie es el río: mucho espacio, para el cambio de escala. -->
+     La última frase se compone en cuerpo mayor, en su lugar: no se repite. Mapa ED del recorrido (Buenos Aires → Luján → Areco → Arrecife → San Nicolás → Rosario), posiciones aproximadas por coordenadas reales; reemplaza la franja de agua (pedido de Patricio, 11 nov. 2026). -->
 <section class="page page--right" id="p067" data-page="067" data-section="09 Camino al Paraná / Rosario" lang="es">
-  <div class="p067__river"></div>
   <div class="page__box">
     <h1 class="p067__title t-pagetitle">Arrecife y primera visión del Paraná</h1>
     <div class="p067__text t-darwin body">
@@ -1791,7 +1790,21 @@
       <p>29 y 30 de sep­tiem­bre.—Hemos se­guido ca­bal­gando por lla­nu­ras del mismo ca­rác­ter.</p>
     </div>
     <p class="p067__quote t-pullquote">En San Nicolás he visto por vez primera el magnífico río Paraná.</p>
-    <p class="p067__riverlabel t-label t-label--strong">Río Paraná</p>
+    <p class="p067__datalabel t-meta"><span class="notetag notetag--ed">ED</span>La cabalgadura</p>
+    <dl class="p067__data data">
+      <div><dt>31 leguas</dt><dd class="t-data">lo que pagó de alquiler en un día; unos 150 km (una legua: unos 5 km)</dd></div>
+    </dl>
+    <svg class="p067__map diagram" viewBox="0 0 92.34 99" role="img" aria-label="mapa del recorrido de Buenos Aires a Rosario por Luján, Areco, Arrecife y San Nicolás, junto al río Paraná">
+      <path class="diagram__sea" d="M78.7 68.5Q86 66.5 92.34 62V85Q89 80 86.6 76.6Q83 72 78.7 68.5Z"/>
+      <path class="p067__river" d="M1.8 0L4.35 4.4L15.2 16.6L19.9 20.9L27.2 27.5L39.5 36.2L45.3 41.4L62.4 54.5L65.3 57.6L78.7 68.5"/>
+      <path class="diagram__path" d="M86 76.3L59.8 75L46.4 61L23.6 53.2L19.2 20.9L4 4.4"/>
+      <g class="diagram__dot"><circle cx="86" cy="76.3" r="1.1"/><circle cx="59.8" cy="75" r="1.1"/><circle cx="46.4" cy="61" r="1.1"/><circle cx="23.6" cy="53.2" r="1.1"/><circle cx="4" cy="4.4" r="1.1"/></g>
+      <circle class="diagram__ring2" cx="19.2" cy="20.9" r="1.4"/>
+      <g class="diagram__label diagram__label--strong"><text x="84" y="81" text-anchor="end">Buenos Aires</text><text x="59.8" y="80" text-anchor="middle">Luján</text><text x="44.6" y="65.6" text-anchor="middle">Areco</text><text x="21.8" y="57.8" text-anchor="middle">Arrecife</text><text x="22.4" y="16.4">San Nicolás</text><text x="6.6" y="3.6">Rosario</text></g>
+      <g class="diagram__label"><text x="22.4" y="19">primera vista del Paraná</text><text transform="translate(50 42.6) rotate(37)">río Paraná</text><text x="92.34" y="89.6" text-anchor="end">Río de la Plata</text></g>
+      <path class="diagram__tick" d="M0 96H19.65M0 95V97M19.65 95V97"/>
+      <text class="diagram__label" x="0" y="93.6">50 km</text>
+    </svg>
   </div>
   <div class="page__folio"><b>067</b><span>09 Camino al Paraná / Rosario</span></div>
 </section>
