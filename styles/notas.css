@@ -69,3 +69,7 @@
 /* 11 nov. 2026 (pedido de Patricio): 058, la nota ED de la franja del río baja al pie, como las demás notas */
 .p058__caption { grid-column: 1 / 4; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm;
   background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+/* 11 nov. 2026 (pedido de Patricio): 058 sin el blanco sobre la nota. El texto sigue arriba, alineado con el de 059;
+   las medidas bajan a la columna derecha y ocupan el mismo lugar que el «razonamiento, paso a paso» de 059 */
+.p058__datalabel { grid-row: 20; }  /* misma línea que el rótulo de 059 */
+.p058__data { grid-row: 21 / 28; transform: none; }

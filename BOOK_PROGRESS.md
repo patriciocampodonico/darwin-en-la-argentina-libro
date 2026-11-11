@@ -631,3 +631,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 — 045: se quita la marca […] de la pregunta (pedido de Patricio): «¿Cuál fué el carácter de la vegetación en ese período?». Re-aprobada.
 - 11 nov. 2026 — 045: con la pregunta en dos renglones, pregunta e imagen bajan a la línea 9 (sin hueco sobre el texto); paisaje recortado a 92,3 × 75,3 mm, 345 ppp. Solo CSS e imagen.
 - 11 nov. 2026 — 058 (pedido de Patricio): la nota ED de la franja del río baja al pie (columnas 1–3, termina en la línea 28, con el filete de 10 mm), como las demás notas. Solo CSS (styles/notas.css).
+- 11 nov. 2026 — 058 (pedido de Patricio): sin el blanco sobre la nota. El texto sigue arriba (líneas 6–17, alineado con 059); las medidas (7 leguas, 40 m) bajan a la columna derecha, líneas 20–27, en el mismo lugar que «El razonamiento, paso a paso» de 059 (rótulo en la línea 20, último filete con el de 059). Solo CSS.
