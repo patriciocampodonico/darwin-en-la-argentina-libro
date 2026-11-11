@@ -82,3 +82,6 @@
 .p059__label { grid-column: 1 / 4; }
 .p059__list { grid-column: 1 / 4; }
 .p059__notes { grid-column: 4 / 7; }
+
+/* 11 nov. 2026 (pedido de Patricio): 055, los números se comprimen y terminan con el texto (el último filete en su último renglón) */
+.p055__data { grid-row: 7 / 18; transform: none; }
