@@ -87,3 +87,13 @@
 .p055__data { grid-row: 7 / 18; transform: none; }
 .p065__title { grid-row: 3 / 5; }
 .p065__text { grid-row: 7 / 24; }
+.p066__text { grid-column: 1 / 7; grid-row: 6 / 16; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p066__image { grid-column: 1 / 4; grid-row: 17 / 29; background-size: contain; background-position: center bottom; }
+.p066__label { grid-column: 4 / 7; grid-row: 17; transform: none; }
+.p066__list { grid-column: 4 / 7; grid-row: 18 / 29; transform: none; }
+.p066__text { grid-row: 7 / 17; }
+.p066__label { grid-row: 18; }
+.p066__list { grid-row: 19 / 29; }
+.p066__image { grid-row: 18 / 28; }
+.p066__image { background-size: 126% auto; background-position: center 100%; }
+.p066__image { grid-row: 18 / 29; }

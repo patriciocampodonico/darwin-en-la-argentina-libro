@@ -640,3 +640,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 — 055 (pedido de Patricio): los números (18, 21, 3 y 7) se comprimen (líneas 7–17) y el último filete termina en el último renglón del texto. Solo CSS.
 - 11 nov. 2026 — 056 (pedido de Patricio): en el esquema, la cifra y su explicación van en el mismo renglón unidas por una raya («20 ciervos — 13 hallados…»), sin el hueco entre las dos. HTML cambiado (SVG): re-aprobada.
 - 11 nov. 2026 · 065: título y texto bajan una línea; el título arranca a la altura del de la 064 y el texto termina en la misma línea que el de la 064.
+- 11 nov. 2026 · 066: texto en dos columnas a todo el ancho; abajo la vizcacha (más grande, a la izquierda) y la lista del montón (a la derecha), terminando juntas.
