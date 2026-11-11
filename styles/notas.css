@@ -206,3 +206,22 @@
 .p089__text { grid-column: 1 / 7; grid-row: 7 / 12; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
 .p089__fig-a, .p089__fig-b { grid-row: 12 / 29; }
 .p089__fig-a .concept__img, .p089__fig-b .concept__img { height: calc(var(--baseline) * 14); }
+/* 090: texto en dos columnas; abajo el esquema de capas y las cifras; nota ED al pie (11 nov. 2026) */
+.p090__text { grid-column: 1 / 7; grid-row: 7 / 16; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p090__column { grid-column: 1 / 4; grid-row: 16 / 25; height: auto; align-self: start; }
+.p090__data { grid-column: 4 / 7; grid-row: 16 / 25; align-self: start; }
+.p090__caption { grid-column: 1 / 4; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+/* 091: la secuencia roca → grava a todo el ancho (11 nov. 2026) */
+.p091__text { grid-row: 7 / 19; }
+.p091__seq { grid-column: 1 / 7; grid-row: 19 / 26; height: auto; align-self: center; }
+.p091__note-e { grid-column: 1 / 4; grid-row: 26 / 29; }
+.p091__caption { grid-column: 4 / 7; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm; background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
+.p091__seq { grid-row: 20 / 26; }
+.p091__note-e, .p091__caption { grid-row: 26 / 29; align-self: start; }
+.p090__caption { grid-column: 4 / 7; grid-row: 21 / 25; align-self: end; }
+.p090__column { grid-row: 18 / 29; align-self: end; }
+.p090__data { grid-row: 18 / 24; }
+.p090__caption { grid-row: 24 / 29; align-self: end; }
+.p090__column { grid-row: 17 / 26; align-self: start; }
+.p090__data { grid-row: 17 / 23; }
+.p090__caption { grid-row: 22 / 26; align-self: end; }
