@@ -97,8 +97,3 @@
 .p066__image { grid-row: 18 / 28; }
 .p066__image { background-size: 126% auto; background-position: center 100%; }
 .p066__image { grid-row: 18 / 29; }
-.p067__text { grid-column: 1 / 7; grid-row: 7 / 12; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
-.p067__quote { grid-column: 1 / 6; grid-row: 12 / 17; align-self: end; }
-.p067__river { top: calc(var(--margin-top) + var(--baseline) * 17); height: calc(var(--baseline) * 11 + var(--margin-bottom)); }
-.p067__riverlabel { grid-row: 19 / 21; }
-.p067__quote { grid-row: 11 / 16; }
