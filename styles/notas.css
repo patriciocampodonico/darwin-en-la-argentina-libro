@@ -69,7 +69,11 @@
 /* 11 nov. 2026 (pedido de Patricio): 058, la nota ED de la franja del río baja al pie, como las demás notas */
 .p058__caption { grid-column: 1 / 4; grid-row: 26 / 29; align-self: end; padding-top: 1.8mm;
   background: linear-gradient(currentColor, currentColor) left top / 10mm var(--rule-fine) no-repeat; }
-/* 11 nov. 2026 (pedido de Patricio): 058 sin el blanco sobre la nota. El texto sigue arriba, alineado con el de 059;
-   las medidas bajan a la columna derecha y ocupan el mismo lugar que el «razonamiento, paso a paso» de 059 */
-.p058__datalabel { grid-row: 20; }  /* misma línea que el rótulo de 059 */
-.p058__data { grid-row: 21 / 28; transform: none; }
+/* 11 nov. 2026 (pedido de Patricio): 058 sin blancos. El texto va en dos columnas a todo el ancho libre (columnas 1–5)
+   y las medidas, grandes y una al lado de la otra, ocupan la franja de abajo; la nota ED sigue al pie */
+.p058__text { grid-column: 1 / 6; grid-row: 6 / 16; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p058__datalabel { grid-column: 1 / 6; grid-row: 17; }
+.p058__data { grid-column: 1 / 6; grid-row: 18 / 25; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; column-gap: var(--column-gap); transform: none; }
+.p058__data > div { padding-bottom: 2mm; }
+.p058__data dt { font-size: 54pt; line-height: calc(var(--baseline) * 5); }
+.p058__data dd { font-size: 10pt; margin-top: 3.2mm; }
