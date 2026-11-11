@@ -655,3 +655,4 @@ Se reemplazaron los 39 recuadros de imagen pendiente por ilustraciones generadas
 - 11 nov. 2026 · 081: el picotijera pasa arriba y el corte del canal abajo (su base termina con el texto).
 - 11 nov. 2026 · 081: se borra el agua y el reflejo bajo el picotijera (la versión con agua queda en originales/081-picotijera-con-agua.jpg) y el pájaro se achica un poco.
 - 11 nov. 2026 · 084: el esquema de la ría arranca con el texto; la nota ED pasa debajo del texto, al pie con filete, terminando con el esquema. 085: texto en dos columnas y el perfil de la llanura redibujado a todo el ancho (mismos elementos y rótulos); nota ED al pie. Reaprobada 085.
+- 11 nov. 2026 · 089: texto en dos columnas a todo el ancho (se va el blanco de arriba a la derecha); las dos láminas suben y son más altas.

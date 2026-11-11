@@ -202,3 +202,7 @@
 .p084__ria { grid-row: 18 / 26; align-self: start; height: auto; }
 .p084__caption { grid-column: 1 / 4; }
 .p084__caption { grid-row: 23 / 26; }
+/* 089: texto en dos columnas a todo el ancho; las dos láminas más altas (11 nov. 2026) */
+.p089__text { grid-column: 1 / 7; grid-row: 7 / 12; align-self: start; column-count: 2; column-gap: var(--column-gap); column-fill: balance; }
+.p089__fig-a, .p089__fig-b { grid-row: 12 / 29; }
+.p089__fig-a .concept__img, .p089__fig-b .concept__img { height: calc(var(--baseline) * 14); }
