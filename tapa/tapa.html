@@ -11,9 +11,16 @@
 <link rel="stylesheet" href="tapa.css">
 <style>
   /* Solo del desplegado */
-  @page { size: calc(var(--page-width) * 2 + var(--spine)) var(--page-height); margin: 0; }
+  /* 12 nov. 2026: tapa y contratapa 3 mm más anchas que las páginas (pegado y pliegue del lomo), hacia el canto.
+     Solo en el desplegado de imprenta: en el libro de pantalla siguen midiendo como las páginas. */
+  :root { --cover-extra: 3mm; }
+  @page { size: calc((var(--page-width) + var(--cover-extra)) * 2 + var(--spine)) var(--page-height); margin: 0; }
   html, body { margin: 0; background: var(--paper); }
-  .cover { display: flex; width: calc(var(--page-width) * 2 + var(--spine)); height: var(--page-height); }
+  .cover { display: flex; width: calc((var(--page-width) + var(--cover-extra)) * 2 + var(--spine)); height: var(--page-height); }
+  .cover .back, .cover .front { width: calc(var(--page-width) + var(--cover-extra)); }
+  .cover .back { padding-left: calc(var(--margin-outer) + var(--cover-extra)); }
+  .cover .front__image { width: calc(102mm + var(--cover-extra)); }
+  .cover .front__panel { right: calc(102mm + var(--cover-extra)); }
   body[data-solo="tapa"] .back, body[data-solo="tapa"] .spine, body[data-solo="contratapa"] .front, body[data-solo="contratapa"] .spine { display: none; }
 </style>
 </head>

@@ -14,7 +14,7 @@ TAPA = 'a'
 css = (ROOT / 'tapa' / 'tapa.css').read_text(encoding='utf-8')
 FLAP = 0  # sin solapas
 SPINE = float(re.search(r'--spine:\s*([\d.]+)mm', css).group(1))
-PW, PH = 210, 160
+PW, PH = 213, 160   # tapa y contratapa: página (210) + 3 mm hacia el canto (--cover-extra en tapa.html, 12 nov. 2026)
 W = 2 * FLAP + 2 * PW + SPINE
 PLIEGUES = [PW, PW + SPINE]
 
