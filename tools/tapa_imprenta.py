@@ -1,8 +1,8 @@
-# Tapa desplegada para imprenta: solapa de atrás + contratapa + lomo + tapa + solapa de adelante.
+# Tapa desplegada para imprenta: contratapa + lomo + tapa (sin solapas desde el 12 nov. 2026: 430 × 160 mm, entra en Super A3).
 # Desde el 20 oct. 2026 va a sangre (simple faz, pedido de Patricio): la hoja mide la tapa al corte, 590 × 160 mm
 # (solapas de 80 mm, lomo de 10 mm), sin demasía ni marcas de corte; solo las marcas de plegado punteadas,
 # 5 mm arriba y abajo en cada pliegue. Entra en A2.
-# Uso: py tools/tapa_imprenta.py   → ../Darwin_tapa_solapas_imprenta.pdf (carpeta LIBRO)
+# Uso: py tools/tapa_imprenta.py   → ../Darwin_tapa_imprenta.pdf (carpeta LIBRO)
 import os, pathlib, re, subprocess
 import pymupdf
 
@@ -12,11 +12,11 @@ CHROME = next(p for p in ['C:/Program Files/Google/Chrome/Application/chrome.exe
 MM = 72 / 25.4
 TAPA = 'a'
 css = (ROOT / 'tapa' / 'tapa.css').read_text(encoding='utf-8')
-FLAP = float(re.search(r'--flap:\s*([\d.]+)mm', css).group(1))
+FLAP = 0  # sin solapas
 SPINE = float(re.search(r'--spine:\s*([\d.]+)mm', css).group(1))
 PW, PH = 210, 160
 W = 2 * FLAP + 2 * PW + SPINE
-PLIEGUES = [FLAP, FLAP + PW, FLAP + PW + SPINE, FLAP + 2 * PW + SPINE]
+PLIEGUES = [PW, PW + SPINE]
 
 tmp = ROOT / 'salida' / '_tapa.pdf'
 subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--virtual-time-budget=8000', f'--print-to-pdf={tmp}',
@@ -34,7 +34,7 @@ for x in PLIEGUES:                                                # plegado, pun
         px = fondo.pixel(min(round((x + 3) / 25.4 * 50), fondo.width - 1), round((y0 + 2.5) / 25.4 * 50))
         tinta = (1, 1, 1) if sum(px) < 380 else (0, 0, 0)         # blanco sobre el azul (lomo), negro sobre papel; se mira 3 mm a la derecha del pliegue
         hoja.draw_line((x * MM, y0 * MM), (x * MM, y1 * MM), color=tinta, width=0.25, dashes='[2 2] 0')
-out = ROOT.parent / 'Darwin_tapa_solapas_imprenta.pdf'
+out = ROOT.parent / 'Darwin_tapa_imprenta.pdf'
 doc.set_metadata({'title': 'Darwin en la Argentina — tapa para imprenta'})
 doc.save(out, deflate=True, garbage=3)
 doc.close(); src.close(); os.remove(tmp)
